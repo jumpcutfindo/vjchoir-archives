@@ -228,7 +228,7 @@ export class ListenComponent implements OnInit {
       type: "success",
       msg: "Playlist link has been copied to your clipboard!"
     });
-    this.clipboard.copy(window.location.origin + '/listen?' + PLAYLIST_QUERY_PARAM + '=' + this.exportPlaylist(playlist));
+    this.clipboard.copy(this.exportPlaylist(playlist));
   }
 
   drop(playlist: Playlist, event: CdkDragDrop<string[]>) {
