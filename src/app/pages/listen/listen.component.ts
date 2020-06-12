@@ -42,6 +42,8 @@ export class ListenComponent implements OnInit {
   currActiveHeader;
   isHeaderVisible: boolean = true;
 
+  importPlaylistCode: string = '';
+
   constructor(private listenService: ListenService, 
     private sovService: SovService, 
     private playerService: PlayerService, 
@@ -111,14 +113,7 @@ export class ListenComponent implements OnInit {
   }
 
   createNewPlaylist() {
-    let tempPlaylist = <Playlist>{
-      name: "Default playlist name",
-      desc: "Default description name",
-      duration: moment.duration("0"),
-      tracks: [],
-      isOpen: false,
-      isDefault: false
-    };
+    let tempPlaylist = this.listenService.createNewPlaylist();
 
     this.myPlaylistsInfo.push(tempPlaylist);
     this.listenService.savePlaylists(this.myPlaylistsInfo);
@@ -201,14 +196,25 @@ export class ListenComponent implements OnInit {
   }
 
   importPlaylist(code: string) {
+    console.log(code);
+
     let playlist = this.listenService.parametersToPlaylist(code);
     this.myPlaylistsInfo.push(playlist);
     this.listenService.savePlaylists(this.myPlaylistsInfo);
 
-    this.createToast({
-      type: "success",
-      msg: "Imported a new playlist from the link provided!"
-    });
+    if(playlist.name == "Default playlist name") {
+      this.createToast({
+        type: "error",
+        msg: "Unable to import the playlist using the link given! Created a default one instead."
+      });
+    } else {
+      this.createToast({
+        type: "success",
+        msg: "Imported a new playlist from the link provided!"
+      });
+    }
+
+    
   }
 
   exportPlaylist(playlist: Playlist): string {
