@@ -55,6 +55,20 @@ export class ListenService {
     localStorage.setItem(MY_PLAYLISTS_STRING, json);
   }
 
+  createNewPlaylist() {
+    
+    let tempPlaylist = <Playlist>{
+      name: "Default playlist name",
+      desc: "Default description name",
+      duration: moment.duration("0"),
+      tracks: [],
+      isOpen: false,
+      isDefault: false
+    };
+
+    return tempPlaylist;
+  }
+
   resetStorage() {
     localStorage.setItem(MY_PLAYLISTS_STRING, "");
     console.log("Storage has been reset!");
@@ -119,10 +133,13 @@ export class ListenService {
       }
 
       playlist.duration = repertoireDuration;
+
+      console.log(playlist);
       
       return playlist;
     } catch(e) {
-      console.log(e);
+      console.log("Unable to import playlist; returning a default one");
+      return this.createNewPlaylist();
     }
   }
 

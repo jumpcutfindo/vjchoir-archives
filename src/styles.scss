@@ -13,13 +13,11 @@ $navbar-background-color: rgb(255, 255, 255);
 $sider-background-color: rgb(0, 0, 0, 0.05);
 $sider-background-color-inv: rgb(255, 255, 255, 0.5);
 $sider-primary-color: rgb(0, 0, 0, 0.40);
-
 $dark-base-color: rgb(35, 7, 18);
 $dark-accent-color: rgb(255, 255, 255);
 $dark-background-color: rgb(48, 9, 24);
 $dark-primary-text-color: rgb(250, 250, 250);
-$dark-border-color: rgba(255,255,255,.2);
-
+$dark-border-color: rgba(255, 255, 255, .2);
 $title-text-font: 'Poppins',
 sans-serif;
 $primary-text-font: 'Karla',
@@ -54,6 +52,7 @@ p {
   font-size: 80%;
   color: #dc3545;
 }
+
 .required {
   color: #dc3545;
 }
@@ -70,6 +69,7 @@ img {
   margin-top: 12px !important;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
 }
+
 .toast-success,
 .toast-error,
 .toast-info,
@@ -85,6 +85,7 @@ ngb-carousel {
     animation: none;
   }
 }
+
 .bottom-padder {
   color: none;
   background: none;
@@ -101,6 +102,7 @@ ngb-carousel {
     opacity: 1;
   }
 }
+
 @-moz-keyframes fadeIn {
   0% {
     opacity: 0;
@@ -109,6 +111,7 @@ ngb-carousel {
     opacity: 1;
   }
 }
+
 @-webkit-keyframes fadeIn {
   0% {
     opacity: 0;
@@ -117,6 +120,7 @@ ngb-carousel {
     opacity: 1;
   }
 }
+
 @-o-keyframes fadeIn {
   0% {
     opacity: 0;
@@ -125,6 +129,7 @@ ngb-carousel {
     opacity: 1;
   }
 }
+
 @-ms-keyframes fadeIn {
   0% {
     opacity: 0;
@@ -220,7 +225,6 @@ ngb-carousel {
       outline: none;
     }
   }
-  
   html,
   body {
     height: 100%;
@@ -234,7 +238,6 @@ ngb-carousel {
   .icon-danger {
     color: red;
   }
-  
   .mat-slide-toggle {
     &.mat-checked {
       .mat-slide-toggle-thumb {
@@ -261,48 +264,47 @@ ngb-carousel {
     color: $primary-text-inv-color;
     border-top: 1px $primary-text-inv-color solid;
   }
-
 }
 
 .dark-mode {
   background: $dark-background-color;
-  h1, h2, h3, h4, h5, h6, p, i, label {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  i,
+  label {
     color: $dark-primary-text-color;
   }
-
   hr {
-    border-top: 1px solid rgba(255,255,255,.2);
+    border-top: 1px solid rgba(255, 255, 255, .2);
   }
-
   nav {
     background: $dark-base-color !important;
-
     &.navbar {
       border-bottom: 2px solid $dark-border-color;
     }
-    
     .navbar-brand {
       color: $dark-primary-text-color !important;
     }
   }
-  
   #sidebar {
     .active {
       color: $dark-base-color !important;
       background: $dark-primary-text-color !important;
-      
       &:hover {
         color: $dark-base-color !important;
         i {
           color: $dark-base-color !important;
         }
       }
-
       i {
         color: $dark-base-color;
       }
     }
-
     li {
       &:hover {
         color: $dark-base-color !important;
@@ -312,7 +314,6 @@ ngb-carousel {
       }
     }
   }
-
   .btn-outline-primary {
     color: $dark-primary-text-color !important;
     border-color: $dark-primary-text-color !important;
@@ -320,7 +321,6 @@ ngb-carousel {
     &:hover {
       color: $dark-background-color !important;
       background-color: $dark-primary-text-color !important;
-
       i {
         color: $dark-background-color;
       }
@@ -384,7 +384,6 @@ ngb-carousel {
       outline: 0px !important;
     }
   }
-
   .badge {
     font-family: $primary-text-font;
   }
@@ -392,7 +391,6 @@ ngb-carousel {
     background-color: $dark-primary-text-color !important;
     color: $dark-base-color !important;
   }
-
   .link {
     cursor: pointer;
     &:hover {
@@ -406,7 +404,6 @@ ngb-carousel {
       outline: none;
     }
   }
-
   .list-group {
     .list-group-item {
       color: $dark-primary-text-color !important;
@@ -414,7 +411,6 @@ ngb-carousel {
       border: 1px solid $dark-border-color;
     }
   }
-
   .repertoire {
     ol {
       list-style: none;
@@ -425,7 +421,7 @@ ngb-carousel {
         color: $dark-primary-text-color;
       }
       li {
-        border: 1px solid $dark-background-color !important; 
+        border: 1px solid $dark-background-color !important;
         border-bottom: 1px $dark-border-color solid !important;
         &:hover {
           border: 1px $dark-border-color solid !important;
@@ -433,7 +429,6 @@ ngb-carousel {
       }
     }
   }
-
   app-listen {
     .listen-header-close {
       &:hover {
@@ -441,30 +436,26 @@ ngb-carousel {
         color: $dark-background-color;
       }
     }
-    
     .playlist-header {
       &:hover {
         background: $dark-primary-text-color;
         color: $dark-background-color !important;
-
-        h4, p, i {
+        h4,
+        p,
+        i {
           color: $dark-background-color !important;
         }
-
         .btn {
           color: $dark-background-color !important;
           border-color: $dark-background-color !important;
-
           &:hover {
             color: $dark-primary-text-color !important;
             background: $dark-background-color !important;
-
             i {
               color: $dark-primary-text-color !important;
             }
           }
         }
-
         input {
           color: $dark-background-color;
         }
@@ -483,7 +474,6 @@ ngb-carousel {
         }
       }
     }
-    
     .song {
       .song-composer,
       .song-number {
@@ -492,14 +482,12 @@ ngb-carousel {
       &:hover {
         background: $dark-primary-text-color;
         color: $dark-background-color !important;
-
         .song-title,
         .song-duration,
         .song-composer,
         .song-number {
           color: $dark-background-color !important;
         }
-        
         i {
           color: red !important;
         }
@@ -511,7 +499,6 @@ ngb-carousel {
         color: $dark-primary-text-color !important;
       }
     }
-    
     .song-title-row {
       .song-number,
       .song-title,
@@ -519,13 +506,11 @@ ngb-carousel {
         color: $dark-primary-text-color !important;
       }
     }
-    
     .add-button {
       .dropdown-menu {
         background: $dark-background-color;
         border: 1px solid $dark-primary-text-color;
       }
-
       .dropdown-item {
         font-family: $primary-text-font;
         max-width: 300px;
@@ -536,21 +521,26 @@ ngb-carousel {
           color: $dark-background-color;
         }
       }
+      .fa-bars {
+        color: $dark-primary-text-color !important;
+      }
     }
   }
-
   .modal-content {
     background: $dark-background-color;
-
-    h1, h2, h3, h4, h5, h6, p {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
       color: $dark-primary-text-color;
     }
-
     hr {
       border-bottom: 1px solid $dark-border-color;
     }
   }
-
   .mat-slide-toggle {
     &.mat-checked {
       .mat-slide-toggle-thumb {
@@ -558,12 +548,12 @@ ngb-carousel {
       }
     }
   }
-
-  input, select, textarea {
+  input,
+  select,
+  textarea {
     font-family: $primary-text-font;
     background: $dark-background-color;
     color: $dark-primary-text-color;
-
     &:focus {
       background: $dark-background-color;
       color: $dark-primary-text-color;
@@ -572,17 +562,21 @@ ngb-carousel {
       border: 1px solid $dark-primary-text-color;
     }
   }
-
   app-player {
     .player-layout {
       background: $dark-background-color;
       color: $dark-primary-text-color;
       box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
-  
-      h1, h2, h3, h4, h5, h6, p, i {
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p,
+      i {
         color: $dark-primary-text-color;
       }
-
       .player-playlists {
         .player-playlists-item {
           height: 50px;
@@ -596,7 +590,6 @@ ngb-carousel {
           }
         }
       }
-
       .song {
         border-bottom: 1px solid $dark-border-color !important;
         .song-composer,
@@ -605,7 +598,6 @@ ngb-carousel {
         }
         &:hover {
           background: $dark-primary-text-color !important;
-  
           .song-title,
           .song-duration,
           .song-composer,
@@ -619,7 +611,6 @@ ngb-carousel {
         .dropdown-toggle {
           color: $dark-primary-text-color !important;
         }
-
         &.active {
           p {
             color: $dark-background-color !important;
@@ -630,7 +621,6 @@ ngb-carousel {
           background: $dark-primary-text-color !important;
         }
       }
-      
       .song-title-row {
         .song-number,
         .song-title,
@@ -638,7 +628,6 @@ ngb-carousel {
           color: $dark-primary-text-color !important;
         }
       }
-
       .player-info {
         .np-composer {
           color: $dark-primary-text-color !important;
@@ -649,7 +638,6 @@ ngb-carousel {
           }
         }
       }
-
       plyr {
         --plyr-color-main: rgb(175, 36, 90);
         --plyr-badge-text-color: $dark-primary-text-color;
@@ -669,22 +657,18 @@ ngb-carousel {
   h1 {
     font-size: 2.0rem !important;
   }
-
   h2 {
     font-size: 1.75rem !important;
   }
-
   h3 {
     font-size: 1.5rem !important;
   }
   p {
     font-size: medium !important;
   }
-
-  
-.bottom-padder {
-  padding: 2rem 0rem 2rem 0rem;
-}
+  .bottom-padder {
+    padding: 2rem 0rem 2rem 0rem;
+  }
 }
 
 @media only screen and (max-width: 768px) {
