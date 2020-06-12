@@ -1,0 +1,27 @@
+
+[
+    {
+        "section": "sop",
+        "names": [
+            "Magdeleine (SL)","Chloe Kow","Julianne Leow","Leong Sih-Zau","Isabella Quah","Val Guo","May Oo","Charisse Peh","Andrea Wong","Natania Yovela Purwanto"]
+    },
+
+    {
+        "section": "alto",
+        "names": [
+            "Devy Anggreni (SL)", "Stephanie Lee", "Beth Lim", "Angeline Siow", "Nadya Png", "Liu Xinran", "Hong Ai Ling", "Ho See Chung", "Teng Zhi Qian", "Shuhara Tasneem bte Sirajudin" ]
+    },
+
+    {
+        "section": "tenor",
+        "names": [
+            "Cyrus Tan", "Edwin Seow", "Mark Chong", "Phua Yong Jun"]
+    },
+
+    {
+        "section": "bass",
+        "names": [
+            "Tristan Chia", "Yang Si Jun", "Tjin Lim", "Darius Ong", "Ahmed Fuaadi Hisham Bakti", "Joel Ler"]
+    }
+
+]

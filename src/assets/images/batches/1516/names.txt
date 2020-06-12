@@ -1,0 +1,27 @@
+[
+    {
+        "section": "sop",
+        "names": [
+            "Sheryl Chow (SL)","Nadya","Rebecca Goh","Voleti Vyshuani","Vera Cheang","Lee Mei Wai","Eunice Tan","Shania Mustika","Iman","Tay Hui Ping","Lee Wen Ting"]
+    },
+
+    {
+        "section": "alto",
+        "names": [
+            "Lee Zhi Xin (SL)","Allysia Dee","Ji Jie Yi","Pearlyn Ee","Yeo Hui Kun","Rachael Goh","Zhou Ren Jie","Lim Jing Wen"]
+    },
+
+    {
+        "section": "tenor",
+        "names": [
+            "Toh Hong Jin (SL)","Jeremy Chua","Lim Qin Da","Gerald Ng","Marcus Lim"
+            ]
+    },
+
+    {
+        "section": "bass",
+        "names": [
+            "Ng Jun Ren (SL)","Donavan Tan","Daryl Yeo","Choo Po Yen","Joshua Tan","Emanuel Lee","Xie Hao","Nigel Lee"]
+    }
+
+]

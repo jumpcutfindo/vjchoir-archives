@@ -1,0 +1,678 @@
+{
+  "intro": {
+    "title": "Welcome to the Batches page!",
+    "msg": "<p>Hello! Welcome to the landing page for Batches! In this part of the website, the details of the previous batches of VJChoir are kept so that you can see how the past batches looked like.</br></br>Use the navigation buttons above to browse through the different batches. In each page, the general information of the choir's committees and members are included. Photos from the various batches are also there so that you can kinda get a look of how lupsup or noob everyone looked back in their hey-day.</br></br><b>Contributing / fixing:</b></br>Seeing as I'm not from any batches after my own, the information provided above has been sent to me over the years by the various members of the various batches. If you want to contribute, or you've spotted an error, head over to the \"Contribute\" part of the archives to send in the relevant information. Thanks very much! :)</p>"
+  },
+  "batches": [{
+      "id": "1920",
+      "name": "2019 / 2020",
+      "image": "../../../assets/images/batches/1920/batch.jpeg",
+      "desc": "Hi there! This page contains information pertaining to the batch of 2019 - 2020.",
+      "comms": [{
+          "name": "Exco",
+          "img": "../../../assets/images/batches/1920/exco.jpg",
+          "members": [
+            "Low Jia Xin (P)",
+            "Miri Aung (VP)",
+            "Alyssa Ng (S)",
+            "Abigail Kwok (Welfare Head)",
+            "Wayne Wong (T)",
+            "Naomi Lim (QM)"
+
+          ]
+        },
+        {
+          "name": "Musico",
+          "img": "../../../assets/images/batches/1920/musico.jpeg",
+          "members": [
+            "Athuf Hashiholan (T)",
+            "Wong Zheng Jie (B)",
+            "Bryan Ng Wen Hann (ASC)",
+            "Amanda Lee (SC)",
+            "Jewel Lee (S)",
+            "Stella Andreanna (A)"
+
+          ]
+        }
+      ],
+      "sections": [{
+          "name": "Sopranos",
+          "members": [
+            "Jewel Lee",
+            "Nicole Lim En-Si",
+            "Abigail Kwok",
+            "Naomi Lim",
+            "Ashleigh Gan",
+            "Nandini Kumar",
+            "Sarah Ang",
+            "Amanda Lee",
+            "Chelsea Ku",
+            "Ruth Ang",
+            "Miri Aung"
+          ]
+        },
+        {
+          "name": "Altos",
+          "members": [
+            "Stella Andreanna",
+            "Kaaviya Pandiyan",
+            "Alyssa Chew",
+            "Alyssa Ng",
+            "Low Jia Xin",
+            "Shreya Jindal",
+            "Foo See Yee",
+            "Violeti Amulya",
+            "Charlene Chun",
+            "Christabel Lee",
+            "Tammie Koh",
+            "Seah Jia Yi",
+            "Hannah Ong"
+          ]
+        },
+        {
+          "name": "Tenors",
+          "members": [
+            "Athuf Hashiholan",
+            "Zhao Shibo",
+            "Ian Sin",
+            "Alwin Tua",
+            "Imran Nasir",
+            "Tay An Sheng"
+
+          ]
+        },
+        {
+          "name": "Basses",
+          "members": [
+            "Wong Zheng Jie",
+            "Nicholas Lai Rui Onn",
+            "Bryan Ng Wen Hann",
+            "Matthew Chan",
+            "Christopher Tan",
+            "Wayne Wong"
+          ]
+        }
+      ],
+      "photos": ["../../../assets/images/batches/1920/featured (1).jpeg", "../../../assets/images/batches/1920/featured (2).jpg", "../../../assets/images/batches/1920/featured (3).jpeg"]
+    },
+    {
+      "id": "1819",
+      "name": "2018 / 2019",
+      "image": "../../../assets/images/batches/1819/batch.jpg",
+      "desc": "Hi there! This page contains information pertaining to the batch of 2018 - 2019.",
+      "comms": [{
+          "name": "Exco",
+          "img": "../../../assets/images/batches/1819/exco.jpg",
+          "members": [
+            "Joel Ler (Welfare Head)",
+            "Darius Ong (QM)",
+            "Ahmed Fuaadi Hisham Bakti (VP)",
+            "Isabella Quah (S)",
+            "Natania Yovela Purwanto (T)",
+            "May Oo (P)"
+          ]
+        },
+        {
+          "name": "Musico",
+          "img": "../../../assets/images/batches/1819/musico.jpg",
+          "members": [
+            "Magdeleine (S)",
+            "Devy Anggreni (A)",
+            "Cyrus Tan (T)",
+            "Tristan Chia (B)",
+            "Leong Sih-Zau (ASC)",
+            "Phua Yong Jun (SC)"
+          ]
+        }
+      ],
+      "sections": [{
+          "name": "Sopranos",
+          "members": [
+            "Magdeleine",
+            "Chloe Kow",
+            "Julianne Leow",
+            "Leong Sih-Zau",
+            "Isabella Quah",
+            "Val Guo",
+            "May Oo",
+            "Charisse Peh",
+            "Andrea Wong",
+            "Natania Yovela Purwanto"
+          ]
+        },
+        {
+          "name": "Altos",
+          "members": [
+            "Devy Anggreni",
+            "Stephanie Lee",
+            "Beth Lim",
+            "Angeline Siow",
+            "Nadya Png",
+            "Liu Xinran",
+            "Hong Ai Ling",
+            "Ho See Chung",
+            "Teng Zhi Qian",
+            "Shuhara Tasneem bte Sirajudin"
+          ]
+        },
+        {
+          "name": "Tenors",
+          "members": [
+            "Cyrus Tan",
+            "Edwin Seow",
+            "Mark Chong",
+            "Phua Yong Jun"
+          ]
+        },
+        {
+          "name": "Basses",
+          "members": [
+            "Tristan Chia",
+            "Yang Si Jun",
+            "Tjin Lim",
+            "Darius Ong",
+            "Ahmed Fuaadi Hisham Bakti",
+            "Joel Ler"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1718",
+      "name": "2017 / 2018",
+      "image": "../../../assets/images/batches/1718/batch.jpg",
+      "desc": "Hi there! This page contains information pertaining to the batch of 2017 - 2018.",
+      "comms": [{
+          "name": "Exco",
+          "img": "../../../assets/images/batches/1718/exco.jpg",
+          "members": [
+            "Dayne Taniajura (VP)",
+            "Sherlyn Priscilla (T)",
+            "Matthias Lee (P)",
+            "Nikki Lim (S)",
+            "Arista Lim (Welfare Head)",
+            "Jessie Ng (QM)"
+          ]
+        },
+        {
+          "name": "Musico",
+          "img": "../../../assets/images/batches/1718/musico.jpg",
+          "members": [
+            "Toh Xin Long (SC)",
+            "Japheth Leong (T)",
+            "Sng Wei En (B)",
+            "Seow Mao Yu (SC)",
+            "Lee Yu Xian (S)",
+            "Sofie Buligis (A)"
+          ]
+        }
+      ],
+      "sections": [{
+          "name": "Sopranos",
+          "members": [
+            "Lee Yu Xian",
+            "Arista Lim",
+            "Nikki Lim",
+            "Jessie Ng",
+            "Carmen Chan",
+            "Cassie Ang",
+            "Cristal Foo",
+            "Dawn Chin",
+            "Kayleigh Lim",
+            "Kelly Yu",
+            "Megan Zhuo",
+            "Huang Xian Xi",
+            "Yao Xinyi",
+            "Lim Ying Ying"
+          ]
+        },
+        {
+          "name": "Altos",
+          "members": [
+            "Sofie Buligis",
+            "Dayne Taniajura",
+            "Sherlyn Priscilla",
+            "Aida Bte Mohamed Zulkifli",
+            "Alyssa Goh",
+            "Lee Cindy",
+            "Clarisa Laksono",
+            "Erin Tan",
+            "Glenys Foo",
+            "Griselda Jayapurna",
+            "He Jialei",
+            "Michelle Yin",
+            "Nikki Chua",
+            "Priscilla Natasya",
+            "Shreya Sriram",
+            "Lum Yen Yi"
+          ]
+        },
+        {
+          "name": "Tenors",
+          "members": [
+            "Japheth Leong",
+            "Seow Mao Yu",
+            "Toh Xin Long",
+            "Yang Chenyu",
+            "Ryan Lai",
+            "Nanda Hidayat",
+            "Enric Sng"
+          ]
+        },
+        {
+          "name": "Basses",
+          "members": [
+            "Sng Wei En",
+            "Matthias Lee",
+            "Dyllan Gan",
+            "Daniel Lim",
+            "Wynn Oh Geng Sheng",
+            "Matthew Lee",
+            "Mohd Al-Ahda"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1617",
+      "name": "2016 / 2017",
+      "image": "../../../assets/images/batches/1617/batch.jpg",
+      "desc": "Hi there! This page contains information pertaining to the batch of 2016 - 2017.",
+      "comms": [{
+          "name": "Exco",
+          "img": "../../../assets/images/batches/1617/exco.jpg",
+          "members": [
+            "Lee Peijing (GAM)",
+            "Christian Teo (S)",
+            "Nicholas Tay (P)",
+            "Cleon Tan (VP)",
+            "Dora Oh (T)"
+          ]
+        },
+        {
+          "name": "Musico",
+          "img": "../../../assets/images/batches/1617/musico.jpg",
+          "members": [
+            "Lloyd Ng (T)",
+            "Cherylene Tan (S)",
+            "Jasper Ong (ASC)",
+            "Michelle Ong (SC)",
+            "Martin Yong (B)",
+            "Rianne Chew (A)"
+          ]
+        },
+        {
+          "name": "Welco",
+          "img": "../../../assets/images/batches/1617/welco.jpg",
+          "members": [
+            "Neo Ming Feng",
+            "Own Min Yi",
+            "Ernest Cho",
+            "Park Ye Won",
+            "Li Yuxuan",
+            "Grace Goh"
+          ]
+        }
+      ],
+      "sections": [{
+          "name": "Sopranos",
+          "members": [
+            "Cherylene",
+            "Shivaane",
+            "Dora",
+            "Michelle",
+            "Ye Won",
+            "Lynnette",
+            "Bao Rong",
+            "Pei Jing",
+            "Qiu Ru",
+            "Payaal",
+            "Shi Chao"
+          ]
+        },
+        {
+          "name": "Altos",
+          "members": [
+            "Rianne",
+            "Grace",
+            "Marissa",
+            "Celeste",
+            "Nai Rong",
+            "Dionetta",
+            "Angela",
+            "Yi Wei",
+            "Min Yi"
+          ]
+        },
+        {
+          "name": "Tenors",
+          "members": [
+            "Lloyd",
+            "Ming Feng",
+            "Jonathan",
+            "Nicholas",
+            "Zu En",
+            "Wen Yu"
+          ]
+        },
+        {
+          "name": "Basses",
+          "members": [
+            "Martin",
+            "Li Yu Xuan",
+            "Brendan",
+            "Christian",
+            "Yeo Yu Xuan",
+            "Rui Cong",
+            "Tay Xiong",
+            "Ernest",
+            "Cleon",
+            "Jasper"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1516",
+      "name": "2015 / 2016",
+      "image": "../../../assets/images/batches/1516/batch.jpg",
+      "desc": "Hi there! This page contains information pertaining to the batch of 2015 - 2016.",
+      "comms": [{
+          "name": "Exco",
+          "img": "../../../assets/images/batches/1516/exco.jpg",
+          "members": [
+            "Yeo Hui Kun (VP)",
+            "Rebecca Goh (S)",
+            "Choo Po Yen (P)",
+            "Allysia Dee (T)",
+            "Tay Hui Ping (GAM)"
+          ]
+        },
+        {
+          "name": "Musico",
+          "img": "../../../assets/images/batches/1516/musico.jpg",
+          "members": [
+            "Ng Jun-Ren (B)",
+            "Toh Hong Jin (T)",
+            "Gerald Ng (SC)",
+            "Marcus Lim (SC)",
+            "Lee Zhi Xin (A)",
+            "Sheryl Chow (S)"
+          ]
+        },
+        {
+          "name": "Welco",
+          "img": "../../../assets/images/batches/1516/welco.jpg",
+          "members": [
+            "Daryl Yeo",
+            "Lim Qin Da",
+            "Emanuel Lee",
+            "Eunice Tan",
+            "Rachael Goh",
+            "Iman",
+            "Vera Cheang",
+            "Shania Mustika"
+          ]
+        }
+      ],
+      "sections": [{
+          "name": "Sopranos",
+          "members": [
+            "Sheryl Chow",
+            "Nadya",
+            "Rebecca Goh",
+            "Voleti Vyshuani",
+            "Vera Cheang",
+            "Lee Mei Wai",
+            "Eunice Tan",
+            "Shania Mustika",
+            "Iman",
+            "Tay Hui Ping",
+            "Lee Wen Ting"
+          ]
+        },
+        {
+          "name": "Altos",
+          "members": [
+            "Lee Zhi Xin",
+            "Allysia Dee",
+            "Ji Jie Yi",
+            "Pearlyn Ee",
+            "Yeo Hui Kun",
+            "Rachael Goh",
+            "Zhou Ren Jie",
+            "Lim Jing Wen"
+          ]
+        },
+        {
+          "name": "Tenors",
+          "members": [
+            "Toh Hong Jin",
+            "Jeremy Chua",
+            "Lim Qin Da",
+            "Gerald Ng",
+            "Marcus Lim"
+          ]
+        },
+        {
+          "name": "Basses",
+          "members": [
+            "Ng Jun Ren",
+            "Donavan Tan",
+            "Daryl Yeo",
+            "Choo Po Yen",
+            "Joshua Tan",
+            "Emanuel Lee",
+            "Xie Hao",
+            "Nigel Lee"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1415",
+      "name": "2014 / 2015",
+      "image": "../../../assets/images/batches/1415/batch.jpg",
+      "desc": "Hi there! This page contains information pertaining to the batch of 2014 - 2015.",
+      "comms": [{
+          "name": "Exco",
+          "img": "../../../assets/images/batches/1415/exco.jpg",
+          "members": [
+            "Rebecca Seah (GAM)",
+            "Wyn Lim (T)",
+            "Calista Loh (S)",
+            "Marcus Tan (VP)",
+            "Kevin Tay (P)"
+          ]
+        },
+        {
+          "name": "Musico",
+          "img": "../../../assets/images/batches/1415/musico.jpg",
+          "members": [
+            "Joel Casey Tay (SC)",
+            "Gloria Ho (ASC)",
+            "Vanessa Kee (S)",
+            "Koh Beiyi (A)",
+            "Justin Wong (T)",
+            "Tan Wei Xi (B)"
+          ]
+        },
+        {
+          "name": "Welco",
+          "img": "../../../assets/images/batches/1415/welco.jpg",
+          "members": [
+            "Joshua Ariel",
+            "Wen Xin",
+            "Caleb Low",
+            "Lynn Chan",
+            "Daniel Hoe",
+            "Ryan Yip",
+            "Bryan Leow",
+            "Sophia Khan"
+          ]
+        }
+      ],
+      "sections": [{
+          "name": "Sopranos",
+          "members": [
+            "Vanessa Kee",
+            "Calista Loh",
+            "Zhou Manqi",
+            "Zhang Hanwen",
+            "Seanne Daphne Ng",
+            "Lynn Chan",
+            "Gloria Ho",
+            "Gao Weinong",
+            "Rebecca Seah",
+            "Zeng Yucheng",
+            "Stephanie Ng",
+            "Mathangi Palanivel",
+            "Lan Wanting",
+            "Lorraine Kong",
+            "Ng Yen"
+          ]
+        },
+        {
+          "name": "Altos",
+          "members": [
+            "Koh Beiyi",
+            "Wyn Lim",
+            "Denise Ho",
+            "Chen Yiwen",
+            "Wen Xin",
+            "Sophia Khan",
+            "Lei Hanming",
+            "Fang Yujie",
+            "Law En Tian",
+            "Rozalin Mohanty"
+          ]
+        },
+        {
+          "name": "Tenors",
+          "members": [
+            "Justin Wong",
+            "Kevin Tay",
+            "Melvyn Ng",
+            "David Lee",
+            "Bryan Leow",
+            "Tan Cai Jin",
+            "Marcus Tan",
+            "Lim Shuhan",
+            "Caleb Low"
+          ]
+        },
+        {
+          "name": "Basses",
+          "members": [
+            "Tan Wei Xi",
+            "Daniel Hoe",
+            "Ryan Yip",
+            "Joel Casey Tay",
+            "Teoh Hong Liang",
+            "Owen Yunaputra Kosman",
+            "Joshua Ariel",
+            "Hans Toby Limanto"
+          ]
+        }
+      ],
+      "photos": ["../../../assets/images/batches/1415/featured (1).jpg", "../../../assets/images/batches/1415/featured (2).jpg", "../../../assets/images/batches/1415/featured (3).jpg", "../../../assets/images/batches/1415/featured (4).jpg"]
+    },
+    {
+      "id": "1314",
+      "name": "2013 / 2014",
+      "image": "../../../assets/images/batches/1314/batch.jpg",
+      "desc": "Hi there! This page contains information pertaining to the batch of 2013 - 2014.",
+      "comms": [{
+          "name": "Exco",
+          "img": "../../../assets/images/batches/1314/exco.jpg",
+          "members": [
+            "Ethan Loh (P)",
+            "Lidiya Hidhir (T)",
+            "Ellis Yee (S)",
+            "Lim Jia Ying (GAM)",
+            "Joshua Lim (VP)"
+          ]
+        },
+        {
+          "name": "Musico",
+          "img": "../../../assets/images/batches/1314/musico.jpg",
+          "members": [
+            "Tseng Wen Yu (SC)",
+            "Andre Tng (SC)",
+            "Shafiqah Shahrin (A)",
+            "Kiang Wen Jen (S)",
+            "Shaun Goh (B)",
+            "Baek Jongwoo (T)"
+          ]
+        },
+        {
+          "name": "Welco",
+          "img": "../../../assets/images/batches/1314/welco.jpg",
+          "members": [
+            "Luo Yigong",
+            "Celine Chang",
+            "Chen Hui Ting",
+            "Ernest Lim",
+            "Ng Yuting",
+            "Mitchell Yap",
+            "Elsa Tong"
+          ]
+        }
+      ],
+      "sections": [{
+          "name": "Sopranos",
+          "members": [
+            "Kiang Wen Jen",
+            "Elsa Tong",
+            "Lee You Xuan",
+            "Chen Hui Ting",
+            "Cheryl Ang",
+            "Jamie Koh",
+            "Chin Ying Xin",
+            "Ng Yuting",
+            "Chan Xing Yun"
+          ]
+        },
+        {
+          "name": "Altos",
+          "members": [
+            "Shafiqah Shahrin",
+            "Jodie Ng",
+            "Shi Ganyu",
+            "Ellis Yee",
+            "Hilary Low",
+            "Hilary Toh",
+            "Wang Qi",
+            "Lidiya Hidhir",
+            "Celine Chang",
+            "Lim Jia Ying"
+          ]
+        },
+        {
+          "name": "Tenors",
+          "members": [
+            "Baek Jongwoo",
+            "Mitchell Yap",
+            "Tseng Wen Yu",
+            "Luo Yigong",
+            "Chae Sae Han",
+            "Angga Wiratama"
+          ]
+        },
+        {
+          "name": "Basses",
+          "members": [
+            "Shaun Goh",
+            "Aloysius Eng",
+            "Joshua Lim",
+            "Ethan Loh",
+            "Andre Tng",
+            "Ernest Lim",
+            "Adrian Kevin Wijono",
+            "Brendan Ng"
+          ]
+        }
+      ]
+    }
+  ]
+}

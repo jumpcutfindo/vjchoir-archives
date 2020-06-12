@@ -1,0 +1,64 @@
+<div class="header">
+  <div *ngFor="let section of contributeInfo.sections">
+    <h3>{{section.title}}</h3>
+    <div [innerHTML]="section.content"></div>
+  </div>
+</div>
+
+<hr/>
+
+<div>
+  <h4>Feedback / Suggestion / Question Form</h4>
+  <form [formGroup]="contributeForm">
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inputName">Name <span class="required">*</span></label>
+        <input type="text" class="form-control" id="inputName" placeholder="Name" formControlName="name">
+        <div *ngIf="getName().invalid && (getName().dirty || getName().touched)">
+          <div *ngIf="getName().errors.required" class="invalid">Your name is required.</div>
+        </div>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="inputBatch">Batch <span class="required">*</span></label>
+        <input type="text" class="form-control" id="inputBatch" placeholder="Batch of ... / ..." formControlName="batch">
+
+        <div *ngIf="getBatch().invalid && (getBatch().dirty || getBatch().touched)">
+          <div *ngIf="getBatch().errors.required" class="invalid">Your batch is required.</div>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputEmail">Email <span class="required">*</span></label>
+      <input type="email" class="form-control" id="inputEmail" placeholder="mail@example.com" formControlName="email">
+      <div *ngIf="getEmail().invalid && (getEmail().dirty || getEmail().touched)">
+        <div class="invalid">Your email is invalid.</div>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inputFeedbackType">Feedback Type <span class="required">*</span></label>
+        <select class="custom-select" id="inputFeedbackType" formControlName="type">
+            <option value="">Select an option...</option>
+            <option value="1">Feedback</option>
+            <option value="2">Question</option>
+        </select>
+        <div *ngIf="getType().invalid && (getType().dirty || getType().touched)">
+          <div *ngIf="getType().errors.required" class="invalid">Please select something from the list.</div>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputFeedback">Feedback / Comments / Suggestions <span class="required">*</span></label>
+      <textarea class="form-control" id="inputFeedback" rows="5" formControlName="text"></textarea>
+      <div *ngIf="getFeedback().invalid && (getFeedback().dirty || getFeedback().touched)">
+        <div *ngIf="getFeedback().errors.required" class="invalid" placeholder="Let me know what you think about the website! Or if you have something to submit, feel free to let me know!">Some text is required.</div>
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-outline-primary" (click)="submitForm()" value="Send" [disabled]="isSubmitting">
+      <span *ngIf="!isSubmitting">Submit</span>
+      <div *ngIf="isSubmitting"><span class="spinner-border spinner-border-sm mr-2 my-auto" role="status" aria-hidden="true"></span>Submitting...</div>
+    </button>
+    <p><span class="invalid">* Required entries</span></p>
+  </form>
+</div>

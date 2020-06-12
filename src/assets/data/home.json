@@ -1,0 +1,28 @@
+{
+  "header": {
+    "title": "Welcome to the...",
+    "image_light": "../assets/images/logo/VJChoir-black.png",
+    "image_dark": "../assets/images/logo/VJChoir.png",
+    "intro_msg": "Welcome to the unofficial official webpage for the Victoria Junior College Choir. In this website, there is a repository of batch information, songs and other cool stuff that you can peruse. Enjoy!"
+  },
+  "sections": [{
+    "title": "Creator's Message",
+    "content": "<p>Hello! Have a happy new year and a great 2020 ahead, and as always if you have suggestions please email <strong>hoe.chan.wei.daniel.2014@vjc.sg</strong> to contribute! Thanks a lot! :)</p>"
+  }],
+  "featured_photos": {
+    "title": "Featured Photos",
+    "images": [{
+        "link": "../../../assets/images/featured/header1.jpg"
+      },
+      {
+        "link": "../../../assets/images/featured/header2.jpg"
+      },
+      {
+        "link": "../../../assets/images/featured/header3.jpg"
+      },
+      {
+        "link": "../../../assets/images/featured/header4.jpg"
+      }
+    ]
+  }
+}

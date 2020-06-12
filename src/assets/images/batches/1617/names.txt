@@ -1,0 +1,28 @@
+[
+    {
+        "section": "sop",
+        "names": [
+            "Cherylene (SL)","Shivaane","Dora","Michelle","Ye Won","Lynnette","Bao Rong","Pei Jing","Qiu Ru","Payaal","Shi Chao"]
+    },
+
+    {
+        "section": "alto",
+        "names": [
+            "Rianne (SL)","Grace","Marissa","Celeste","Nai Rong","Dionetta","Angela","Yi Wei","Min Yi"]
+    },
+
+    {
+        "section": "tenor",
+        "names": [
+            "Lloyd (SL)","Ming Feng","Jonathan","Nicholas","Zu En","Wen Yu"
+            ]
+    },
+
+    {
+        "section": "bass",
+        "names": [
+            "Martin (SL)","Li Yu Xuan","Brendan","Christian","Yeo Yu Xuan","Rui Cong","Tay Xiong","Ernest","Cleon","Jasper"]
+    }
+
+]
+

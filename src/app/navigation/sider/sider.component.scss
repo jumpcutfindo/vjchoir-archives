@@ -1,0 +1,19 @@
+@import "../../../styles.scss";
+h6, p {
+  color: $sider-primary-color;
+}
+
+.social-link {
+  font-family: $primary-text-font;
+  display: flex;
+  align-items: center;
+}
+
+a {
+  color: $accent-color;
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}

@@ -1,0 +1,28 @@
+<div class="sidebar-wrapper sticky-top">
+  <!-- Sidebar -->
+  <nav id="sidebar">
+    <div class="sidebar-header">
+      <img src="../../assets/images/logo/VJChoir.png" class="w-100 px-4 py-4">
+    </div>
+
+    <ul class="list-unstyled components">
+      <li *ngFor="let item of sidebarItems" [ngClass]="item.isVisible ? (item == currActive ? 'active' : '') : 'd-none' " (click)="controller.navigateTo(item); toggleSidebar();" routerLink="{{item.linkName}}">
+        <i class="{{item.icon}}"></i>{{item.name}}
+      </li>
+    </ul>
+    <hr class="hr-inv mx-2" />
+    <div class="d-flex mx-3">
+      <div *ngIf="isDarkMode" class="row m-0 p-0 flex-grow-1">
+        <i class="fa fa-moon my-auto mr-2"></i>
+        <p class="m-0 p-0">Dark Mode</p>
+      </div>
+      <div *ngIf="!isDarkMode" class="row m-0 p-0 flex-grow-1">
+        <i class="fa fa-sun my-auto mr-2"></i>
+        <p class="m-0 p-0">Light Mode</p>
+      </div>
+      <mat-slide-toggle [(ngModel)]="isDarkMode" (change)="changeMode()"></mat-slide-toggle>
+    </div>
+    <p class="mx-3 text-center"><small>© VJChoir 2020.<br/>No man is an island.</small></p>
+  </nav>
+
+</div>

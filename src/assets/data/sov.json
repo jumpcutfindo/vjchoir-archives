@@ -1,0 +1,1606 @@
+{
+  "intro": {
+    "title": "Welcome to the Symphony of Voices page!",
+    "msg": "<p>Hey there! Welcome to the landing page for Symphony of Voices.</br></br><b>Symphony of Voices</b> is the Victoria Junior College Choir's annual concert, held usually at the end of the J2 batch's stint in choir. Each concert has its own theme, with a variety of songs associated with the theme being sung in the concert, usually in the second half.</br></br>This part of the website contains information for each Symphony of Voices, with their repertoire and recordings stored and available for download here.</br></br>Contributing:</br>As with other pages, there is a lot you can contribute here. If you're able and willing to provide any details regarding your own SOV, whether it is available here or not, please head over to the Contribute page to find out how you can help with this section of the website. We really appreciate any contributions you can make to help the archive be better :)</p>"
+  },
+  "sov": [{
+      "id": 2019,
+      "title": "Symphony of Voices 2019",
+      "abbr": "SOV2019",
+      "info": {
+        "date": "22nd May 2019",
+        "venue": "Esplanade Concert Hall",
+        "theme": "A World Where Roses Bloom",
+        "noFirstHalf": 8,
+        "noSecondHalf": 11
+      },
+      "intro": "Symphony of Voices 2019 was held at the Esplanade Concert Hall on the 22nd of May, 2019.</br> The theme for this year was <b>A World Where Roses Bloom</b>.",
+      "artwork": "../../../assets/images/sov/SOV2019.png",
+      "repertoire": [{
+          "name": "Beati Quorum Via",
+          "composer": "Charles Villiers Stanford",
+          "duration": "3:42",
+          "mp3": "1 Beati Quorum Via"
+        },
+        {
+          "name": "Gaur Akelarre",
+          "composer": "Josu Elberdin",
+          "duration": "2:23",
+          "mp3": "2 Gaur Akelarre"
+        },
+        {
+          "name": "Two Lenten Motets (Memento Mei, Domine and Crucem Tuam Adoramus, Domine)",
+          "composer": "Paweł Łukaszewski",
+          "duration": "7:13",
+          "mp3": "3 Two Lenten Motets"
+        },
+        {
+          "name": "Ancient Prairie",
+          "composer": "Ēriks Ešenvalds",
+          "duration": "4:33",
+          "mp3": "4 Ancient Prairie"
+        },
+        {
+          "name": "Earth Song",
+          "composer": "Frank Ticheli",
+          "duration": "3:42",
+          "mp3": "5 Earth Song"
+        },
+        {
+          "name": "Jenny",
+          "composer": "Nick Myers",
+          "duration": "4:34",
+          "mp3": "6 Jenny"
+        },
+        {
+          "name": "归人 (Homecoming Person)",
+          "composer": "Nelson Kwei",
+          "duration": "3:58",
+          "mp3": "7 Gui Ren"
+        },
+        {
+          "name": "鬼女 (Kijo)",
+          "composer": "Hideki Chihara",
+          "duration": "3:58",
+          "mp3": "8 Kijo"
+        },
+        {
+          "name": "O My Love Is Like A Red, Red Rose",
+          "composer": "Robert Burns (arr. Simon Carrington)",
+          "duration": "4:13",
+          "mp3": "9 O My Love Is Like A Red, Red Rose"
+        },
+        {
+          "name": "Contre Qui, Rose",
+          "composer": "Morten Johannes Lauridsen",
+          "duration": "2:42",
+          "mp3": "10 Contre Qui, Rose"
+        },
+        {
+          "name": "L'Important C'est la Rose",
+          "composer": "Gilbert Bécaud (arr. Nelson Kwei)",
+          "duration": "4:32",
+          "mp3": "11 L'Important C'est la Rose"
+        },
+        {
+          "name": "Spotless Rose",
+          "composer": "Ola Gjeilo",
+          "duration": "3:06",
+          "mp3": "12 Spotless Rose"
+        },
+        {
+          "name": "The Rose",
+          "composer": "Amanda McBroom",
+          "duration": "3:34",
+          "mp3": "13 The Rose"
+        },
+        {
+          "name": "可爱的玫瑰花",
+          "composer": "Makoto Kawakuchi (arr. Jason Ong)",
+          "duration": "3:48",
+          "mp3": "14 Ke Ai De Mei Gui Hua"
+        },
+        {
+          "name": "玫瑰玫瑰我爱你",
+          "composer": "Chen Ge Xin (arr. Jason Ong)",
+          "duration": "2:55",
+          "mp3": "15 Mei Gui Mei Gui Wo Ai Ni"
+        },
+        {
+          "name": "Red Roses for a Blue Lady",
+          "composer": "Sid Tepper, Roy C. Bennett (arr. Ralph Hunter)",
+          "duration": "2:34",
+          "mp3": "16 Red Roses for a Blue Lady"
+        },
+        {
+          "name": "Rosas Pandan",
+          "composer": "George G. Hernandez",
+          "duration": "2:22",
+          "mp3": "17 Rosas Pandan"
+        },
+        {
+          "name": "Somewhere Out There",
+          "composer": "Nelson Kwei",
+          "duration": "3:42",
+          "mp3": "18 Somewhere Out There"
+        },
+        {
+          "name": "No Man Is An Island",
+          "composer": "Roy Ringwald (choir anthem)",
+          "duration": "3:39",
+          "mp3": "19 No Man Is An Island"
+        }
+      ],
+      "links": {
+        "yt": {
+          "link": "https://www.youtube.com/playlist?list=PLhz3lrGQP-Ah7GJBnts7VCtUAGHvnUgqj",
+          "desc": "The entire SOV2019 playlist has been uploaded to YouTube for everyone to watch."
+        },
+        "dls": {
+          "intro": "Audio for this particular SOV is available for download in the following sections. If any of these links go down, please drop us a message so that we can rectify the problem ASAP. Thank you! :)",
+          "sections": [{
+              "title": "Everything",
+              "desc": "Audio and videos to all SOVs can be found in the link above.",
+              "links": [{
+                "title": "Google Drive",
+                "link": "https://drive.google.com/drive/folders/0B24yMaqyw1Rwfkk1MEo1Wk43YkNiUGx6TVNBTVNmaG80ZVZRRE81TTUySjZnSEZuX1JNbjg",
+                "icon": "fab fa-google-drive",
+                "size": ""
+              }]
+            },
+            {
+              "title": "Video",
+              "desc": "Videos for this SOV are currently unavailable.",
+              "links": []
+            },
+            {
+              "title": "Audio",
+              "desc": "Links to the audio can be found in the links above.",
+              "links": [{
+                  "title": "Dropbox",
+                  "link": "https://www.dropbox.com/s/iwct39dgkpx9e9w/SOV2019.zip?dl=0",
+                  "icon": "fab fa-dropbox",
+                  "size": "192 MB"
+                },
+                {
+                  "title": "Google Drive",
+                  "link": "https://drive.google.com/open?id=1d12p-8S4V0VajmoV6LY9hK9YitRL88Z3",
+                  "icon": "fab fa-google-drive",
+                  "size": "192 MB"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": 2018,
+      "title": "Symphony of Voices 2018",
+      "abbr": "SOV2018",
+      "info": {
+        "date": "23rd May 2018",
+        "venue": "Esplanade Concert Hall",
+        "theme": "All Things Bright and Beautiful",
+        "noFirstHalf": 7,
+        "noSecondHalf": 10
+      },
+      "intro": "Symphony of Voices 2018 was held at the Esplanade Concert Hall on the 23rd of May, 2018.</br> The theme for this year was <b>All Things Bright And Beautiful</b>.",
+      "artwork": "../../../assets/images/sov/SOV2018.png",
+      "repertoire": [{
+          "name": "Lux Aeterna",
+          "composer": "Ēriks Ešenvalds",
+          "duration": "3:18",
+          "mp3": "1 Lux Aeterna"
+        },
+        {
+          "name": "Malagueña",
+          "composer": "Einojuhani Rautavaara",
+          "duration": "1:06",
+          "mp3": "2 Malaguena"
+        },
+        {
+          "name": "Wandering Heart",
+          "composer": "Ēriks Ešenvalds",
+          "duration": "4:49",
+          "mp3": "3 Wandering Heart"
+        },
+        {
+          "name": "Star of the County Down",
+          "composer": "Ben Parry",
+          "duration": "3:12",
+          "mp3": "4 Star of the County Down"
+        },
+        {
+          "name": "She Walks In Beauty",
+          "composer": "Seow Mao Yu",
+          "duration": "3:44",
+          "mp3": "5 She Walks In Beauty"
+        },
+        {
+          "name": "The Cloud",
+          "composer": "Toh Xin Long",
+          "duration": "4:39",
+          "mp3": "6 The Cloud"
+        },
+        {
+          "name": "Leonardo Dreams of His Flying Machine",
+          "composer": "Eric Whitacre",
+          "duration": "8:30",
+          "mp3": "7 Leonardo Dreams of His Flying Machine"
+        },
+        {
+          "name": "Phoenix",
+          "composer": "Ola Gjeilo",
+          "duration": "5:08",
+          "mp3": "8 Phoenix"
+        },
+        {
+          "name": "Among The Leaves So Green, O",
+          "composer": "John Byrt",
+          "duration": "2:32",
+          "mp3": "9 Among The Leaves So Green, O"
+        },
+        {
+          "name": "The Teddy Bear's Picnic",
+          "composer": "John W. Bratton",
+          "duration": "2:03",
+          "mp3": "10 The Teddy Bear's Picnic"
+        },
+        {
+          "name": "Unicornis Captivatur",
+          "composer": "Ola Gjeilo",
+          "duration": "6:05",
+          "mp3": "11 Unicornis Captivatur"
+        },
+        {
+          "name": "Double, Double Toil and Trouble",
+          "composer": "Jaako Mantyjarvi",
+          "duration": "2:58",
+          "mp3": "12 Double, Double Toil and Trouble"
+        },
+        {
+          "name": "The Goslings",
+          "composer": "Frederick Bridge",
+          "duration": "2:57",
+          "mp3": "13 The Goslings"
+        },
+        {
+          "name": "The Mermaid",
+          "composer": "John Whitworth",
+          "duration": "3:35",
+          "mp3": "14 The Mermaid"
+        },
+        {
+          "name": "Africa",
+          "composer": "Phillip Lawson",
+          "duration": "4:01",
+          "mp3": "15 Africa"
+        },
+        {
+          "name": "The Circle of Life",
+          "composer": "unknown",
+          "duration": "4:15",
+          "mp3": "16 The Circle of Life"
+        },
+        {
+          "name": "No Man Is An Island",
+          "composer": "Roy Ringwald (choir anthem)",
+          "duration": "3:24",
+          "mp3": "17 No Man Is An Island"
+        }
+      ],
+      "links": {
+        "yt": {
+          "link": "https://www.youtube.com/playlist?list=PLhz3lrGQP-AiYBnxKclfPkJXyNaXsAlvo",
+          "desc": "The entire SOV2018 playlist has been uploaded to YouTube for everyone to watch."
+        },
+        "dls": {
+          "intro": "Audio and video for this particular SOV is available for download in the following sections. If any of these links go down, please drop us a message so that we can rectify the problem ASAP. Thank you! :)",
+          "sections": [{
+              "title": "Everything",
+              "desc": "Audio and videos to all SOVs can be found in the link above.",
+              "links": [{
+                "title": "Google Drive",
+                "link": "https://drive.google.com/drive/folders/0B24yMaqyw1Rwfkk1MEo1Wk43YkNiUGx6TVNBTVNmaG80ZVZRRE81TTUySjZnSEZuX1JNbjg",
+                "icon": "fab fa-google-drive",
+                "size": ""
+              }]
+            },
+            {
+              "title": "Video",
+              "desc": "Videos with the various angles edited in can be found in the link above.",
+              "links": [{
+                "title": "Dropbox",
+                "link": "https://www.dropbox.com/sh/rv6q4sl6hato7y7/AAAJU7T1J9ecNbyfqujqR_zCa?dl=0",
+                "icon": "fab fa-dropbox",
+                "size": ""
+              }]
+            },
+            {
+              "title": "Audio",
+              "desc": "Links to the audio can be found in the links above.",
+              "links": [{
+                  "title": "Box",
+                  "link": "https://app.box.com/s/3wselmmulduax2vycu8qsdudxecd254u",
+                  "icon": "fas fa-box-open",
+                  "size": "150 MB"
+                },
+                {
+                  "title": "Dropbox",
+                  "link": "https://www.dropbox.com/s/6xxh9igrawqjmsx/SOV2018.zip?dl=0",
+                  "icon": "fab fa-dropbox",
+                  "size": "150 MB"
+                },
+                {
+                  "title": "Google Drive",
+                  "link": "https://drive.google.com/open?id=1v59qpiYSrSBgPZX9AZWWw9cImb4ovBEJ",
+                  "icon": "fab fa-google-drive",
+                  "size": "150 MB"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": 2017,
+      "title": "Symphony of Voices 2017",
+      "abbr": "SOV2017",
+      "info": {
+        "date": "15th May 2017",
+        "venue": "Esplanade Concert Hall",
+        "theme": "Across the Vast Eternal Sky",
+        "noFirstHalf": 9,
+        "noSecondHalf": 10
+      },
+      "intro": "Symphony of Voices 2017 was held on the 15th of May, 2017 at the Esplanade Concert Hall.</br> The theme for this year was <b>Across the Vast Eternal Sky</b>.",
+      "artwork": "../../../assets/images/sov/SOV2017.jpg",
+      "repertoire": [{
+          "name": "I Carry Your Heart",
+          "composer": "Connor Koppin",
+          "duration": "5:03",
+          "mp3": "1 I Carry Your Heart"
+        },
+        {
+          "name": "Nader My God By U",
+          "composer": "André van der Merwe",
+          "duration": "3:20",
+          "mp3": "2 Nader My God By U"
+        },
+        {
+          "name": "Let Thy Love Play Upon My Voice",
+          "composer": "Aldo Joson",
+          "duration": "4:44",
+          "mp3": "3 Let Thy Love Play Upon My Voice"
+        },
+        {
+          "name": "Pater Noster",
+          "composer": "John August Pamintuan",
+          "duration": "3:59",
+          "mp3": "4 Pater Noster"
+        },
+        {
+          "name": "Je Suis Déshéritée",
+          "composer": "Pierre Cadéac",
+          "duration": "3:46",
+          "mp3": "5 Je Suis Desheritee"
+        },
+        {
+          "name": "A Basque Lullaby",
+          "composer": "Dan Forrest",
+          "duration": "4:05",
+          "mp3": "6 A Basque Lullaby"
+        },
+        {
+          "name": "Plenty Good Room",
+          "composer": "Kirby Shaw",
+          "duration": "3:15",
+          "mp3": "7 Plenty Good Room"
+        },
+        {
+          "name": "Only In Sleep",
+          "composer": "Ēriks Ešenvalds",
+          "duration": "6:27",
+          "mp3": "8 Only In Sleep"
+        },
+        {
+          "name": "Long Road",
+          "composer": "Ēriks Ešenvalds",
+          "duration": "6:04",
+          "mp3": "9 Long Road"
+        },
+        {
+          "name": "Sure On This Shining Night",
+          "composer": "Morten Lauridsen",
+          "duration": "4:12",
+          "mp3": "10 Sure On This Shining Night"
+        },
+        {
+          "name": "La Luna",
+          "composer": "Z. Randall Stroope",
+          "duration": "5:00",
+          "mp3": "11 La Luna"
+        },
+        {
+          "name": "We Beheld Once Again the Stars",
+          "composer": "Z. Randall Stroope",
+          "duration": "7:31",
+          "mp3": "12 We Beheld Once Again the Stars"
+        },
+        {
+          "name": "De Circuitu Aeterno",
+          "composer": "Petr Eben",
+          "duration": "3:22",
+          "mp3": "13 De Circuitu Aeterno"
+        },
+        {
+          "name": "Starlight",
+          "composer": "Keith Thomas",
+          "duration": "3:33",
+          "mp3": "14 Starlight"
+        },
+        {
+          "name": "I Sing The Body Electric",
+          "composer": "Ed Lojeski",
+          "duration": "3:31",
+          "mp3": "15 I Sing The Body Electric"
+        },
+        {
+          "name": "Iuppiter",
+          "composer": "Michael Ostrzyga",
+          "duration": "4:15",
+          "mp3": "16 Iuppiter"
+        },
+        {
+          "name": "Across the Vast Eternal Sky",
+          "composer": "Ola Gjeilo",
+          "duration": "4:50",
+          "mp3": "17 Across the Vast Eternal Sky"
+        },
+        {
+          "name": "Let My Love Be Heard",
+          "composer": "Jake Runestad (encore piece)",
+          "duration": "4:12",
+          "mp3": "18 Let My Love Be Heard"
+        },
+        {
+          "name": "No Man Is An Island",
+          "composer": "Roy Ringwald (choir anthem)",
+          "duration": "3:37",
+          "mp3": "19 No Man Is An Island"
+        }
+      ],
+      "links": {
+        "yt": {
+          "link": "https://www.youtube.com/playlist?list=PLhz3lrGQP-AjAwAPV0Up1G-81dNRmb--G&amp;v=mm84SViJWK4",
+          "desc": "The entire SOV2017 playlist has been uploaded to YouTube for everyone to watch."
+        },
+        "dls": {
+          "intro": "Audio and video for this particular SOV is available for download in the following sections. If any of these links go down, please drop us a message so that we can rectify the problem ASAP. Thank you! :)",
+          "sections": [{
+              "title": "Everything",
+              "desc": "Audio and videos to all SOVs can be found in the link above.",
+              "links": [{
+                "title": "Google Drive",
+                "link": "https://drive.google.com/drive/folders/0B24yMaqyw1Rwfkk1MEo1Wk43YkNiUGx6TVNBTVNmaG80ZVZRRE81TTUySjZnSEZuX1JNbjg",
+                "icon": "fab fa-google-drive",
+                "size": ""
+              }]
+            },
+            {
+              "title": "Video",
+              "desc": "Videos with the various angles edited in can be found in the link above.",
+              "links": [{
+                "title": "Dropbox",
+                "link": "https://www.dropbox.com/sh/t2ojfmo7o0hbz3i/AABqUv572E2KpzVx6NRRkYhYa?dl=0&lst=",
+                "icon": "fab fa-dropbox",
+                "size": "30.9 GB"
+              }]
+            },
+            {
+              "title": "Audio",
+              "desc": "Links to the audio can be found in the links above.",
+              "links": [{
+                  "title": "Box",
+                  "link": "https://app.box.com/s/6yazwt0qeyjx9kps29hkhb62b1oy91f9",
+                  "icon": "fas fa-box-open",
+                  "size": "160 MB"
+                },
+                {
+                  "title": "Dropbox",
+                  "link": "https://www.dropbox.com/s/pcwldlm4bmovzt9/SOV2017.zip?dl=0",
+                  "icon": "fab fa-dropbox",
+                  "size": "160 MB"
+                },
+                {
+                  "title": "Google Drive",
+                  "link": "https://drive.google.com/open?id=0B24yMaqyw1RwWEZqbmVFeHNHeDg",
+                  "icon": "fab fa-google-drive",
+                  "size": "160 MB"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": 2016,
+      "title": "Symphony of Voices 2016",
+      "abbr": "SOV2016",
+      "info": {
+
+        "date": "25th May 2016",
+        "venue": "Esplanade Concert Hall",
+        "theme": "Sands of Time",
+        "noFirstHalf": 7,
+        "noSecondHalf": 10
+      },
+      "intro": "Symphony of Voices 2016 was held on the 25th of May, 2016 at the Esplanade Concert Hall.</br> The theme for this year was <b>Sands of Time</b>.",
+      "artwork": "../../../assets/images/sov/SOV2016.png",
+      "repertoire": [{
+          "name": "Hallelujah",
+          "composer": "George Frideric Handel",
+          "duration": "4:18",
+          "mp3": "1 Hallelujah"
+        },
+        {
+          "name": "Ne Timeas Maria",
+          "composer": "Tomás Luis de Victoria",
+          "duration": "3:12",
+          "mp3": "2 Ne Timeas Maria"
+        },
+        {
+          "name": "Abendlied",
+          "composer": "Josef Rheinberger",
+          "duration": "3:06",
+          "mp3": "3 Abendlied"
+        },
+        {
+          "name": "Rest",
+          "composer": "R. Vaughan Williams",
+          "duration": "3:29",
+          "mp3": "4 Rest"
+        },
+        {
+          "name": "Tomorrow Shall Be My Dancing Day",
+          "composer": "Philip Stopford",
+          "duration": "2:29",
+          "mp3": "5 Tomorrow Shall Be My Dancing Day"
+        },
+        {
+          "name": "Unicornis Captivatur",
+          "composer": "Ola Gjeilo",
+          "duration": "5:55",
+          "mp3": "6 Unicornis Captivatur"
+        },
+        {
+          "name": "Te Deum",
+          "composer": "Franz Joseph Haydn",
+          "duration": "9:18",
+          "mp3": "7 Te Deum"
+        },
+        {
+          "name": "可爱的山乡 (The Lovely Mountain Village)",
+          "composer": "Leong Yoon Pin",
+          "duration": "1:42",
+          "mp3": "8 The Lovely Mountain Village"
+        },
+        {
+          "name": "唱起山歌岭游 (Mountain Voyage of Folk Songs)",
+          "composer": "Leong Yoon Pin",
+          "duration": "2:31",
+          "mp3": "9 Mountain Voyage of Folk Songs"
+        },
+        {
+          "name": "思念 (Nostalgia)",
+          "composer": "Leong Yoon Pin",
+          "duration": "4:26",
+          "mp3": "10 Nostalgia"
+        },
+        {
+          "name": "街頭巷尾 (Street Calls)",
+          "composer": "Leong Yoon Pin",
+          "duration": "3:20",
+          "mp3": "11 Street Calls"
+        },
+        {
+          "name": "The Heaven's Flock",
+          "composer": "Ēriks Ešenvalds",
+          "duration": "3:50",
+          "mp3": "12 The Heaven's Flock"
+        },
+        {
+          "name": "Rivers of Light",
+          "composer": "Ēriks Ešenvalds",
+          "duration": "7:04",
+          "mp3": "13 Rivers of Light"
+        },
+        {
+          "name": "The New Moon",
+          "composer": "Ēriks Ešenvalds",
+          "duration": "4:19",
+          "mp3": "14 The New Moon"
+        },
+        {
+          "name": "Amazing Grace",
+          "composer": "Ēriks Ešenvalds",
+          "duration": "5:44",
+          "mp3": "15 Amazing Grace"
+        },
+        {
+          "name": "Northern Lights",
+          "composer": "Ēriks Ešenvalds (encore piece)",
+          "duration": "6:47",
+          "mp3": "16 Northern Lights"
+        },
+        {
+          "name": "No Man Is An Island",
+          "composer": "Roy Ringwald (choir anthem)",
+          "duration": "3:31",
+          "mp3": "17 No Man Is An Island"
+        }
+      ],
+      "links": {
+        "yt": {
+          "link": "https://www.youtube.com/playlist?list=PLhz3lrGQP-AhO7WyXanMAJtt-O4HOBhhc&v=2JkSIBGunqk",
+          "desc": "The entire SOV2016 playlist has been uploaded to YouTube for everyone to watch."
+        },
+        "dls": {
+          "intro": "Audio and video for this particular SOV is available for download in the following sections. If any of these links go down, please drop us a message so that we can rectify the problem ASAP. Thank you! :)",
+          "sections": [{
+              "title": "Everything",
+              "desc": "Audio and videos to all SOVs can be found in the link above.",
+              "links": [{
+                "title": "Google Drive",
+                "link": "https://drive.google.com/drive/folders/0B24yMaqyw1Rwfkk1MEo1Wk43YkNiUGx6TVNBTVNmaG80ZVZRRE81TTUySjZnSEZuX1JNbjg",
+                "icon": "fab fa-google-drive",
+                "size": ""
+              }]
+            },
+            {
+              "title": "Video",
+              "desc": "Individual video files can be found in the above link.",
+              "links": [{
+                "title": "Google Drive",
+                "link": "https://drive.google.com/open?id=0B24yMaqyw1Rwa2gteGJGNFpmXzQ",
+                "icon": "fab fa-google-drive",
+                "size": "3.0 GB"
+              }]
+            },
+            {
+              "title": "Audio",
+              "desc": "Links to the audio can be found in the links above.",
+              "links": [{
+                  "title": "Box",
+                  "link": "https://app.box.com/s/e2xioxf2414wjutzcquvfcm91wripkix",
+                  "icon": "fas fa-box-open",
+                  "size": "170 MB"
+                },
+                {
+                  "title": "Dropbox",
+                  "link": "https://www.dropbox.com/s/4s8myqpzbhes6nm/SOV2016.zip?dl=0",
+                  "icon": "fab fa-dropbox",
+                  "size": "170 MB"
+                },
+                {
+                  "title": "Google Drive",
+                  "link": "https://drive.google.com/open?id=0B24yMaqyw1Rwa2gteGJGNFpmXzQ",
+                  "icon": "fab fa-google-drive",
+                  "size": "170 MB"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": 2015,
+      "title": "Symphony of Voices 2015",
+      "abbr": "SOV2015",
+      "info": {
+
+        "date": "17th May 2015",
+        "venue": "Esplanade Concert Hall",
+        "theme": "Aurora Borealis",
+        "noFirstHalf": 9,
+        "noSecondHalf": 12
+      },
+      "intro": "Symphony of Voices 2015 was held on the 17th of May, 2015 at the Esplanade Concert Hall.</br> The theme for this year was <b>Aurora Borealis</b>.",
+      "artwork": "../../../assets/images/sov/SOV2015.jpg",
+      "repertoire": [{
+          "name": "There Is Sweet Music Here",
+          "composer": "Z. Randall Stroope",
+          "duration": "3:08",
+          "mp3": "1 There Is Sweet Music Here"
+        },
+        {
+          "name": "Stopping By Woods On A Snowy Evening",
+          "composer": "Ruth Artman",
+          "duration": "2:26",
+          "mp3": "2 Stopping By Woods On A Snowy Evening"
+        },
+        {
+          "name": "Trees",
+          "composer": "Oscar Rasbach",
+          "duration": "1:57",
+          "mp3": "3 Trees"
+        },
+        {
+          "name": "Full Fathom Five",
+          "composer": "R. Vaughan Williams",
+          "duration": "3:29",
+          "mp3": "4 Full Fathom Five"
+        },
+        {
+          "name": "Linden Lea",
+          "composer": "R. Vaughan Williams",
+          "duration": "2:35",
+          "mp3": "5 Linden Lea"
+        },
+        {
+          "name": "刺 (Ci)",
+          "composer": "Zechariah Goh Toh Chai",
+          "duration": "4:07",
+          "mp3": "6 Ci"
+        },
+        {
+          "name": "猜调 (Cai Diao)",
+          "composer": "Zechariah Goh Toh Chai",
+          "duration": "2:10",
+          "mp3": "7 Cai Diao"
+        },
+        {
+          "name": "Itsuki no Komori Uta",
+          "composer": "Ko Matsushita",
+          "duration": "4:12",
+          "mp3": "8 Itsuki no Komori Uta"
+        },
+        {
+          "name": "Karimatanu Kuicha",
+          "composer": "Ko Matsushita",
+          "duration": "4:16",
+          "mp3": "9 Karimatanu Kuicha"
+        },
+        {
+          "name": "Chant to Bring Back the Wolf & Chant to Make the Magic Work",
+          "composer": "R. Murray Schafer",
+          "duration": "2:33",
+          "mp3": "10 Chant to Bring Back the Wolf & Chant to Make the Magic Work"
+        },
+        {
+          "name": "Snowforms",
+          "composer": "R. Murray Schafer",
+          "duration": "7:48",
+          "mp3": "11 Snowforms"
+        },
+        {
+          "name": "Guitarra",
+          "composer": "Stephen Smith",
+          "duration": "2:45",
+          "mp3": "12 Guitarra"
+        },
+        {
+          "name": "Lux Aurumque",
+          "composer": "Eric Whitacre",
+          "duration": "3:15",
+          "mp3": "13 Lux Aurumque"
+        },
+        {
+          "name": "O Nata Lux",
+          "composer": "Guy Forbes",
+          "duration": "3:31",
+          "mp3": "14 O Nata Lux"
+        },
+        {
+          "name": "Aglepta",
+          "composer": "Arne Mellnas",
+          "duration": "3:26",
+          "mp3": "15 Aglepta"
+        },
+        {
+          "name": "De Circuitu Aeterno",
+          "composer": "Petr Eben",
+          "duration": "3:32",
+          "mp3": "16 De Circuitu Aeterno"
+        },
+        {
+          "name": "Pseudo Yoik",
+          "composer": "Jaakko Mäntyjärvi",
+          "duration": "2:05",
+          "mp3": "17 Pseudo Yoik"
+        },
+        {
+          "name": "Northern Lights",
+          "composer": "Ēriks Ešenvalds",
+          "duration": "6:49",
+          "mp3": "18 Northern Lights"
+        },
+        {
+          "name": "Yagi Bushi",
+          "composer": "Ko Matsuhita (encore piece)",
+          "duration": "3:45",
+          "mp3": "19 Yagi Bushi"
+        },
+        {
+          "name": "Entreat Me Not To Leave You",
+          "composer": "Dan Forrest (encore piece)",
+          "duration": "6:29",
+          "mp3": "20 Entreat Me Not To Leave You"
+        },
+        {
+          "name": "No Man Is An Island",
+          "composer": "Roy Ringwald (choir anthem)",
+          "duration": "3:15",
+          "mp3": "21 No Man Is An Island"
+        }
+      ],
+      "links": {
+        "yt": {
+          "link": "https://www.youtube.com/playlist?list=PLhz3lrGQP-AhOaoASWJDR8iDZoQ2Gyr11&v=mu30vFmhD1U",
+          "desc": "The entire SOV2015 playlist has been uploaded to YouTube for everyone to watch."
+        },
+        "dls": {
+          "intro": "Audio and video for this particular SOV is available for download in the following sections. If any of these links go down, please drop us a message so that we can rectify the problem ASAP. Thank you! :)",
+          "sections": [{
+              "title": "Everything",
+              "desc": "Audio and videos to all SOVs can be found in the link above.",
+              "links": [{
+                "title": "Google Drive",
+                "link": "https://drive.google.com/drive/folders/0B24yMaqyw1Rwfkk1MEo1Wk43YkNiUGx6TVNBTVNmaG80ZVZRRE81TTUySjZnSEZuX1JNbjg",
+                "icon": "fab fa-google-drive",
+                "size": ""
+              }]
+            },
+            {
+              "title": "Video",
+              "desc": "Individual video files can be found in the above link.",
+              "links": [{
+                "title": "Google Drive",
+                "link": "https://drive.google.com/drive/folders/0B24yMaqyw1RwfkkycW9oY3VJUXF5S0ltdHJidGFFTlhWTlhuT1d6SnVWemJwZHgwdzY5clU?usp=sharing",
+                "icon": "fab fa-google-drive",
+                "size": "3.0 GB"
+              }]
+            },
+            {
+              "title": "Audio",
+              "desc": "Links to the audio can be found in the links above.",
+              "links": [{
+                  "title": "Box",
+                  "link": "https://app.box.com/s/d4qptb16kn9665a2tzyr1sis169koypo",
+                  "icon": "fas fa-box-open",
+                  "size": "120 MB"
+                },
+                {
+                  "title": "Dropbox",
+                  "link": "https://dl.dropboxusercontent.com/u/30533021/SOV2015.zip",
+                  "icon": "fab fa-dropbox",
+                  "size": "120 MB"
+                },
+                {
+                  "title": "Google Drive",
+                  "link": "https://drive.google.com/drive/folders/0B24yMaqyw1RwfkkycW9oY3VJUXF5S0ltdHJidGFFTlhWTlhuT1d6SnVWemJwZHgwdzY5clU?usp=sharing",
+                  "icon": "fab fa-google-drive",
+                  "size": "120 MB"
+                },
+                {
+                  "title": "Mega",
+                  "link": "https://mega.co.nz/#F!7d5BgRST!CPPfTSpNdbCnpcBtzSQRdg",
+                  "icon": "fas fa-cloud-download-alt",
+                  "size": "120 MB"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": 2014,
+      "title": "Symphony of Voices 2014",
+      "abbr": "SOV2014",
+      "info": {
+        "date": "26th May 2014",
+        "venue": "Esplanade Concert Hall",
+        "theme": "Asian",
+        "noFirstHalf": 9,
+        "noSecondHalf": 11
+      },
+      "intro": "Symphony of Voices 2014 was held on the 26th of May, 2014 at the Esplanade Concert Hall.</br> The theme for this year was <b>Asian</b>.",
+      "artwork": "../../../assets/images/sov/SOV2014.jpg",
+      "repertoire": [{
+          "name": "Pastime with Good Company",
+          "composer": "Henry VIII",
+          "duration": "1:43",
+          "mp3": "1 Pastime with Good Company"
+        },
+        {
+          "name": "Die mit Tränen säen",
+          "composer": "Heinrich Schütz",
+          "duration": "3:41",
+          "mp3": "2 Die mit tranen saen"
+        },
+        {
+          "name": "Crucifixus",
+          "composer": "Antonio Lotti",
+          "duration": "3:14",
+          "mp3": "3 Crucifixus"
+        },
+        {
+          "name": "Io Piango",
+          "composer": "Morten Lauridsen",
+          "duration": "2:11",
+          "mp3": "4 Io Piango"
+        },
+        {
+          "name": "Ciao, Bella Ciao",
+          "composer": "Ben Parry",
+          "duration": "3:16",
+          "mp3": "5 Ciao, Bella Ciao"
+        },
+        {
+          "name": "The Battle of Jericho",
+          "composer": "Moses Hogan",
+          "duration": "2:03",
+          "mp3": "6 The Battle of Jericho"
+        },
+        {
+          "name": "Alleluia",
+          "composer": "Ralph Manuel",
+          "duration": "3:54",
+          "mp3": "7 Alleluia"
+        },
+        {
+          "name": "O Nata Lux",
+          "composer": "Guy Forbes",
+          "duration": "3:41",
+          "mp3": "8 O Nata Lux"
+        },
+        {
+          "name": "The Spheres",
+          "composer": "Ola Gjeilo",
+          "duration": "4:46",
+          "mp3": "9 The Spheres"
+        },
+        {
+          "name": "Japanese Game",
+          "composer": "Ko Matsushita",
+          "duration": "3:50",
+          "mp3": "10 Japanese Game"
+        },
+        {
+          "name": "Itsuki no Komori Uta",
+          "composer": "Ko Matsushita",
+          "duration": "4:09",
+          "mp3": "11 Itsuki no Komori uta"
+        },
+        {
+          "name": "双城恋曲 (Love in Two Cities)",
+          "composer": "Nelson Kwei",
+          "duration": "3:33",
+          "mp3": "12 Love in Two Cities"
+        },
+        {
+          "name": "沂蒙山歌 (Yi Meng Shan Ge)",
+          "composer": "张以达 (Zhang Yida)",
+          "duration": "3:16",
+          "mp3": "13 Yi Meng Shan Ge"
+        },
+        {
+          "name": "Reminiscences of Hainan",
+          "composer": "Zechariah Goh Toh Chai",
+          "duration": "4:07",
+          "mp3": "14 Reminiscences of Hainan"
+        },
+        {
+          "name": "Dayo Dayo Kupita",
+          "composer": "Nilo Alcala",
+          "duration": "3:04",
+          "mp3": "15 Dayo Dayo Kupita"
+        },
+        {
+          "name": "Naiman Sharag",
+          "composer": "Se Enkhbayar",
+          "duration": "3:19",
+          "mp3": "16 Naiman Sharag"
+        },
+        {
+          "name": "Meplalian",
+          "composer": "Budi Susanto Yohanes",
+          "duration": "2:57",
+          "mp3": "17 Meplalian"
+        },
+        {
+          "name": "Yamko Rambe Yamko",
+          "composer": "Agustinus Bambang Jusana",
+          "duration": "2:40",
+          "mp3": "18 Yamko Rambe Yamko"
+        },
+        {
+          "name": "All My Heart This Night Rejoices",
+          "composer": "Z. Randall Stroope (encore piece)",
+          "duration": "4:06",
+          "mp3": "19 All My Heart This Night Rejoices"
+        },
+        {
+          "name": "No Man Is An Island",
+          "composer": "Roy Ringwald (choir anthem)",
+          "duration": "3:15",
+          "mp3": "20 No Man Is An Island"
+        }
+      ],
+      "links": {
+        "yt": {
+          "link": "https://www.youtube.com/playlist?list=PLhz3lrGQP-AhZjwOk7vDwnXkkMX4BnT6R&v=WnuSXEyxI9U",
+          "desc": "The entire SOV2014 playlist has been uploaded to YouTube for everyone to watch."
+        },
+        "dls": {
+          "intro": "Audio and video for this particular SOV is available for download in the following sections. If any of these links go down, please drop us a message so that we can rectify the problem ASAP. Thank you! :)",
+          "sections": [{
+              "title": "Everything",
+              "desc": "Audio and videos to all SOVs can be found in the link above.",
+              "links": [{
+                "title": "Google Drive",
+                "link": "https://drive.google.com/drive/folders/0B24yMaqyw1Rwfkk1MEo1Wk43YkNiUGx6TVNBTVNmaG80ZVZRRE81TTUySjZnSEZuX1JNbjg",
+                "icon": "fab fa-google-drive",
+                "size": ""
+              }]
+            },
+            {
+              "title": "Video",
+              "desc": "The entire video files can be found in the above links. Link 1 code: rxrl5d0T1e_7EEXevTQoYjz9-ZBNqBLLsSABWWCw0W4; Link 2 code: rxrl5d0T1e_7EEXevTQoYjz9-ZBNqBLLsSABWWCw0W4",
+              "links": [{
+                  "title": "MEGA (link 1)",
+                  "link": "https://mega.co.nz/#!M9p2lJzB",
+                  "icon": "fas fa-cloud-download-alt",
+                  "size": "about 0.75 GB"
+                },
+                {
+                  "title": "MEGA (link 2)",
+                  "link": "https://mega.co.nz/#!spQy3D6B",
+                  "icon": "fas fa-cloud-download-alt",
+                  "size": "about 0.75 GB"
+                }
+              ]
+            },
+            {
+              "title": "Audio",
+              "desc": "Links to the audio can be found in the links above.",
+              "links": [{
+                  "title": "Dropbox",
+                  "link": "https://www.dropbox.com/s/px7vhfc4qlbh5tp/SOV2014.zip?dl=0",
+                  "icon": "fab fa-dropbox",
+                  "size": "169 MB"
+                },
+                {
+                  "title": "Google Drive",
+                  "link": "https://drive.google.com/drive/folders/1GJNYVfv2AyQ7dyPLOedNjALGwwKiQlyn?usp=sharing",
+                  "icon": "fab fa-google-drive",
+                  "size": "169 MB"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }, {
+      "id": 2013,
+      "title": "Symphony of Voices 2013",
+      "abbr": "SOV2013",
+      "info": {
+        "date": "21st May 2013",
+        "venue": "Esplanade Concert Hall",
+        "theme": "Victorian",
+        "noFirstHalf": 8,
+        "noSecondHalf": 11
+      },
+      "intro": "Symphony of Voices 2013 was held on the 21st of May, 2013 at the Esplanade Concert Hall.</br> The theme for this year was <b>Victorian</b>.",
+      "artwork": "../../../assets/images/sov/SOV2013.jpg",
+      "repertoire": [{
+          "name": "Magnificat",
+          "composer": "Giles Swayne",
+          "duration": "3:53",
+          "mp3": "1 Magnificat"
+        },
+        {
+          "name": "Phoenix",
+          "composer": "Ola Gjeilo",
+          "duration": "4:34",
+          "mp3": "2 Phoenix"
+        },
+        {
+          "name": "Ronde",
+          "composer": "Maurice Ravel",
+          "duration": "1:56",
+          "mp3": "3 Ronde"
+        },
+        {
+          "name": "Yumemita Monowa",
+          "composer": "Kohei Tanaka",
+          "duration": "5:05",
+          "mp3": "4 Yumemita Monowa"
+        },
+        {
+          "name": "Lay a Garland",
+          "composer": "Robert Pearsall",
+          "duration": "3:12",
+          "mp3": "5 Lay a Garland"
+        },
+        {
+          "name": "Lux Aurumque",
+          "composer": "Eric Whitacre",
+          "duration": "3:17",
+          "mp3": "6 Lux Aurumque"
+        },
+        {
+          "name": "Nox Aurumque",
+          "composer": "Eric Whitacre",
+          "duration": "5:42",
+          "mp3": "7 Nox Aurumque"
+        },
+        {
+          "name": "Magnificat Gloria",
+          "composer": "Alberto Gran",
+          "duration": "6:26",
+          "mp3": "8 Magnificat Gloria"
+        },
+        {
+          "name": "It Was A Lover and His Lass",
+          "composer": "Thomas Morley",
+          "duration": "1:35",
+          "mp3": "9 It Was A Lover And His Lass"
+        },
+        {
+          "name": "Flora Gave Me Fairest Flowers",
+          "composer": "John Wilbye",
+          "duration": "2:13",
+          "mp3": "10 Flora Gave Me Fairest Flowers"
+        },
+        {
+          "name": "Greensleeves",
+          "composer": "R. Vaughan Williams",
+          "duration": "4:09",
+          "mp3": "11 Greensleeves"
+        },
+        {
+          "name": "Dashing Away with the Smoothing Iron",
+          "composer": "John Rutter",
+          "duration": "2:28",
+          "mp3": "12 Dashing Away With The Smoothing Iron"
+        },
+        {
+          "name": "She's Like The Swallow",
+          "composer": "Edward T. Chapman",
+          "duration": "3:21",
+          "mp3": "13 She's Like The Swallow"
+        },
+        {
+          "name": "The Oak and The Ash",
+          "composer": "Gordon Langford",
+          "duration": "3:07",
+          "mp3": "14 The Oak and The Ash"
+        },
+        {
+          "name": "O My Love Is Like A Red, Red Rose",
+          "composer": "Simon Carrington",
+          "duration": "4:02",
+          "mp3": "15 O My Love Is Like A Red, Red Rose"
+        },
+        {
+          "name": "Nae Luck About the House",
+          "composer": "Gordon Langford",
+          "duration": "2:48",
+          "mp3": "16 Nae Luck About The House"
+        },
+        {
+          "name": "Distant Land",
+          "composer": "John Rutter",
+          "duration": "4:20",
+          "mp3": "17 Distant Land"
+        },
+        {
+          "name": "Bobby Shaftoe",
+          "composer": "Gordon Langford",
+          "duration": "1:34",
+          "mp3": "18 Bobby Shaftoe"
+        },
+        {
+          "name": "No Man Is An Island",
+          "composer": "Roy Ringwald (choir anthem)",
+          "duration": "3:07",
+          "mp3": "19 No Man Is An Island"
+        }
+      ],
+      "links": {
+        "yt": {
+          "link": "https://www.youtube.com/playlist?list=PLhz3lrGQP-AhueKqX8olKEYOQudLVUMee",
+          "desc": "The entire SOV2013 playlist has been uploaded to YouTube for everyone to watch."
+        },
+        "dls": {
+          "intro": "Audio and video for this particular SOV is available for download in the following sections. If any of these links go down, please drop us a message so that we can rectify the problem ASAP. Thank you! :)",
+          "sections": [{
+              "title": "Everything",
+              "desc": "Audio and videos to all SOVs can be found in the link above.",
+              "links": [{
+                "title": "Google Drive",
+                "link": "https://drive.google.com/drive/folders/0B24yMaqyw1Rwfkk1MEo1Wk43YkNiUGx6TVNBTVNmaG80ZVZRRE81TTUySjZnSEZuX1JNbjg",
+                "icon": "fab fa-google-drive",
+                "size": "1.0 GB"
+              }]
+            },
+            {
+              "title": "Video",
+              "desc": "The video files for this particular SOV can be found in the above link.",
+              "links": [{
+                "title": "Google Drive",
+                "link": "https://drive.google.com/drive/folders/0B24yMaqyw1Rwfkk1MEo1Wk43YkNiUGx6TVNBTVNmaG80ZVZRRE81TTUySjZnSEZuX1JNbjg",
+                "icon": "fab fa-google-drive",
+                "size": "1.0 GB"
+              }]
+            },
+            {
+              "title": "Audio",
+              "desc": "Links to the audio can be found in the links above.",
+              "links": [{
+                  "title": "Box",
+                  "link": "https://app.box.com/s/3s8k6yy3glwhccbm97njif0bvqespxh7",
+                  "icon": "fas fa-box-open",
+                  "size": "140 MB"
+                },
+                {
+                  "title": "Dropbox",
+                  "link": "https://www.dropbox.com/s/p9sx170keu334u3/SOV2013.zip?dl=0",
+                  "icon": "fab fa-dropbox",
+                  "size": "140 MB"
+                },
+                {
+                  "title": "Google Drive",
+                  "link": "https://drive.google.com/folderview?id=0B24yMaqyw1Rwfkk1MEo1Wk43YkNiUGx6TVNBTVNmaG80ZVZRRE81TTUySjZnSEZuX1JNbjg&usp=sharing",
+                  "icon": "fab fa-google-drive",
+                  "size": "140 MB"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }, {
+
+      "id": 2012,
+      "title": "Symphony of Voices 2012",
+      "abbr": "SOV2012",
+      "info": {
+
+        "date": "24th April 2012",
+        "venue": "Esplanade Concert Hall",
+        "theme": "Into the Vienna Woods",
+        "noFirstHalf": 8,
+        "noSecondHalf": 8
+      },
+      "intro": "Symphony of Voices 2012 was held on the 24th of April, 2012 at the Esplanade Concert Hall.</br> The theme for this year was <b>Into the Vienna Woods</b>.",
+      "artwork": "../../../assets/images/sov/SOV2012.png",
+      "repertoire": [{
+          "name": "Magnificat Gloria",
+          "composer": "Alberto Grau",
+          "duration": "6:50",
+          "mp3": "1 Magnificat Gloria"
+        },
+        {
+          "name": "Hear My Prayer, O Lord",
+          "composer": "Henry Purcell",
+          "duration": "2:29",
+          "mp3": "2 Hear My Prayer, O Lord"
+        },
+        {
+          "name": "Kyrie",
+          "composer": "Franz Schubert",
+          "duration": "2:48",
+          "mp3": "3 Kyrie"
+        },
+        {
+          "name": "Die Capelle",
+          "composer": "Robert Schumann",
+          "duration": "3:12",
+          "mp3": "4 Die Capelle"
+        },
+        {
+          "name": "Kotoba-asobi Uta",
+          "composer": "Ko Matsushita",
+          "duration": "3:38",
+          "mp3": "5 Kotoba-asobi Uta"
+        },
+        {
+          "name": "Yagi Bushi",
+          "composer": "Ko Matsushita",
+          "duration": "3:48",
+          "mp3": "6 Yagi Bushi"
+        },
+        {
+          "name": "Japanese Game",
+          "composer": "Ko Matsushita",
+          "duration": "3:50",
+          "mp3": "7 Japanese Game"
+        },
+        {
+          "name": "Levavi Oculos Meos",
+          "composer": "Vytautas Miškinis",
+          "duration": "4:07",
+          "mp3": "8 Levavi Oculos Meos"
+        },
+        {
+          "name": "De Profundis Clamavi",
+          "composer": "Piotr Janczak",
+          "duration": "3:09",
+          "mp3": "9 De Profundis Clamavi"
+        },
+        {
+          "name": "Journey with Wild Horses",
+          "composer": "Darius Lim",
+          "duration": "3:48",
+          "mp3": "10 Journey with Wild Horses"
+        },
+        {
+          "name": "A Puppet's Dream",
+          "composer": "Darius Lim",
+          "duration": "2:25",
+          "mp3": "11 A Puppet's Dream"
+        },
+        {
+          "name": "Exercitus Grandis",
+          "composer": "Zechariah Goh Toh Chai",
+          "duration": "4:54",
+          "mp3": "12 Exercitus Grandis"
+        },
+        {
+          "name": "Kalejs Kala Debesis",
+          "composer": "Selga Mence",
+          "duration": "2:10",
+          "mp3": "13 Kalejs Kala Debesis"
+        },
+        {
+          "name": "Mate Saule",
+          "composer": "Péteris Vasks",
+          "duration": "5:32",
+          "mp3": "14 Mate Saule"
+        },
+        {
+          "name": "My Love Is Like A Red, Red Rose",
+          "composer": "Simon Carrington",
+          "duration": "3:07",
+          "mp3": "15 My Love Is Like A Red, Red Rose"
+        },
+        {
+          "name": "No Man Is An Island",
+          "composer": "Roy Ringwald (choir anthem)",
+          "duration": "3:17",
+          "mp3": "16 No Man Is An Island"
+        }
+      ],
+      "links": {
+        "yt": {
+          "desc": "SOV2012's videos were not uploaded to YouTube, but you can still access the video in the link above."
+        },
+        "dls": {
+          "intro": "Audio and video for this particular SOV is available for download in the following sections. If any of these links go down, please drop us a message so that we can rectify the problem ASAP. Thank you! :)",
+          "sections": [{
+              "title": "Everything",
+              "desc": "Audio and videos to all SOVs can be found in the link above.",
+              "links": [{
+                "title": "Google Drive",
+                "link": "https://drive.google.com/drive/folders/0B24yMaqyw1Rwfkk1MEo1Wk43YkNiUGx6TVNBTVNmaG80ZVZRRE81TTUySjZnSEZuX1JNbjg",
+                "icon": "fab fa-google-drive",
+                "size": "1.0 GB"
+              }]
+            },
+            {
+              "title": "Video",
+              "desc": "Videos for this year's SOV as recorded by the Esplanade can be found in the link above.",
+              "links": [{
+                "title": "Google Drive",
+                "link": "https://drive.google.com/open?id=1e0CH_KSxBV056t2OccWtLDcv7gM_5b81",
+                "icon": "fab fa-google-drive",
+                "size": "345 MB"
+              }]
+            },
+            {
+              "title": "Audio",
+              "desc": "Links to the audio can be found in the links above.",
+              "links": [{
+                "title": "Google Drive",
+                "link": "https://drive.google.com/open?id=1e0CH_KSxBV056t2OccWtLDcv7gM_5b81",
+                "icon": "fab fa-google-drive",
+                "size": "142 MB"
+              }]
+            }
+          ]
+        }
+      }
+    }, {
+      "id": 2010,
+      "title": "Symphony of Voices 2010",
+      "abbr": "SOV2010",
+      "info": {
+
+        "date": "11th May 2010",
+        "venue": "Esplanade Concert Hall",
+        "theme": "Masquerade",
+        "noFirstHalf": 9,
+        "noSecondHalf": 11
+      },
+      "intro": "Symphony of Voices 2010 was held on the 11th of May, 2010 at the Esplanade Concert Hall.</br> The theme for this year was <b>Masquerade</b>.</br>Note: for this year there wasn't really a specific theme, but instead the concert was divided into a few different sections. You can take a look at the booklet for more information in the Google Drive.",
+      "artwork": "../../../assets/images/sov/SOV2010.jpg",
+      "repertoire": [{
+          "name": "Exsultate Iusti",
+          "composer": "Domenico Barolucci",
+          "duration": "3:06",
+          "mp3": "01 Exsultate Iusti"
+        },
+        {
+          "name": "Exsultate Deo",
+          "composer": "Domenico Barolucci",
+          "duration": "2:37",
+          "mp3": "02 Exsultate Deo"
+        },
+        {
+          "name": "Hodie Christus Natus Est",
+          "composer": "G.P. da Palestrina",
+          "duration": "1:58",
+          "mp3": "03 Hodie Christus Natus Est"
+        },
+        {
+          "name": "Exsultate Justi",
+          "composer": "Lodovico da Viadana",
+          "duration": "1:48",
+          "mp3": "04 Exsultate Justi"
+        },
+        {
+          "name": "Gaude Maria",
+          "composer": "Antonio Lotti",
+          "duration": "2:38",
+          "mp3": "05 Gaude Maria"
+        },
+        {
+          "name": "Lay a Garland",
+          "composer": "Robert Pearsall",
+          "duration": "3:26",
+          "mp3": "06 Lay a Garland"
+        },
+        {
+          "name": "Yagi Bushi",
+          "composer": "Ko Matsushita",
+          "duration": "3:36",
+          "mp3": "07 Yagi Bushi"
+        },
+        {
+          "name": "渔唱 (The Fisherman's Song)",
+          "composer": "Nelson Kwei",
+          "duration": "2:44",
+          "mp3": "08 The Fisherman's Song"
+        },
+        {
+          "name": "Kruhay",
+          "composer": "Benny F. Castillion",
+          "duration": "3:38",
+          "mp3": "09 Kruhay"
+        },
+        {
+          "name": "De Profundis Clamavi",
+          "composer": "Piotr Janczak",
+          "duration": "2:44",
+          "mp3": "10 De Profundis Clamavi"
+        },
+        {
+          "name": "De Circuitu Aeterno",
+          "composer": "Darius Lim",
+          "duration": "3:26",
+          "mp3": "11 De Circuitu Aeterno"
+        },
+        {
+          "name": "Die Spokewals",
+          "composer": "Hendrik Hofmeyr",
+          "duration": "4:22",
+          "mp3": "12 Die Spokewals"
+        },
+        {
+          "name": "Como Tu",
+          "composer": "Alberto Gran",
+          "duration": "3:47",
+          "mp3": "13 Como Tu"
+        },
+        {
+          "name": "Stopping by Woods on a Snowy Evening",
+          "composer": "Nelson Kwei",
+          "duration": "2:18",
+          "mp3": "14 Stopping by Woods on a Snowy Evening"
+        },
+        {
+          "name": "I Set My Sail",
+          "composer": "Martin Carbow",
+          "duration": "3:55",
+          "mp3": "15 I Set My Sail"
+        },
+        {
+          "name": "Java Jive",
+          "composer": "Kirby Shaw",
+          "duration": "2:09",
+          "mp3": "16 Java Jive"
+        },
+        {
+          "name": "One Voice",
+          "composer": "Barry Manilow (arr. Frank Metis)",
+          "duration": "2:53",
+          "mp3": "17 One Voice"
+        },
+        {
+          "name": "Hallelujah",
+          "composer": "Leonard Cohen",
+          "duration": "3:00",
+          "mp3": "18 Hallelujah"
+        },
+        {
+          "name": "Il Coro dei Malammogliati",
+          "composer": "Luigi Dallapiccola",
+          "duration": "4:36",
+          "mp3": "19 Il Coro dei Malammogliati"
+        },
+        {
+          "name": "No Man Is An Island",
+          "composer": "Roy Ringwald (choir anthem)",
+          "duration": "3:13",
+          "mp3": "20 No Man Is An Island"
+        }
+      ],
+      "links": {
+        "yt": {
+          "link": "https://www.youtube.com/playlist?list=PLhz3lrGQP-AgJA239YBw_Ykr8m0SbpB7V",
+          "desc": "SOV2010 has been uploaded to YouTube for everyone to watch."
+        },
+        "dls": {
+          "intro": "Audio and video for this particular SOV is available for download in the following sections. If any of these links go down, please drop us a message so that we can rectify the problem ASAP. Thank you! :)",
+          "sections": [{
+              "title": "Everything",
+              "desc": "Audio and videos to all SOVs can be found in the link above.",
+              "links": [{
+                "title": "Google Drive",
+                "link": "https://drive.google.com/drive/folders/0B24yMaqyw1Rwfkk1MEo1Wk43YkNiUGx6TVNBTVNmaG80ZVZRRE81TTUySjZnSEZuX1JNbjg",
+                "icon": "fab fa-google-drive",
+                "size": "1.0 GB"
+              }]
+            },
+            {
+              "title": "Video",
+              "desc": "Videos for this year's SOV can be found in the link above.",
+              "links": [{
+                "title": "Google Drive",
+                "link": "https://drive.google.com/open?id=1ua7hew63pWFDmuKXSUpQ3WZoaC1YFUNt",
+                "icon": "fab fa-google-drive",
+                "size": "1.97 GB"
+              }]
+            },
+            {
+              "title": "Audio",
+              "desc": "Links to the audio can be found in the links above.",
+              "links": [{
+                  "title": "Google Drive",
+                  "link": "https://drive.google.com/open?id=1ua7hew63pWFDmuKXSUpQ3WZoaC1YFUNt",
+                  "icon": "fab fa-google-drive",
+                  "size": "158 MB"
+                },
+
+                {
+                  "title": "Dropbox",
+                  "link": "https://www.dropbox.com/s/botybzz7teuuzzq/SOV2010.zip?dl=0",
+                  "icon": "fab fa-dropbox",
+                  "size": "158 MB"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

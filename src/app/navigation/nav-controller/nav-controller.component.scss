@@ -1,0 +1,38 @@
+.content-right {
+  flex-grow: 1 !important;
+}
+
+@media only screen and (max-width: 1024px) {
+  .sider {
+    display: none !important;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .main-content {
+    overflow-x: hidden;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: stretch;
+  }
+
+  .content-left, .content-right {
+    box-sizing: border-box;
+  }
+
+  .content-left {
+    position: relative;
+    margin-left: -250px;
+    transition: margin .4s;
+
+    &.visible {
+      margin-left: 250px;
+    }
+  }
+
+  .content-right {
+    min-width: 100%;
+    flex-grow: 0 !important;
+  }
+
+}

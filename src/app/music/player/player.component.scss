@@ -1,0 +1,140 @@
+@import "../../../styles.scss";
+@import "https://fonts.googleapis.com/css?family=Catamaran:300,400,500,600,700";
+.player-layout {
+  right: 25px;
+  width: 500px;
+  max-height: 700px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background: $background-color;
+  text-align: center;
+  transition: all 0.3s;
+  overflow: hidden;
+  .player-content {
+    max-height: 700px;
+    transition: max-height 0.2s;
+    &.inactive {
+      max-height: 0;
+    }
+  }
+  .player-header {
+    cursor: pointer;
+    &:hover {
+      background: $sider-background-color;
+    }
+  }
+  .player-playlists {
+    max-height: 300px;
+    overflow-y: scroll;
+    img {
+      width: 50px;
+      height: 50px;
+    }
+    .player-playlists-item {
+      height: 50px;
+      border-bottom: 1px solid $sider-background-color;
+      &:hover {
+        cursor: pointer;
+        background: $sider-background-color;
+      }
+    }
+  }
+  .player-active-window-header {
+    border-bottom: 1px solid $sider-background-color;
+    .btn {
+      &:hover {
+        color: $accent-color !important;
+      }
+      &:focus,
+      &.active {
+        box-shadow: none !important;
+        outline: 0px !important;
+      }
+    }
+  }
+  .song {
+    border-bottom: 1px solid $sider-background-color;
+    &:hover {
+      cursor: pointer;
+      background: $sider-background-color;
+    }
+    &.active {
+      background: $accent-color;
+      color: $primary-text-inv-color;
+      .song-composer,
+      .song-number {
+        color: $sider-background-color-inv;
+      }
+    }
+  }
+  .song-composer,
+  .song-number {
+    color: $sider-primary-color;
+    font-family: 'Catamaran', 'sans-serif'
+  }
+  .player-min-artwork {
+    width: 50px;
+    height: 50px;
+  }
+  .player-info {
+    img {
+      max-width: 125px;
+      max-height: 125px;
+    }
+    .np-title {
+      font-size: 16pt;
+    }
+    .np-composer {
+      color: $primary-text-color-faded;
+      font-family: 'Catamaran', 'sans-serif'
+    }
+    .np-playlist-title {
+      font-size: medium;
+      color: $primary-text-color-faded;
+    }
+  }
+  plyr {
+    --plyr-color-main: rgb(175, 36, 90);
+    --plyr-audio-controls-background: none;
+  }
+}
+
+.big-play-button {
+  &:hover {
+    color: $accent-color !important;
+  }
+  &:focus,
+  &.active {
+    box-shadow: none !important;
+    outline: 0px !important;
+  }
+}
+
+.fixed-bottom {
+  left: auto;
+}
+
+.sov-link {
+  color: $accent-color;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.badge {
+  &:hover {
+    cursor: pointer;
+  }
+  &:active {
+    outline: none;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .player-layout {
+    right: 0;
+    width: 100%;
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "socials": [{
+      "name": "Instagram",
+      "icon": "fab fa-instagram fa-lg",
+      "link": "https://www.instagram.com/vjchoir/"
+    },
+    {
+      "name": "YouTube",
+      "icon": "fab fa-youtube fa-lg",
+      "link": "https://www.youtube.com/user/jumpcutfindo"
+    }
+  ],
+  "sider_text": "© VJChoir 2020. All rights reserved. Not affiliated to the school."
+}

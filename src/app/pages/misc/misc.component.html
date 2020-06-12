@@ -1,0 +1,39 @@
+<div class="d-flex row ml-0">
+  <button *ngFor="let item of miscJSON.sections" class="btn btn-outline-primary mx-1 mb-2" [ngClass]="item == currActive ? 'active' : ''" (click)="currActive = item" [routerLink]="about" fragment="{{item.id}}" onclick="this.blur();">
+    {{item.title}}
+  </button>
+</div>
+
+<div class="content" class="my-3">
+  <div class="section" *ngFor="let section of miscJSON.sections" [ngClass]="section == currActive ? '' : 'd-none'" id="{{section.id}}">
+    <div *ngIf="section.title == 'Updates'">
+      <h3>{{section.title}}</h3>
+      <div [innerHTML]="section.content"></div>
+      <hr/>
+      <div *ngFor="let update of updateLog; last as isLast; first as isFirst">
+        <div class="d-flex">
+          <h4 class="my-0">{{update.title}}</h4>
+          <span *ngIf="isFirst" class="badge badge-danger my-auto ml-2">CURRENT VERSION</span>
+        </div>
+        <p [innerHTML]="update.summary"></p>
+        <ul>
+          <li *ngFor="let change of update.changes">
+            <p>{{change.title}}</p>
+            <div [innerHTML]="change.explanation"></div>
+          </li>
+        </ul>
+
+        <hr *ngIf="!isLast" />
+      </div>
+    </div>
+    <div *ngIf="section.title != 'Updates'">
+      <h3>{{section.title}}</h3>
+      <div [innerHTML]="section.content">
+      </div>
+    </div>
+
+    <div class="d-flex justify-content-center mt-5" *ngIf="section.title =='Main'">
+      <img src="../../../assets/images/logo/mainfooter.png" class="w-50 col-12 col-md-6">
+    </div>
+  </div>
+</div>

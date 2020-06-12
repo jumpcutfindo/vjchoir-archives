@@ -1,0 +1,22 @@
+@import "../../../styles.scss";
+.navbar {
+  .navbar-brand {
+    font-family: $title-text-font;
+    font-weight: 500;
+  }
+  border-bottom: 2px solid rgba(black, 0.1);
+  background: $navbar-background-color;
+  justify-content: start;
+}
+
+.sidebar-toggle {
+  display: none;
+  transition: all 0.3s;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .sidebar-toggle {
+    display: block;
+  }
+}

@@ -1,0 +1,39 @@
+@import "../../../styles.scss";
+@import "https://fonts.googleapis.com/css?family=Catamaran:300,400,500,600,700";
+@import "https://fonts.googleapis.com/css?family=Playfair+Display:300,400,500,600,700";
+.repertoire {
+  ol {
+    list-style: none;
+    p {
+      font-family: "Playfair Display", "serif" !important;
+      font-size: 18pt !important;
+      font-weight: 500;
+    }
+    .composer {
+      font-family: "Catamaran", sans-serif;
+      font-weight: 600;
+      color: $primary-text-color-faded;
+    }
+    .id {
+      font-family: "Catamaran", sans-serif;
+      font-style: italic;
+    }
+    li {
+      border: 1px rgba(0, 0, 0, 0) solid;
+      border-bottom: 1px $sider-background-color solid;
+      &:hover {
+        border: 1px $accent-color solid;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.links {
+  a {
+    font-family: $primary-text-font;
+  }
+  .link-col:not(:last-child) {
+    border-right: 1px $sider-background-color solid;
+  }
+}

@@ -1,0 +1,19 @@
+<div class="main-content d-flex justify-content-around p-0 m-0">
+  <app-sidebar class="content-left" [sidebarItems]="menu" [controller]="controller" [currActive]="currActive" [ngClass]="isSidebarActive ? 'visible' : ''"></app-sidebar>
+  <div class="p-0 m-0 content-right" [ngClass]="isSidebarActive ? 'shrunk' : ''">
+    <app-navbar [menu]="menu" [controller]="controller" [currActive]="currActive"></app-navbar>
+
+    <div class="row m-0">
+      <div class="col-sm-12 col-xl-9 mt-3">
+        <app-loading></app-loading>
+        <router-outlet></router-outlet>
+        <div class="bottom-padder"></div>
+      </div>
+      <div class="sider col-sm-0 col-xl-3 m-0 p-0">
+        <app-sider></app-sider>
+      </div>
+    </div>
+  </div>
+
+  <app-player></app-player>
+</div>

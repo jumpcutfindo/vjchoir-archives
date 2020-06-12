@@ -1,0 +1,102 @@
+@import "../../../styles.scss";
+@import "https://fonts.googleapis.com/css?family=Catamaran:300,400,500,600,700";
+.listen-header-close {
+  &:hover {
+    cursor: pointer;
+    background: $sider-background-color;
+  }
+}
+
+.playlist-header {
+  &:hover {
+    cursor: pointer;
+    background: $sider-background-color;
+  }
+  input {
+    background: none;
+    border: 1px solid rgba(0, 0, 0, 0);
+    outline: none;
+    &:focus {
+      border: none;
+    }
+    &:hover {
+      border: 1px solid $accent-color;
+    }
+  }
+}
+
+.playlist-artwork {
+  max-width: 150px;
+  max-height: 150px;
+}
+
+.song {
+  .song-composer,
+  .song-number {
+    color: $sider-primary-color;
+    font-family: 'Catamaran', 'sans-serif'
+  }
+  &:hover {
+    cursor: pointer;
+    background: $sider-background-color;
+  }
+  &.active {
+    background: $accent-color;
+    color: $primary-text-inv-color;
+    .song-composer,
+    .song-number {
+      color: $sider-background-color-inv;
+    }
+  }
+  .border-bottom {
+    border-bottom: 1px solid $sider-background-color;
+  }
+}
+
+.song-title-row {
+  .song-number,
+  .song-title,
+  .song-duration {
+    color: $sider-primary-color;
+  }
+}
+
+.add-button {
+  i {
+    color: $sider-primary-color;
+    &:hover {
+      color: $accent-color;
+    }
+  }
+  .dropdown-toggle::after {
+    display: none;
+  }
+  .dropdown-item {
+    font-family: $primary-text-font;
+    max-width: 300px;
+    &:active {
+      outline: none;
+      background: $accent-color;
+    }
+  }
+}
+
+.add-button-filler {
+  width: 50px;
+}
+
+.cdk-drag-preview {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background: $background-color;
+}
+
+textarea {
+  font-family: $primary-text-font;
+}
+
+.form-control {
+  &:focus {
+    border-color: $accent-color;
+    box-shadow: none;
+  }
+}

@@ -1,0 +1,27 @@
+
+[
+    {
+        "section": "sop",
+        "names": [
+            "Lee Yu Xian (SL)","Arista Lim","Nikki Lim","Jessie Ng","Carmen Chan","Cassie Ang","Cristal Foo","Dawn Chin","Kayleigh Lim","Kelly Yu","Megan Zhuo","Huang Xian Xi","Yao Xinyi","Lim Ying Ying"]
+    },
+
+    {
+        "section": "alto",
+        "names": [
+            "Sofie Buligis (SL)","Dayne Taniajura","Sherlyn Priscilla","Aida Bte Mohamed Zulkifli","Alyssa Goh","Lee Cindy","Clarisa Laksono","Erin Tan","Glenys Foo","Griselda Jayapurna","He Jialei","Michelle Yin","Nikki Chua","Priscilla Natasya","Shreya Sriram","Lum Yen Yi"]
+    },
+
+    {
+        "section": "tenor",
+        "names": [
+            "Japheth Leong (SL)","Seow Mao Yu","Toh Xin Long","Yang Chenyu","Ryan Lai","Nanda Hidayat","Enric Sng"]
+    },
+
+    {
+        "section": "bass",
+        "names": [
+            "Sng Wei En (SL)","Matthias Lee","Dyllan Gan","Daniel Lim","Wynn Oh Geng Sheng","Matthew Lee","Mohd Al-Ahda"]
+    }
+
+]
