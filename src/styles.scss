@@ -434,6 +434,9 @@ ngb-carousel {
       &:hover {
         background: $dark-primary-text-color;
         color: $dark-background-color;
+        i {
+          color: $dark-background-color;
+        }
       }
     }
     .playlist-header {
