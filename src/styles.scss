@@ -282,6 +282,9 @@ ngb-carousel {
   hr {
     border-top: 1px solid rgba(255, 255, 255, .2);
   }
+  ul {
+    list-style: none;
+  }
   nav {
     background: $dark-base-color !important;
     &.navbar {
@@ -529,13 +532,11 @@ ngb-carousel {
       }
     }
   }
-
   .cdk-drag-preview {
     box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
     background: $dark-background-color !important;
     border-bottom: none !important;
   }
-
   .modal-content {
     background: $dark-background-color;
     h1,

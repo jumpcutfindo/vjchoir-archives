@@ -30,6 +30,7 @@ import { ClipboardModule } from '@angular/cdk/clipboard/';
 import { ToastrModule } from 'ngx-toastr';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import { LoadingComponent } from './loading/loading.component';
+import { BlogComponent } from './pages/misc/blog/blog.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { LoadingComponent } from './loading/loading.component';
     AppendNamesPipe,
     SafePipe,
     FormatDurationPipe,
-    LoadingComponent
+    LoadingComponent,
+    BlogComponent
   ],
   imports: [
     BrowserModule,
