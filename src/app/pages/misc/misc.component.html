@@ -26,7 +26,9 @@
         <hr *ngIf="!isLast" />
       </div>
     </div>
-    <div *ngIf="section.title != 'Updates'">
+    <misc-blog *ngIf="section.title == 'Blog'">
+    </misc-blog>
+    <div *ngIf="section.title != 'Updates' && section.title != 'Blog'">
       <h3>{{section.title}}</h3>
       <div [innerHTML]="section.content">
       </div>

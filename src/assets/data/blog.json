@@ -1,0 +1,23 @@
+{
+  "intro": {
+    "title": "Welcome to the Blog!",
+    "content": "This page is for the creator(s) of the website to share any fun, interesting stories related to the choir or in the pursuit of proper archival techniques. Here, I will share more about random updates and other things of that sort, which hopefully can give a deeper insight into how the website is maintained and managed and the problems faced in trying to get all the data together."
+  },
+  "posts": [{
+    "title": "",
+    "date": "",
+    "author": "",
+    "sections": [{
+      "header": "",
+      "image_front": {
+        "src": "",
+        "caption": ""
+      },
+      "content": "",
+      "image_back": {
+        "src": "",
+        "caption": ""
+      }
+    }]
+  }]
+}
