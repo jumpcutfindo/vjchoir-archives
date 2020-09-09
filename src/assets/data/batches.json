@@ -4,6 +4,88 @@
     "msg": "<p>Hello! Welcome to the landing page for Batches! In this part of the website, the details of the previous batches of VJChoir are kept so that you can see how the past batches looked like.</br></br>Use the navigation buttons above to browse through the different batches. In each page, the general information of the choir's committees and members are included. Photos from the various batches are also there so that you can kinda get a look of how lupsup or noob everyone looked back in their hey-day.</br></br><b>Contributing / fixing:</b></br>Seeing as I'm not from any batches after my own, the information provided above has been sent to me over the years by the various members of the various batches. If you want to contribute, or you've spotted an error, head over to the \"Contribute\" part of the archives to send in the relevant information. Thanks very much! :)</p>"
   },
   "batches": [{
+      "id": "2021",
+      "name": "2020 / 2021",
+      "image": "",
+      "desc": "Hi there! This page contains information pertaining to the batch of 2020 - 2021.",
+      "comms": [{
+          "name": "Exco",
+          "img": "",
+          "members": [
+            "Meg-Gayle Dean (P)",
+            "Shaikh Aliyy Uraidhy Mattar (VP)",
+            "Aiman Zahid (S)",
+            "Jillian Rani (Welfare Head)",
+            "Lim Xin Neng (T)",
+            "Lai Huiyi, Rachel-Joy (QM)"
+          ]
+        },
+        {
+          "name": "Musico",
+          "img": "",
+          "members": [
+            "Wong Jun Xiang (SC)",
+            "Ling De Han, Jeremy (ASC, T)",
+            "Natalie Jiang Liting (S)",
+            "Suen Wing Lam (A)",
+            "Khen Nipanutiyan (B)"
+          ]
+        }
+      ],
+      "sections": [{
+          "name": "Sopranos",
+          "members": [
+            "Natalie Jian Liting",
+            "Chan Li Hsin Adele",
+            "Christine Ho Shi En",
+            "Ho Yan Zhen",
+            "Joy Kee",
+            "Kiran Geofran",
+            "Manoharan Monika",
+            "Nina Sarmiento",
+            "Romaine Zu Qiao Lin",
+            "Phoebe Ng Jing Yi",
+            "Priskila Rebecca Panggabean"
+          ]
+        },
+        {
+          "name": "Altos",
+          "members": [
+            "Suen Wing Lam",
+            "Lai Huiyi, Rachel-Joy",
+            "Yuen Mei Hui",
+            "Elizabeth Rakhi Baby",
+            "Jillian Rani",
+            "Meg-Gayle Dean",
+            "Tessa Chen Man Hin",
+            "Nur Afiqah Yusriyah Bte Yunos",
+            "Thangaraj Moses Jerin Esther"
+          ]
+        },
+        {
+          "name": "Tenors",
+          "members": [
+            "Ling De Han, Jeremy",
+            "Wong Jun Xiang",
+            "Lim Xin Neng",
+            "Loh Ming En, James",
+            "Lau Zhan Heng",
+            "Sean Ng Jia Hao"
+          ]
+        },
+        {
+          "name": "Basses",
+          "members": [
+            "Khen Nipanutiyan",
+            "Kiran s/o Kasinathan",
+            "Shaikh Aliyy Uraidhy Mattar",
+            "Bae Min Suk, Robin",
+            "Aiman Zahid"
+          ]
+        }
+      ]
+    },
+    {
       "id": "1920",
       "name": "2019 / 2020",
       "image": "../../../assets/images/batches/1920/batch.jpeg",
@@ -18,7 +100,6 @@
             "Abigail Kwok (Welfare Head)",
             "Wayne Wong (T)",
             "Naomi Lim (QM)"
-
           ]
         },
         {
@@ -31,7 +112,6 @@
             "Amanda Lee (SC)",
             "Jewel Lee (S)",
             "Stella Andreanna (A)"
-
           ]
         }
       ],
@@ -78,7 +158,6 @@
             "Alwin Tua",
             "Imran Nasir",
             "Tay An Sheng"
-
           ]
         },
         {
@@ -93,7 +172,11 @@
           ]
         }
       ],
-      "photos": ["../../../assets/images/batches/1920/featured (1).jpeg", "../../../assets/images/batches/1920/featured (2).jpg", "../../../assets/images/batches/1920/featured (3).jpeg"]
+      "photos": [
+        "../../../assets/images/batches/1920/featured (1).jpeg",
+        "../../../assets/images/batches/1920/featured (2).jpg",
+        "../../../assets/images/batches/1920/featured (3).jpeg"
+      ]
     },
     {
       "id": "1819",
@@ -157,12 +240,7 @@
         },
         {
           "name": "Tenors",
-          "members": [
-            "Cyrus Tan",
-            "Edwin Seow",
-            "Mark Chong",
-            "Phua Yong Jun"
-          ]
+          "members": ["Cyrus Tan", "Edwin Seow", "Mark Chong", "Phua Yong Jun"]
         },
         {
           "name": "Basses",
@@ -575,7 +653,12 @@
           ]
         }
       ],
-      "photos": ["../../../assets/images/batches/1415/featured (1).jpg", "../../../assets/images/batches/1415/featured (2).jpg", "../../../assets/images/batches/1415/featured (3).jpg", "../../../assets/images/batches/1415/featured (4).jpg"]
+      "photos": [
+        "../../../assets/images/batches/1415/featured (1).jpg",
+        "../../../assets/images/batches/1415/featured (2).jpg",
+        "../../../assets/images/batches/1415/featured (3).jpg",
+        "../../../assets/images/batches/1415/featured (4).jpg"
+      ]
     },
     {
       "id": "1314",
