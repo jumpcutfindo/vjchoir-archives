@@ -15,6 +15,14 @@ export class BatchesService {
   getBatches(): Observable<any> {
     if (!this.batchesItems) {
       this.batchesItems = batchesJSON.batches.map((batch) => {
+
+        // Organises the members by alphabetical order, keeping the SL in front
+        for (let section of batch.sections) {
+          let sectionLeader = section.members[0];
+          section.members = section.members.slice(1, section.members.length).sort();
+          section.members.unshift(sectionLeader);
+        }
+
         let tempItem: BatchItem = {
           id: batch.id,
           name: batch.name,
