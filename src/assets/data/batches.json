@@ -6,11 +6,11 @@
   "batches": [{
       "id": "2021",
       "name": "2020 / 2021",
-      "image": "",
+      "image": "../../../assets/images/batches/2021/batch.jpg",
       "desc": "Hi there! This page contains information pertaining to the batch of 2020 - 2021.",
       "comms": [{
           "name": "Exco",
-          "img": "",
+          "img": "../../../assets/images/batches/2021/exco.jpg",
           "members": [
             "Meg-Gayle Dean (P)",
             "Shaikh Aliyy Uraidhy Mattar (VP)",
@@ -22,7 +22,7 @@
         },
         {
           "name": "Musico",
-          "img": "",
+          "img": "../../../assets/images/batches/2021/musico.jpg",
           "members": [
             "Wong Jun Xiang (SC)",
             "Ling De Han, Jeremy (ASC, T)",

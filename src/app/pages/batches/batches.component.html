@@ -17,9 +17,9 @@
     <hr/>
 
     <div class="container-fluid d-flex align-content-start flex-wrap">
-      <div *ngFor="let batch of batches" class="link col-12 col-xl-6 my-3" (click)="currActive = batch" [routerLink]="" fragment="{{batch.id}}" onclick="window.scroll(0,0);">
+      <div *ngFor="let batch of batches" class="link col-12 col-xl-6 my-auto" (click)="currActive = batch" [routerLink]="" fragment="{{batch.id}}" onclick="window.scroll(0,0);">
         <img src="{{batch.image}}" class="img-fluid rounded" />
-        <h4 class="my-2 text-center">Batch of {{batch.name}}</h4>
+        <h4 class="my-3 text-center">Batch of {{batch.name}}</h4>
       </div>
     </div>
   </div>
