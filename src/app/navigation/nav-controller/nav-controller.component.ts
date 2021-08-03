@@ -41,7 +41,6 @@ export class NavControllerComponent implements OnInit {
     this.router.events.subscribe((val) => {
       if (val instanceof NavigationEnd) {
         this.loadingService.setLoading(true);
-        console.log(val);
         this.navControllerService.onRouteUpdate(val);
         this.navigateToLink(val.url);
       }
@@ -94,7 +93,9 @@ export class NavControllerComponent implements OnInit {
   pages = ['home', 'about', 'batches', 'sov', 'listen', 'contribute', 'misc']
   navigateToLink(url: string) {
     for(let i = 0; i < this.pages.length; i ++) {
-      if(url.toLowerCase().includes(this.pages[i])) {
+      let sourceUrl = url.split("#")[0];
+
+      if(sourceUrl.toLowerCase().includes(this.pages[i])) {
         let temp = this.menu.filter(x => x.linkName.includes(this.pages[i]));
         this.navigateTo(temp[0]);
         return;
