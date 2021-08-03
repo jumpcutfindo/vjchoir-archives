@@ -3,12 +3,94 @@
     "title": "Welcome to the Batches page!",
     "msg": "<p>Hello! Welcome to the landing page for Batches! In this part of the website, the details of the previous batches of VJChoir are kept so that you can see how the past batches looked like.</br></br>Use the navigation buttons above to browse through the different batches. In each page, the general information of the choir's committees and members are included. Photos from the various batches are also there so that you can kinda get a look of how lupsup or noob everyone looked back in their hey-day.</br></br><b>Contributing / fixing:</b></br>Seeing as I'm not from any batches after my own, the information provided above has been sent to me over the years by the various members of the various batches. If you want to contribute, or you've spotted an error, head over to the \"Contribute\" part of the archives to send in the relevant information. Thanks very much! :)</p>"
   },
-  "batches": [{
+  "batches": [
+    {
+      "id": "2122",
+      "name": "2021 / 2022",
+      "image": "",
+      "desc": "Hi there! This page contains information pertaining to the batch of 2021 - 2022.",
+      "comms": [
+        {
+          "name": "Exco",
+          "img": "",
+          "members": [
+            "Tan Xuan Lin, Claire (P)",
+            "Lyu Mingze (VP)",
+            "Kyla Frances Yew (S)",
+            "Mohamed Samir (Welfare Head)",
+            "Bolliger Andrea Shijia (QM)",
+            "Phua Sin Yi Venice (T)"
+
+          ]
+        },
+        {
+          "name": "Musico",
+          "img": "",
+          "members": [
+            "Jin Yucheng (SC)",
+            "Matt Tan Yong (SC & B)",
+            "Ng Sin Yee (S)",
+            "Katherine Fontanilla (A)",
+            "Nathan Sivali Sudikarman (T)"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "name": "Sopranos",
+          "members": [
+            "Ng Sin Yee",
+            "Phua Sin Yi Venice",
+            "Uy Alexa Denise Mejia",
+            "Balachandar Srividya",
+            "Keisha Mehar",
+            "Kimberly Tsang Li Ting",
+            "Tan Keng Yee, Jolene",
+            "Charmaine Liong Shuen Meng",
+            "Kang Kai Xin"
+          ]
+        },
+        {
+          "name": "Altos",
+          "members": [
+            "Katherine Fontanilla",
+            "Tan Xuan Lin, Claire",
+            "Kyla Frances Yew",
+            "Bolliger Andrea Shijia",
+            "Ang Kai Li Cally",
+            "Tai Wing Xin",
+            "Shannon Lu Tianmo",
+            "Wong Liang Min Hannah"
+          ]
+        },
+        {
+          "name": "Tenors",
+          "members": [
+            "Nathan Sivali Sudikarman",
+            "Lyu Mingze",
+            "Jin Yucheng",
+            "Ee Yong Kang Darren",
+            "Leroy Sear Zheng Zhan"
+          ]
+        },
+        {
+          "name": "Basses",
+          "members": [
+            "Matt Tan Yong",
+            "Mohamed Samir",
+            "Arthur Lee Zheng Yang",
+            "Huang Yifan"
+          ]
+        }
+      ]
+    },
+    {
       "id": "2021",
       "name": "2020 / 2021",
       "image": "../../../assets/images/batches/2021/batch.jpg",
       "desc": "Hi there! This page contains information pertaining to the batch of 2020 - 2021.",
-      "comms": [{
+      "comms": [
+        {
           "name": "Exco",
           "img": "../../../assets/images/batches/2021/exco.jpg",
           "members": [
@@ -32,7 +114,8 @@
           ]
         }
       ],
-      "sections": [{
+      "sections": [
+        {
           "name": "Sopranos",
           "members": [
             "Natalie Jian Liting",
@@ -90,7 +173,8 @@
       "name": "2019 / 2020",
       "image": "../../../assets/images/batches/1920/batch.jpeg",
       "desc": "Hi there! This page contains information pertaining to the batch of 2019 - 2020.",
-      "comms": [{
+      "comms": [
+        {
           "name": "Exco",
           "img": "../../../assets/images/batches/1920/exco.jpg",
           "members": [
@@ -115,7 +199,8 @@
           ]
         }
       ],
-      "sections": [{
+      "sections": [
+        {
           "name": "Sopranos",
           "members": [
             "Jewel Lee",
@@ -183,7 +268,8 @@
       "name": "2018 / 2019",
       "image": "../../../assets/images/batches/1819/batch.jpg",
       "desc": "Hi there! This page contains information pertaining to the batch of 2018 - 2019.",
-      "comms": [{
+      "comms": [
+        {
           "name": "Exco",
           "img": "../../../assets/images/batches/1819/exco.jpg",
           "members": [
@@ -208,7 +294,8 @@
           ]
         }
       ],
-      "sections": [{
+      "sections": [
+        {
           "name": "Sopranos",
           "members": [
             "Magdeleine",
@@ -260,7 +347,8 @@
       "name": "2017 / 2018",
       "image": "../../../assets/images/batches/1718/batch.jpg",
       "desc": "Hi there! This page contains information pertaining to the batch of 2017 - 2018.",
-      "comms": [{
+      "comms": [
+        {
           "name": "Exco",
           "img": "../../../assets/images/batches/1718/exco.jpg",
           "members": [
@@ -285,7 +373,8 @@
           ]
         }
       ],
-      "sections": [{
+      "sections": [
+        {
           "name": "Sopranos",
           "members": [
             "Lee Yu Xian",
@@ -356,7 +445,8 @@
       "name": "2016 / 2017",
       "image": "../../../assets/images/batches/1617/batch.jpg",
       "desc": "Hi there! This page contains information pertaining to the batch of 2016 - 2017.",
-      "comms": [{
+      "comms": [
+        {
           "name": "Exco",
           "img": "../../../assets/images/batches/1617/exco.jpg",
           "members": [
@@ -392,7 +482,8 @@
           ]
         }
       ],
-      "sections": [{
+      "sections": [
+        {
           "name": "Sopranos",
           "members": [
             "Cherylene",
@@ -455,7 +546,8 @@
       "name": "2015 / 2016",
       "image": "../../../assets/images/batches/1516/batch.jpg",
       "desc": "Hi there! This page contains information pertaining to the batch of 2015 - 2016.",
-      "comms": [{
+      "comms": [
+        {
           "name": "Exco",
           "img": "../../../assets/images/batches/1516/exco.jpg",
           "members": [
@@ -493,7 +585,8 @@
           ]
         }
       ],
-      "sections": [{
+      "sections": [
+        {
           "name": "Sopranos",
           "members": [
             "Sheryl Chow",
@@ -552,7 +645,8 @@
       "name": "2014 / 2015",
       "image": "../../../assets/images/batches/1415/batch.jpg",
       "desc": "Hi there! This page contains information pertaining to the batch of 2014 - 2015.",
-      "comms": [{
+      "comms": [
+        {
           "name": "Exco",
           "img": "../../../assets/images/batches/1415/exco.jpg",
           "members": [
@@ -590,7 +684,8 @@
           ]
         }
       ],
-      "sections": [{
+      "sections": [
+        {
           "name": "Sopranos",
           "members": [
             "Vanessa Kee",
@@ -665,7 +760,8 @@
       "name": "2013 / 2014",
       "image": "../../../assets/images/batches/1314/batch.jpg",
       "desc": "Hi there! This page contains information pertaining to the batch of 2013 - 2014.",
-      "comms": [{
+      "comms": [
+        {
           "name": "Exco",
           "img": "../../../assets/images/batches/1314/exco.jpg",
           "members": [
@@ -702,7 +798,8 @@
           ]
         }
       ],
-      "sections": [{
+      "sections": [
+        {
           "name": "Sopranos",
           "members": [
             "Kiang Wen Jen",
