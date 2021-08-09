@@ -1,8 +1,28 @@
-[{
+[
+  {
+    "title": "v4.1",
+    "date": "09 August 2021",
+    "summary": "This update mainly updates information regarding the various batches and adds a few SOVs. It also fixes some bugs inherent in the website.",
+    "items": [{
+        "title": "Add batch information for batches of 2020/2021 and 2021/2022",
+        "explanation": ""
+      },
+      {
+        "title": "Add songs and playlist information for SOV2007 and SOV2008",
+        "explanation": "<ul><li><p>Users are able to navigate through SOVs of 2007 and 2008, adding them to their respective playlists if they desire</p></li></ul>"
+      },
+      {
+        "title": "Fix bugs in the website",
+        "explanation": ""
+      }
+    ]
+  },
+  {
     "title": "v4",
     "date": "",
     "summary": "This update is big enough to warrant it a new version code: v4. The main change is that I've converted the website and all its features into Angular (from pure HTML / CSS), and made it more integrated with Bootstrap 4. This helps to add a lot of functionality, and also helps to make the website more easily updatable in the future. The code is also much cleaner and more modifiable to add on new components / remove old components, and debug.",
-    "items": [{
+    "items": [
+      {
         "title": "Converted most / all of the code into Angular",
         "explanation": ""
       },
@@ -30,14 +50,14 @@
         "title": "Cleaned up data storage",
         "explanation": "<p>The storing of the website's data (in JSON format) was pretty messy and has been cleaned up now. Added a form for users to fill up for feedback / ideas</p>"
       }
-
     ]
   },
   {
     "title": "New Year Cleaning",
     "date": "6 January 2020 ",
     "summary": "",
-    "items": [{
+    "items": [
+      {
         "title": "Updated the dates to 2020",
         "explanation": ""
       },
@@ -59,7 +79,8 @@
     "title": "Mini mini update",
     "date": "29 August 2019",
     "summary": "",
-    "items": [{
+    "items": [
+      {
         "title": "Added the Batch of 2019 - 2020's information",
         "explanation": ""
       },
@@ -73,7 +94,8 @@
     "title": "For the night is dark and full of terrors",
     "date": "1 June 2019",
     "summary": "",
-    "items": [{
+    "items": [
+      {
         "title": "Added SOV2010's information (available on both the SOV page and listen page)",
         "explanation": ""
       },
@@ -99,7 +121,8 @@
     "title": "SOV2019 Update",
     "date": "28 May 2019",
     "summary": "",
-    "items": [{
+    "items": [
+      {
         "title": "Added SOV2019's information (which includes download links, updates to the listen page)",
         "explanation": ""
       },
@@ -138,7 +161,8 @@
     "title": "This is still alive!",
     "date": "03 Mar 2019",
     "summary": "",
-    "items": [{
+    "items": [
+      {
         "title": "Added a bunch of stories that were submitted last year apparently but I never realised (sorry Dayne)",
         "explanation": ""
       },
@@ -169,7 +193,8 @@
     "title": "Never too late to the party!",
     "date": "11 Dec 2018",
     "summary": "",
-    "items": [{
+    "items": [
+      {
         "title": "Added SOV2012 (information and Listen data)",
         "explanation": ""
       },
@@ -188,7 +213,8 @@
     "title": "v3",
     "date": "03 Dec 2018",
     "summary": "",
-    "items": [{
+    "items": [
+      {
         "title": "The website has been updated to give it a fresher, modern look!",
         "explanation": ""
       },

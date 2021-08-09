@@ -291,6 +291,10 @@ ngb-carousel {
       color: $dark-primary-text-color !important;
     }
   }
+  li::marker {
+    color: $dark-primary-text-color;
+  }
+
   #sidebar {
     .active {
       color: $dark-base-color !important;
