@@ -3,7 +3,8 @@
     "title": "Welcome to the Symphony of Voices page!",
     "msg": "<p>Hey there! Welcome to the landing page for Symphony of Voices.</br></br><b>Symphony of Voices</b> is the Victoria Junior College Choir's annual concert, held usually at the end of the J2 batch's stint in choir. Each concert has its own theme, with a variety of songs associated with the theme being sung in the concert, usually in the second half.</br></br>This part of the website contains information for each Symphony of Voices, with their repertoire and recordings stored and available for download here.</br></br>Contributing:</br>As with other pages, there is a lot you can contribute here. If you're able and willing to provide any details regarding your own SOV, whether it is available here or not, please head over to the Contribute page to find out how you can help with this section of the website. We really appreciate any contributions you can make to help the archive be better :)</p>"
   },
-  "sov": [{
+  "sov": [
+    {
       "id": 2019,
       "title": "Symphony of Voices 2019",
       "abbr": "SOV2019",
@@ -16,7 +17,8 @@
       },
       "intro": "Symphony of Voices 2019 was held at the Esplanade Concert Hall on the 22nd of May, 2019.</br> The theme for this year was <b>A World Where Roses Bloom</b>.",
       "artwork": "../../../assets/images/sov/SOV2019.png",
-      "repertoire": [{
+      "repertoire": [
+        {
           "name": "Beati Quorum Via",
           "composer": "Charles Villiers Stanford",
           "duration": "3:42",
@@ -138,15 +140,18 @@
         },
         "dls": {
           "intro": "Audio for this particular SOV is available for download in the following sections. If any of these links go down, please drop us a message so that we can rectify the problem ASAP. Thank you! :)",
-          "sections": [{
+          "sections": [
+            {
               "title": "Everything",
               "desc": "Audio and videos to all SOVs can be found in the link above.",
-              "links": [{
-                "title": "Google Drive",
-                "link": "https://drive.google.com/drive/folders/1J0J87sIO77Obo9i3XkpCaGbbNRDhdLLa?usp=sharing",
-                "icon": "fab fa-google-drive",
-                "size": ""
-              }]
+              "links": [
+                {
+                  "title": "Google Drive",
+                  "link": "https://drive.google.com/drive/folders/1J0J87sIO77Obo9i3XkpCaGbbNRDhdLLa?usp=sharing",
+                  "icon": "fab fa-google-drive",
+                  "size": ""
+                }
+              ]
             },
             {
               "title": "Video",
@@ -156,7 +161,8 @@
             {
               "title": "Audio",
               "desc": "Links to the audio can be found in the links above.",
-              "links": [{
+              "links": [
+                {
                   "title": "Dropbox",
                   "link": "https://www.dropbox.com/s/iwct39dgkpx9e9w/SOV2019.zip?dl=0",
                   "icon": "fab fa-dropbox",
@@ -187,7 +193,8 @@
       },
       "intro": "Symphony of Voices 2018 was held at the Esplanade Concert Hall on the 23rd of May, 2018.</br> The theme for this year was <b>All Things Bright And Beautiful</b>.",
       "artwork": "../../../assets/images/sov/SOV2018.png",
-      "repertoire": [{
+      "repertoire": [
+        {
           "name": "Lux Aeterna",
           "composer": "Ēriks Ešenvalds",
           "duration": "3:18",
@@ -297,30 +304,36 @@
         },
         "dls": {
           "intro": "Audio and video for this particular SOV is available for download in the following sections. If any of these links go down, please drop us a message so that we can rectify the problem ASAP. Thank you! :)",
-          "sections": [{
+          "sections": [
+            {
               "title": "Everything",
               "desc": "Audio and videos to all SOVs can be found in the link above.",
-              "links": [{
-                "title": "Google Drive",
-                "link": "https://drive.google.com/drive/folders/1J0J87sIO77Obo9i3XkpCaGbbNRDhdLLa?usp=sharing",
-                "icon": "fab fa-google-drive",
-                "size": ""
-              }]
+              "links": [
+                {
+                  "title": "Google Drive",
+                  "link": "https://drive.google.com/drive/folders/1J0J87sIO77Obo9i3XkpCaGbbNRDhdLLa?usp=sharing",
+                  "icon": "fab fa-google-drive",
+                  "size": ""
+                }
+              ]
             },
             {
               "title": "Video",
               "desc": "Videos with the various angles edited in can be found in the link above.",
-              "links": [{
-                "title": "Dropbox",
-                "link": "https://www.dropbox.com/sh/rv6q4sl6hato7y7/AAAJU7T1J9ecNbyfqujqR_zCa?dl=0",
-                "icon": "fab fa-dropbox",
-                "size": ""
-              }]
+              "links": [
+                {
+                  "title": "Dropbox",
+                  "link": "https://www.dropbox.com/sh/rv6q4sl6hato7y7/AAAJU7T1J9ecNbyfqujqR_zCa?dl=0",
+                  "icon": "fab fa-dropbox",
+                  "size": ""
+                }
+              ]
             },
             {
               "title": "Audio",
               "desc": "Links to the audio can be found in the links above.",
-              "links": [{
+              "links": [
+                {
                   "title": "Box",
                   "link": "https://app.box.com/s/3wselmmulduax2vycu8qsdudxecd254u",
                   "icon": "fas fa-box-open",
@@ -357,7 +370,8 @@
       },
       "intro": "Symphony of Voices 2017 was held on the 15th of May, 2017 at the Esplanade Concert Hall.</br> The theme for this year was <b>Across the Vast Eternal Sky</b>.",
       "artwork": "../../../assets/images/sov/SOV2017.jpg",
-      "repertoire": [{
+      "repertoire": [
+        {
           "name": "I Carry Your Heart",
           "composer": "Connor Koppin",
           "duration": "5:03",
@@ -479,30 +493,36 @@
         },
         "dls": {
           "intro": "Audio and video for this particular SOV is available for download in the following sections. If any of these links go down, please drop us a message so that we can rectify the problem ASAP. Thank you! :)",
-          "sections": [{
+          "sections": [
+            {
               "title": "Everything",
               "desc": "Audio and videos to all SOVs can be found in the link above.",
-              "links": [{
-                "title": "Google Drive",
-                "link": "https://drive.google.com/drive/folders/1J0J87sIO77Obo9i3XkpCaGbbNRDhdLLa?usp=sharing",
-                "icon": "fab fa-google-drive",
-                "size": ""
-              }]
+              "links": [
+                {
+                  "title": "Google Drive",
+                  "link": "https://drive.google.com/drive/folders/1J0J87sIO77Obo9i3XkpCaGbbNRDhdLLa?usp=sharing",
+                  "icon": "fab fa-google-drive",
+                  "size": ""
+                }
+              ]
             },
             {
               "title": "Video",
               "desc": "Videos with the various angles edited in can be found in the link above.",
-              "links": [{
-                "title": "Dropbox",
-                "link": "https://www.dropbox.com/sh/t2ojfmo7o0hbz3i/AABqUv572E2KpzVx6NRRkYhYa?dl=0&lst=",
-                "icon": "fab fa-dropbox",
-                "size": "30.9 GB"
-              }]
+              "links": [
+                {
+                  "title": "Dropbox",
+                  "link": "https://www.dropbox.com/sh/t2ojfmo7o0hbz3i/AABqUv572E2KpzVx6NRRkYhYa?dl=0&lst=",
+                  "icon": "fab fa-dropbox",
+                  "size": "30.9 GB"
+                }
+              ]
             },
             {
               "title": "Audio",
               "desc": "Links to the audio can be found in the links above.",
-              "links": [{
+              "links": [
+                {
                   "title": "Box",
                   "link": "https://app.box.com/s/6yazwt0qeyjx9kps29hkhb62b1oy91f9",
                   "icon": "fas fa-box-open",
@@ -531,7 +551,6 @@
       "title": "Symphony of Voices 2016",
       "abbr": "SOV2016",
       "info": {
-
         "date": "25th May 2016",
         "venue": "Esplanade Concert Hall",
         "theme": "Sands of Time",
@@ -540,7 +559,8 @@
       },
       "intro": "Symphony of Voices 2016 was held on the 25th of May, 2016 at the Esplanade Concert Hall.</br> The theme for this year was <b>Sands of Time</b>.",
       "artwork": "../../../assets/images/sov/SOV2016.png",
-      "repertoire": [{
+      "repertoire": [
+        {
           "name": "Hallelujah",
           "composer": "George Frideric Handel",
           "duration": "4:18",
@@ -650,30 +670,36 @@
         },
         "dls": {
           "intro": "Audio and video for this particular SOV is available for download in the following sections. If any of these links go down, please drop us a message so that we can rectify the problem ASAP. Thank you! :)",
-          "sections": [{
+          "sections": [
+            {
               "title": "Everything",
               "desc": "Audio and videos to all SOVs can be found in the link above.",
-              "links": [{
-                "title": "Google Drive",
-                "link": "https://drive.google.com/drive/folders/1J0J87sIO77Obo9i3XkpCaGbbNRDhdLLa?usp=sharing",
-                "icon": "fab fa-google-drive",
-                "size": ""
-              }]
+              "links": [
+                {
+                  "title": "Google Drive",
+                  "link": "https://drive.google.com/drive/folders/1J0J87sIO77Obo9i3XkpCaGbbNRDhdLLa?usp=sharing",
+                  "icon": "fab fa-google-drive",
+                  "size": ""
+                }
+              ]
             },
             {
               "title": "Video",
               "desc": "Individual video files can be found in the above link.",
-              "links": [{
-                "title": "Google Drive",
-                "link": "https://drive.google.com/open?id=0B24yMaqyw1Rwa2gteGJGNFpmXzQ",
-                "icon": "fab fa-google-drive",
-                "size": "3.0 GB"
-              }]
+              "links": [
+                {
+                  "title": "Google Drive",
+                  "link": "https://drive.google.com/open?id=0B24yMaqyw1Rwa2gteGJGNFpmXzQ",
+                  "icon": "fab fa-google-drive",
+                  "size": "3.0 GB"
+                }
+              ]
             },
             {
               "title": "Audio",
               "desc": "Links to the audio can be found in the links above.",
-              "links": [{
+              "links": [
+                {
                   "title": "Box",
                   "link": "https://app.box.com/s/e2xioxf2414wjutzcquvfcm91wripkix",
                   "icon": "fas fa-box-open",
@@ -702,7 +728,6 @@
       "title": "Symphony of Voices 2015",
       "abbr": "SOV2015",
       "info": {
-
         "date": "17th May 2015",
         "venue": "Esplanade Concert Hall",
         "theme": "Aurora Borealis",
@@ -711,7 +736,8 @@
       },
       "intro": "Symphony of Voices 2015 was held on the 17th of May, 2015 at the Esplanade Concert Hall.</br> The theme for this year was <b>Aurora Borealis</b>.",
       "artwork": "../../../assets/images/sov/SOV2015.jpg",
-      "repertoire": [{
+      "repertoire": [
+        {
           "name": "There Is Sweet Music Here",
           "composer": "Z. Randall Stroope",
           "duration": "3:08",
@@ -845,30 +871,36 @@
         },
         "dls": {
           "intro": "Audio and video for this particular SOV is available for download in the following sections. If any of these links go down, please drop us a message so that we can rectify the problem ASAP. Thank you! :)",
-          "sections": [{
+          "sections": [
+            {
               "title": "Everything",
               "desc": "Audio and videos to all SOVs can be found in the link above.",
-              "links": [{
-                "title": "Google Drive",
-                "link": "https://drive.google.com/drive/folders/1J0J87sIO77Obo9i3XkpCaGbbNRDhdLLa?usp=sharing",
-                "icon": "fab fa-google-drive",
-                "size": ""
-              }]
+              "links": [
+                {
+                  "title": "Google Drive",
+                  "link": "https://drive.google.com/drive/folders/1J0J87sIO77Obo9i3XkpCaGbbNRDhdLLa?usp=sharing",
+                  "icon": "fab fa-google-drive",
+                  "size": ""
+                }
+              ]
             },
             {
               "title": "Video",
               "desc": "Individual video files can be found in the above link.",
-              "links": [{
-                "title": "Google Drive",
-                "link": "https://drive.google.com/drive/folders/0B24yMaqyw1RwfkkycW9oY3VJUXF5S0ltdHJidGFFTlhWTlhuT1d6SnVWemJwZHgwdzY5clU?usp=sharing",
-                "icon": "fab fa-google-drive",
-                "size": "3.0 GB"
-              }]
+              "links": [
+                {
+                  "title": "Google Drive",
+                  "link": "https://drive.google.com/drive/folders/0B24yMaqyw1RwfkkycW9oY3VJUXF5S0ltdHJidGFFTlhWTlhuT1d6SnVWemJwZHgwdzY5clU?usp=sharing",
+                  "icon": "fab fa-google-drive",
+                  "size": "3.0 GB"
+                }
+              ]
             },
             {
               "title": "Audio",
               "desc": "Links to the audio can be found in the links above.",
-              "links": [{
+              "links": [
+                {
                   "title": "Box",
                   "link": "https://app.box.com/s/d4qptb16kn9665a2tzyr1sis169koypo",
                   "icon": "fas fa-box-open",
@@ -911,7 +943,8 @@
       },
       "intro": "Symphony of Voices 2014 was held on the 26th of May, 2014 at the Esplanade Concert Hall.</br> The theme for this year was <b>Asian</b>.",
       "artwork": "../../../assets/images/sov/SOV2014.jpg",
-      "repertoire": [{
+      "repertoire": [
+        {
           "name": "Pastime with Good Company",
           "composer": "Henry VIII",
           "duration": "1:43",
@@ -1039,20 +1072,24 @@
         },
         "dls": {
           "intro": "Audio and video for this particular SOV is available for download in the following sections. If any of these links go down, please drop us a message so that we can rectify the problem ASAP. Thank you! :)",
-          "sections": [{
+          "sections": [
+            {
               "title": "Everything",
               "desc": "Audio and videos to all SOVs can be found in the link above.",
-              "links": [{
-                "title": "Google Drive",
-                "link": "hhttps://drive.google.com/drive/folders/1J0J87sIO77Obo9i3XkpCaGbbNRDhdLLa?usp=sharing",
-                "icon": "fab fa-google-drive",
-                "size": ""
-              }]
+              "links": [
+                {
+                  "title": "Google Drive",
+                  "link": "hhttps://drive.google.com/drive/folders/1J0J87sIO77Obo9i3XkpCaGbbNRDhdLLa?usp=sharing",
+                  "icon": "fab fa-google-drive",
+                  "size": ""
+                }
+              ]
             },
             {
               "title": "Video",
               "desc": "The entire video files can be found in the above links. Link 1 code: rxrl5d0T1e_7EEXevTQoYjz9-ZBNqBLLsSABWWCw0W4; Link 2 code: rxrl5d0T1e_7EEXevTQoYjz9-ZBNqBLLsSABWWCw0W4",
-              "links": [{
+              "links": [
+                {
                   "title": "MEGA (link 1)",
                   "link": "https://mega.co.nz/#!M9p2lJzB",
                   "icon": "fas fa-cloud-download-alt",
@@ -1069,7 +1106,8 @@
             {
               "title": "Audio",
               "desc": "Links to the audio can be found in the links above.",
-              "links": [{
+              "links": [
+                {
                   "title": "Dropbox",
                   "link": "https://www.dropbox.com/s/px7vhfc4qlbh5tp/SOV2014.zip?dl=0",
                   "icon": "fab fa-dropbox",
@@ -1086,7 +1124,8 @@
           ]
         }
       }
-    }, {
+    },
+    {
       "id": 2013,
       "title": "Symphony of Voices 2013",
       "abbr": "SOV2013",
@@ -1099,7 +1138,8 @@
       },
       "intro": "Symphony of Voices 2013 was held on the 21st of May, 2013 at the Esplanade Concert Hall.</br> The theme for this year was <b>Victorian</b>.",
       "artwork": "../../../assets/images/sov/SOV2013.jpg",
-      "repertoire": [{
+      "repertoire": [
+        {
           "name": "Magnificat",
           "composer": "Giles Swayne",
           "duration": "3:53",
@@ -1221,30 +1261,36 @@
         },
         "dls": {
           "intro": "Audio and video for this particular SOV is available for download in the following sections. If any of these links go down, please drop us a message so that we can rectify the problem ASAP. Thank you! :)",
-          "sections": [{
+          "sections": [
+            {
               "title": "Everything",
               "desc": "Audio and videos to all SOVs can be found in the link above.",
-              "links": [{
-                "title": "Google Drive",
-                "link": "https://drive.google.com/drive/folders/1J0J87sIO77Obo9i3XkpCaGbbNRDhdLLa?usp=sharing",
-                "icon": "fab fa-google-drive",
-                "size": "1.0 GB"
-              }]
+              "links": [
+                {
+                  "title": "Google Drive",
+                  "link": "https://drive.google.com/drive/folders/1J0J87sIO77Obo9i3XkpCaGbbNRDhdLLa?usp=sharing",
+                  "icon": "fab fa-google-drive",
+                  "size": "1.0 GB"
+                }
+              ]
             },
             {
               "title": "Video",
               "desc": "The video files for this particular SOV can be found in the above link.",
-              "links": [{
-                "title": "Google Drive",
-                "link": "https://drive.google.com/drive/folders/0B24yMaqyw1Rwfkk1MEo1Wk43YkNiUGx6TVNBTVNmaG80ZVZRRE81TTUySjZnSEZuX1JNbjg",
-                "icon": "fab fa-google-drive",
-                "size": "1.0 GB"
-              }]
+              "links": [
+                {
+                  "title": "Google Drive",
+                  "link": "https://drive.google.com/drive/folders/0B24yMaqyw1Rwfkk1MEo1Wk43YkNiUGx6TVNBTVNmaG80ZVZRRE81TTUySjZnSEZuX1JNbjg",
+                  "icon": "fab fa-google-drive",
+                  "size": "1.0 GB"
+                }
+              ]
             },
             {
               "title": "Audio",
               "desc": "Links to the audio can be found in the links above.",
-              "links": [{
+              "links": [
+                {
                   "title": "Box",
                   "link": "https://app.box.com/s/3s8k6yy3glwhccbm97njif0bvqespxh7",
                   "icon": "fas fa-box-open",
@@ -1267,13 +1313,12 @@
           ]
         }
       }
-    }, {
-
+    },
+    {
       "id": 2012,
       "title": "Symphony of Voices 2012",
       "abbr": "SOV2012",
       "info": {
-
         "date": "24th April 2012",
         "venue": "Esplanade Concert Hall",
         "theme": "Into the Vienna Woods",
@@ -1282,7 +1327,8 @@
       },
       "intro": "Symphony of Voices 2012 was held on the 24th of April, 2012 at the Esplanade Concert Hall.</br> The theme for this year was <b>Into the Vienna Woods</b>.",
       "artwork": "../../../assets/images/sov/SOV2012.png",
-      "repertoire": [{
+      "repertoire": [
+        {
           "name": "Magnificat Gloria",
           "composer": "Alberto Grau",
           "duration": "6:50",
@@ -1385,45 +1431,52 @@
         },
         "dls": {
           "intro": "Audio and video for this particular SOV is available for download in the following sections. If any of these links go down, please drop us a message so that we can rectify the problem ASAP. Thank you! :)",
-          "sections": [{
+          "sections": [
+            {
               "title": "Everything",
               "desc": "Audio and videos to all SOVs can be found in the link above.",
-              "links": [{
-                "title": "Google Drive",
-                "link": "https://drive.google.com/drive/folders/1J0J87sIO77Obo9i3XkpCaGbbNRDhdLLa?usp=sharing",
-                "icon": "fab fa-google-drive",
-                "size": "1.0 GB"
-              }]
+              "links": [
+                {
+                  "title": "Google Drive",
+                  "link": "https://drive.google.com/drive/folders/1J0J87sIO77Obo9i3XkpCaGbbNRDhdLLa?usp=sharing",
+                  "icon": "fab fa-google-drive",
+                  "size": "1.0 GB"
+                }
+              ]
             },
             {
               "title": "Video",
               "desc": "Videos for this year's SOV as recorded by the Esplanade can be found in the link above.",
-              "links": [{
-                "title": "Google Drive",
-                "link": "https://drive.google.com/open?id=1e0CH_KSxBV056t2OccWtLDcv7gM_5b81",
-                "icon": "fab fa-google-drive",
-                "size": "345 MB"
-              }]
+              "links": [
+                {
+                  "title": "Google Drive",
+                  "link": "https://drive.google.com/open?id=1e0CH_KSxBV056t2OccWtLDcv7gM_5b81",
+                  "icon": "fab fa-google-drive",
+                  "size": "345 MB"
+                }
+              ]
             },
             {
               "title": "Audio",
               "desc": "Links to the audio can be found in the links above.",
-              "links": [{
-                "title": "Google Drive",
-                "link": "https://drive.google.com/open?id=1e0CH_KSxBV056t2OccWtLDcv7gM_5b81",
-                "icon": "fab fa-google-drive",
-                "size": "142 MB"
-              }]
+              "links": [
+                {
+                  "title": "Google Drive",
+                  "link": "https://drive.google.com/open?id=1e0CH_KSxBV056t2OccWtLDcv7gM_5b81",
+                  "icon": "fab fa-google-drive",
+                  "size": "142 MB"
+                }
+              ]
             }
           ]
         }
       }
-    }, {
+    },
+    {
       "id": 2010,
       "title": "Symphony of Voices 2010",
       "abbr": "SOV2010",
       "info": {
-
         "date": "11th May 2010",
         "venue": "Esplanade Concert Hall",
         "theme": "Masquerade",
@@ -1432,7 +1485,8 @@
       },
       "intro": "Symphony of Voices 2010 was held on the 11th of May, 2010 at the Esplanade Concert Hall.</br> The theme for this year was <b>Masquerade</b>.</br>Note: for this year there wasn't really a specific theme, but instead the concert was divided into a few different sections. You can take a look at the booklet for more information in the Google Drive.",
       "artwork": "../../../assets/images/sov/SOV2010.jpg",
-      "repertoire": [{
+      "repertoire": [
+        {
           "name": "Exsultate Iusti",
           "composer": "Domenico Barolucci",
           "duration": "3:06",
@@ -1560,30 +1614,36 @@
         },
         "dls": {
           "intro": "Audio and video for this particular SOV is available for download in the following sections. If any of these links go down, please drop us a message so that we can rectify the problem ASAP. Thank you! :)",
-          "sections": [{
+          "sections": [
+            {
               "title": "Everything",
               "desc": "Audio and videos to all SOVs can be found in the link above.",
-              "links": [{
-                "title": "Google Drive",
-                "link": "https://drive.google.com/drive/folders/1J0J87sIO77Obo9i3XkpCaGbbNRDhdLLa?usp=sharing",
-                "icon": "fab fa-google-drive",
-                "size": "1.0 GB"
-              }]
+              "links": [
+                {
+                  "title": "Google Drive",
+                  "link": "https://drive.google.com/drive/folders/1J0J87sIO77Obo9i3XkpCaGbbNRDhdLLa?usp=sharing",
+                  "icon": "fab fa-google-drive",
+                  "size": "1.0 GB"
+                }
+              ]
             },
             {
               "title": "Video",
               "desc": "Videos for this year's SOV can be found in the link above.",
-              "links": [{
-                "title": "Google Drive",
-                "link": "https://drive.google.com/open?id=1ua7hew63pWFDmuKXSUpQ3WZoaC1YFUNt",
-                "icon": "fab fa-google-drive",
-                "size": "1.97 GB"
-              }]
+              "links": [
+                {
+                  "title": "Google Drive",
+                  "link": "https://drive.google.com/open?id=1ua7hew63pWFDmuKXSUpQ3WZoaC1YFUNt",
+                  "icon": "fab fa-google-drive",
+                  "size": "1.97 GB"
+                }
+              ]
             },
             {
               "title": "Audio",
               "desc": "Links to the audio can be found in the links above.",
-              "links": [{
+              "links": [
+                {
                   "title": "Google Drive",
                   "link": "https://drive.google.com/open?id=1ua7hew63pWFDmuKXSUpQ3WZoaC1YFUNt",
                   "icon": "fab fa-google-drive",
@@ -1595,6 +1655,380 @@
                   "link": "https://www.dropbox.com/s/botybzz7teuuzzq/SOV2010.zip?dl=0",
                   "icon": "fab fa-dropbox",
                   "size": "158 MB"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": 2008,
+      "title": "Symphony of Voices 2008",
+      "abbr": "SOV2008",
+      "info": {
+        "date": "12th May 2008",
+        "venue": "Esplanade Concert Hall",
+        "theme": "N/A",
+        "noFirstHalf": 8,
+        "noSecondHalf": 12
+      },
+      "intro": "Symphony of Voices 2008 was held on the 12th of May, 2008 at the Esplanade Concert Hall.",
+      "artwork": "../../../assets/images/sov/SOV2008.png",
+      "repertoire": [
+        {
+          "name": "Mate Saule",
+          "composer": "Pēteris Vasks",
+          "duration": "5:43",
+          "mp3": "01 Mate Saule"
+        },
+        {
+          "name": "29. Zsoltár",
+          "composer": "Tamás Pánczél",
+          "duration": "3:39",
+          "mp3": "02 Zsoltar"
+        },
+        {
+          "name": "De Circuitu Aeterno",
+          "composer": "Petr Eben",
+          "duration": "3:36",
+          "mp3": "03 De Circuitu Aeterno"
+        },
+        {
+          "name": "Il Coro Delle Malmaritate",
+          "composer": "Luigi Dallapiccola",
+          "duration": "4:23",
+          "mp3": "04 Il Coro Delle Malmaritate"
+        },
+        {
+          "name": "Nicolette",
+          "composer": "Maurice Ravel",
+          "duration": "1:53",
+          "mp3": "05 Nicolette"
+        },
+        {
+          "name": "Trois beaux oiseaux du paradis",
+          "composer": "Maurice Ravel",
+          "duration": "2:51",
+          "mp3": "06 Trois beaux oiseaux du paradis"
+        },
+        {
+          "name": "Ronde",
+          "composer": "Maurice Ravel",
+          "duration": "1:50",
+          "mp3": "07 Ronde"
+        },
+        {
+          "name": "Leonardo Dreams of His Flying Machine",
+          "composer": "Eric Whitacre",
+          "duration": "7:30",
+          "mp3": "08 Leonardo Dreams of His Flying Machine"
+        },
+        {
+          "name": "Kodomo",
+          "composer": "Ko Matsushita",
+          "duration": "3:58",
+          "mp3": "09 Kodomo"
+        },
+        {
+          "name": "Yoru",
+          "composer": "Ko Matsushita",
+          "duration": "3:55",
+          "mp3": "10 Yoru"
+        },
+        {
+          "name": "Hashiru",
+          "composer": "Ko Matsushita",
+          "duration": "3:04",
+          "mp3": "11 Hashiru"
+        },
+        {
+          "name": "Mamoru",
+          "composer": "Ko Matsushita",
+          "duration": "3:14",
+          "mp3": "12 Mamoru"
+        },
+        {
+          "name": "读书郎 (Schoolboy)",
+          "composer": "Unknown composer",
+          "duration": "2:52",
+          "mp3": "13 Schoolboy"
+        },
+        {
+          "name": "春天来了 (Springtime)",
+          "composer": "Unknown composer",
+          "duration": "2:36",
+          "mp3": "14 Springtime"
+        },
+        {
+          "name": "Potong Padi",
+          "composer": "Nelson Kwei",
+          "duration": "2:47",
+          "mp3": "15 Potong Padi"
+        },
+        {
+          "name": "Janger",
+          "composer": "Nelson Kwei",
+          "duration": "3:09",
+          "mp3": "16 Janger"
+        },
+        {
+          "name": "Katakataka",
+          "composer": "Emmanuel Laureola",
+          "duration": "2:00",
+          "mp3": "17 Katakataka"
+        },
+        {
+          "name": "Dum Belle",
+          "composer": "Rodolfo Delarmente",
+          "duration": "3:06",
+          "mp3": "18 Dum Belle"
+        },
+        {
+          "name": "El Guayaboso",
+          "composer": "Guido López-Gavilán",
+          "duration": "2:30",
+          "mp3": "19 El Guayaboso"
+        },
+        {
+          "name": "No Man Is An Island",
+          "composer": "Roy Ringwald (choir anthem)",
+          "duration": "3:03",
+          "mp3": "20 No Man Is An Island"
+        }
+      ],
+      "links": {
+        "yt": {
+          "desc": "SOV2008 has not been uploaded to YouTube for viewership."
+        },
+        "dls": {
+          "intro": "Audio for this particular SOV is available for download in the following links. If you wish to contribute the video files, please drop me a message!",
+          "sections": [
+            {
+              "title": "Everything",
+              "desc": "Audio and videos to all SOVs can be found in the link above.",
+              "links": [
+                {
+                  "title": "Google Drive",
+                  "link": "https://drive.google.com/drive/folders/1J0J87sIO77Obo9i3XkpCaGbbNRDhdLLa?usp=sharing",
+                  "icon": "fab fa-google-drive"
+                }
+              ]
+            },
+            {
+              "title": "Video",
+              "desc": "Videos for this year's SOV are unavailable for download (no source)."
+            },
+            {
+              "title": "Audio",
+              "desc": "Links to the audio can be found in the links above.",
+              "links": [
+                {
+                  "title": "Google Drive",
+                  "link": "https://drive.google.com/open?id=1ua7hew63pWFDmuKXSUpQ3WZoaC1YFUNt",
+                  "icon": "fab fa-google-drive"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": 2007,
+      "title": "Symphony of Voices 2007",
+      "abbr": "SOV2007",
+      "info": {
+        "date": "15th May 2007",
+        "venue": "Esplanade Concert Hall",
+        "theme": "N/A",
+        "noFirstHalf": 16,
+        "noSecondHalf": 9
+      },
+      "intro": "Symphony of Voices 2007 was held on the 15th of May, 2007 at the Esplanade Concert Hall.",
+      "artwork": "../../../assets/images/sov/SOV2007.png",
+      "repertoire": [
+        {
+          "name": "Cantus Gloriosus",
+          "composer": "Józef Świder",
+          "duration": "3:27",
+          "mp3": "01 Cantus Gloriosus"
+        },
+        {
+          "name": "O Magnum Mysterium",
+          "composer": "Morten Lauridsen",
+          "duration": "5:13",
+          "mp3": "02 O Magnum Mysterium"
+        },
+        {
+          "name": "Salve Regina",
+          "composer": "Antonio Lotti",
+          "duration": "3:24",
+          "mp3": "03 Salve Regina"
+        },
+        {
+          "name": "Crucifixus",
+          "composer": "Antonio Lotti",
+          "duration": "3:28",
+          "mp3": "04 Crucifixus"
+        },
+        {
+          "name": "Amor Vittorioso",
+          "composer": "Giovanni Gastoldi",
+          "duration": "2:03",
+          "mp3": "05 Amor Vittorioso"
+        },
+        {
+          "name": "All Creatures Now Are Merry-minded",
+          "composer": "Maurice Ravel",
+          "duration": "1:58",
+          "mp3": "06 All Creatures Now Are Merry-minded"
+        },
+        {
+          "name": "Dale Como Es",
+          "composer": "Alberto Grau",
+          "duration": "5:08",
+          "mp3": "07 Dale Como Es"
+        },
+        {
+          "name": "Confitemini Domino",
+          "composer": "Alberto Grau",
+          "duration": "7:23",
+          "mp3": "08 Confitemini Domino"
+        },
+        {
+          "name": "Il Coro Delle Malmaritate",
+          "composer": "Luigi Dallapiccola",
+          "duration": "4:28",
+          "mp3": "09 Il Coro Delle Malmaritate"
+        },
+        {
+          "name": "Il Coro Dei Malammogliati",
+          "composer": "Luigi Dallapiccola",
+          "duration": "4:42",
+          "mp3": "10 Il Coro Dei Malammogliati"
+        },
+        {
+          "name": "Asa (Morning)",
+          "composer": "Ko Matsushita",
+          "duration": "1:05",
+          "mp3": "11 Asa (Morning)"
+        },
+        {
+          "name": "Anata no Kokoro no Naka ni (In Your Heart)",
+          "composer": "Ko Matsushita",
+          "duration": "2:02",
+          "mp3": "12 Anata no Kokoro no Naka ni (In Your Heart)"
+        },
+        {
+          "name": "Furueteokure (Please Show a Sign)",
+          "composer": "Ko Matsushita",
+          "duration": "1:22",
+          "mp3": "13 Furueteokure (Please Show a Sign)"
+        },
+        {
+          "name": "Hana (Flower)",
+          "composer": "Ko Matsushitar",
+          "duration": "3:28",
+          "mp3": "14 Hana (Flower)"
+        },
+        {
+          "name": "Lullaby",
+          "composer": "Zechariah Goh Toh Chai",
+          "duration": "3:28",
+          "mp3": "15 Lullaby"
+        },
+        {
+          "name": "Counting Frogs",
+          "composer": "Zechariah Goh Toh Chai",
+          "duration": "2:30",
+          "mp3": "16 Counting Frogs"
+        },
+        {
+          "name": "苗家少女 [Miao Jia Shao Nu]",
+          "composer": "Nelson Kwei",
+          "duration": "5:05",
+          "mp3": "17 Miao Jia Shao Nu"
+        },
+        {
+          "name": "Wayang Kulit Medley",
+          "composer": "Pawl Widyawan",
+          "duration": "3:15",
+          "mp3": "18 Wayang Kulit Medley"
+        },
+        {
+          "name": "O My Love is Like a Red, Red Rose",
+          "composer": "Simon Carrington",
+          "duration": "3:43",
+          "mp3": "19 O My Love is Like a Red, Red Rose"
+        },
+        {
+          "name": "The Skye Boat Song",
+          "composer": "Unknown composer",
+          "duration": "6:08",
+          "mp3": "20 The Skye Boat Song"
+        },
+        {
+          "name": "Pasttime with Good Company",
+          "composer": "Henry VIII",
+          "duration": "1:37",
+          "mp3": "21 Pasttime with Good Company"
+        },
+        {
+          "name": "Organ Fugue (BWV 578)",
+          "composer": "Ward Swingle",
+          "duration": "3:00",
+          "mp3": "22 Organ Fugue (BWV 578)"
+        },
+        {
+          "name": "1812 Overture",
+          "composer": "Unknown composer",
+          "duration": "6:10",
+          "mp3": "23 1812 Overture"
+        },
+        {
+          "name": "Ciao, Bella Ciao",
+          "composer": "Ben Parry",
+          "duration": "3:17",
+          "mp3": "24 Ciao, Bella Ciao"
+        },
+        {
+          "name": "No Man Is An Island",
+          "composer": "Roy Ringwald (choir anthem)",
+          "duration": "3:09",
+          "mp3": "25 No Man Is An Island"
+        }
+      ],
+      "links": {
+        "yt": {
+          "desc": "SOV2008 has not been uploaded to YouTube for viewership."
+        },
+        "dls": {
+          "intro": "Audio for this particular SOV is available for download in the following links. If you wish to contribute the video files, please drop me a message!",
+          "sections": [
+            {
+              "title": "Everything",
+              "desc": "Audio and videos to all SOVs can be found in the link above.",
+              "links": [
+                {
+                  "title": "Google Drive",
+                  "link": "https://drive.google.com/drive/folders/1J0J87sIO77Obo9i3XkpCaGbbNRDhdLLa?usp=sharing",
+                  "icon": "fab fa-google-drive"
+                }
+              ]
+            },
+            {
+              "title": "Video",
+              "desc": "Videos for this year's SOV are unavailable for download (no source)."
+            },
+            {
+              "title": "Audio",
+              "desc": "Links to the audio can be found in the links above.",
+              "links": [
+                {
+                  "title": "Google Drive",
+                  "link": "https://drive.google.com/open?id=1ua7hew63pWFDmuKXSUpQ3WZoaC1YFUNt",
+                  "icon": "fab fa-google-drive"
                 }
               ]
             }
