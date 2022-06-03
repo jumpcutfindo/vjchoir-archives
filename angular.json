@@ -125,7 +125,6 @@
       }
     }
   },
-  "defaultProject": "vjchoir-archives",
   "schematics": {
     "@schematics/angular:component": {
       "style": "scss"
