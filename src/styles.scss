@@ -77,6 +77,13 @@ img {
   font-family: $primary-text-font !important;
 }
 
+.splide__slide {
+  img {
+      width: 100% !important;
+      height: auto;
+  }
+}
+
 ngb-carousel {
   &:focus {
     outline: none;

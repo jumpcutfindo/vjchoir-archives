@@ -19,14 +19,11 @@
 
   <div class="section">
     <h3>{{homeJSON.featured_photos.title}}</h3>
-    <ngb-carousel *ngIf="homeJSON.featured_photos.images" class="mx-md-5 my-3">
-      <ng-template ngbSlide *ngFor="let image of homeJSON.featured_photos.images">
-        <div>
-          <img [src]="image.link" class="img-fluid">
-        </div>
-      </ng-template>
-    </ngb-carousel>
-
+    <splide *ngIf="homeJSON.featured_photos.images" [options]="{ type: 'loop', perPage: 1, keyboard: false, width: '100vw', autoplay: 'true', interval: '4000'}">
+      <splide-slide *ngFor="let image of homeJSON.featured_photos.images">
+          <img [src]="image.link" alt="" />
+      </splide-slide>
+   </splide>
   </div>
 </div>
 

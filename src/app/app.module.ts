@@ -27,6 +27,7 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
 import { NgbCarouselModule, NgbDropdownModule, NgbModalModule, NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { ClipboardModule } from '@angular/cdk/clipboard';
+import { NgxSplideModule } from 'ngx-splide';
 
 @NgModule({
   declarations: [
@@ -63,6 +64,7 @@ import { ClipboardModule } from '@angular/cdk/clipboard';
     NgbTooltipModule,
     DragDropModule,
     ClipboardModule,
+    NgxSplideModule
   ],
   providers: [],
   bootstrap: [AppComponent]
