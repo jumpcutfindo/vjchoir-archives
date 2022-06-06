@@ -28,6 +28,7 @@ import { NgbCarouselModule, NgbDropdownModule, NgbModalModule, NgbTooltipModule 
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { ClipboardModule } from '@angular/cdk/clipboard';
 import { NgxSplideModule } from 'ngx-splide';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -64,7 +65,12 @@ import { NgxSplideModule } from 'ngx-splide';
     NgbTooltipModule,
     DragDropModule,
     ClipboardModule,
-    NgxSplideModule
+    NgxSplideModule,
+    ToastrModule.forRoot({
+      timeOut: 2000,
+      positionClass: 'toast-top-center',
+      preventDuplicates: true
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]
