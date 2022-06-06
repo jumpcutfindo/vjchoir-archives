@@ -1,22 +1,12 @@
 import {
   Component,
   OnInit,
-  HostListener,
   ViewChild,
-  ViewChildren,
-  QueryList,
-  ElementRef,
 } from "@angular/core";
 import { MenuItem } from "../model/MenuItem";
 
 import { NavControllerService } from "./nav-controller.service";
-import { Router, NavigationStart, NavigationEnd } from "@angular/router";
-import { HomeComponent } from "src/app/pages/home/home.component";
-import { AboutComponent } from "src/app/pages/about/about.component";
-import { BatchesComponent } from "src/app/pages/batches/batches.component";
-import { SovComponent } from "src/app/pages/sov/sov.component";
-import { PlayerComponent } from "src/app/music/player/player.component";
-import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
+import { Router, NavigationEnd } from "@angular/router";
 import { LoadingService } from 'src/app/loading/loading.service';
 
 @Component({
