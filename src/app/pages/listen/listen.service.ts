@@ -55,7 +55,6 @@ export class ListenService {
   }
 
   createNewPlaylist() {
-    
     let tempPlaylist = <Playlist>{
       name: "Default playlist name",
       desc: "Default description name",
