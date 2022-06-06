@@ -4,13 +4,12 @@ import listenJSON from "../../../assets/data/listen.json";
 
 import { Observable, of } from "rxjs";
 import { Playlist } from "src/app/music/model/Playlist";
-import moment from "moment";
 import { SovService } from '../sov/sov.service';
 
 const MY_PLAYLISTS_STRING = "myPlaylists";
 
 const DEFAULT_TITLE = "Imported playlist";
-const DEFAULT_DESCRIPTION = "This playlist was imported on " + moment().format("dddd, MMMM Do YYYY, h:mm a");
+const DEFAULT_DESCRIPTION = "This playlist was imported on " + new Date().toISOString();
 
 const PLAYLIST_SEPARATOR = "p";
 const TRACKS_SEPARATOR = "t";
@@ -60,7 +59,7 @@ export class ListenService {
     let tempPlaylist = <Playlist>{
       name: "Default playlist name",
       desc: "Default description name",
-      duration: moment.duration("0"),
+      duration: 0,
       tracks: [],
       isOpen: false,
       isDefault: false
@@ -78,10 +77,6 @@ export class ListenService {
   }
 
   jsonToPlaylist(playlist: any): Playlist {
-    playlist.duration = moment.duration(playlist.duration);
-    for(let song of playlist.tracks) {
-        song.duration = moment.duration(song.duration);
-    }
     playlist.isOpen = false;
 
     return playlist;
@@ -127,9 +122,9 @@ export class ListenService {
         tracks: songs.sort((a, b) => a.pos - b.pos).map(x => x.song)
       }
 
-      let repertoireDuration = moment.duration();
+      let repertoireDuration = 0;
       for(let j = 0; j < playlist.tracks.length; j ++) {
-        repertoireDuration.add(playlist.tracks[j].duration);
+        repertoireDuration += playlist.tracks[j].duration;
       }
 
       playlist.duration = repertoireDuration;

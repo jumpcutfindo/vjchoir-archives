@@ -3,7 +3,6 @@ import { ListenService } from './listen.service';
 import { SovService } from '../sov/sov.service';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Playlist } from 'src/app/music/model/Playlist';
-import moment from 'moment';
 import { Song } from 'src/app/music/model/Song';
 import { PlayerService } from 'src/app/music/player/player.service';
 import {CdkDragDrop, moveItemInArray} from '@angular/cdk/drag-drop';
