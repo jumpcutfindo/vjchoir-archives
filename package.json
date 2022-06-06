@@ -6,7 +6,7 @@
     "start": "ng serve",
     "build": "ng build --prod --base-href=\"https://vjchoir.github.io/\"",
     "test": "ng test",
-    "lint": "ng lint",
+    "lint": "eslint \"src/**/*.ts\"",
     "e2e": "ng e2e"
   },
   "private": true,
@@ -45,6 +45,9 @@
     "@angular/compiler-cli": "^14.0.0",
     "@angular/language-service": "^14.0.0",
     "@types/node": "^12.11.1",
+    "@typescript-eslint/eslint-plugin": "^5.27.0",
+    "@typescript-eslint/parser": "^5.27.0",
+    "eslint": "^8.17.0",
     "karma": "~6.3.20",
     "karma-chrome-launcher": "~3.1.0",
     "karma-coverage-istanbul-reporter": "~3.0.2",
