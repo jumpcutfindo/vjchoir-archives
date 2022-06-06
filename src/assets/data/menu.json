@@ -42,14 +42,6 @@
     },
     {
       "id": 5,
-      "name": "CONTRIBUTE",
-      "linkName": "/contribute",
-      "icon": "fas fa-people-carry",
-      "active": false,
-      "isVisible": true
-    },
-    {
-      "id": 6,
       "name": "MISC",
       "linkName": "/misc",
       "icon": "fas fa-ellipsis-h",

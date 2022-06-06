@@ -8,7 +8,6 @@ import { AboutComponent } from './pages/about/about.component';
 import { BatchesComponent } from './pages/batches/batches.component';
 import { SovComponent } from './pages/sov/sov.component';
 import { ListenComponent } from './pages/listen/listen.component';
-import { ContributeComponent } from './pages/contribute/contribute.component';
 import { MiscComponent } from './pages/misc/misc.component';
 import { NavControllerComponent } from './navigation/nav-controller/nav-controller.component';
 import { SiderComponent } from './navigation/sider/sider.component';
@@ -40,7 +39,6 @@ import { ToastrModule } from 'ngx-toastr';
     BatchesComponent,
     SovComponent,
     ListenComponent,
-    ContributeComponent,
     MiscComponent,
     NavControllerComponent,
     SiderComponent,
