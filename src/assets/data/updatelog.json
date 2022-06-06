@@ -19,8 +19,8 @@
   },
   {
     "title": "v4",
-    "date": "",
-    "summary": "This update is big enough to warrant it a new version code: v4. The main change is that I've converted the website and all its features into Angular (from pure HTML / CSS), and made it more integrated with Bootstrap 4. This helps to add a lot of functionality, and also helps to make the website more easily updatable in the future. The code is also much cleaner and more modifiable to add on new components / remove old components, and debug.",
+    "date": "12 June 2020",
+    "summary": "Updated the site into an Angular-based web application, with more functionalities.",
     "items": [
       {
         "title": "Converted most / all of the code into Angular",
@@ -53,9 +53,9 @@
     ]
   },
   {
-    "title": "New Year Cleaning",
+    "title": "v3.6",
     "date": "6 January 2020 ",
-    "summary": "",
+    "summary": "New Year Cleaning update - updated some information and added some small features.",
     "items": [
       {
         "title": "Updated the dates to 2020",
@@ -76,9 +76,9 @@
     ]
   },
   {
-    "title": "Mini mini update",
+    "title": "v3.5",
     "date": "29 August 2019",
-    "summary": "",
+    "summary": "Added batch information and some minor bugfixes.",
     "items": [
       {
         "title": "Added the Batch of 2019 - 2020's information",
@@ -91,16 +91,16 @@
     ]
   },
   {
-    "title": "For the night is dark and full of terrors",
+    "title": "v3.4",
     "date": "1 June 2019",
-    "summary": "",
+    "summary": "Added dark mode and updated some SOV data.",
     "items": [
       {
         "title": "Added SOV2010's information (available on both the SOV page and listen page)",
         "explanation": ""
       },
       {
-        "title": "Added a \"night mode\" to the website - you can toggle this on and off on the sidebar)",
+        "title": "Added \"dark mode\" to the website - you can toggle this on and off on the sidebar)",
         "explanation": ""
       },
       {
@@ -118,16 +118,16 @@
     ]
   },
   {
-    "title": "SOV2019 Update",
+    "title": "v3.3",
     "date": "28 May 2019",
-    "summary": "",
+    "summary": "Added SOV2019, as well as refactored some code to make the site run better.",
     "items": [
       {
         "title": "Added SOV2019's information (which includes download links, updates to the listen page)",
         "explanation": ""
       },
       {
-        "title": "Re-coded the website to make it more developer friendly (this is stuff you don't need to care about",
+        "title": "Re-coded the website to make it more developer friendly (this is stuff you don't need to care about)",
         "explanation": ""
       },
       {
@@ -158,9 +158,9 @@
   },
 
   {
-    "title": "This is still alive!",
+    "title": "v3.2",
     "date": "03 Mar 2019",
-    "summary": "",
+    "summary": "We're still alive! Added a bunch of stories previously submitted and other small tweaks.",
     "items": [
       {
         "title": "Added a bunch of stories that were submitted last year apparently but I never realised (sorry Dayne)",
@@ -190,9 +190,9 @@
   },
 
   {
-    "title": "Never too late to the party!",
+    "title": "v3.1",
     "date": "11 Dec 2018",
-    "summary": "",
+    "summary": "Adds SOV2012 and some batch information.",
     "items": [
       {
         "title": "Added SOV2012 (information and Listen data)",
@@ -212,7 +212,7 @@
   {
     "title": "v3",
     "date": "03 Dec 2018",
-    "summary": "",
+    "summary": "Migrated from Google Sites to a simple HTML-CSS-JavaScript website.",
     "items": [
       {
         "title": "The website has been updated to give it a fresher, modern look!",

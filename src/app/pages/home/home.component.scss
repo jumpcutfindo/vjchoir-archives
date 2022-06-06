@@ -1,0 +1,51 @@
+@import "../../../styles.scss";
+@import "https://fonts.googleapis.com/css?family=Catamaran:300,400,500,600,700";
+
+.logs {
+  max-width: 75vw;
+  height: auto;
+  overflow-x: scroll;
+  white-space: nowrap;
+
+  .log-box {
+    min-width: 250px;
+    min-height: 250px;
+    max-width: 250px;
+    max-height: 250px;
+    border: 1px $primary-text-color-faded solid;
+    border-radius: 5px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    h3, h4, p {
+        word-break: normal;
+        white-space: normal;
+        text-overflow: ellipsis;
+    }
+  }
+}
+
+
+@media only screen and (max-width: 1200px) {
+    .logs {
+        max-width: 70vw;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .logs {
+        max-width: 65vw;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    .logs {
+        max-width: 60vw;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .logs {
+        max-width: 100vw;
+    }
+}

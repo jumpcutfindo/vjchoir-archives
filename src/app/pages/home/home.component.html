@@ -1,29 +1,35 @@
 <div class="header">
-  <h1>{{homeJSON.header.title}}</h1>
+  <h1>{{header.title}}</h1>
   <div class="col-sm-12 col-md-8 col-xl-8 my-3">
     <img src="{{logoImage}}" class="img-fluid">
   </div>
-  <p class="my-4">{{homeJSON.header.intro_msg}}</p>
+  <p class="my-4">{{header.message}}</p>
 </div>
 
-<hr/>
+<hr />
 
 <div class="content">
-  <div class="section" *ngFor="let section of homeJSON.sections">
-    <h3>{{section.title}}</h3>
-    <div [innerHTML]="section.content">
-    </div>
-  </div>
-
-  <hr/>
-
   <div class="section">
-    <h3>{{homeJSON.featured_photos.title}}</h3>
-    <splide *ngIf="homeJSON.featured_photos.images" [options]="{ type: 'loop', perPage: 1, keyboard: false, width: '100vw', autoplay: 'true', interval: '4000'}">
-      <splide-slide *ngFor="let image of homeJSON.featured_photos.images">
-          <img [src]="image.link" alt="" />
+    <h3>Featured Photos</h3>
+    <splide *ngIf="featuredPhotos"
+      [options]="{ type: 'loop', perPage: 1, keyboard: false, width: '100vw', autoplay: 'true', interval: '5000'}">
+      <splide-slide *ngFor="let photo of featuredPhotos">
+        <img [src]="photo" alt="" />
       </splide-slide>
-   </splide>
+    </splide>
+  </div>
+  <hr />
+  <div class="section">
+    <h3>Website Updates</h3>
+    <div class="logs d-flex flex-row">
+      <div *ngFor="let update of updateLogs; last as isLast; first as isFirst" class="log-box d-block p-3 mr-2">
+        <div class="d-flex">
+          <h4 class="my-0">{{update.title}}</h4>
+          <span *ngIf="isFirst" class="badge badge-danger my-auto ml-2">CURRENT VERSION</span>
+        </div>
+        <p [innerHTML]="update.summary"></p>
+      </div>
+    </div>
   </div>
 </div>
 

@@ -23,6 +23,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AppRoutingModule } from './app-routing/app-routing.module';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { NgbCarouselModule, NgbDropdownModule, NgbModalModule, NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { ClipboardModule } from '@angular/cdk/clipboard';
@@ -61,6 +62,7 @@ import { ToastrModule } from 'ngx-toastr';
     NgbModalModule,
     NgbDropdownModule,
     NgbTooltipModule,
+    MatSlideToggleModule,
     DragDropModule,
     ClipboardModule,
     NgxSplideModule,
