@@ -67,7 +67,6 @@ export class HomeService {
     rawEvents = rawEvents.filter(e => e.time > Date.now());
 
     const events: HomeEvent[] = rawEvents.map(event => {
-      console.log(event.time, Date.now());
       return {
         title: event.title,
         description: event.description,

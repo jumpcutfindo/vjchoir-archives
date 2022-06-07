@@ -4,8 +4,8 @@ import { AboutService } from "./about.service";
 import { NavControllerService } from "src/app/navigation/nav-controller/nav-controller.service";
 import { Router } from "@angular/router";
 import { Location } from "@angular/common";
-import { Title } from '@angular/platform-browser';
-import { LoadingService } from 'src/app/loading/loading.service';
+import { Title } from "@angular/platform-browser";
+import { LoadingService } from "src/app/loading/loading.service";
 
 @Component({
   selector: "app-about",
@@ -30,7 +30,7 @@ export class AboutComponent implements OnInit {
       this.handleFragment();
     });
 
-    this.navControllerService.routerUpdates.subscribe(val => {
+    this.navControllerService.routerUpdates.subscribe((val) => {
       this.handleFragment();
     });
 
@@ -41,8 +41,8 @@ export class AboutComponent implements OnInit {
     if (!this.router.url.includes("#")) {
       this.currActive = this.aboutJSON.sections[0];
     } else {
-      let fragment = this.router.url.split("#")[1];
-      for (let item of this.aboutJSON.sections) {
+      const fragment = this.router.url.split("#")[1];
+      for (const item of this.aboutJSON.sections) {
         if (fragment.includes(item.id)) {
           this.currActive = item;
           break;

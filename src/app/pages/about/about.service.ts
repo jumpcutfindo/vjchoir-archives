@@ -7,9 +7,6 @@ import { Observable, of } from 'rxjs';
   providedIn: 'root',
 })
 export class AboutService {
-
-  constructor() { }
-
   getContent(): Observable<any> {
       return of(aboutJSON);
   }
