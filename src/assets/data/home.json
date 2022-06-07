@@ -7,6 +7,7 @@
     },
     "message": "Welcome to the unofficial official webpage for the Victoria Junior College Choir. This website is a repository of batch information, songs, concerts and other cool stuff for you to peruse. Enjoy!"
   },
+  "upcoming_events": [],
   "featured_photos": {
     "location": "../../../assets/images/featured",
     "base_name": "featured_",

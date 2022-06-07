@@ -10,6 +10,25 @@
 
 <div class="content">
   <div class="section">
+    <h3>Upcoming Events</h3>
+    <div *ngIf="upcomingEvents.length > 0" class="cards upcoming-events d-flex flex-row pb-2">
+      <div *ngFor="let event of upcomingEvents" class="card d-block p-3 mr-2 text-center" (click)="openLink(event.link)">
+        <div class="d-flex flex-column">
+          <h1 class="m-0 days-remaining">{{event.daysRemaining}}</h1>
+          <p class="m-0">DAYS TO</p>
+          <h4>{{event.title}}</h4>
+        </div>
+        <p class="date m-0"></p>
+        <p class="m-0">{{event.description}}</p>
+        <p *ngIf="event.link" class="link mt-2"><i class="fas fa-link mr-2"></i>Click for more info!</p>
+      </div>
+    </div>
+    <p *ngIf="upcomingEvents.length <= 0">
+      Looks like there aren't any events scheduled! If you're from the choir and would like to indicate an event here, please message the website admin!
+    </p>
+  </div>
+  <hr />
+  <div class="section">
     <h3>Featured Photos</h3>
     <splide *ngIf="featuredPhotos"
       [options]="{ type: 'loop', perPage: 1, keyboard: false, width: '100vw', autoplay: 'true', interval: '5000'}">
@@ -20,13 +39,14 @@
   </div>
   <hr />
   <div class="section">
-    <h3>Website Updates</h3>
-    <div class="logs d-flex flex-row">
-      <div *ngFor="let update of updateLogs; last as isLast; first as isFirst" class="log-box d-block p-3 mr-2">
+    <h3>Website Updates</h3> 
+    <div class="cards d-flex flex-row pb-2">
+      <div *ngFor="let update of updateLogs; last as isLast; first as isFirst" class="card d-block p-3 mr-2">
         <div class="d-flex">
           <h4 class="my-0">{{update.title}}</h4>
           <span *ngIf="isFirst" class="badge badge-danger my-auto ml-2">CURRENT VERSION</span>
         </div>
+        <p class="date m-0">{{update.date}}</p>
         <p [innerHTML]="update.summary"></p>
       </div>
     </div>

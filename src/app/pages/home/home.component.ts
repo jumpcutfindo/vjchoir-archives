@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { HomeHeader, HomeService } from './home.service';
+import { HomeEvent, HomeHeader, HomeService } from './home.service';
 import { Title } from '@angular/platform-browser';
 import { LoadingService } from 'src/app/loading/loading.service';
 import { DarkModeService } from 'src/app/services/darkmode.service';
@@ -18,6 +18,7 @@ export class HomeComponent implements OnInit {
   // Content
   header: HomeHeader;
   featuredPhotos: string[];
+  upcomingEvents: HomeEvent[];
   updateLogs: any[];
 
   logoImage;
@@ -38,6 +39,10 @@ export class HomeComponent implements OnInit {
     // Retrieve header content
     this.homeService.getHeader()
       .subscribe(header => this.header = header);
+
+    // Retrieve upcoming events
+    this.homeService.getUpcomingEvents()
+      .subscribe(events => this.upcomingEvents = events);
     
     // Retrieve photo content
     this.homeService.getFeaturedPhotos()
@@ -68,4 +73,10 @@ export class HomeComponent implements OnInit {
     }
   }
 
+  /**
+   * Directs user to a provided link
+   */
+  openLink(url: string) {
+    if (url) window.open(url, "_blank");
+  }
 }

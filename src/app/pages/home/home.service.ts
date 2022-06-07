@@ -16,6 +16,14 @@ export class HomeHeader {
   message: string;
 }
 
+export class HomeEvent {
+  title: string;
+  description: string;
+  time: number;
+  link?: string;
+  daysRemaining: number;
+}
+
 export class HomeService {
   /**
    * Retreive the information for the home header
@@ -42,5 +50,33 @@ export class HomeService {
     }
 
     return of(photos);
+  }
+
+  /**
+   * Retrieve any upcoming events entered into the website.
+   * Example:
+   * {
+      "title": "SOV2022",
+      "description": "Symphony of Voices 2022 will be at the Esplanade!",
+      "time": 1655895600000,
+      "link": "https://www.example.com/"
+    },
+   */
+  getUpcomingEvents(): Observable<HomeEvent[]> {
+    let rawEvents = homeJSON.upcoming_events;
+    rawEvents = rawEvents.filter(e => e.time > Date.now());
+
+    const events: HomeEvent[] = rawEvents.map(event => {
+      console.log(event.time, Date.now());
+      return {
+        title: event.title,
+        description: event.description,
+        time: event.time,
+        link: event.link,
+        daysRemaining: Math.floor((event.time - Date.now()) / 8.64e7)
+      }
+    });
+
+    return of(events);
   }
 }
