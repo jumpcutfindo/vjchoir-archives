@@ -1,11 +1,11 @@
 {
   "intro": {
     "title": "Welcome to the Batches page!",
-    "msg": "<p>Hello! Welcome to the landing page for Batches! In this part of the website, the details of the previous batches of VJChoir are kept so that you can see how the past batches looked like.</br></br>Use the navigation buttons above to browse through the different batches. In each page, the general information of the choir's committees and members are included. Photos from the various batches are also there so that you can kinda get a look of how lupsup or noob everyone looked back in their hey-day.</br></br><b>Contributing / fixing:</b></br>Seeing as I'm not from any batches after my own, the information provided above has been sent to me over the years by the various members of the various batches. If you want to contribute, or you've spotted an error, head over to the \"Contribute\" part of the archives to send in the relevant information. Thanks very much! :)</p>"
+    "msg": "<p>Hello! Welcome to the landing page for Batches! In this part of the website, the details of the previous batches of VJChoir are kept so that you can see how the past batches looked like.</br></br>Use the navigation buttons above to browse through the different batches. In each page, the general information of the choir's committees and members are included. Photos from the various batches are also there so that you can kinda get a look of how lupsup or noob everyone looked back in their hey-day.</p>"
   },
   "batches": [
     {
-      "id": "2122",
+      "id": "2022",
       "name": "2021 / 2022",
       "image": "",
       "desc": "Hi there! This page contains information pertaining to the batch of 2021 - 2022.",
@@ -169,7 +169,7 @@
       ]
     },
     {
-      "id": "1920",
+      "id": "2020",
       "name": "2019 / 2020",
       "image": "../../../assets/images/batches/1920/batch.jpeg",
       "desc": "Hi there! This page contains information pertaining to the batch of 2019 - 2020.",
@@ -264,7 +264,7 @@
       ]
     },
     {
-      "id": "1819",
+      "id": "2019",
       "name": "2018 / 2019",
       "image": "../../../assets/images/batches/1819/batch.jpg",
       "desc": "Hi there! This page contains information pertaining to the batch of 2018 - 2019.",
@@ -343,7 +343,7 @@
       ]
     },
     {
-      "id": "1718",
+      "id": "2018",
       "name": "2017 / 2018",
       "image": "../../../assets/images/batches/1718/batch.jpg",
       "desc": "Hi there! This page contains information pertaining to the batch of 2017 - 2018.",
@@ -441,7 +441,7 @@
       ]
     },
     {
-      "id": "1617",
+      "id": "2017",
       "name": "2016 / 2017",
       "image": "../../../assets/images/batches/1617/batch.jpg",
       "desc": "Hi there! This page contains information pertaining to the batch of 2016 - 2017.",
@@ -542,7 +542,7 @@
       ]
     },
     {
-      "id": "1516",
+      "id": "2016",
       "name": "2015 / 2016",
       "image": "../../../assets/images/batches/1516/batch.jpg",
       "desc": "Hi there! This page contains information pertaining to the batch of 2015 - 2016.",
@@ -641,7 +641,7 @@
       ]
     },
     {
-      "id": "1415",
+      "id": "2015",
       "name": "2014 / 2015",
       "image": "../../../assets/images/batches/1415/batch.jpg",
       "desc": "Hi there! This page contains information pertaining to the batch of 2014 - 2015.",
@@ -756,7 +756,7 @@
       ]
     },
     {
-      "id": "1314",
+      "id": "2014",
       "name": "2013 / 2014",
       "image": "../../../assets/images/batches/1314/batch.jpg",
       "desc": "Hi there! This page contains information pertaining to the batch of 2013 - 2014.",

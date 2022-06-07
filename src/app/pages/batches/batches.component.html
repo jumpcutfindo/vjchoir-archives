@@ -1,8 +1,8 @@
 <div class="d-flex row ml-0">
-  <button class="btn btn-outline-primary mx-1 mb-2" [ngClass]="currActive ? '' : 'active'" (click)="currActive = null" onclick="this.blur(); window.scroll(0,0);" [routerLink]="" fragment="home">
+  <button class="btn btn-outline-primary mx-1 mb-2" [ngClass]="currActive ? '' : 'active'" (click)="currActive = null" onclick="this.blur(); window.scroll(0,0);" [routerLink]="['/batches', 'home']">
       Home
     </button>
-  <button *ngFor="let batch of batches" class="btn btn-outline-primary mx-1 mb-2" [ngClass]="batch == currActive ? 'active' : ''" (click)="currActive = batch" [routerLink]="" fragment="{{batch.id}}" onclick="this.blur(); window.scroll(0,0);">
+  <button *ngFor="let batch of batches" class="btn btn-outline-primary mx-1 mb-2" [ngClass]="batch == currActive ? 'active' : ''" (click)="currActive = batch" [routerLink]="['/batches', batch.id]" onclick="this.blur(); window.scroll(0,0);">
           {{batch.name}}
       </button>
 </div>
