@@ -29,6 +29,7 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
 import { ClipboardModule } from '@angular/cdk/clipboard';
 import { NgxSplideModule } from 'ngx-splide';
 import { ToastrModule } from 'ngx-toastr';
+import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { ToastrModule } from 'ngx-toastr';
     AppendNamesPipe,
     SafePipe,
     FormatDurationPipe,
-    LoadingComponent
+    LoadingComponent,
+    PageNotFoundComponent
   ],
   imports: [
     CommonModule,

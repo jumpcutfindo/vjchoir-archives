@@ -7,6 +7,7 @@ import { BatchesComponent } from "../pages/batches/batches.component";
 import { SovComponent } from "../pages/sov/sov.component";
 import { ListenComponent } from "../pages/listen/listen.component";
 import { MiscComponent } from "../pages/misc/misc.component";
+import { PageNotFoundComponent } from "../pages/page-not-found/page-not-found.component";
 
 const routes: Routes = [
   {
@@ -38,6 +39,9 @@ const routes: Routes = [
   {
     path: 'misc',
     component: MiscComponent
+  },
+  {
+    path: '**', component: PageNotFoundComponent
   }
 ];
 

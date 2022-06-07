@@ -21,7 +21,7 @@ export class NavControllerComponent implements OnInit {
   controller: NavControllerComponent;
   currActive: MenuItem;
 
-  isSidebarActive: boolean = false;
+  isSidebarActive = false;
 
   constructor(
     private navControllerService: NavControllerService,
@@ -60,7 +60,7 @@ export class NavControllerComponent implements OnInit {
     const windowName = window.location.href;
 
     for (let i = 0; i < this.menu.length; i++) {
-      let item = this.menu[i];
+      const item = this.menu[i];
 
       if (windowName.includes(item.linkName)) {
         this.currActive = item;
@@ -83,10 +83,10 @@ export class NavControllerComponent implements OnInit {
   pages = ['home', 'about', 'batches', 'sov', 'listen', 'contribute', 'misc']
   navigateToLink(url: string) {
     for(let i = 0; i < this.pages.length; i ++) {
-      let sourceUrl = url.split("#")[0];
+      const sourceUrl = url.split("#")[0];
 
       if(sourceUrl.toLowerCase().includes(this.pages[i])) {
-        let temp = this.menu.filter(x => x.linkName.includes(this.pages[i]));
+        const temp = this.menu.filter(x => x.linkName.includes(this.pages[i]));
         this.navigateTo(temp[0]);
         return;
       }
