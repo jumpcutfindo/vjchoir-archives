@@ -100,25 +100,10 @@ export class NavControllerService {
   onLinkClick(event: any) {
     this.clickedLinkSource.next(event);
   }
-
-  onRouteUpdate(value: any) {
-    const url = value.url;
-    
-    let route = url.split('#')[0];
-    let fragment = url.split('#')[1];
-    
-    for(let item of MENU_ARRAY) {
-      if(route.includes(item)) {
-        this.routeUpdatesSource.next({
-          route: item,
-          fragment: fragment,
-          url: url
-        });
-        break;
-      }
-    }
-  }
   
+  /**
+   * Toggles the sidebar.
+   */
   toggleSidebar() {
     this.sidebarToggleSource.next();
     this.isSidebarActive = !this.isSidebarActive;
