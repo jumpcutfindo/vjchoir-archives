@@ -32,9 +32,9 @@ export class BatchesComponent implements OnInit {
       
       // Load batch based on the URL
       this.setBatch(urlData[1].path);
-
-      this.loadingService.setLoading(false);
     });
+    
+    this.loadingService.setLoading(false);
   }
 
   setBatch(batchId: string): void {

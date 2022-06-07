@@ -1,13 +1,14 @@
 import {
   Component,
+  ComponentFactoryResolver,
   OnInit,
   ViewChild,
 } from "@angular/core";
-import { MenuItem } from "../model/MenuItem";
 
-import { NavControllerService } from "./nav-controller.service";
-import { Router, NavigationEnd } from "@angular/router";
+import { MenuItem, NavControllerService } from "./nav-controller.service";
+import { Router, NavigationEnd, ActivatedRoute } from "@angular/router";
 import { LoadingService } from 'src/app/loading/loading.service';
+import { combineLatest } from "rxjs";
 
 @Component({
   selector: "nav-controller",
@@ -24,10 +25,13 @@ export class NavControllerComponent implements OnInit {
   isSidebarActive = false;
 
   constructor(
+    private activatedRoute: ActivatedRoute,
     private navControllerService: NavControllerService,
     private router: Router,
     private loadingService: LoadingService
-  ) {
+  ) {}
+
+  ngOnInit() {
     this.router.events.subscribe((val) => {
       if (val instanceof NavigationEnd) {
         this.loadingService.setLoading(true);
@@ -37,40 +41,20 @@ export class NavControllerComponent implements OnInit {
     this.navControllerService.sidebarToggle.subscribe(val => {
       this.isSidebarActive = !this.isSidebarActive;
     })
-  }
 
-  ngOnInit() {
-    this.getMenu();
-    this.setCurrActive();
+    combineLatest([this.navControllerService.getMenuItems(), this.activatedRoute.url]).subscribe(([menuData, urlData]) => {
+      this.menu = menuData;
+
+      // Determine which sidebar item should be active
+      const page = urlData[0].path;
+      this.setActiveItem(page);
+    });
+
     this.controller = this;
   }
 
-  private getMenu() {
-    this.navControllerService
-      .getMenuItems()
-      .subscribe((menu) => (this.menu = menu));
-  }
-
-  private setCurrActive() {
-    const windowName = window.location.href;
-
-    for (let i = 0; i < this.menu.length; i++) {
-      const item = this.menu[i];
-
-      if (windowName.includes(item.linkName)) {
-        this.currActive = item;
-        break;
-      }
-    }
-
-    if (!this.currActive) {
-      this.currActive = this.navControllerService.getDefaultActiveItem();
-    }
-  }
-
-  navigateTo(item) {
-    this.currActive = item;
-
+  private setActiveItem(id: string) {
+    this.currActive = this.menu.find(item => item.id === id) ?? this.menu[0];
     window.scroll(0, 0);
   }
 }

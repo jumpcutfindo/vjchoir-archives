@@ -1,13 +1,10 @@
 import {
   Component,
   OnInit,
-  HostListener,
-  Output,
-  EventEmitter,
 } from "@angular/core";
 import { SovService } from "./sov.service";
 import { SymphVoices } from "src/app/music/model/SymphVoices";
-import { Router, NavigationStart, NavigationEnd } from "@angular/router";
+import { Router } from "@angular/router";
 import { NavControllerService } from "src/app/navigation/nav-controller/nav-controller.service";
 import { PlayerService } from "src/app/music/player/player.service";
 import { Playlist } from "src/app/music/model/Playlist";
@@ -70,8 +67,8 @@ export class SovComponent implements OnInit {
     if (!this.router.url.includes("#")) {
       this.currActive = null;
     } else {
-      let fragment = this.router.url.split("#")[1];
-      for (let item of this.sovInfo) {
+      const fragment = this.router.url.split("#")[1];
+      for (const item of this.sovInfo) {
         if (fragment.includes(item.abbr)) {
           this.currActive = item;
           this.titleService.setTitle(this.currActive.title);

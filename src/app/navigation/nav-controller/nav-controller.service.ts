@@ -1,32 +1,14 @@
-import { Injectable, ViewChild, Renderer2, RendererFactory2 } from '@angular/core';
+import { Injectable, RendererFactory2 } from '@angular/core';
 
 import menuJSON from '../../../assets/data/menu.json';
-import { MenuItem } from '../model/MenuItem';
 import { Observable, of, Subject } from 'rxjs';
-import { Title } from '@angular/platform-browser';
 
-const MENU_ARRAY = ['about', 'batches', 'sov', 'misc'];
-
-/**
- * Handles fragments (e.g. sov#2019) and sets the appropriate section
- * based on the provided fragments. Also updates the title accordingly.
- */
- export const handleFragment = (url: string, fragments: any[], titleService?: Title) => {
-  if (!url.includes("#")) return fragments[0];
-
-  const fragmentId = url.split("#")[1];
-  let resultFragment = fragments[0];
-  for (const fragment of fragments) {
-    if (fragmentId === fragment.id) {
-      resultFragment = fragments.indexOf(fragment);
-      break;
-    }
-  }
-  
-  if (titleService) titleService.setTitle(resultFragment.title);
-
-  return resultFragment;
-};
+export interface MenuItem {
+  id: string;
+  name: string;
+  icon: string;
+  isVisible?: boolean;
+}
 
 @Injectable({
   providedIn: 'root',
@@ -80,10 +62,8 @@ export class NavControllerService {
     return {
       id: x.id,
       name: x.name,
-      linkName: x.linkName,
       icon: x.icon,
-      active: x.active,
-      isVisible: x.isVisible,
+      isVisible: x.isVisible === undefined ? true : x.isVisible,
     };
   }
 

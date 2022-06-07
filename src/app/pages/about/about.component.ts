@@ -29,9 +29,9 @@ export class AboutComponent implements OnInit {
 
       // Load section based on the URL
       this.setSection(urlData[1].path);
-
-      this.loadingService.setLoading(false);
     });
+
+    this.loadingService.setLoading(false);
   }
 
   /**
