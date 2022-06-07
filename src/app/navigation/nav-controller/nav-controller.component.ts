@@ -22,6 +22,7 @@ export class NavControllerComponent implements OnInit {
   currActive: MenuItem;
 
   isSidebarActive = false;
+  shouldLoad: boolean;
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -33,7 +34,7 @@ export class NavControllerComponent implements OnInit {
   ngOnInit() {
     this.router.events.subscribe((val) => {
       if (val instanceof NavigationEnd) {
-        this.loadingService.setLoading(true);
+        if (this.shouldLoad) this.loadingService.setLoading(true);
       }
     });
 
@@ -55,7 +56,13 @@ export class NavControllerComponent implements OnInit {
   }
 
   private setActiveItem(id: string) {
+    const oldActiveId = this.currActive ? this.currActive.id : undefined;
+
     this.currActive = this.menu.find(item => item.id === id) ?? this.menu[0];
+
+    console.log(oldActiveId, this.currActive.id)
+    this.shouldLoad = oldActiveId !== this.currActive.id;
+
     window.scroll(0, 0);
   }
 }
