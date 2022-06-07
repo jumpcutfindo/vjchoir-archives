@@ -38,18 +38,30 @@ const routes: Routes = [
   { path: 'batches/2015', component: BatchesComponent },
   { path: 'batches/2014', component: BatchesComponent },
 
-  {
-    path: 'sov',
-    component: SovComponent
-  },
+  { path: 'sov', redirectTo: 'sov/home', pathMatch: 'full' },
+  { path: 'sov/home', component: SovComponent },
+  { path: 'sov/2019', component: SovComponent },
+  { path: 'sov/2018', component: SovComponent },
+  { path: 'sov/2017', component: SovComponent },
+  { path: 'sov/2016', component: SovComponent },
+  { path: 'sov/2015', component: SovComponent },
+  { path: 'sov/2014', component: SovComponent },
+  { path: 'sov/2013', component: SovComponent },
+  { path: 'sov/2012', component: SovComponent },
+  { path: 'sov/2010', component: SovComponent },
+  { path: 'sov/2008', component: SovComponent },
+  { path: 'sov/2007', component: SovComponent },
+  
   {
     path: 'listen',
     component: ListenComponent
   },
-  {
-    path: 'misc',
-    component: MiscComponent
-  },
+
+  { path: 'misc', redirectTo: 'misc/main', pathMatch: 'full' },
+  { path: 'misc/main', component: MiscComponent },
+  { path: 'misc/updates', component: MiscComponent },
+  { path: 'misc/faq', component: MiscComponent },
+
   {
     path: '**', component: PageNotFoundComponent
   }

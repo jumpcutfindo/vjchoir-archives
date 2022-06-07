@@ -1,12 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { MiscService } from './misc.service';
-import { UpdateLog } from './model/UpdateLog';
-import { Router } from '@angular/router';
-import { NavControllerService } from 'src/app/navigation/nav-controller/nav-controller.service';
-import { Title } from '@angular/platform-browser';
+import { MiscService, UpdateLog } from './misc.service';
+import { ActivatedRoute } from '@angular/router';
 import { LoadingService } from 'src/app/loading/loading.service';
-
-const MISC_TITLE = "Miscellaneous";
+import { combineLatest } from 'rxjs';
 
 @Component({
   selector: 'app-misc',
@@ -20,39 +16,23 @@ export class MiscComponent implements OnInit {
 
   currActive;
 
-  constructor(private miscService: MiscService, 
-    private navControllerService: NavControllerService, 
-    private router: Router,
-    private titleService: Title,
+  constructor(
+    private activatedRoute: ActivatedRoute,
+    private miscService: MiscService, 
     private loadingService: LoadingService) { }
 
   ngOnInit() {
     this.miscService.getUpdateLog().subscribe(updateLog => this.updateLog = updateLog);
-    this.miscService.getContent().subscribe(miscJSON => {
-      this.miscJSON = miscJSON
-      this.handleFragment();
-    });
 
-    this.navControllerService.routerUpdates.subscribe(val => {
-      this.handleFragment();
-    });
+    combineLatest([this.miscService.getContent(), this.activatedRoute.url]).subscribe(([miscData, urlData]) => {
+      this.miscJSON = miscData;
+      this.setSection(urlData[1].path);
+    })
+    
+    this.loadingService.setLoading(false);
   }
 
-  private handleFragment() {
-    if (!this.router.url.includes("#")) {
-      this.currActive = this.miscJSON.sections[0];
-    } else {
-      let fragment = this.router.url.split("#")[1];
-      for (let item of this.miscJSON.sections) {
-        if (fragment.includes(item.id)) {
-          this.currActive = item;
-          this.titleService.setTitle(this.currActive.title);
-          this.loadingService.setLoading(false);
-          return;
-        }
-      }
-    }
-    this.titleService.setTitle(MISC_TITLE);
-    this.loadingService.setLoading(false);
+  setSection(id: string): void {
+    this.currActive = this.miscJSON.sections.find(section => section.id === id);
   }
 }

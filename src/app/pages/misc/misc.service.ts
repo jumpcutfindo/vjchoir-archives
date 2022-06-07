@@ -3,19 +3,19 @@ import { Observable, of } from 'rxjs'
 
 import updateJSON from '../../../assets/data/updatelog.json'
 import miscJSON from '../../../assets/data/misc.json'
-import { UpdateLog } from './model/UpdateLog';
+
+export interface UpdateLog {
+    title: string;
+    date: string;
+    summary: string;
+    changes: [];
+}
 
 @Injectable({
     providedIn: "root"
 })
-
-export class MiscService {
-    constructor() {
-    
-    }
-    
-    getUpdateLog(): Observable<any> {
-        let updateLog = updateJSON.map(update => {
+export class MiscService {getUpdateLog(): Observable<any> {
+        const updateLog = updateJSON.map(update => {
             return {
                 title: update.title,
                 date: update.date,

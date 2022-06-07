@@ -1,8 +1,8 @@
 <div class="d-flex row ml-0">
-  <button class="btn btn-outline-primary mx-1 mb-2" [ngClass]="currActive ? '' : 'active'" (click)="currActive = null" onclick="this.blur(); window.scroll(0,0);" [routerLink]="" fragment="home">
+  <button class="btn btn-outline-primary mx-1 mb-2" [ngClass]="currActive ? '' : 'active'" (click)="currActive = null" onclick="this.blur(); window.scroll(0,0);" [routerLink]="['/sov', 'home']">
         Home
       </button>
-  <button *ngFor="let sov of sovInfo" class="btn btn-outline-primary mx-1 mb-2" [ngClass]="sov == currActive ? 'active' : ''" (click)="currActive = sov" [routerLink]="" fragment="{{sov.abbr}}" onclick="this.blur(); window.scroll(0,0);">
+  <button *ngFor="let sov of sovInfo" class="btn btn-outline-primary mx-1 mb-2" [ngClass]="sov == currActive ? 'active' : ''" (click)="currActive = sov" [routerLink]="['/sov', sov.id]" onclick="this.blur(); window.scroll(0,0);">
             {{sov.abbr}}
         </button>
 </div>

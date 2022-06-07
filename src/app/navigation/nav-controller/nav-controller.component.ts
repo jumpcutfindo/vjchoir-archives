@@ -1,6 +1,5 @@
 import {
   Component,
-  ComponentFactoryResolver,
   OnInit,
   ViewChild,
 } from "@angular/core";
@@ -46,7 +45,9 @@ export class NavControllerComponent implements OnInit {
       this.menu = menuData;
 
       // Determine which sidebar item should be active
-      const page = urlData[0].path;
+      let page = urlData[0].path;
+      console.log(window.location);
+      if (!page) page = window.location.pathname.split("/")[1];
       this.setActiveItem(page);
     });
 
