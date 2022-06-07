@@ -3,8 +3,30 @@ import { Injectable, ViewChild, Renderer2, RendererFactory2 } from '@angular/cor
 import menuJSON from '../../../assets/data/menu.json';
 import { MenuItem } from '../model/MenuItem';
 import { Observable, of, Subject } from 'rxjs';
+import { Title } from '@angular/platform-browser';
 
 const MENU_ARRAY = ['about', 'batches', 'sov', 'misc'];
+
+/**
+ * Handles fragments (e.g. sov#2019) and sets the appropriate section
+ * based on the provided fragments. Also updates the title accordingly.
+ */
+ export const handleFragment = (url: string, fragments: any[], titleService?: Title) => {
+  if (!url.includes("#")) return fragments[0];
+
+  const fragmentId = url.split("#")[1];
+  let resultFragment = fragments[0];
+  for (const fragment of fragments) {
+    if (fragmentId === fragment.id) {
+      resultFragment = fragments.indexOf(fragment);
+      break;
+    }
+  }
+  
+  if (titleService) titleService.setTitle(resultFragment.title);
+
+  return resultFragment;
+};
 
 @Injectable({
   providedIn: 'root',
@@ -33,6 +55,9 @@ export class NavControllerService {
     this.renderer = rendererFactory.createRenderer(null, null);
   }
 
+  /**
+   * Retrieves the menu (sidebar) items
+   */
   getMenuItems(): Observable<MenuItem[]> {
     if(!this.menuItems) {
         this.menuItems = menuJSON.items.map((x) => this.toMenuItem(x));
@@ -41,10 +66,16 @@ export class NavControllerService {
     return of(this.menuItems);
   }
 
+  /**
+   * Retrieves the default menu item (i.e. home page)
+   */
   getDefaultActiveItem() {
     return this.menuItems[menuJSON.defaultActiveId];
   }
 
+  /**
+   * Convert a set of properties into a menu item
+   */
   private toMenuItem(x) {
     return {
       id: x.id,
@@ -56,10 +87,16 @@ export class NavControllerService {
     };
   }
 
+  /**
+   * Handles the event when a song is clicked
+   */
   onSongClick(event: any) {
     this.clickedSongSource.next(event);
   }
 
+  /**
+   * Handles the event when a link is clicked
+   */
   onLinkClick(event: any) {
     this.clickedLinkSource.next(event);
   }

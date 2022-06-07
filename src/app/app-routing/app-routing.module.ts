@@ -17,10 +17,12 @@ const routes: Routes = [
     path: 'home',
     component: HomeComponent
   },
-  {
-    path: 'about',
-    component: AboutComponent
-  },
+  { path: 'about', redirectTo: 'about/archival', pathMatch: 'full' },
+  { path: 'about/archival', component: AboutComponent },
+  { path: 'about/choir', component: AboutComponent },
+  { path: 'about/conductor', component: AboutComponent },
+  { path: 'about/contributors', component: AboutComponent },
+  { path: 'about/contributing', component: AboutComponent },
   {
     path: 'batches',
     component: BatchesComponent

@@ -1,5 +1,5 @@
 <div class="d-flex row ml-0">
-  <button *ngFor="let item of aboutJSON.sections" class="btn btn-outline-primary mx-1 mb-2" [ngClass]="item == currActive ? 'active' : ''" (click)="currActive = item" [routerLink]="about" fragment="{{item.id}}" onclick="this.blur();">
+  <button *ngFor="let item of aboutJSON.sections" class="btn btn-outline-primary mx-1 mb-2" [ngClass]="item == currActive ? 'active' : ''" (click)="currActive = item" [routerLink]="['/about', item.id]" onclick="this.blur();">
         {{item.title}}
     </button>
 </div>

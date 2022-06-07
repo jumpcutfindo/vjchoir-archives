@@ -48,7 +48,6 @@ export class SidebarComponent implements OnInit {
   }
 
   toggleSidebar() {
-    console.log(window.innerWidth);
     if(window.innerWidth <= 1024) {
       this.navControllerSerivce.toggleSidebar();
     }
