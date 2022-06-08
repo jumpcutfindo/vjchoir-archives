@@ -3,8 +3,8 @@ import { Injectable } from "@angular/core";
 import listenJSON from "../../../assets/data/listen.json";
 
 import { Observable, of } from "rxjs";
-import { Playlist } from "src/app/music/model/Playlist";
 import { SovService } from '../sov/sov.service';
+import { Playlist } from "src/app/music/player/player.service";
 
 const MY_PLAYLISTS_STRING = "myPlaylists";
 

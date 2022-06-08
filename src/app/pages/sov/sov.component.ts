@@ -3,13 +3,8 @@ import {
   OnInit,
 } from "@angular/core";
 import { SovService } from "./sov.service";
-import { SymphVoices } from "src/app/music/model/SymphVoices";
-import { ActivatedRoute, Router } from "@angular/router";
-import { NavControllerService } from "src/app/navigation/nav-controller/nav-controller.service";
-import { PlayerService } from "src/app/music/player/player.service";
-import { Playlist } from "src/app/music/model/Playlist";
-import { Song } from "src/app/music/model/Song";
-import { Title } from '@angular/platform-browser';
+import { ActivatedRoute } from "@angular/router";
+import { PlayerService, Playlist, Song, SymphVoices } from "src/app/music/player/player.service";
 import { LoadingService } from 'src/app/loading/loading.service';
 import { combineLatest } from "rxjs";
 

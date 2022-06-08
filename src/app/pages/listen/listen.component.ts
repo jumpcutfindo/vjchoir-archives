@@ -2,9 +2,7 @@ import { Component, OnInit, HostListener } from '@angular/core';
 import { ListenService } from './listen.service';
 import { SovService } from '../sov/sov.service';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { Playlist } from 'src/app/music/model/Playlist';
-import { Song } from 'src/app/music/model/Song';
-import { PlayerService } from 'src/app/music/player/player.service';
+import { PlayerService, Playlist, PlaylistActionType, Song } from 'src/app/music/player/player.service';
 import {CdkDragDrop, moveItemInArray} from '@angular/cdk/drag-drop';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
@@ -101,6 +99,9 @@ export class ListenComponent implements OnInit {
     this.loadingService.setLoading(false);
   }
 
+  /**
+   * Handles the updating of the playlist name / description.
+   */
   onKeyEnter(playlist: Playlist, element: any) {
     const property = element.getAttribute("id");
 
@@ -110,6 +111,9 @@ export class ListenComponent implements OnInit {
     console.log("Updated '" + property + "' to '" + element.value + "'!");
   }
 
+  /**
+   * Creates a new, empty playlist.
+   */
   createNewPlaylist() {
     const tempPlaylist = this.listenService.createNewPlaylist();
 
@@ -119,7 +123,7 @@ export class ListenComponent implements OnInit {
     console.log("Created new playlist!");
 
     this.playerService.onPlaylistUpdate({
-      type: "Create playlist",
+      type: PlaylistActionType.CREATE_PLAYLIST,
       playlist: tempPlaylist
     });
     this.createToast({
@@ -136,7 +140,7 @@ export class ListenComponent implements OnInit {
     console.log("Deleted playlist: " + playlist.name);
 
     this.playerService.onPlaylistUpdate({
-      type: "Delete playlist",
+      type: PlaylistActionType.DELETE_PLAYLIST,
       playlist: playlist
     });
     this.createToast({
@@ -152,7 +156,7 @@ export class ListenComponent implements OnInit {
     this.listenService.savePlaylists(this.myPlaylistsInfo);
 
     this.playerService.onPlaylistUpdate({
-      type: "Add song",
+      type: PlaylistActionType.ADD_SONG,
       playlist: playlist
     });
 
@@ -169,7 +173,7 @@ export class ListenComponent implements OnInit {
     this.listenService.savePlaylists(this.myPlaylistsInfo);
 
     this.playerService.onPlaylistUpdate({
-      type: "Remove song",
+      type: PlaylistActionType.DELETE_SONG,
       playlist: playlist
     });
     

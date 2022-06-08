@@ -1,11 +1,9 @@
-import { Component, OnInit, ViewChild, HostListener, Output, EventEmitter } from "@angular/core";
+import { Component, OnInit, ViewChild, Output, EventEmitter } from "@angular/core";
 import { PlyrComponent } from "ngx-plyr";
 import { SovService } from "src/app/pages/sov/sov.service";
-import { Song } from "../model/Song";
 import { NavControllerService } from 'src/app/navigation/nav-controller/nav-controller.service';
 import { ListenService } from 'src/app/pages/listen/listen.service';
-import { Playlist } from '../model/Playlist';
-import { PlayerService } from './player.service';
+import { PlayerService, Playlist, PlaylistActionType, Song } from './player.service';
 
 const PLAYLISTS_DEFAULT_TITLE = "Playlists";
 
@@ -44,7 +42,7 @@ export class PlayerComponent implements OnInit {
 
   constructor(private navController: NavControllerService, private sovService: SovService, private listenService: ListenService, private playerService: PlayerService) {
     this.playerService.playlistUpdates.subscribe(val => {
-      if(val.type == "Delete playlist") {
+      if(val.type === PlaylistActionType.DELETE_PLAYLIST) {
         let tempIndex = this.playlists.indexOf(val.playlist);
         this.playlists.splice(tempIndex, 1);
         console.log("Completed");
