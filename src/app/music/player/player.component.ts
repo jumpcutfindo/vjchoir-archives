@@ -41,9 +41,8 @@ export class PlayerComponent implements OnInit {
   audioSources: Plyr.Source[] = [];
 
   constructor(private navController: NavControllerService, private sovService: SovService, private listenService: ListenService, private playerService: PlayerService) {
-    // Whenever there are any updates to the playlists, load the playlists
-    this.listenService.playlistUpdates.subscribe(action => {
-      this.loadCustomPlaylists();
+    this.listenService.playlistUpdates.subscribe(val => {
+      this.loadPlaylists();
     });
 
     this.playerService.songRequestUpdates.subscribe(val => {
@@ -57,6 +56,8 @@ export class PlayerComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.loadPlaylists(true);
+
     this.activeWindowTitle = PLAYLISTS_DEFAULT_TITLE;
     this.isMinimised = true;
     this.playerPlaylistsWindow = document.getElementById("player-playlists");
@@ -64,16 +65,22 @@ export class PlayerComponent implements OnInit {
     this.loadSongViaId(0, 0, false);
   }
 
-  loadDefaultPlaylists(): void {
+  loadPlaylists(justLoaded?: boolean) {
     this.sovService.getSovInfo().subscribe((info) => {
-      this.sovInfo = info;
-    })
-  }
+      this.sovInfo = info
+    });
 
-  loadCustomPlaylists(): void {
     this.listenService.getPlaylists().subscribe(playlists => {
       this.myPlaylists = playlists;
     });
+
+    this.playlists = [];
+    for(let sov of this.sovInfo) {
+      this.playlists.push(sov.repertoire);
+    }    
+    for(let playlist of this.myPlaylists) {
+      this.playlists.push(playlist);
+    }
   }
 
   displayPlaylist(playlist: Playlist) {

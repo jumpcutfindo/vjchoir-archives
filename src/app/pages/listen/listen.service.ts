@@ -37,8 +37,7 @@ export interface Playlist {
   tracks: Song[];
   name?: string;
   desc?: string;
-  duration?: any;
-  isOpen?: boolean;
+  duration?: number;
   isDefault?: boolean;
 }
 
@@ -131,7 +130,6 @@ export class ListenService {
       desc: "Default description name",
       duration: 0,
       tracks: [],
-      isOpen: false,
       isDefault: false
     };
   }
@@ -151,7 +149,6 @@ export class ListenService {
   resetStorage() {
     localStorage.setItem(MY_PLAYLISTS_STRING, "");
     console.log("Storage has been reset!");
-    console.log(localStorage.getItem(MY_PLAYLISTS_STRING));
 
     this.myPlaylists = [];
   }

@@ -119,6 +119,14 @@ ngb-carousel {
   }
 }
 
+app-player, app-sidebar {
+  z-index: 1;
+}
+
+.modal-backdrop {
+  z-index: 2 !important;
+}
+
 @keyframes fadeIn {
   0% {
     opacity: 0;

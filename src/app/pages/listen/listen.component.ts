@@ -115,6 +115,9 @@ export class ListenComponent implements OnInit {
     console.log("Updated '" + property + "' to '" + element.value + "'!");
   }
 
+  /**
+   * Handles creation of a new, empty playlist
+   */
   createNewPlaylist(): void {
     const tempPlaylist = this.listenService.createNewPlaylist();
 
@@ -127,12 +130,12 @@ export class ListenComponent implements OnInit {
       playlists: this.myPlaylistsInfo
     });
 
-    this.createToast({
-      type: "success",
-      msg: "Created a new playlist!"
-    });
+    this.createToast("success", "Created a new playlist!");
   }
 
+  /**
+   * Handles deletion of a selected playlist
+   */
   deletePlaylist(playlist: Playlist) {
     const playlistIndex = this.myPlaylistsInfo.indexOf(playlist);
     this.myPlaylistsInfo.splice(playlistIndex, 1);
@@ -144,12 +147,12 @@ export class ListenComponent implements OnInit {
       playlists: this.myPlaylistsInfo
     });
 
-    this.createToast({
-      type: "error",
-      msg: "Deleted playlist '" + playlist.name + "'!"
-    });
+    this.createToast("error", "Deleted playlist '" + playlist.name + "'!");
   }
 
+  /**
+   * Handles the adding of a song to a playlist 
+   */
   addSongToPlaylist(song: Song, playlist: Playlist) {
     playlist.tracks.push(song);
     playlist.duration += song.duration;
@@ -159,26 +162,22 @@ export class ListenComponent implements OnInit {
       playlists: this.myPlaylistsInfo
     });
 
-    this.createToast({
-      type: "success",
-      msg: "Added '" + song.title + "' to '" + playlist.name + "'!"
-    });
+    this.createToast("success", "Added '" + song.title + "' to '" + playlist.name + "'!");
   }
 
+  /**
+   * Handles the removal of a song from a playlist
+   */
   removeSongFromPlaylist(song: Song, playlist: Playlist) {
     playlist.tracks = playlist.tracks.filter(x => x != song);
-    playlist.duration.subtract(song.duration);
-
+    playlist.duration -= song.duration;
 
     this.listenService.onPlaylistUpdate({
       type: PlaylistActionType.DELETE_SONG,
       playlists: this.myPlaylistsInfo
     });
     
-    this.createToast({
-      type: "error",
-      msg: "Removed '" + song.title + "' from '" + playlist.name + "'!"
-    });
+    this.createToast("error", "Removed '" + song.title + "' from '" + playlist.name + "'!");
   }
 
   playSong(playlist: Playlist, song: Song) {
@@ -189,10 +188,7 @@ export class ListenComponent implements OnInit {
     this.myPlaylistsInfo = [];
     this.listenService.resetStorage();
 
-    this.createToast({
-      type: "error",
-      msg: "Storage has been reset!"
-    });
+    this.createToast("success", "Storage has been reset successfully!");
   }
 
   importPlaylist(code: string) {
@@ -200,30 +196,15 @@ export class ListenComponent implements OnInit {
     this.myPlaylistsInfo.push(playlist);
 
     if(playlist.name == "Default playlist name") {
-      this.createToast({
-        type: "error",
-        msg: "Unable to import the playlist using the link given! Created a default one instead."
-      });
+      this.createToast("error", "Unable to import the playlist using the link given! Created a default one instead.");
     } else {
-      this.createToast({
-        type: "success",
-        msg: "Imported a new playlist from the link provided!"
-      });
+      this.createToast("success", "Imported a new playlist from the link provided!");
     }
   }
 
-  exportPlaylist(playlist: Playlist): string {
-    const string = this.listenService.playlistToParameters(playlist);
-    
-    return string;
-  }
-
   getPlaylistLink(playlist: Playlist) {
-    this.createToast({
-      type: "success",
-      msg: "Playlist link has been copied to your clipboard!"
-    });
-    this.clipboard.copy(this.exportPlaylist(playlist));
+    this.createToast("success", "Playlist link has been copied to your clipboard!");
+    this.clipboard.copy(this.listenService.playlistToParameters(playlist));
   }
 
   drop(playlist: Playlist, event: CdkDragDrop<string[]>) {
@@ -234,15 +215,18 @@ export class ListenComponent implements OnInit {
     this.modalService.open(modal);
   }
   
-  createToast(params) {
+  createToast(type: string, message: string)  {
     if(!this.areToastsEnabled) {
       return;
     }
 
-    if(params.type == "success") {
-      this.toaster.success(params.msg);
-    } else if(params.type == "error") {
-      this.toaster.error(params.msg);
+    switch (type) {
+    case "success":
+      this.toaster.success(message);
+      break;
+    case "error":
+      this.toaster.error(message);
+      break;
     }
   }
 
