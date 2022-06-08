@@ -55,12 +55,14 @@ export class NavControllerComponent implements OnInit {
     this.controller = this;
   }
 
+  /**
+   * Sets the active menu item based on the id provided.
+   */
   private setActiveItem(id: string) {
     const oldActiveId = this.currActive ? this.currActive.id : undefined;
 
     this.currActive = this.menu.find(item => item.id === id) ?? this.menu[0];
 
-    console.log(oldActiveId, this.currActive.id)
     this.shouldLoad = oldActiveId !== this.currActive.id;
 
     window.scroll(0, 0);

@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectorRef, Output, EventEmitter, HostListener } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { ListenService } from './listen.service';
 import { SovService } from '../sov/sov.service';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
@@ -23,7 +23,8 @@ const LISTEN_TITLE = "Listen";
   styleUrls: ['./listen.component.scss']
 })
 export class ListenComponent implements OnInit {
-
+  // Handling width of window
+  innerWidth = window.innerWidth;
   @HostListener('window:resize', ['$event'])
   onResize(event) {
     this.innerWidth = window.innerWidth;
@@ -33,15 +34,15 @@ export class ListenComponent implements OnInit {
   areToastsEnabled: boolean;
   isHeaderClosedOnStart: boolean;
 
-  innerWidth = window.innerWidth;
-
+  // Header content related
   headerContent;
+  currActiveHeader;
+  isHeaderVisible = true;
+
+  // Playlist related
   sovInfo;
   myPlaylistsInfo: Playlist[];
-  currActiveHeader;
-  isHeaderVisible: boolean = true;
-
-  importPlaylistCode: string = '';
+  importPlaylistCode = '';
 
   constructor(private listenService: ListenService, 
     private sovService: SovService, 
@@ -57,39 +58,37 @@ export class ListenComponent implements OnInit {
   }
 
   ngOnInit() {
-    let settings = localStorage.getItem(LISTEN_PAGE_SETTINGS_ID);
+    // Retrieve local settings
+    const settings = localStorage.getItem(LISTEN_PAGE_SETTINGS_ID);
     if(settings == null || settings == undefined || settings == '') {
       console.log("No settings! Loading default..")
       this.areToastsEnabled = true;
       this.isHeaderClosedOnStart = false;
     } else {
-      let settingsJSON = JSON.parse(settings);
-      console.log(settingsJSON);
+      const settingsJSON = JSON.parse(settings);
       this.areToastsEnabled = settingsJSON.areToastsEnabled;
       this.isHeaderClosedOnStart = settingsJSON.isHeaderClosedOnStart;
     }
 
     this.isHeaderVisible = !this.isHeaderClosedOnStart;
 
-
+    // Retrieve header content
     this.listenService.getHeader().subscribe(content => {
       this.headerContent = content
       this.currActiveHeader = this.headerContent.sections[0];
     });
 
+    // Retrieve SOV info
     this.sovService.getSovInfo().subscribe(content => {
       this.sovInfo = content;
     })
-
-    this.sovInfo.map(item => {
-      item.isOpen = false;
-      return item;
-    });
-
+    
+    // Retrieve personal playlists
     this.listenService.getPlaylists().subscribe(myPlaylists => {
-      this.myPlaylistsInfo = this.listenService.myPlaylists;
+      this.myPlaylistsInfo = myPlaylists;
     });
 
+    // Handles links with importing of playlist included
     this.route.queryParams.subscribe(params => {
       if(params[PLAYLIST_QUERY_PARAM]) {
         this.importPlaylist(params[PLAYLIST_QUERY_PARAM]);
@@ -103,7 +102,7 @@ export class ListenComponent implements OnInit {
   }
 
   onKeyEnter(playlist: Playlist, element: any) {
-    let property = element.getAttribute("id");
+    const property = element.getAttribute("id");
 
     playlist[property] = element.value;
     this.listenService.savePlaylists(this.myPlaylistsInfo);
@@ -112,7 +111,7 @@ export class ListenComponent implements OnInit {
   }
 
   createNewPlaylist() {
-    let tempPlaylist = this.listenService.createNewPlaylist();
+    const tempPlaylist = this.listenService.createNewPlaylist();
 
     this.myPlaylistsInfo.push(tempPlaylist);
     this.listenService.savePlaylists(this.myPlaylistsInfo);
@@ -195,9 +194,7 @@ export class ListenComponent implements OnInit {
   }
 
   importPlaylist(code: string) {
-    console.log(code);
-
-    let playlist = this.listenService.parametersToPlaylist(code);
+    const playlist = this.listenService.parametersToPlaylist(code);
     this.myPlaylistsInfo.push(playlist);
     this.listenService.savePlaylists(this.myPlaylistsInfo);
 
@@ -212,12 +209,10 @@ export class ListenComponent implements OnInit {
         msg: "Imported a new playlist from the link provided!"
       });
     }
-
-    
   }
 
   exportPlaylist(playlist: Playlist): string {
-    let string = this.listenService.playlistToParameters(playlist);
+    const string = this.listenService.playlistToParameters(playlist);
     
     return string;
   }
@@ -252,12 +247,11 @@ export class ListenComponent implements OnInit {
   }
 
   saveSettings() {
-    let settingsJSON = {
+    const settingsJSON = {
       areToastsEnabled: this.areToastsEnabled,
       isHeaderClosedOnStart: this.isHeaderClosedOnStart
-    }
+    };
 
-    console.log(settingsJSON);
     localStorage.setItem(LISTEN_PAGE_SETTINGS_ID, JSON.stringify(settingsJSON));
     console.log("Settings have been saved.");
   }
