@@ -1,10 +1,18 @@
 <div class="d-flex row ms-0">
-  <button class="btn btn-outline-primary mx-1 mb-2" [ngClass]="currActive ? '' : 'active'" (click)="currActive = null" onclick="this.blur(); window.scroll(0,0);" [routerLink]="['/sov', 'home']">
+  <div ngbDropdown class="d-inline-block me-2 p-0">
+    <button type="button" class="btn btn-outline-primary" ngbDropdownToggle>{{currActive == null ? 'Home' : currActive.abbr}}</button>
+    <div ngbDropdownMenu>
+      <button ngbDropdownItem class="btn btn-outline-primary mx-1 mb-2" [ngClass]="currActive ? '' : 'active'" (click)="currActive = null" onclick="this.blur(); window.scroll(0,0);" [routerLink]="['/sov', 'home']">
         Home
       </button>
-  <button *ngFor="let sov of sovInfo" class="btn btn-outline-primary mx-1 mb-2" [ngClass]="sov == currActive ? 'active' : ''" (click)="currActive = sov" [routerLink]="['/sov', sov.id]" onclick="this.blur(); window.scroll(0,0);">
-            {{sov.abbr}}
-        </button>
+      <button ngbDropdownItem *ngFor="let sov of sovInfo" class="btn btn-outline-primary mx-1 mb-2" [ngClass]="sov == currActive ? 'active' : ''" (click)="currActive = sov" [routerLink]="['/sov', sov.id]" onclick="this.blur(); window.scroll(0,0);">
+        {{sov.abbr}}
+      </button>
+    </div>
+  </div>
+
+  
+  
 </div>
 
 <div class="content" class="my-3">

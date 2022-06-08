@@ -1,9 +1,12 @@
 <div class="listen-header d-block">
   <div class="listen-header-buttons d-flex mb-4">
-    <div class="d-flex row mx-0">
-      <button *ngFor="let item of headerContent.sections" class="btn btn-outline-primary mx-1 mb-2 mb-md-0" [ngClass]="item == currActiveHeader ? 'active' : ''" (click)="currActiveHeader = item; isHeaderVisible = true;" onclick="this.blur(); event.stopPropagation()">
+    <div ngbDropdown class="d-inline-block me-2 p-0">
+      <button type="button" class="btn btn-outline-primary" ngbDropdownToggle>{{currActiveHeader.title}}</button>
+      <div ngbDropdownMenu>
+        <button ngbDropdownItem *ngFor="let item of headerContent.sections" class="btn btn-outline-primary my-1" [ngClass]="item == currActiveHeader ? 'active' : ''" (click)="currActiveHeader = item; isHeaderVisible = true;" onclick="this.blur(); event.stopPropagation()">
           {{item.title}}
-      </button>
+        </button>
+      </div>
     </div>
     <div class="d-flex flex-grow-1 justify-content-end rounded listen-header-close" (click)="isHeaderVisible = !isHeaderVisible">
       <i class="fa fa-caret-up m-0 my-auto me-md-3 mx-2" *ngIf="isHeaderVisible"></i>

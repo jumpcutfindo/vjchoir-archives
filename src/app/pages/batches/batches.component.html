@@ -1,10 +1,15 @@
 <div class="d-flex row ms-0">
-  <button class="btn btn-outline-primary mx-1 mb-2" [ngClass]="currActive ? '' : 'active'" (click)="currActive = null" onclick="this.blur(); window.scroll(0,0);" [routerLink]="['/batches', 'home']">
-      Home
-    </button>
-  <button *ngFor="let batch of batches" class="btn btn-outline-primary mx-1 mb-2" [ngClass]="batch == currActive ? 'active' : ''" (click)="currActive = batch" [routerLink]="['/batches', batch.id]" onclick="this.blur(); window.scroll(0,0);">
-          {{batch.name}}
+  <div ngbDropdown class="d-inline-block me-2 p-0">
+    <button type="button" class="btn btn-outline-primary" ngbDropdownToggle>{{currActive == null ? 'Home' : currActive.name}}</button>
+    <div ngbDropdownMenu>
+      <button ngbDropdownItem class="btn btn-outline-primary mb-2" [ngClass]="currActive ? '' : 'active'" (click)="currActive = null" onclick="this.blur(); window.scroll(0,0);" [routerLink]="['/batches', 'home']">
+        Home
       </button>
+      <button ngbDropdownItem *ngFor="let batch of batches" class="btn btn-outline-primary mb-2" [ngClass]="batch == currActive ? 'active' : ''" (click)="currActive = batch" [routerLink]="['/batches', batch.id]" onclick="this.blur(); window.scroll(0,0);">
+        {{batch.name}}
+      </button>
+    </div>
+  </div>
 </div>
 
 <div class="content" class="my-3">

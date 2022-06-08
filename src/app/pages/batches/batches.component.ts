@@ -14,6 +14,8 @@ export class BatchesComponent implements OnInit {
 
   batches: BatchItem[];
   batchesIntro: any;
+
+  currTitle: string;
   currActive: BatchItem;
 
   constructor(
@@ -21,10 +23,12 @@ export class BatchesComponent implements OnInit {
     private batchesService: BatchesService,
     private loadingService: LoadingService
   ) { 
-  
+    
   }
 
   ngOnInit() {
+    this.currTitle = "Home";
+
     this.batchesService.getIntro().subscribe(intro => this.batchesIntro = intro);
 
     combineLatest([this.batchesService.getBatches(), this.activatedRoute.url]).subscribe(([batches, urlData]) => {
@@ -39,5 +43,6 @@ export class BatchesComponent implements OnInit {
 
   setBatch(batchId: string): void {
     this.currActive = this.batches.find(batch => batch.id === batchId);
+    if (this.currActive) this.currTitle = this.currActive.name;
   }
 }

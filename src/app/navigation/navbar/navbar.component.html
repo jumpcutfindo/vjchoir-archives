@@ -1,5 +1,5 @@
 <nav class="navbar navbar-light bg-light">
   <i *ngIf="!isSidebarActive" class="fa fa-bars my-auto me-3 sidebar-toggle" (click)="toggleSidebar()"></i>
   <i *ngIf="isSidebarActive" class="fa fa-times my-auto me-3 sidebar-toggle" (click)="toggleSidebar()"></i>
-  <a class="navbar-brand">{{currActive.name | titlecase }}</a>
+  <a class="navbar-brand ms-3">{{currActive.name | titlecase }}</a>
 </nav>
