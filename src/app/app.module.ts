@@ -30,6 +30,7 @@ import { ClipboardModule } from '@angular/cdk/clipboard';
 import { NgxSplideModule } from 'ngx-splide';
 import { ToastrModule } from 'ngx-toastr';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -52,6 +53,7 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
     PageNotFoundComponent
   ],
   imports: [
+    BrowserAnimationsModule,
     CommonModule,
     RouterModule,
     PlyrModule,

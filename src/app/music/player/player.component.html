@@ -35,7 +35,7 @@
   </div>
 
   <div class="player-content" [ngClass]="isMinimised ? 'inactive' : 'active'">
-    <div class="player-plyr">
+    <div class="player-plyr" [ngClass]="isMinimised ? 'd-none' : ''">
       <div class="player-info d-flex m-3">
         <img src="{{nowPlaying.artwork}}" class="me-3 rounded">
         <div class="d-flex flex-column flex-grow-1 justify-content-between m-0 p-0 text-start">

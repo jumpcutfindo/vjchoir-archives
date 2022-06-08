@@ -112,7 +112,7 @@ export class ListenComponent implements OnInit {
       playlists: this.myPlaylistsInfo
     });
 
-    console.log("Updated '" + property + "' to '" + element.value + "'!");
+    this.createToast("success", "Updated '" + property + "' to '" + element.value + "'!");
   }
 
   /**
