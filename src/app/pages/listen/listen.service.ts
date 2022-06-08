@@ -2,7 +2,7 @@ import { Injectable } from "@angular/core";
 
 import listenJSON from "../../../assets/data/listen.json";
 
-import { Observable, of } from "rxjs";
+import { Observable, of, Subject } from "rxjs";
 import { SovService } from '../sov/sov.service';
 
 const MY_PLAYLISTS_STRING = "myPlaylists";
@@ -59,27 +59,40 @@ export interface Song {
 }
 
 export enum PlaylistActionType {
-  CREATE_PLAYLIST, DELETE_PLAYLIST, ADD_SONG, DELETE_SONG
+  CREATE_PLAYLIST, DELETE_PLAYLIST, UPDATE_PLAYLIST_HEADERS, ADD_SONG, DELETE_SONG
 }
 
 export interface PlaylistAction {
   type: PlaylistActionType,
-  playlist: Playlist,
+  playlists: Playlist[],
 }
 
 /**
- * Honestly this should be called "PlaylistService" but too late
+ * Honestly this should be called "PlaylistService" but too late.
+ * This service handles all playlist related actions and information retrieval.
  */
 @Injectable({
   providedIn: "root",
 })
 export class ListenService {
+  // Observable for any playlist related actions taken
+  private playlistUpdatesSource = new Subject<PlaylistAction>();
+  playlistUpdates = this.playlistUpdatesSource.asObservable();
+
   myPlaylists: Playlist[];
   sovInfo: any;
 
   constructor(private sovService: SovService) {
-    let json = localStorage.getItem(MY_PLAYLISTS_STRING);
-    console.log("Loading playlists json...");
+    this.getLocalPlaylists();
+    this.sovService.getSovInfo().subscribe(info => this.sovInfo = info);
+  }
+
+  /**
+   * Loads any locally saved playlists.
+   */
+  private getLocalPlaylists(): void {
+    const json = localStorage.getItem(MY_PLAYLISTS_STRING);
+    console.log("Loading any saved playlists...");
 
     if (!json || json == "") {
       this.myPlaylists = [];
@@ -89,8 +102,7 @@ export class ListenService {
         return this.jsonToPlaylist(playlistJSON);
       });
     }
-
-    this.sovService.getSovInfo().subscribe(info => this.sovInfo = info);
+    console.log("Loaded " + this.myPlaylists.length + " saved playlists!");
   }
 
   getHeader(): Observable<any> {
@@ -101,14 +113,20 @@ export class ListenService {
     return of(this.myPlaylists);
   }
 
-  savePlaylists(myPlaylists: Playlist[]) {
-    let json = JSON.stringify(myPlaylists);
-    console.log("Saving playlists json...");
+  /**
+   * Saves any playlists created to local storage
+   */
+  private savePlaylists(myPlaylists: Playlist[]): void {
+    const json = JSON.stringify(myPlaylists);
+    console.log("Saving playlists...");
     localStorage.setItem(MY_PLAYLISTS_STRING, json);
   }
 
-  createNewPlaylist() {
-    let tempPlaylist = <Playlist>{
+  /**
+   * Generates a new, empty playlist to be edited by the user
+   */
+  createNewPlaylist(): Playlist  {
+    return {
       name: "Default playlist name",
       desc: "Default description name",
       duration: 0,
@@ -116,10 +134,20 @@ export class ListenService {
       isOpen: false,
       isDefault: false
     };
-
-    return tempPlaylist;
   }
 
+  /**
+   * Dispatches the action to the observable. The provided playlists in the action
+   * contains the latest updated set of playlists, so we make sure to save it.
+   */
+  onPlaylistUpdate(action: PlaylistAction) {
+    this.playlistUpdatesSource.next(action);
+    this.savePlaylists(this.myPlaylists);
+  }
+
+  /**
+   * Deletes all playlists from the local storage
+   */
   resetStorage() {
     localStorage.setItem(MY_PLAYLISTS_STRING, "");
     console.log("Storage has been reset!");
@@ -128,27 +156,33 @@ export class ListenService {
     this.myPlaylists = [];
   }
 
+  /**
+   * Converts a JSON stored playlist to one usable by the system
+   */
   jsonToPlaylist(playlist: any): Playlist {
     playlist.isOpen = false;
 
     return playlist;
   }
 
+  /**
+   * Converts some generated code parameters into a playlist
+   */
   parametersToPlaylist(code: string): any {
     try {
-      let params = [];
-      let playlistParams = code.split(PLAYLIST_SEPARATOR);
+      const params = [];
+      const playlistParams = code.split(PLAYLIST_SEPARATOR);
       playlistParams.shift();
-      for(let playlistParam of playlistParams) {
-        let plIdAndTracks = playlistParam.split(TRACKS_SEPARATOR);
-        let plId = plIdAndTracks[0];
-        let tracks = plIdAndTracks[1].split(SONG_SEPARATOR);
+      for(const playlistParam of playlistParams) {
+        const plIdAndTracks = playlistParam.split(TRACKS_SEPARATOR);
+        const plId = plIdAndTracks[0];
+        const tracks = plIdAndTracks[1].split(SONG_SEPARATOR);
         tracks.shift();
 
-        for(let track of tracks) {
-          let trackInfo = track.split(POS_SEPARATOR);
-          let trackId = trackInfo[0];
-          let pos = trackInfo[1];
+        for(const track of tracks) {
+          const trackInfo = track.split(POS_SEPARATOR);
+          const trackId = trackInfo[0];
+          const pos = trackInfo[1];
 
           params.push({
             pl_id: plId,
@@ -158,9 +192,9 @@ export class ListenService {
         }
       }
 
-      let songs = params.map(param => {
-        let sov = this.sovInfo.filter(x => x.id == parseInt(param.pl_id))[0];
-        let song = sov.repertoire.tracks[parseInt(param.id)];
+      const songs = params.map(param => {
+        const sov = this.sovInfo.filter(x => x.id == parseInt(param.pl_id))[0];
+        const song = sov.repertoire.tracks[parseInt(param.id)];
 
         return {
           pos: param.pos,
@@ -168,7 +202,7 @@ export class ListenService {
         }
       });
 
-      let playlist: Playlist = {
+      const playlist: Playlist = {
         name: DEFAULT_TITLE,
         desc: DEFAULT_DESCRIPTION,
         tracks: songs.sort((a, b) => a.pos - b.pos).map(x => x.song)
@@ -190,16 +224,19 @@ export class ListenService {
     }
   }
 
+  /**
+   * Converts a playlist into generated code parameters
+   */
   playlistToParameters(playlist: Playlist): any {
     const tracks = playlist.tracks;
-    let plIds = [];
-    let params = [];
+    const plIds = [];
+    const params = [];
 
     let output = '';
 
     for(let i = 0; i < tracks.length; i ++) {
-      let song = tracks[i];
-      let param = {
+      const song = tracks[i];
+      const param = {
         pl_pos: i.toString(),
         id: song.id.toString(),
         pl_id: song.album_info.id,
@@ -220,13 +257,13 @@ export class ListenService {
       }
     }
 
-    for(let plId of plIds) {
-      let str: string = ''
+    for(const plId of plIds) {
+      let str = ''
       str +=(PLAYLIST_SEPARATOR + plId + TRACKS_SEPARATOR);
 
-      let songsWithThisId = params.filter(x => x.pl_id == plId);
+      const songsWithThisId = params.filter(x => x.pl_id == plId);
 
-      for(let song of songsWithThisId) {
+      for(const song of songsWithThisId) {
         str += SONG_SEPARATOR + song.id + POS_SEPARATOR + song.pl_pos;
       }
 

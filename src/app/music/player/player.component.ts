@@ -41,14 +41,9 @@ export class PlayerComponent implements OnInit {
   audioSources: Plyr.Source[] = [];
 
   constructor(private navController: NavControllerService, private sovService: SovService, private listenService: ListenService, private playerService: PlayerService) {
-    this.playerService.playlistUpdates.subscribe(val => {
-      if(val.type === PlaylistActionType.DELETE_PLAYLIST) {
-        let tempIndex = this.playlists.indexOf(val.playlist);
-        this.playlists.splice(tempIndex, 1);
-        console.log("Completed");
-        console.log(this.playlists);
-      }
-      this.loadPlaylists();
+    // Whenever there are any updates to the playlists, load the playlists
+    this.listenService.playlistUpdates.subscribe(action => {
+      this.loadCustomPlaylists();
     });
 
     this.playerService.songRequestUpdates.subscribe(val => {
@@ -62,8 +57,6 @@ export class PlayerComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.loadPlaylists(true);
-
     this.activeWindowTitle = PLAYLISTS_DEFAULT_TITLE;
     this.isMinimised = true;
     this.playerPlaylistsWindow = document.getElementById("player-playlists");
@@ -71,22 +64,16 @@ export class PlayerComponent implements OnInit {
     this.loadSongViaId(0, 0, false);
   }
 
-  loadPlaylists(justLoaded?: boolean) {
+  loadDefaultPlaylists(): void {
     this.sovService.getSovInfo().subscribe((info) => {
-      this.sovInfo = info
-    });
+      this.sovInfo = info;
+    })
+  }
 
+  loadCustomPlaylists(): void {
     this.listenService.getPlaylists().subscribe(playlists => {
       this.myPlaylists = playlists;
     });
-
-    this.playlists = [];
-    for(let sov of this.sovInfo) {
-      this.playlists.push(sov.repertoire);
-    }    
-    for(let playlist of this.myPlaylists) {
-      this.playlists.push(playlist);
-    }
   }
 
   displayPlaylist(playlist: Playlist) {

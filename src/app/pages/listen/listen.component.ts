@@ -102,11 +102,15 @@ export class ListenComponent implements OnInit {
   /**
    * Handles the updating of the playlist name / description.
    */
-  onKeyEnter(playlist: Playlist, element: any) {
+  onUpdatePlaylistHeaders(playlist: Playlist, element: any) {
     const property = element.getAttribute("id");
 
     playlist[property] = element.value;
-    this.listenService.savePlaylists(this.myPlaylistsInfo);
+
+    this.listenService.onPlaylistUpdate({
+      type: PlaylistActionType.UPDATE_PLAYLIST_HEADERS,
+      playlists: this.myPlaylistsInfo
+    });
 
     console.log("Updated '" + property + "' to '" + element.value + "'!");
   }
@@ -115,14 +119,14 @@ export class ListenComponent implements OnInit {
     const tempPlaylist = this.listenService.createNewPlaylist();
 
     this.myPlaylistsInfo.push(tempPlaylist);
-    this.listenService.savePlaylists(this.myPlaylistsInfo);
 
     console.log("Created new playlist!");
 
-    this.playerService.onPlaylistUpdate({
+    this.listenService.onPlaylistUpdate({
       type: PlaylistActionType.CREATE_PLAYLIST,
-      playlist: tempPlaylist
+      playlists: this.myPlaylistsInfo
     });
+
     this.createToast({
       type: "success",
       msg: "Created a new playlist!"
@@ -132,14 +136,14 @@ export class ListenComponent implements OnInit {
   deletePlaylist(playlist: Playlist) {
     const playlistIndex = this.myPlaylistsInfo.indexOf(playlist);
     this.myPlaylistsInfo.splice(playlistIndex, 1);
-    this.listenService.savePlaylists(this.myPlaylistsInfo);
 
     console.log("Deleted playlist: " + playlist.name);
 
-    this.playerService.onPlaylistUpdate({
+    this.listenService.onPlaylistUpdate({
       type: PlaylistActionType.DELETE_PLAYLIST,
-      playlist: playlist
+      playlists: this.myPlaylistsInfo
     });
+
     this.createToast({
       type: "error",
       msg: "Deleted playlist '" + playlist.name + "'!"
@@ -150,11 +154,9 @@ export class ListenComponent implements OnInit {
     playlist.tracks.push(song);
     playlist.duration += song.duration;
 
-    this.listenService.savePlaylists(this.myPlaylistsInfo);
-
-    this.playerService.onPlaylistUpdate({
+    this.listenService.onPlaylistUpdate({
       type: PlaylistActionType.ADD_SONG,
-      playlist: playlist
+      playlists: this.myPlaylistsInfo
     });
 
     this.createToast({
@@ -167,11 +169,10 @@ export class ListenComponent implements OnInit {
     playlist.tracks = playlist.tracks.filter(x => x != song);
     playlist.duration.subtract(song.duration);
 
-    this.listenService.savePlaylists(this.myPlaylistsInfo);
 
-    this.playerService.onPlaylistUpdate({
+    this.listenService.onPlaylistUpdate({
       type: PlaylistActionType.DELETE_SONG,
-      playlist: playlist
+      playlists: this.myPlaylistsInfo
     });
     
     this.createToast({
@@ -197,7 +198,6 @@ export class ListenComponent implements OnInit {
   importPlaylist(code: string) {
     const playlist = this.listenService.parametersToPlaylist(code);
     this.myPlaylistsInfo.push(playlist);
-    this.listenService.savePlaylists(this.myPlaylistsInfo);
 
     if(playlist.name == "Default playlist name") {
       this.createToast({
@@ -228,7 +228,6 @@ export class ListenComponent implements OnInit {
 
   drop(playlist: Playlist, event: CdkDragDrop<string[]>) {
     moveItemInArray(playlist.tracks, event.previousIndex, event.currentIndex);
-    this.listenService.savePlaylists(this.myPlaylistsInfo);
   }
 
   openModal(modal) {

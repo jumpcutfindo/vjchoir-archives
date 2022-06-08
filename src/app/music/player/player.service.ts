@@ -7,18 +7,10 @@ import { Playlist, PlaylistAction, Song } from 'src/app/pages/listen/listen.serv
     providedIn: 'root',
 })
 export class PlayerService {
-
-    private playlistUpdatesSource = new Subject<PlaylistAction>();
-    playlistUpdates = this.playlistUpdatesSource.asObservable();
-
     private songRequestSource = new Subject<any>();
     songRequestUpdates = this.songRequestSource.asObservable();
 
     constructor() { }
-
-    onPlaylistUpdate(action: PlaylistAction) {
-        this.playlistUpdatesSource.next(action);
-    }
 
     onSongRequest(playlist: Playlist, song: Song) {
         const request = {
