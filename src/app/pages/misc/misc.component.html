@@ -1,8 +1,8 @@
-<div class="d-flex row ms-0">
+<div class="ms-0">
   <div ngbDropdown class="d-inline-block me-2 p-0">
     <button type="button" class="btn btn-outline-primary" ngbDropdownToggle>{{currActive.title}}</button>
     <div ngbDropdownMenu>
-      <button *ngFor="let item of miscJSON.sections" class="btn btn-outline-primary mx-1 mb-2" [ngClass]="item == currActive ? 'active' : ''" (click)="currActive = item" [routerLink]="['/misc', item.id]" onclick="this.blur();">
+      <button ngbDropdownItem *ngFor="let item of miscJSON.sections" class="btn btn-outline-primary my-1" [ngClass]="item == currActive ? 'active' : ''" (click)="currActive = item" [routerLink]="['/misc', item.id]" onclick="this.blur();">
         {{item.title}}
       </button>
     </div>

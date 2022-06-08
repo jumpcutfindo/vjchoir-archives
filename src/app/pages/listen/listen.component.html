@@ -13,7 +13,7 @@
       <i class="fa fa-caret-down m-0 my-auto me-md-3 mx-2" *ngIf="!isHeaderVisible"></i>
     </div>
   </div>
-  <div *ngIf="isHeaderVisible">
+  <div *ngIf="isHeaderVisible" class="section">
     <h3>{{currActiveHeader.header}}</h3>
     <div [innerHTML]="currActiveHeader.content"></div>
     <div *ngIf="currActiveHeader.title == 'Settings'">
@@ -59,7 +59,7 @@
   <hr/>
 </div>
 
-<div class="listen-your-playlists">
+<div class="listen-your-playlists section">
   <div class="d-flex mb-2">
     <h5 class="flex-grow-1 my-auto">Your Playlists</h5>
     <button class="btn btn-outline-primary me-2" (click)="openModal(importPlaylistModal)" onclick="this.blur();">
@@ -177,7 +177,7 @@
 </div>
 <hr/>
 
-<div class="listen-default-playlists mb-5 mb-xl-0">
+<div class="listen-default-playlists mb-5 mb-xl-0 section">
   <h5 class="mt-4">Default Playlists</h5>
   <div *ngFor="let sov of sovInfo; last as isLast" class="container-fluid p-0">
     <div class="playlist-header d-flex my-auto m-0 px-2 py-2" (click)="sov.isOpen = !sov.isOpen" *ngIf="!sov.isOpen">

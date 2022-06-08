@@ -12,17 +12,17 @@
     </ul>
     <hr class="hr-inv mx-2" />
     <div class="d-flex mx-3">
-      <div *ngIf="isDarkMode" class="row m-0 p-0 flex-grow-1">
+      <div *ngIf="isDarkMode" class="d-flex m-0 p-0 flex-grow-1">
         <i class="fa fa-moon my-auto me-2"></i>
         <p class="m-0 p-0">Dark Mode</p>
       </div>
-      <div *ngIf="!isDarkMode" class="row m-0 p-0 flex-grow-1">
+      <div *ngIf="!isDarkMode" class="d-flex m-0 p-0 flex-grow-1">
         <i class="fa fa-sun my-auto me-2"></i>
         <p class="m-0 p-0">Light Mode</p>
       </div>
       <mat-slide-toggle [(ngModel)]="isDarkMode" (change)="changeMode()"></mat-slide-toggle>
     </div>
-    <p class="mx-3 text-center"><small>© VJChoir 2021.<br/>No man is an island.</small></p>
+    <p class="mx-3 text-center"><small>© VJChoir 2022.<br/>No man is an island.</small></p>
   </nav>
 
 </div>
