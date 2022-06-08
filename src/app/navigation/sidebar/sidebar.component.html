@@ -13,11 +13,11 @@
     <hr class="hr-inv mx-2" />
     <div class="d-flex mx-3">
       <div *ngIf="isDarkMode" class="row m-0 p-0 flex-grow-1">
-        <i class="fa fa-moon my-auto mr-2"></i>
+        <i class="fa fa-moon my-auto me-2"></i>
         <p class="m-0 p-0">Dark Mode</p>
       </div>
       <div *ngIf="!isDarkMode" class="row m-0 p-0 flex-grow-1">
-        <i class="fa fa-sun my-auto mr-2"></i>
+        <i class="fa fa-sun my-auto me-2"></i>
         <p class="m-0 p-0">Light Mode</p>
       </div>
       <mat-slide-toggle [(ngModel)]="isDarkMode" (change)="changeMode()"></mat-slide-toggle>

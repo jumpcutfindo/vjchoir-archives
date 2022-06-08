@@ -1,32 +1,32 @@
 <div class="player-layout fixed-bottom" [ngClass]="isMinimised ? 'active' : ''">
   <div class="player-header" (click)="isMinimised = !isMinimised">
-    <div class="row justify-content-between mx-3 py-3" [ngClass]="isMinimised ? 'd-none' : ''">
+    <div class="d-flex justify-content-between mx-3 py-3" [ngClass]="isMinimised ? 'd-none' : ''">
       <p class="m-0">Player</p>
       <i class="fas fa-caret-down mt-1"></i>
     </div>
-    <div class="row justify-content-between mx-3 py-3" [ngClass]="!isMinimised ? 'd-none' : ''">
-      <div class="row m-0 p-0 col-8">
-        <img class="player-min-artwork rounded" src="{{nowPlaying.artwork}}">
-        <div class="col m-0 p-0 ml-3 text-left">
+    <div class="d-flex justify-content-between mx-3 py-3" [ngClass]="!isMinimised ? 'd-none' : ''">
+      <div class="d-flex m-0 p-0 col-8">
+        <img class="player-min-artwork rounded my-auto" src="{{nowPlaying.artwork}}">
+        <div class="col m-0 p-0 ms-3 text-start my-auto">
           <p class="m-0 d-block text-truncate">{{nowPlaying.title}}</p>
           <p class="m-0"><small>{{currActivePlaylist.name}}</small></p>
         </div>
       </div>
 
       <div class="mx-0 my-auto col-4 px-0 px-sm-2">
-        <div class="row m-0 p-0 justify-content-between">
+        <div class="d-flex m-0 p-0 justify-content-between">
           <button class="btn big-play-button p-0" [disabled]="nowPlaying.id - 1 < 0" (click)="onBigPrevClick($event)">
-                <i class="fas fa-step-backward mt-1 mr-2 my-auto"></i>
+                <i class="fas fa-step-backward mt-1 me-2 my-auto"></i>
             </button>
-          <div *ngIf="isBuffering" class="spinner-border spinner-border-sm mt-1 mr-1" role="status">
+          <div *ngIf="isBuffering" class="spinner-border spinner-border-sm mt-1 me-1" role="status">
             <span class="sr-only">Loading...</span>
           </div>
           <button *ngIf="!isBuffering" class="btn big-play-button p-0" (click)="onBigPlayClick($event)">
-              <i class="fas fa-play mt-1 mr-2 my-auto" [ngClass]="isMinimised && isPlaying ? 'd-none' : ''"></i>
-              <i class="fas fa-pause mt-1 mr-2 my-auto" [ngClass]="isMinimised && !isPlaying ? 'd-none' : ''"></i>
+              <i class="fas fa-play mt-1 me-2 my-auto" [ngClass]="isMinimised && isPlaying ? 'd-none' : ''"></i>
+              <i class="fas fa-pause mt-1 me-2 my-auto" [ngClass]="isMinimised && !isPlaying ? 'd-none' : ''"></i>
             </button>
           <button class="btn big-play-button p-0" [disabled]="nowPlaying.id + 1 >= currActivePlaylist.tracks.length" (click)="onBigNextClick($event)">
-                <i class="fas fa-step-forward mt-1 mr-2 my-auto" ></i>
+                <i class="fas fa-step-forward mt-1 me-2 my-auto" ></i>
             </button>
         </div>
       </div>
@@ -36,16 +36,16 @@
 
   <div class="player-content" [ngClass]="isMinimised ? 'inactive' : 'active'">
     <div class="player-plyr">
-      <div class="player-info row m-0">
-        <img src="{{nowPlaying.artwork}}" class="w-25 my-auto m-2 rounded">
-        <div class="col m-0 p-0 m-2 mr-3 text-left">
-          <div class="my-auto">
+      <div class="player-info d-flex m-3">
+        <img src="{{nowPlaying.artwork}}" class="me-3 rounded">
+        <div class="d-flex flex-column flex-grow-1 justify-content-between m-0 p-0 text-start">
+          <div class="my-2">
             <p class="np-title m-0">{{nowPlaying.title}}</p>
             <p class="np-composer m-0"><small>by {{nowPlaying.composer}}</small></p>
           </div>
-          <hr class="m-0 mt-3" />
+          <hr class="m-0" />
           <p class="np-playlist-title m-0 py-2">
-            <a routerLink="/sov" fragment="{{nowPlaying.album_info.abbr}}" (click)="onLinkClick(nowPlaying.album_info.abbr)" class="sov-link d-flex justify-content-between">{{nowPlaying.album_info.title}}
+            <a [routerLink]="['/sov', nowPlaying.album_info.id]" (click)="onLinkClick(nowPlaying.album_info.abbr)" class="sov-link d-flex justify-content-between">{{nowPlaying.album_info.title}}
               <i class="fa fa-arrow-right small my-auto"></i>
             </a>
           </p>
@@ -54,28 +54,28 @@
       <plyr plyrType="audio" [plyrSources]="audioSources" (plyrWaiting)="isBuffering = true;" (plyrCanPlay)="onCanPlay();" (plyrCanPlayThrough)=" isBuffering = false;" (plyrEnded)="loadNextSong()" (plyrPlay)="isPlaying = true; isCanPlay = false;" (plyrPause)="isPlaying = false">
       </plyr>
     </div>
-    <div class="player-active-window-header row p-0 m-0">
-      <button class="btn" [ngClass]="currDisplayedPlaylist ? '' : 'd-none'" (click)="onBackClick()"><small><i class="fa fa-arrow-left"></i></small></button>
+    <div class="d-flex player-active-window-header">
+      <button class="btn my-auto" [ngClass]="currDisplayedPlaylist ? '' : 'd-none'" (click)="onBackClick()"><small><i class="fa fa-arrow-left"></i></small></button>
       <div class="d-flex justify-content-between">
-        <h6 class="text-left p-2 m-0 my-auto">{{activeWindowTitle}}</h6>
-        <span *ngIf="currDisplayedPlaylist && currDisplayedPlaylist.isDefault" class="badge badge-primary badge-pill my-auto" routerLink="/sov" fragment="{{sovInfo[currDisplayedPlaylistId].abbr}}" (click)="onLinkClick(sovInfo[currDisplayedPlaylistId].abbr)">PAGE</span>
+        <h6 class="text-start mx-2 my-auto">{{activeWindowTitle}}</h6>
+        <span *ngIf="currDisplayedPlaylist && currDisplayedPlaylist.isDefault" class="badge bg-primary rounded-pill my-auto" [routerLink]="['/sov', currDisplayedPlaylist.id]" (click)="onLinkClick(sovInfo[currDisplayedPlaylistId].abbr)">PAGE</span>
       </div>
     </div>
     <div id="player-playlists" class="player-playlists d-flex flex-column">
       <div class="col m-0 p-0" [ngClass]="currDisplayedPlaylist ? 'd-none' : ''">
-        <p class="py-1 px-2 m-0 text-left"><small><b>Your Playlists</b></small></p>
-        <div *ngIf="getMyPlaylists().length != 0">
-          <div class="player-playlists-item row m-0" *ngFor="let playlist of getMyPlaylists()" (click)="displayPlaylist(playlist)">
-            <p class="my-auto ml-3">{{playlist.name}}</p>
+        <p class="ms-2 mb-0 text-start"><small><b>Your Playlists</b></small></p>
+        <div *ngIf="getMyPlaylists().length != 0" class="mb-2">
+          <div class="d-flex player-playlists-item m-0" *ngFor="let playlist of getMyPlaylists()" (click)="displayPlaylist(playlist)">
+            <p class="my-auto ms-3 text-start">{{playlist.name}}</p>
           </div>
         </div>
-        <div *ngIf="getMyPlaylists().length == 0" class="d-flex justify-content-center">
+        <div *ngIf="getMyPlaylists().length == 0" class="d-flex justify-content-center mb-2">
           <p class="m-0 p-0 text-center mb-2 col-10"><small>You haven't created any playlists of your own! Go to the <a routerLink="/listen" (click)="onLinkClick('listen')">Listen</a> page to start now!</small></p>
         </div>
-        <p class="py-1 px-2 m-0 text-left"><small><b>Default Playlists</b></small></p>
-        <div class="player-playlists-item row m-0" *ngFor="let playlist of getDefaultPlaylists(); index as index" (click)="displayPlaylist(playlist)">
+        <p class="ms-2 mb-0 text-start"><small><b>Default Playlists</b></small></p>
+        <div class="d-flex player-playlists-item m-0" *ngFor="let playlist of getDefaultPlaylists(); index as index" (click)="displayPlaylist(playlist)">
           <img src="{{sovInfo[index].artwork}}">
-          <p class="my-auto ml-3">{{playlist.name}}</p>
+          <p class="my-auto ms-3">{{playlist.name}}</p>
         </div>
       </div>
 
@@ -86,7 +86,7 @@
         <div *ngIf="currDisplayedPlaylist.tracks.length != 0">
           <div class="song row m-0 py-2" *ngFor="let song of currDisplayedPlaylist.tracks; let i = index" (click)="loadSong(currDisplayedPlaylist, song)" [ngClass]="nowPlaying == song ? 'active' : ''">
             <p class="song-number text-center col-1 m-0 p-0"><small>{{i+1}}</small></p>
-            <p class="song-title text-left text-truncate col-9 m-0 p-0">{{song.title}} <small class="song-composer">{{song.composer}}</small></p>
+            <p class="song-title text-start text-truncate col-9 m-0 p-0">{{song.title}} <small class="song-composer">{{song.composer}}</small></p>
             <p class="song-duration text-center col-2 m-0 p-0 pr-1"><small>{{song.duration | formatDuration}}</small></p>
           </div>
         </div>

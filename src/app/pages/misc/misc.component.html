@@ -1,4 +1,4 @@
-<div class="d-flex row ml-0">
+<div class="d-flex row ms-0">
   <button *ngFor="let item of miscJSON.sections" class="btn btn-outline-primary mx-1 mb-2" [ngClass]="item == currActive ? 'active' : ''" (click)="currActive = item" [routerLink]="['/misc', item.id]" onclick="this.blur();">
     {{item.title}}
   </button>
@@ -13,7 +13,7 @@
       <div *ngFor="let update of updateLog; last as isLast; first as isFirst">
         <div class="d-flex">
           <h4 class="my-0">{{update.title}}</h4>
-          <span *ngIf="isFirst" class="badge badge-danger my-auto ml-2">CURRENT VERSION</span>
+          <span *ngIf="isFirst" class="badge bg-danger my-auto ms-2">CURRENT VERSION</span>
         </div>
         <p [innerHTML]="update.summary"></p>
         <ul>

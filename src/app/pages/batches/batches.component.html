@@ -1,4 +1,4 @@
-<div class="d-flex row ml-0">
+<div class="d-flex row ms-0">
   <button class="btn btn-outline-primary mx-1 mb-2" [ngClass]="currActive ? '' : 'active'" (click)="currActive = null" onclick="this.blur(); window.scroll(0,0);" [routerLink]="['/batches', 'home']">
       Home
     </button>
@@ -55,7 +55,7 @@
             <ul class="list-group">
               <li class="list-group-item" *ngFor="let name of section.members; first as isFirst">
                 <p class="m-0 p-0">{{name}}</p>
-                <span *ngIf="isFirst" class="badge badge-primary badge-pill">SL</span>
+                <span *ngIf="isFirst" class="badge bg-primary rounded-pill">SL</span>
               </li>
             </ul>
           </div>
