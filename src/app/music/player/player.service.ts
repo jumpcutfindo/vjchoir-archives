@@ -1,58 +1,7 @@
 import { Injectable } from '@angular/core';
 
 import { Subject } from 'rxjs';
-
-export interface SymphVoices {
-    id: number;
-    title: string;
-    abbr: string;
-    info: {
-        date: string;
-        venue: string;
-        theme: string;
-        noFirstHalf: number;
-        noSecondHalf: number;
-    }
-    intro?: string;
-    artwork: string;
-    repertoire: Playlist;
-    links?: any;
-}
-
-export interface Playlist {
-    id?: number;
-    tracks: Song[];
-    name?: string;
-    desc?: string;
-    duration?: any;
-    isOpen?: boolean;
-    isDefault?: boolean;
-}
-
-export interface Song {
-    playlistId: number;
-    id: number;
-    title: string;
-    desc?: string;
-    src: string;
-    composer?: string;
-    duration: any;
-    artwork?: string;
-    album_info?: {
-        title: string;
-        abbr: string;
-        id: number;
-    }
-}
-
-export enum PlaylistActionType {
-    CREATE_PLAYLIST, DELETE_PLAYLIST, ADD_SONG, DELETE_SONG
-}
-
-export interface PlaylistAction {
-    type: PlaylistActionType,
-    playlist: Playlist,
-}
+import { Playlist, PlaylistAction, Song } from 'src/app/pages/listen/listen.service';
 
 @Injectable({
     providedIn: 'root',

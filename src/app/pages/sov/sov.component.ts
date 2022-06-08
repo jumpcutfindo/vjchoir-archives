@@ -4,9 +4,10 @@ import {
 } from "@angular/core";
 import { SovService } from "./sov.service";
 import { ActivatedRoute } from "@angular/router";
-import { PlayerService, Playlist, Song, SymphVoices } from "src/app/music/player/player.service";
+import { PlayerService } from "src/app/music/player/player.service";
 import { LoadingService } from 'src/app/loading/loading.service';
 import { combineLatest } from "rxjs";
+import { SymphVoices, Playlist, Song } from "../listen/listen.service";
 
 @Component({
   selector: "app-sov",

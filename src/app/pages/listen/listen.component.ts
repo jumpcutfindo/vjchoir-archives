@@ -1,8 +1,8 @@
 import { Component, OnInit, HostListener } from '@angular/core';
-import { ListenService } from './listen.service';
+import { ListenService, Playlist, PlaylistActionType, Song } from './listen.service';
 import { SovService } from '../sov/sov.service';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { PlayerService, Playlist, PlaylistActionType, Song } from 'src/app/music/player/player.service';
+import { PlayerService } from 'src/app/music/player/player.service';
 import {CdkDragDrop, moveItemInArray} from '@angular/cdk/drag-drop';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
@@ -111,10 +111,7 @@ export class ListenComponent implements OnInit {
     console.log("Updated '" + property + "' to '" + element.value + "'!");
   }
 
-  /**
-   * Creates a new, empty playlist.
-   */
-  createNewPlaylist() {
+  createNewPlaylist(): void {
     const tempPlaylist = this.listenService.createNewPlaylist();
 
     this.myPlaylistsInfo.push(tempPlaylist);

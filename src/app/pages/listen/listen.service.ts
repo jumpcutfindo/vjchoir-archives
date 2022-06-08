@@ -4,7 +4,6 @@ import listenJSON from "../../../assets/data/listen.json";
 
 import { Observable, of } from "rxjs";
 import { SovService } from '../sov/sov.service';
-import { Playlist } from "src/app/music/player/player.service";
 
 const MY_PLAYLISTS_STRING = "myPlaylists";
 
@@ -16,6 +15,61 @@ const TRACKS_SEPARATOR = "t";
 const SONG_SEPARATOR = "s";
 const POS_SEPARATOR = "i";
 
+export interface SymphVoices {
+  id: number;
+  title: string;
+  abbr: string;
+  info: {
+      date: string;
+      venue: string;
+      theme: string;
+      noFirstHalf: number;
+      noSecondHalf: number;
+  }
+  intro?: string;
+  artwork: string;
+  repertoire: Playlist;
+  links?: any;
+}
+
+export interface Playlist {
+  id?: number;
+  tracks: Song[];
+  name?: string;
+  desc?: string;
+  duration?: any;
+  isOpen?: boolean;
+  isDefault?: boolean;
+}
+
+export interface Song {
+  playlistId: number;
+  id: number;
+  title: string;
+  desc?: string;
+  src: string;
+  composer?: string;
+  duration: any;
+  artwork?: string;
+  album_info?: {
+      title: string;
+      abbr: string;
+      id: number;
+  }
+}
+
+export enum PlaylistActionType {
+  CREATE_PLAYLIST, DELETE_PLAYLIST, ADD_SONG, DELETE_SONG
+}
+
+export interface PlaylistAction {
+  type: PlaylistActionType,
+  playlist: Playlist,
+}
+
+/**
+ * Honestly this should be called "PlaylistService" but too late
+ */
 @Injectable({
   providedIn: "root",
 })

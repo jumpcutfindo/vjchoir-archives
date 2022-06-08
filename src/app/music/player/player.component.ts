@@ -2,8 +2,8 @@ import { Component, OnInit, ViewChild, Output, EventEmitter } from "@angular/cor
 import { PlyrComponent } from "ngx-plyr";
 import { SovService } from "src/app/pages/sov/sov.service";
 import { NavControllerService } from 'src/app/navigation/nav-controller/nav-controller.service';
-import { ListenService } from 'src/app/pages/listen/listen.service';
-import { PlayerService, Playlist, PlaylistActionType, Song } from './player.service';
+import { ListenService, Playlist, PlaylistActionType, Song, SymphVoices } from 'src/app/pages/listen/listen.service';
+import { PlayerService } from './player.service';
 
 const PLAYLISTS_DEFAULT_TITLE = "Playlists";
 

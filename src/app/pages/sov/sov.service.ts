@@ -2,7 +2,7 @@ import { Injectable } from "@angular/core";
 
 import sovJSON from "../../../assets/data/sov.json";
 import { Observable, of } from "rxjs";
-import { Playlist, Song, SymphVoices } from "src/app/music/player/player.service";
+import { Song, Playlist, SymphVoices } from "../listen/listen.service";
 
 @Injectable({
   providedIn: "root",
