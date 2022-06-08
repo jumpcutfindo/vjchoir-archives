@@ -88,7 +88,7 @@
       <p class="col-6 m-0 pl-2 text-truncate"><b>{{playlist.name}}</b></p>
       <div class="col-6 text-right d-inline-block row p-0">
         <div class="d-inline">
-          <span class="badge badge-pill badge-secondary mr-2">{{playlist.duration.hours() + "H " + playlist.duration.minutes() + "M"}}</span>
+          <span class="badge badge-pill badge-secondary mr-2">{{ playlist.duration | formatDuration: "h:m"}}</span>
           <span class="badge badge-pill badge-primary">{{playlist.tracks.length}} SONGS</span>
         </div>
         <div class="d-inline ml-2">
@@ -182,7 +182,7 @@
       <p *ngIf="innerWidth <= 600" class="col-4 m-0 pl-2 text-truncate"><b>{{sov.abbr}}</b></p>
       <div class="col-8 col-md-6 text-right d-inline-block row p-0">
         <div class="d-inline">
-          <span class="badge badge-pill badge-secondary mr-2">{{sov.repertoire.duration / 3600 + "H " + sov.repertoire.duration % 3600 / 60 + "M"}}</span>
+          <span class="badge badge-pill badge-secondary mr-2">{{sov.repertoire.duration | formatDuration: "h:m"}}</span>
           <span class="badge badge-pill badge-primary">{{sov.repertoire.tracks.length}} SONGS</span>
         </div>
         <div class="d-inline ml-2">

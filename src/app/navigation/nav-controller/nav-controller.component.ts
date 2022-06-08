@@ -47,7 +47,6 @@ export class NavControllerComponent implements OnInit {
 
       // Determine which sidebar item should be active
       let page = urlData[0].path;
-      console.log(window.location);
       if (!page) page = window.location.pathname.split("/")[1];
       this.setActiveItem(page);
     });

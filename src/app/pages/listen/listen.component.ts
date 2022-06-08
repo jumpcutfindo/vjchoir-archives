@@ -147,7 +147,7 @@ export class ListenComponent implements OnInit {
 
   addSongToPlaylist(song: Song, playlist: Playlist) {
     playlist.tracks.push(song);
-    playlist.duration.add(song.duration);
+    playlist.duration += song.duration;
 
     this.listenService.savePlaylists(this.myPlaylistsInfo);
 

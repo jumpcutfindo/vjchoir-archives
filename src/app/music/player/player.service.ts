@@ -18,7 +18,6 @@ export class PlayerService {
     constructor() { }
 
     onPlaylistUpdate(msg: any) {
-        console.log(msg);
         this.playlistUpdatesSource.next(msg);
     }
 

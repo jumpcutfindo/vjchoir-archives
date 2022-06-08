@@ -48,7 +48,6 @@ export class ListenService {
   }
 
   savePlaylists(myPlaylists: Playlist[]) {
-    console.log(myPlaylists.length);
     let json = JSON.stringify(myPlaylists);
     console.log("Saving playlists json...");
     localStorage.setItem(MY_PLAYLISTS_STRING, json);
