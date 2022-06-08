@@ -84,14 +84,15 @@
     </ng-template>
   </div>
   <div *ngFor="let playlist of myPlaylistsInfo; last as isLast" class="container-fluid p-0">
-    <div class="playlist-header container-fluid row my-auto m-0 px-0 py-2" (click)="playlist.isOpen = !playlist.isOpen" *ngIf="!playlist.isOpen">
-      <p class="col-6 m-0 pl-2 text-truncate"><b>{{playlist.name}}</b></p>
-      <div class="col-6 text-right d-inline-block row p-0">
-        <div class="d-inline">
+    <div class="playlist-header d-flex my-auto m-0 px-2 py-2" (click)="playlist.isOpen = !playlist.isOpen" *ngIf="!playlist.isOpen">
+      <p class="d-flex m-0 pl-2 text-truncate"><b>{{playlist.name}}</b></p>
+      <div class="flex-grow-1"></div>
+      <div class="d-flex">
+        <div>
           <span class="badge rounded-pill bg-secondary me-2">{{ playlist.duration | formatDuration: "h:m"}}</span>
           <span class="badge rounded-pill bg-primary">{{playlist.tracks.length}} SONGS</span>
         </div>
-        <div class="d-inline ms-2">
+        <div class="ms-2">
           <i class="fas fa-caret-down"></i>
         </div>
       </div>
@@ -106,11 +107,11 @@
               <h4 class="flex-grow-1 m-0 col-8 p-0">
                 <input #name id="name" class="p-1 col-12" value="{{playlist.name}}" onclick="event.stopPropagation();" (keyup.enter)="name.blur()" (blur)="onUpdatePlaylistHeaders(playlist, name)" autocomplete="off">
               </h4>
-              <div class="col-4 d-flex justify-content-end">
+              <div class="d-flex justify-content-end mx-3">
                 <!-- <i class="fa fa-file-export icon-primary me-3 my-auto" placement="top" ngbTooltip="Get playlist code" [cdkCopyToClipboard]="exportPlaylist(playlist)" onclick="event.stopPropagation();"></i> -->
                 <i class="fa fa-link icon-primary me-3 my-auto" placement="top" ngbTooltip="Copy playlist link" (click)="getPlaylistLink(playlist)" onclick="event.stopPropagation();"></i>
                 <i class="fa fa-times icon-danger me-4 my-auto" placement="top" ngbTooltip="Delete playlist" (click)="openModal(deleteModal);" onclick="event.stopPropagation();"></i>
-                <i class="fa fa-caret-up my-auto"></i>
+                <i class="fa fa-caret-up my-auto" (click)="playlist.isOpen = !playlist.isOpen; event.stopPropagation();"></i>
               </div>
             </div>
             <p class="d-block m-0">
@@ -133,7 +134,6 @@
         </div>
         <div cdkDropList (cdkDropListDropped)="drop(playlist, $event)">
           <div class="song row m-0 py-2" *ngFor="let song of playlist.tracks; let i = index; last as isLast" [ngClass]="!isLast ? 'border-bottom' : ''" cdkDrag>
-
             <div class="d-inline-flex col-12 m-0 p-0">
               <div class="add-button text-center p-0 m-0 col-2 col-md-1 d-flex justify-content-around" (click)="removeSongFromPlaylist(song, playlist)">
                 <div cdkDragHandle>
@@ -177,15 +177,16 @@
 <div class="listen-default-playlists mb-5 mb-xl-0">
   <h5 class="mt-4">Default Playlists</h5>
   <div *ngFor="let sov of sovInfo; last as isLast" class="container-fluid p-0">
-    <div class="playlist-header container-fluid row my-auto m-0 px-0 py-2" (click)="sov.isOpen = !sov.isOpen" *ngIf="!sov.isOpen">
+    <div class="playlist-header d-flex my-auto m-0 px-2 py-2" (click)="sov.isOpen = !sov.isOpen" *ngIf="!sov.isOpen">
       <p *ngIf="innerWidth > 600" class="col-6 m-0 pl-2 text-truncate"><b>{{sov.title}}</b></p>
       <p *ngIf="innerWidth <= 600" class="col-4 m-0 pl-2 text-truncate"><b>{{sov.abbr}}</b></p>
-      <div class="col-8 col-md-6 text-right d-inline-block row p-0">
-        <div class="d-inline">
+      <div class="flex-grow-1"></div>
+      <div class="d-flex">
+        <div>
           <span class="badge rounded-pill bg-secondary me-2">{{sov.repertoire.duration | formatDuration: "h:m"}}</span>
           <span class="badge rounded-pill bg-primary">{{sov.repertoire.tracks.length}} SONGS</span>
         </div>
-        <div class="d-inline ms-2">
+        <div class="ms-2">
           <i class="fas fa-caret-down"></i>
         </div>
       </div>
