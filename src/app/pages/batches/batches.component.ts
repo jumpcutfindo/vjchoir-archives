@@ -39,6 +39,8 @@ export class BatchesComponent implements OnInit {
     });
     
     this.loadingService.setLoading(false);
+
+    console.log(this.batches)
   }
 
   setBatch(batchId: string): void {
