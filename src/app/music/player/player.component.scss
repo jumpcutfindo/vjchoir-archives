@@ -14,6 +14,11 @@
     transition: max-height 0.2s;
     &.inactive {
       max-height: 0;
+    
+      .player-plyr {
+        transition: ease 0.2s;
+        display: none;
+      }
     }
   }
   .player-header {
@@ -39,7 +44,6 @@
     }
   }
   .player-active-window-header {
-    border-bottom: 1px solid $sider-background-color;
     .btn {
       &:hover {
         color: $accent-color !important;

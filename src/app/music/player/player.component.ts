@@ -24,10 +24,10 @@ export class PlayerComponent implements OnInit {
   playlists: Playlist[] = [];
 
   isMinimised: boolean;
-  isPlaying: boolean = false;
+  isPlaying = false;
 
-  isCanPlay: boolean = false;
-  isBuffering: boolean = true;
+  isCanPlay = false;
+  isBuffering = true;
 
   activeWindowTitle: string;
   currDisplayedPlaylist: Playlist;
@@ -75,10 +75,10 @@ export class PlayerComponent implements OnInit {
     });
 
     this.playlists = [];
-    for(let sov of this.sovInfo) {
+    for(const sov of this.sovInfo) {
       this.playlists.push(sov.repertoire);
     }    
-    for(let playlist of this.myPlaylists) {
+    for(const playlist of this.myPlaylists) {
       this.playlists.push(playlist);
     }
   }
@@ -91,12 +91,12 @@ export class PlayerComponent implements OnInit {
   }
 
   getDefaultPlaylists(): Playlist[] {
-    let defaultPlaylists = this.playlists.filter(x => x.isDefault);
+    const defaultPlaylists = this.playlists.filter(x => x.isDefault);
     return defaultPlaylists;
   }
 
   getMyPlaylists(): Playlist[] {
-    let myPlaylists = this.playlists.filter(x => !x.isDefault);
+    const myPlaylists = this.playlists.filter(x => !x.isDefault);
     return this.playlists.filter(x => !x.isDefault);
   }
 
@@ -120,7 +120,7 @@ export class PlayerComponent implements OnInit {
     this.isCanPlay = isPlayOnLoad;
   }
 
-  loadSong(playlist: Playlist, song: Song, isPlayOnLoad: boolean = true) {
+  loadSong(playlist: Playlist, song: Song, isPlayOnLoad = true) {
     console.log("Loading '" + song.title + "' of playlist '" + playlist.name + "'");
     this.audioSources = [
       {
@@ -134,8 +134,8 @@ export class PlayerComponent implements OnInit {
   }
 
   loadNextSong() {
-    let currPlaylistIndex = this.playlists.indexOf(this.currActivePlaylist);
-    let currSongIndex = this.currActivePlaylist.tracks.indexOf(this.nowPlaying);
+    const currPlaylistIndex = this.playlists.indexOf(this.currActivePlaylist);
+    const currSongIndex = this.currActivePlaylist.tracks.indexOf(this.nowPlaying);
     let nextSongIndex = currSongIndex + 1;
 
     if(nextSongIndex >= this.currActivePlaylist.tracks.length) {
@@ -146,8 +146,8 @@ export class PlayerComponent implements OnInit {
   }
 
   loadPrevSong() {
-    let currPlaylistIndex = this.playlists.indexOf(this.currActivePlaylist);
-    let currSongIndex = this.currActivePlaylist.tracks.indexOf(this.nowPlaying);
+    const currPlaylistIndex = this.playlists.indexOf(this.currActivePlaylist);
+    const currSongIndex = this.currActivePlaylist.tracks.indexOf(this.nowPlaying);
     let prevSongIndex = currSongIndex + 1;
 
     if(prevSongIndex < this.currActivePlaylist.tracks.length) {
