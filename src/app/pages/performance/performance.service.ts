@@ -4,13 +4,14 @@ import performancesJSON from '../../../assets/data/performances.json';
 import { SymphVoices } from "../listen/listen.service";
 
 export interface MediaSection {
-    link?: string,
+    link?: {
+        name: string,
+        url: string,
+    },
     title?: string,
-    description: string,
-}
-
-export interface ImageSection extends MediaSection {
-    image: string
+    image?: string,
+    description?: string,
+    divider?: boolean,
 }
 
 export interface Performance {

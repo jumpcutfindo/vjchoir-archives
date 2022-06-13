@@ -32,7 +32,7 @@ h6 {
   font-family: $title-text-font;
 }
 
-p {
+a, p {
   font-family: $primary-text-font;
   font-size: large;
 }
@@ -89,7 +89,7 @@ p {
       cursor: pointer;
       background: $accent-color;
       border: 1px $background-color solid;
-      h3, h4, p {
+      i, h3, h4, p {
           color: $primary-text-inv-color;
       }
     }
@@ -142,6 +142,18 @@ ngb-carousel {
 
 app-player, app-sidebar {
   z-index: 1;
+}
+
+.performance-modal {
+  max-width: 1000px !important;
+
+  a {
+    color: $primary-text-inv-color;
+
+    &:focus {
+      outline: none;
+    }
+  }
 }
 
 .modal-backdrop {
@@ -514,7 +526,8 @@ app-player, app-sidebar {
         background: white !important;
         h3,
         h4,
-        p {
+        p,
+        i {
           color: $primary-text-color !important;
         }
       }

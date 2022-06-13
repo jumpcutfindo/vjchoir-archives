@@ -5,46 +5,35 @@
     },
     "performances": [
         {
-            "title": "Symphony of Voices 2022",
-            "description": "Lorem ipsum delet at amor empty empty",
-            "image": "../../../assets/images/batches/2022/batch.jpg",
+            "title": "4th Vietnam International Choir Competition",
+            "description": "The choir participated in the 4th Vietnam International Choir Competition organised by INTERKULTUR, in Hoi An, Vietnam. The choir achieved great results, winning 4 out of the 4 categories (Male Chorus, Female Chorus, Mixed Youth, Sacred) they participated in for the competition.",
+            "image": "../../../assets/images/performances/2015/hoi_an.jpg",
+            "location": "Hội An, Vietnam",
             "time": {
-                "start": 1655319600000
+                "start": 1430334000000,
+                "end": 1430679600000
             },
             "media": [
                 {
-                    "title": "Introduction",
-                    "description": "This is a subsection that appears below the title or something"
-                }
-            ]
-        },
-        {
-            "title": "Asia Cantate 2022",
-            "description": "Wow another Kwei Concert LOLLLL overseas hype man",
-            "location": "Hong Kong",
-            "time": {
-                "start": 1652400000000,
-                "end": 1652659200000
-            },
-            "media": [
+                    "title": "Results",
+                    "description": "Results for the competition can be found at the following website, which lists the choir's fellow competitors and their relevant results as well."
+                },
                 {
-                    "title": "Introduction",
-                    "description": "This is a subsection that appears below the title or something"
-                }
-            ]
-        },
-        {
-            "title": "Asia Cantate 2001",
-            "description": "This is a tester concert, obviously Asia Cantate wasn't exist back then xD",
-            "location": "Hong Kong",
-            "time": {
-                "start": 988416000000,
-                "end": 988761600000
-            },
-            "media": [
+                    "link": {
+                        "name": "Link to the results",
+                        "url": "http://www.hoianworldheritage.org.vn/en/news/New-notice/result-364.hwh"
+                    },
+                    "divider": true
+                },
                 {
-                    "title": "Introduction",
-                    "description": "This is 2001, internet doesn't exist yet lol"
+                    "title": "Recordings",
+                    "description": "Recordings of the various performances by the choir in Hoi An can be found in the following link:"
+                },
+                {
+                    "link": {
+                        "name": "VJChoir in Hoi An",
+                        "url": "https://www.youtube.com/playlist?list=PLhz3lrGQP-Aje_Dhl5spMD4v4rLpDqCQL"
+                    }
                 }
             ]
         }

@@ -8,15 +8,45 @@
       <div *ngFor="let year of getYears()" class="d-flex flex-column my-2">
         <h3 class="m-0">{{year}}</h3>
         <div *ngIf="performances[year]" class="cards d-flex">
-          <div *ngFor="let performance of performances[year]" class="card performance me-2 my-2" [routerLink]="performance.link ?? null">
+          <div *ngFor="let performance of performances[year]" class="card performance me-2 my-2" [routerLink]="performance.link ?? null" (click)="openModal(performance, performanceModal)">
             <img *ngIf="performance.image" src="{{performance.image}}" />
             <img *ngIf="!performance.image" src="../../../assets/images/batch.png" />
-            <div class="performance-title p-3">
-              <h4 class="m-0">{{performance.title}}</h4>
+            <div class="performance-title p-3 col-12">
+              <h4 class="m-0 text-wrap">{{performance.title}}</h4>
               <p class="m-0">{{performance.time.start | formatDate}}<span *ngIf="performance.time.end"> to {{performance.time.end | formatDate}}</span></p>
+              <p *ngIf="performance.location" class="my-0"><i class="fas fa-map-marker-alt my-auto me-2"></i>{{performance.location}}</p>
             </div>
           </div>
         </div>
+      </div>
+      <div>
+        <ng-template #performanceModal let-modal>
+          <div class="performance-modal d-flex flex-column p-3">
+            <div class="d-flex">
+              <div class="col-11 d-flex flex-column">
+                <h3 class="m-0">{{openedPerformance.title}}</h3>
+                <p class="m-0">{{openedPerformance.time.start | formatDate}}<span *ngIf="openedPerformance.time.end"> to {{openedPerformance.time.end | formatDate}}</span></p>
+              </div>
+              <div class="col-1 d-flex justify-content-end align-top">
+                <i class="fas fa-times fa-lg mt-1 me-1 close-button" (click)="modal.dismiss()"></i>
+              </div>
+            </div>
+            <div class="d-flex flex-column mb-2">
+              <img *ngIf="openedPerformance.image" src="{{openedPerformance.image}}" class="col-lg-10 my-2" />
+              <p class="m-0">{{openedPerformance.description}}</p>
+            </div>
+            <hr />
+            <div *ngIf="openedPerformance.media" class="d-flex flex-column">
+              <div *ngFor="let media of openedPerformance.media; last as isLast" class="d-flex flex-column mb-2" >
+                <h4 *ngIf="media.title" class="m-0">{{media.title}}</h4>
+                <a *ngIf="media.link" href="{{media.link.url}}" target="_blank" class="m-0">{{media.link.name}}</a>
+                <p *ngIf="media.description" class="m-0">{{media.description}}</p>
+                <img *ngIf="media.image" src="{{media.image}}" class="col-lg-10 my-2">
+                <hr *ngIf="media.divider" />
+              </div>
+            </div>
+          </div>
+        </ng-template>
       </div>
     </div>
 </div>

@@ -24,3 +24,9 @@
         }
     }
 }
+
+.close-button {
+    &:hover {
+        cursor: pointer;
+    }
+}

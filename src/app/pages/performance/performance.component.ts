@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { combineLatest } from 'rxjs';
 import { LoadingService } from 'src/app/loading/loading.service';
 import { SovService } from '../sov/sov.service';
@@ -13,9 +14,12 @@ export class PerformanceComponent implements OnInit {
   intro: any;
   performances: Record<string, Performance[]>;
 
+  openedPerformance: Performance;
+
   constructor(private loadingSerivce: LoadingService,
     private performanceService: PerformanceService,
-    private sovService: SovService) { }
+    private sovService: SovService,
+    private modalService: NgbModal) { }
 
   ngOnInit(): void {
     // Retrieve component information
@@ -45,5 +49,10 @@ export class PerformanceComponent implements OnInit {
 
   getYears(): string[] {
     return Object.keys(this.performances).reverse();
+  }
+
+  openModal(performance, modal): void {
+    this.openedPerformance = performance;
+    if (!performance.link) this.modalService.open(modal, { modalDialogClass: 'performance-modal', });
   }
 }
