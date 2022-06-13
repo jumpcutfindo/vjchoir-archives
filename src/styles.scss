@@ -135,6 +135,14 @@ app-player, app-sidebar {
   padding: 12px !important;
 }
 
+.plyr__controls__item[data-plyr="play"], .plyr__control[data-plyr="settings"] {
+  display: none !important;
+}
+
+.plyr__volume {
+  width: 30% !important;
+}
+
 @keyframes fadeIn {
   0% {
     opacity: 0;

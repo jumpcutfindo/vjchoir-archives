@@ -53,7 +53,7 @@ export class PlayerComponent implements OnInit {
   ngOnInit() {
     // Setup layout settings
     this.activeWindowTitle = PLAYLISTS_DEFAULT_TITLE;
-    this.isMinimised = true;
+    this.isMinimised = false;
     this.playerPlaylistsWindow = document.getElementById("player-playlists");
 
     // Load the default song
@@ -146,10 +146,12 @@ export class PlayerComponent implements OnInit {
 
   play(): void {
     this.plyr.player.play();
+    this.isPlaying = true;
   }
 
   pause(): void {
     this.plyr.player.pause();
+    this.isPlaying = false;
   }
 
   /**
@@ -180,6 +182,8 @@ export class PlayerComponent implements OnInit {
    * Loads the next song in the current playlist.
    */
   loadNextSong(): void {
+    this.pause();
+
     const currPlaylistIndex = this.playlists.indexOf(this.currActivePlaylist);
     const currSongIndex = this.currActivePlaylist.tracks.indexOf(this.nowPlaying);
 
@@ -188,6 +192,8 @@ export class PlayerComponent implements OnInit {
     // Loop back to the start if this is the last song
     if(nextSongIndex >= this.currActivePlaylist.tracks.length) {
       nextSongIndex = 0;
+      this.loadSongViaId(currPlaylistIndex, nextSongIndex, false);
+      return;
     }
 
     this.loadSongViaId(currPlaylistIndex, nextSongIndex, true);
@@ -197,6 +203,8 @@ export class PlayerComponent implements OnInit {
    * Loads the previous song in the current playlist.
    */
   loadPrevSong(): void {
+    this.pause();
+    
     const currPlaylistIndex = this.playlists.indexOf(this.currActivePlaylist);
     const currSongIndex = this.currActivePlaylist.tracks.indexOf(this.nowPlaying);
     let prevSongIndex = currSongIndex - 1;
@@ -211,8 +219,9 @@ export class PlayerComponent implements OnInit {
   /**
    * Handles the event when play button is clicked
    */
-  onPlayClick(event) {
-    event.stopPropagation();
+  onPlayClick(event?) {
+    console.log("play clikced")
+    if (event) event.stopPropagation();
     if (this.isPlaying) {
       this.playerService.onPlayerAction({
         type: PlayerActionTypes.PAUSE,
@@ -231,8 +240,8 @@ export class PlayerComponent implements OnInit {
   /**
    * Handles the event when next button is clicked
    */
-  onNextClick(event) {
-    event.stopPropagation();
+  onNextClick(event?) {
+    if (event) event.stopPropagation();
     this.playerService.onPlayerAction({
       type: PlayerActionTypes.NEXT,
       playlist: this.currActivePlaylist,
@@ -243,8 +252,8 @@ export class PlayerComponent implements OnInit {
   /**
    * Handles the event when prev button is clicked
    */
-  onPrevClick(event) {
-    event.stopPropagation();
+  onPrevClick(event?) {
+    if (event) event.stopPropagation();
     this.playerService.onPlayerAction({
       type: PlayerActionTypes.PREVIOUS,
       playlist: this.currActivePlaylist,
@@ -254,7 +263,7 @@ export class PlayerComponent implements OnInit {
 
   onCanPlay() {
     if(this.isCanPlay) {
-      this.plyr.player.play();
+      this.play();
     }
   }
 }

@@ -15,18 +15,18 @@
       <div class="mx-0 my-auto col-4 px-0 px-sm-2">
         <div class="d-flex m-0 p-0 justify-content-between">
           <button class="btn big-play-button p-0" [disabled]="!nowPlayingHasPrev" (click)="onPrevClick($event)">
-                <i class="fas fa-step-backward mt-1 me-2 my-auto"></i>
-            </button>
+            <i class="fas fa-step-backward mt-1 me-2 my-auto"></i>
+          </button>
           <div *ngIf="isBuffering" class="spinner-border spinner-border-sm mt-1 me-1" role="status">
             <span class="sr-only">Loading...</span>
           </div>
           <button *ngIf="!isBuffering" class="btn big-play-button p-0" (click)="onPlayClick($event)">
-              <i class="fas fa-play mt-1 me-2 my-auto" [ngClass]="isMinimised && isPlaying ? 'd-none' : ''"></i>
-              <i class="fas fa-pause mt-1 me-2 my-auto" [ngClass]="isMinimised && !isPlaying ? 'd-none' : ''"></i>
-            </button>
+            <i class="fas fa-play mt-1 me-2 my-auto" [ngClass]="isMinimised && isPlaying ? 'd-none' : ''"></i>
+            <i class="fas fa-pause mt-1 me-2 my-auto" [ngClass]="isMinimised && !isPlaying ? 'd-none' : ''"></i>
+          </button>
           <button class="btn big-play-button p-0" [disabled]="!nowPlayingHasNext" (click)="onNextClick($event)">
-                <i class="fas fa-step-forward mt-1 me-2 my-auto" ></i>
-            </button>
+            <i class="fas fa-step-forward mt-1 me-2 my-auto"></i>
+          </button>
         </div>
       </div>
     </div>
@@ -35,7 +35,7 @@
 
   <div class="player-content" [ngClass]="isMinimised ? 'inactive' : 'active'">
     <div class="player-plyr">
-      <div class="player-info d-flex m-3">
+      <div class="player-info d-flex mt-3 mx-3">
         <img src="{{nowPlaying.artwork}}" class="me-3 rounded">
         <div class="d-flex flex-column flex-grow-1 justify-content-between m-0 p-0 text-start">
           <div class="my-2">
@@ -50,14 +50,30 @@
           </p>
         </div>
       </div>
-      <plyr plyrType="audio" [plyrSources]="audioSources" (plyrWaiting)="isBuffering = true;" (plyrCanPlay)="onCanPlay();" (plyrCanPlayThrough)=" isBuffering = false;" (plyrEnded)="loadNextSong()" (plyrPlay)="isPlaying = true; isCanPlay = false;" (plyrPause)="isPlaying = false">
-      </plyr>
+      <div class="d-flex flex-column">
+        <plyr class="flex-grow-1" plyrType="audio" [plyrSources]="audioSources" (plyrWaiting)="isBuffering = true;" (plyrCanPlay)="onCanPlay();" (plyrCanPlayThrough)=" isBuffering = false;" (plyrEnded)="loadNextSong()">
+        </plyr>
+        <div class="d-flex mb-2 justify-content-center">
+          <button class="btn big-play-button px-1" [disabled]="!nowPlayingHasPrev" (click)="onPrevClick($event)">
+            <i class="fas fa-step-backward mt-1 me-2 my-auto"></i>
+          </button>
+          <button class="btn big-play-button mx-2 p-0" (click)="onPlayClick($event)">
+            <i class="fas fa-play fa-lg mt-1 me-2 my-auto" [ngClass]="isPlaying ? 'd-none' : ''"></i>
+            <i class="fas fa-pause fa-lg mt-1 me-2 my-auto" [ngClass]="!isPlaying ? 'd-none' : ''"></i>
+          </button>
+          <button class="btn big-play-button px-1" [disabled]="!nowPlayingHasNext" (click)="onNextClick($event)">
+            <i class="fas fa-step-forward mt-1 me-2 my-auto"></i>
+          </button>
+        </div>
+      </div>
     </div>
-    <div class="d-flex player-active-window-header">
+    <hr class="m-0"/>
+    <div class="d-flex player-active-window-header mt-2">
       <button class="btn my-auto" [ngClass]="currDisplayedPlaylist ? '' : 'd-none'" (click)="onBackClick()"><small><i class="fa fa-arrow-left"></i></small></button>
       <div class="d-flex justify-content-between">
         <h6 class="text-start mx-2 my-auto">{{activeWindowTitle}}</h6>
         <span *ngIf="currDisplayedPlaylist && currDisplayedPlaylist.isDefault" class="badge bg-primary rounded-pill my-auto" [routerLink]="['/sov', currDisplayedPlaylist.id]">PAGE</span>
+        <span *ngIf="currDisplayedPlaylist && !currDisplayedPlaylist.isDefault" class="badge bg-primary rounded-pill my-auto" [routerLink]="['/listen']">EDIT</span>
       </div>
     </div>
     <div id="player-playlists" class="player-playlists d-flex flex-column">
@@ -65,6 +81,7 @@
         <p class="ms-2 mb-0 text-start"><small><b>Your Playlists</b></small></p>
         <div *ngIf="getMyPlaylists().length != 0" class="mb-2">
           <div class="d-flex player-playlists-item m-0" *ngFor="let playlist of getMyPlaylists()" (click)="displayPlaylist(playlist)">
+            <img src="../../../assets/images/playlist.png">
             <p class="my-auto ms-3 text-start">{{playlist.name}}</p>
           </div>
         </div>
