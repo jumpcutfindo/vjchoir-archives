@@ -28,6 +28,7 @@ const routes: Routes = [
   
   { path: 'batches', redirectTo: 'batches/home', pathMatch: 'full' },
   { path: 'batches/home', component: BatchesComponent },
+  { path: 'batches/2023', component: BatchesComponent },
   { path: 'batches/2022', component: BatchesComponent },
   { path: 'batches/2021', component: BatchesComponent },
   { path: 'batches/2020', component: BatchesComponent },

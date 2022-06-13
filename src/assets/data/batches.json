@@ -1,9 +1,79 @@
 {
   "intro": {
     "title": "Welcome to the Batches page!",
-    "msg": "<p>Hello! Welcome to the landing page for Batches! In this part of the website, the details of the previous batches of VJChoir are kept so that you can see how the past batches looked like.</br></br>Use the navigation buttons above to browse through the different batches. In each page, the general information of the choir's committees and members are included. Photos from the various batches are also there so that you can kinda get a look of how lupsup or noob everyone looked back in their hey-day.</p>"
+    "msg": "<p>Hello! Welcome to the landing page for Batches! In this part of the website, the details of the previous batches of VJChoir are kept so that you can see how the past batches looked like.</br></br>In each page, the general information of the choir's committees and members are included. Photos from the various batches are also there so that you can kinda get a look of how lupsup or noob everyone looked back in their hey-day.</br></br>If you're from a previous batch and have photos you'd like to share on the website, you can always drop me a message and I'll update the page for you! There's a neat little carousel at the bottom of each batch's page that shows up if they've submitted any photos to the site :)</p>"
   },
   "batches": [
+    {
+      "id": "2023",
+      "name": "2022 / 2023",
+      "image": "../../../assets/images/batch.png",
+      "desc": "Hi there! This page contains information pertaining to the batch of 2022 - 2023.",
+      "comms": [
+        {
+          "name": "Exco",
+          "img": "../../../assets/images/batch.png",
+          "members": [
+            "Lin Muxi (P)",
+            "Mrudani Subramanian (VP)",
+            "Aaron Koay (S)",
+            "Jenna Lim (Welfare Head)",
+            "Shatiesh Rajha (QM)",
+            "Asher Ooi (T)"
+          ]
+        },
+        {
+          "name": "Musico",
+          "img": "../../../assets/images/batch.png",
+          "members": [
+            "Brandon Goh (SC)",
+            "Ho Rui Yi (ASC)",
+            "Elizabeth Chan (S)",
+            "Lim Shuen Ying (A)",
+            "Isaac Kuah (T)",
+            "Nathan Evan Seah Shen (B)"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "name": "Sopranos",
+          "members": [
+            "Elizabeth Chan",
+            "Du Ruiyang",
+            "Seow Xin Yu",
+            "Charis Tey"
+          ]
+        },
+        {
+          "name": "Altos",
+          "members": [
+            "Lim Shuen Ying",
+            "Jenna Lim",
+            "Lin Muxi",
+            "Mrudani Subramanian",
+            "Ng Zhiqi"
+          ]
+        },
+        {
+          "name": "Tenors",
+          "members": [
+            "Isaac Kuah",
+            "Aaron Koay",
+            "Ho Rui Yi"
+          ]
+        },
+        {
+          "name": "Basses",
+          "members": [
+            "Nathan Evan Seah Shen",
+            "Asher Ooi",
+            "Brandon Goh",
+            "Shatiesh Rajha"
+          ]
+        }
+      ]
+    },
     {
       "id": "2022",
       "name": "2021 / 2022",
