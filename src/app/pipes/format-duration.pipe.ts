@@ -22,3 +22,12 @@ export class FormatDurationPipe implements PipeTransform {
     }
   }
 }
+
+@Pipe({name: 'formatDate'})
+export class FormatDatePipe implements PipeTransform {
+  transform(duration: number): string {
+    const formatter = new Intl.DateTimeFormat('en-gb', { month: 'long' });
+    const date = new Date(duration);
+    return `${date.getDate()} ${formatter.format(date)} ${date.getFullYear()}`
+  }
+}

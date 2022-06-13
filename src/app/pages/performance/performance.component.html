@@ -2,6 +2,21 @@
     <div class="section">
       <h3>{{intro.title}}</h3>
       <div [innerHTML]="intro.msg"></div>
-      
+    </div>
     <hr/>
+    <div class="section">
+      <div *ngFor="let year of getYears()" class="d-flex flex-column my-2">
+        <h3 class="m-0">{{year}}</h3>
+        <div *ngIf="performances[year]" class="cards d-flex">
+          <div *ngFor="let performance of performances[year]" class="card performance me-2 my-2">
+            <img *ngIf="performance.image" src="{{performance.image}}" />
+            <img *ngIf="!performance.image" src="../../../assets/images/batch.png" />
+            <div class="performance-title p-3">
+              <h4 class="m-0">{{performance.title}}</h4>
+              <p class="m-0">{{performance.time.start | formatDate}}<span *ngIf="performance.time.end"> to {{performance.time.end | formatDate}}</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 </div>

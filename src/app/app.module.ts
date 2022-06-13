@@ -13,7 +13,7 @@ import { NavControllerComponent } from './navigation/nav-controller/nav-controll
 import { AppendNamesPipe } from './pipes/append-names.pipe';
 import { SafePipe } from './pipes/safe-link-pipe';
 import { PlayerComponent } from './music/player/player.component';
-import { FormatDurationPipe } from './pipes/format-duration.pipe';
+import { FormatDatePipe, FormatDurationPipe } from './pipes/format-duration.pipe';
 import { LoadingComponent } from './loading/loading.component';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
@@ -45,12 +45,13 @@ import { PerformanceComponent } from './pages/performance/performance.component'
     MiscComponent,
     NavControllerComponent,
     PlayerComponent,
+    LoadingComponent,
+    PageNotFoundComponent,
+    PerformanceComponent,
     AppendNamesPipe,
     SafePipe,
     FormatDurationPipe,
-    LoadingComponent,
-    PageNotFoundComponent,
-    PerformanceComponent
+    FormatDatePipe,
   ],
   imports: [
     BrowserAnimationsModule,
