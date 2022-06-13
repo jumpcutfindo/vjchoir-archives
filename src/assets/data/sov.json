@@ -9,7 +9,7 @@
       "title": "Symphony of Voices 2019",
       "abbr": "SOV2019",
       "info": {
-        "date": "22nd May 2019",
+        "date": 1558551600000,
         "venue": "Esplanade Concert Hall",
         "theme": "A World Where Roses Bloom",
         "noFirstHalf": 8,
@@ -185,7 +185,7 @@
       "title": "Symphony of Voices 2018",
       "abbr": "SOV2018",
       "info": {
-        "date": "23rd May 2018",
+        "date": 1527102000000,
         "venue": "Esplanade Concert Hall",
         "theme": "All Things Bright and Beautiful",
         "noFirstHalf": 7,
@@ -362,7 +362,7 @@
       "title": "Symphony of Voices 2017",
       "abbr": "SOV2017",
       "info": {
-        "date": "15th May 2017",
+        "date": 1494874800000,
         "venue": "Esplanade Concert Hall",
         "theme": "Across the Vast Eternal Sky",
         "noFirstHalf": 9,
@@ -551,7 +551,7 @@
       "title": "Symphony of Voices 2016",
       "abbr": "SOV2016",
       "info": {
-        "date": "25th May 2016",
+        "date": 1464202800000,
         "venue": "Esplanade Concert Hall",
         "theme": "Sands of Time",
         "noFirstHalf": 7,
@@ -728,7 +728,7 @@
       "title": "Symphony of Voices 2015",
       "abbr": "SOV2015",
       "info": {
-        "date": "17th May 2015",
+        "date": 1431889200000,
         "venue": "Esplanade Concert Hall",
         "theme": "Aurora Borealis",
         "noFirstHalf": 9,
@@ -935,7 +935,7 @@
       "title": "Symphony of Voices 2014",
       "abbr": "SOV2014",
       "info": {
-        "date": "26th May 2014",
+        "date": 1401130800000,
         "venue": "Esplanade Concert Hall",
         "theme": "Asian",
         "noFirstHalf": 9,
@@ -1130,7 +1130,7 @@
       "title": "Symphony of Voices 2013",
       "abbr": "SOV2013",
       "info": {
-        "date": "21st May 2013",
+        "date": 1369162800000,
         "venue": "Esplanade Concert Hall",
         "theme": "Victorian",
         "noFirstHalf": 8,
@@ -1319,7 +1319,7 @@
       "title": "Symphony of Voices 2012",
       "abbr": "SOV2012",
       "info": {
-        "date": "24th April 2012",
+        "date": 1335294000000,
         "venue": "Esplanade Concert Hall",
         "theme": "Into the Vienna Woods",
         "noFirstHalf": 8,
@@ -1477,7 +1477,7 @@
       "title": "Symphony of Voices 2010",
       "abbr": "SOV2010",
       "info": {
-        "date": "11th May 2010",
+        "date": 1273604400000,
         "venue": "Esplanade Concert Hall",
         "theme": "Masquerade",
         "noFirstHalf": 9,
@@ -1666,7 +1666,7 @@
       "title": "Symphony of Voices 2008",
       "abbr": "SOV2008",
       "info": {
-        "date": "12th May 2008",
+        "date": 1210618800000,
         "venue": "Esplanade Concert Hall",
         "theme": "N/A",
         "noFirstHalf": 8,
@@ -1838,7 +1838,7 @@
       "title": "Symphony of Voices 2007",
       "abbr": "SOV2007",
       "info": {
-        "date": "15th May 2007",
+        "date": 1179255600000,
         "venue": "Esplanade Concert Hall",
         "theme": "N/A",
         "noFirstHalf": 16,

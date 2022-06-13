@@ -20,7 +20,7 @@ export interface SymphVoices {
   title: string;
   abbr: string;
   info: {
-      date: string;
+      date: number;
       venue: string;
       theme: string;
       noFirstHalf: number;

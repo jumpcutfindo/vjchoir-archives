@@ -46,7 +46,7 @@ export class PerformanceService {
                 location: sov.info.venue,
                 image: sov.artwork,
                 time: {
-                    start: 0
+                    start: sov.info.date
                 }
             };
         });

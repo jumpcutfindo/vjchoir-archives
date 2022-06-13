@@ -33,6 +33,7 @@ export class PerformanceComponent implements OnInit {
       const earliestYear = new Date(sortedPerformances[sortedPerformances.length - 1].time.start).getFullYear();
       const latestYear = new Date(sortedPerformances[0].time.start).getFullYear();
 
+      // Split the performances into years
       for (let i = earliestYear; i <= latestYear; i++) {
         const yearPerformances = sortedPerformances.filter(performance => new Date(performance.time.start).getFullYear() === i);
         if (yearPerformances.length !== 0) this.performances[i.toString()] = yearPerformances;

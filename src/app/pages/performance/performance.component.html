@@ -8,7 +8,7 @@
       <div *ngFor="let year of getYears()" class="d-flex flex-column my-2">
         <h3 class="m-0">{{year}}</h3>
         <div *ngIf="performances[year]" class="cards d-flex">
-          <div *ngFor="let performance of performances[year]" class="card performance me-2 my-2">
+          <div *ngFor="let performance of performances[year]" class="card performance me-2 my-2" [routerLink]="performance.link ?? null">
             <img *ngIf="performance.image" src="{{performance.image}}" />
             <img *ngIf="!performance.image" src="../../../assets/images/batch.png" />
             <div class="performance-title p-3">
