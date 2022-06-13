@@ -74,14 +74,14 @@
     <div *ngIf="currActive.photos">
       <hr/>
       <h4>Featured Photos</h4>
-
-      <ngb-carousel class="mx-auto my-3 col-sm-12 col-md-8">
-        <ng-template ngbSlide *ngFor="let image of currActive.photos">
-          <div class="text-center">
-            <img src="{{image}}" class="img-fluid">
-          </div>
-        </ng-template>
-      </ngb-carousel>
+      <splide *ngIf="currActive.photos"
+        [options]="{ type: 'loop', perPage: 1, keyboard: false, width: '100vw', autoplay: 'true', interval: '5000'}">
+        <splide-slide *ngFor="let photo of currActive.photos">
+          <img [src]="photo" alt="" />
+        </splide-slide>
+      </splide>
     </div>
   </div>
 </div>
+
+<div class="m-5"></div>
