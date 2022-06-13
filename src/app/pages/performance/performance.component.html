@@ -26,6 +26,7 @@
               <div class="col-11 d-flex flex-column">
                 <h3 class="m-0">{{openedPerformance.title}}</h3>
                 <p class="m-0">{{openedPerformance.time.start | formatDate}}<span *ngIf="openedPerformance.time.end"> to {{openedPerformance.time.end | formatDate}}</span></p>
+                <p *ngIf="openedPerformance.location" class="my-0"><i class="fas fa-map-marker-alt my-auto me-2"></i>{{openedPerformance.location}}</p>
               </div>
               <div class="col-1 d-flex justify-content-end align-top">
                 <i class="fas fa-times fa-lg mt-1 me-1 close-button" (click)="modal.dismiss()"></i>
