@@ -4,7 +4,6 @@ import { HomeEvent, HomeHeader, HomeService } from './home.service';
 import { Title } from '@angular/platform-browser';
 import { LoadingService } from 'src/app/loading/loading.service';
 import { DarkModeService } from 'src/app/services/darkmode.service';
-import { CommonService } from 'src/app/services/common.service';
 import { MiscService } from '../misc/misc.service';
 
 @Component({
@@ -26,7 +25,6 @@ export class HomeComponent implements OnInit {
   test: string;
 
   constructor(private homeService: HomeService, 
-    private commonService: CommonService,
     private miscService: MiscService,
     private titleService: Title,
     private loadingService: LoadingService,
@@ -34,7 +32,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     // Update title
-    this.titleService.setTitle(this.commonService.getArchiveName());
+    this.titleService.setTitle("The VJChoir Archives");
 
     // Retrieve header content
     this.homeService.getHeader()
