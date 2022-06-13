@@ -53,7 +53,7 @@ export class PlayerComponent implements OnInit {
   ngOnInit() {
     // Setup layout settings
     this.activeWindowTitle = PLAYLISTS_DEFAULT_TITLE;
-    this.isMinimised = false;
+    this.isMinimised = true;
     this.playerPlaylistsWindow = document.getElementById("player-playlists");
 
     // Load the default song

@@ -1,6 +1,15 @@
 @import "../../../styles.scss";
 @import "https://fonts.googleapis.com/css?family=Catamaran:300,400,500,600,700";
 @import "https://fonts.googleapis.com/css?family=Playfair+Display:300,400,500,600,700";
+.card {
+  max-height: 325px !important;
+  .card-artwork {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+
 .repertoire {
   ol {
     list-style: none;
