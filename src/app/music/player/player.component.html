@@ -44,7 +44,7 @@
           </div>
           <hr class="m-0" />
           <p class="np-playlist-title m-0 py-2">
-            <a [routerLink]="['/sov', nowPlaying.album_info.id]" (click)="onLinkClick(nowPlaying.album_info.abbr)" class="sov-link d-flex justify-content-between">{{nowPlaying.album_info.title}}
+            <a [routerLink]="['/sov', nowPlaying.album_info.id]" class="sov-link d-flex justify-content-between">{{nowPlaying.album_info.title}}
               <i class="fa fa-arrow-right small my-auto"></i>
             </a>
           </p>
@@ -57,7 +57,7 @@
       <button class="btn my-auto" [ngClass]="currDisplayedPlaylist ? '' : 'd-none'" (click)="onBackClick()"><small><i class="fa fa-arrow-left"></i></small></button>
       <div class="d-flex justify-content-between">
         <h6 class="text-start mx-2 my-auto">{{activeWindowTitle}}</h6>
-        <span *ngIf="currDisplayedPlaylist && currDisplayedPlaylist.isDefault" class="badge bg-primary rounded-pill my-auto" [routerLink]="['/sov', currDisplayedPlaylist.id]" (click)="onLinkClick(sovInfo[currDisplayedPlaylistId].abbr)">PAGE</span>
+        <span *ngIf="currDisplayedPlaylist && currDisplayedPlaylist.isDefault" class="badge bg-primary rounded-pill my-auto" [routerLink]="['/sov', currDisplayedPlaylist.id]">PAGE</span>
       </div>
     </div>
     <div id="player-playlists" class="player-playlists d-flex flex-column">
@@ -69,7 +69,7 @@
           </div>
         </div>
         <div *ngIf="getMyPlaylists().length == 0" class="d-flex justify-content-center mb-2">
-          <p class="m-0 p-0 text-center mb-2 col-10"><small>You haven't created any playlists of your own! Go to the <a routerLink="/listen" (click)="onLinkClick('listen')">Listen</a> page to start now!</small></p>
+          <p class="m-0 p-0 text-center mb-2 col-10"><small>You haven't created any playlists of your own! Go to the <a routerLink="/listen">Listen</a> page to start now!</small></p>
         </div>
         <p class="ms-2 mb-0 text-start"><small><b>Default Playlists</b></small></p>
         <div class="d-flex player-playlists-item m-0" *ngFor="let playlist of getDefaultPlaylists(); index as index" (click)="displayPlaylist(playlist)">
@@ -80,7 +80,7 @@
 
       <div class="col m-0 p-0" *ngIf="currDisplayedPlaylist">
         <div class="d-flex justify-content-center my-2" *ngIf="currDisplayedPlaylist.tracks.length == 0">
-          <p class="m-0 p-0 text-center mb-2 col-10"><small>It looks like you don't have any songs added to this playlist yet! Click on the '+' button next to the songs under the <a routerLink="/listen" (click)="onLinkClick('listen')">Listen</a> page to add them to your playlist!</small></p>
+          <p class="m-0 p-0 text-center mb-2 col-10"><small>It looks like you don't have any songs added to this playlist yet! Click on the '+' button next to the songs under the <a routerLink="/listen">Listen</a> page to add them to your playlist!</small></p>
         </div>
         <div *ngIf="currDisplayedPlaylist.tracks.length != 0">
           <div class="song row m-0 py-2" *ngFor="let song of currDisplayedPlaylist.tracks; let i = index" (click)="loadSongViaId(playlists.indexOf(currDisplayedPlaylist), currDisplayedPlaylist.tracks.indexOf(song))" [ngClass]="nowPlaying == song ? 'active' : ''">

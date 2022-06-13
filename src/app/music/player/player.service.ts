@@ -5,24 +5,26 @@ import { Playlist, PlaylistAction, Song } from 'src/app/pages/listen/listen.serv
 
 export enum PlayerActionTypes {
     PLAY, PAUSE, PREVIOUS, NEXT, SELECT_SONG
-};
+}
+
+export interface PlayerAction {
+    type: PlayerActionTypes,
+    playlist: Playlist,
+    song: Song,
+}
 
 @Injectable({
     providedIn: 'root',
 })
 export class PlayerService {
-    // TODO: Create a proper class for these observables
-    private playerUpdatesSource = new Subject<any>();
+    private playerUpdatesSource = new Subject<PlayerAction>();
     playerUpdates = this.playerUpdatesSource.asObservable();
 
-    private songRequestSource = new Subject<any>();
-    songRequestUpdates = this.songRequestSource.asObservable();
+    onPlayerAction(action: PlayerAction): void {
+        this.playerUpdatesSource.next(action);
+    }
 
-    onSongRequest(playlist: Playlist, song: Song) {
-        const request = {
-            playlist: playlist,
-            song: song
-        }
-        this.songRequestSource.next(request);
+    requestSong(playlist: Playlist, song: Song): void {
+        this.onPlayerAction({ type: PlayerActionTypes.SELECT_SONG, playlist, song });
     }
 }

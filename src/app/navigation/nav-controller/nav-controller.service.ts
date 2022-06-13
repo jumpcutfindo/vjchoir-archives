@@ -19,9 +19,6 @@ export class NavControllerService {
   
   private menuItems: MenuItem[];
 
-  private clickedSongSource = new Subject<any>();
-  clickedSong = this.clickedSongSource.asObservable();
-
   private clickedLinkSource = new Subject<any>();
   clickedLink = this.clickedLinkSource.asObservable();
 
@@ -65,13 +62,6 @@ export class NavControllerService {
       icon: x.icon,
       isVisible: x.isVisible === undefined ? true : x.isVisible,
     };
-  }
-
-  /**
-   * Handles the event when a song is clicked
-   */
-  onSongClick(event: any) {
-    this.clickedSongSource.next(event);
   }
 
   /**

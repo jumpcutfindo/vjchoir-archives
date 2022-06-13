@@ -3,7 +3,7 @@ import { PlyrComponent } from "ngx-plyr";
 import { SovService } from "src/app/pages/sov/sov.service";
 import { NavControllerService } from 'src/app/navigation/nav-controller/nav-controller.service';
 import { ListenService, Playlist, PlaylistActionType, Song, SymphVoices } from 'src/app/pages/listen/listen.service';
-import { PlayerService } from './player.service';
+import { PlayerActionTypes, PlayerService } from './player.service';
 
 const PLAYLISTS_DEFAULT_TITLE = "Playlists";
 
@@ -46,16 +46,7 @@ export class PlayerComponent implements OnInit {
       this.loadPlaylists();
     });
 
-    // TODO: Remove this an integrate into the player actions
-    this.playerService.songRequestUpdates.subscribe(val => {
-      // this.loadSong(val.playlist, val.song, true);
-    })
-
-    // TODO: Remove this an integrate into the player actions
-    this.navController.clickedSong.subscribe(val => {
-      this.loadSongViaId(val.playlistId, val.id, true);
-    });
-
+    this.initPlayerUpdateListener();
     this.loadPlaylists();
   }
 
@@ -67,6 +58,35 @@ export class PlayerComponent implements OnInit {
 
     // Load the default song
     this.loadSongViaId(0, 0, false);
+  }
+
+  /**
+   * Instantiates the listener for any relevant player updates. Actions will
+   * go through the serivce and dispatched to the component for relevant
+   * updates.
+   */
+  initPlayerUpdateListener(): void {
+    this.playerService.playerUpdates.subscribe(action => {
+      let playlistId;
+      switch (action.type) {
+      case PlayerActionTypes.PLAY:
+        this.play();
+        break;
+      case PlayerActionTypes.PAUSE:
+        this.pause();
+        break;
+      case PlayerActionTypes.NEXT:
+        this.loadNextSong();
+        break;
+      case PlayerActionTypes.PREVIOUS:
+        this.loadPrevSong();
+        break;
+      case PlayerActionTypes.SELECT_SONG:
+        playlistId = this.playlists.indexOf(action.playlist);
+        this.loadSongViaId(playlistId, this.playlists[playlistId].tracks.indexOf(action.song));
+        break;
+      }
+    });
   }
 
   /**
@@ -122,6 +142,14 @@ export class PlayerComponent implements OnInit {
    */
   getMyPlaylists(): Playlist[] {
     return this.myPlaylists;
+  }
+
+  play(): void {
+    this.plyr.player.play();
+  }
+
+  pause(): void {
+    this.plyr.player.pause();
   }
 
   /**
@@ -180,39 +208,53 @@ export class PlayerComponent implements OnInit {
     this.loadSongViaId(currPlaylistIndex, prevSongIndex, true);
   }
 
+  /**
+   * Handles the event when play button is clicked
+   */
   onPlayClick(event) {
     event.stopPropagation();
-    if(this.isPlaying) {
-      this.plyr.player.pause();
+    if (this.isPlaying) {
+      this.playerService.onPlayerAction({
+        type: PlayerActionTypes.PAUSE,
+        playlist: this.currActivePlaylist,
+        song: this.nowPlaying,
+      });
     } else {
-      this.plyr.player.play();
+      this.playerService.onPlayerAction({
+        type: PlayerActionTypes.PLAY,
+        playlist: this.currActivePlaylist,
+        song: this.nowPlaying,
+      });
     }
   }
 
+  /**
+   * Handles the event when next button is clicked
+   */
   onNextClick(event) {
     event.stopPropagation();
-    this.loadNextSong();
+    this.playerService.onPlayerAction({
+      type: PlayerActionTypes.NEXT,
+      playlist: this.currActivePlaylist,
+      song: this.nowPlaying
+    });
   }
 
+  /**
+   * Handles the event when prev button is clicked
+   */
   onPrevClick(event) {
     event.stopPropagation();
-    this.loadPrevSong();
+    this.playerService.onPlayerAction({
+      type: PlayerActionTypes.PREVIOUS,
+      playlist: this.currActivePlaylist,
+      song: this.nowPlaying
+    });
   }
 
   onCanPlay() {
     if(this.isCanPlay) {
       this.plyr.player.play();
-    }
-  }
-
-  onLinkClick(link: string) {
-    this.navController.onLinkClick(link);
-
-    if(window.innerWidth < 1024) {
-      if(this.navController.getIsSidebarActive()) {
-        this.navController.toggleSidebar();
-      }
-      this.isMinimised = !this.isMinimised;
     }
   }
 }

@@ -181,7 +181,7 @@ export class ListenComponent implements OnInit {
   }
 
   playSong(playlist: Playlist, song: Song) {
-    this.playerService.onSongRequest(playlist, song);
+    this.playerService.requestSong(playlist, song);
   }
 
   resetStorage() {
