@@ -61,7 +61,8 @@
             <h5>{{section.name}}</h5>
             <ul class="list-group">
               <li class="list-group-item" *ngFor="let name of section.members; first as isFirst">
-                <p class="m-0 p-0">{{name}}</p>
+                <a *ngIf="name === 'Daniel Hoe'" href="https://www.youtube.com/watch?v=IWpPVodf7N8" target="_blank"><p class="m-0">{{name}}</p></a>
+                <p *ngIf="name !== 'Daniel Hoe'"class="m-0 p-0">{{name}}</p>
                 <span *ngIf="isFirst" class="badge bg-primary rounded-pill">SL</span>
               </li>
             </ul>
