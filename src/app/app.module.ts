@@ -30,6 +30,7 @@ import { NgxSplideModule } from 'ngx-splide';
 import { ToastrModule } from 'ngx-toastr';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PerformanceComponent } from './pages/performance/performance.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     SafePipe,
     FormatDurationPipe,
     LoadingComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    PerformanceComponent
   ],
   imports: [
     BrowserAnimationsModule,

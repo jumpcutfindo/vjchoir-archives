@@ -3,10 +3,6 @@ import { Injectable } from '@angular/core';
 import homeJSON from '../../../assets/data/home.json';
 import { Observable, of } from 'rxjs';
 
-@Injectable({
-  providedIn: 'root',
-})
-
 export class HomeHeader {
   title: string;
   logo: {
@@ -24,6 +20,9 @@ export class HomeEvent {
   daysRemaining: number;
 }
 
+@Injectable({
+  providedIn: 'root',
+})
 export class HomeService {
   /**
    * Retreive the information for the home header

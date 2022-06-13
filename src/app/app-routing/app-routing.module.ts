@@ -8,6 +8,7 @@ import { SovComponent } from "../pages/sov/sov.component";
 import { ListenComponent } from "../pages/listen/listen.component";
 import { MiscComponent } from "../pages/misc/misc.component";
 import { PageNotFoundComponent } from "../pages/page-not-found/page-not-found.component";
+import { PerformanceComponent } from "../pages/performance/performance.component";
 
 const routes: Routes = [
   {
@@ -52,6 +53,11 @@ const routes: Routes = [
   { path: 'sov/2010', component: SovComponent },
   { path: 'sov/2008', component: SovComponent },
   { path: 'sov/2007', component: SovComponent },
+
+  {
+    path: 'performances', 
+    component: PerformanceComponent
+  },
   
   {
     path: 'listen',

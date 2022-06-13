@@ -21,6 +21,11 @@
       "icon": "fas fa-compact-disc"
     },
     {
+      "id": "performances",
+      "name": "PERFORMANCES",
+      "icon": "fas fa-theater-masks"
+    },
+    {
       "id": "listen",
       "name": "LISTEN",
       "icon": "fas fa-headphones"
