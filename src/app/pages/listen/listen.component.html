@@ -138,11 +138,11 @@
         <div cdkDropList (cdkDropListDropped)="drop(playlist, $event)">
           <div class="song row m-0 py-2" *ngFor="let song of playlist.tracks; let i = index; last as isLast" [ngClass]="!isLast ? 'border-bottom' : ''" cdkDrag>
             <div class="d-inline-flex col-12 m-0 p-0">
-              <div class="add-button text-center p-0 m-0 col-2 col-md-1 d-flex justify-content-around" (click)="removeSongFromPlaylist(song, playlist)">
+              <div class="add-button text-center p-0 m-0 col-2 col-md-1 d-flex justify-content-around">
                 <div cdkDragHandle>
                   <i class="fa fa-bars small"></i>
                 </div>
-                <div>
+                <div (click)="removeSongFromPlaylist(song, playlist)">
                   <i class="fa fa-times text-danger small"></i>
                 </div>
               </div>

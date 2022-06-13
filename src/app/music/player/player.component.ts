@@ -20,52 +20,60 @@ export class PlayerComponent implements OnInit {
 
   sovInfo: any;
   myPlaylists: Playlist[];
-
   playlists: Playlist[] = [];
 
   isMinimised: boolean;
   isPlaying = false;
-
   isCanPlay = false;
   isBuffering = true;
 
   activeWindowTitle: string;
   currDisplayedPlaylist: Playlist;
   currDisplayedPlaylistId: number;
+
   currActivePlaylist: Playlist;
-  
   nowPlaying: Song;
+  nowPlayingHasNext: boolean;
+  nowPlayingHasPrev: boolean;
 
   playerPlaylistsWindow: HTMLElement;
 
   audioSources: Plyr.Source[] = [];
 
   constructor(private navController: NavControllerService, private sovService: SovService, private listenService: ListenService, private playerService: PlayerService) {
+    // Update personal playlists whenever there is an edit made to personal playlists
     this.listenService.playlistUpdates.subscribe(val => {
       this.loadPlaylists();
     });
 
+    // TODO: Remove this an integrate into the player actions
     this.playerService.songRequestUpdates.subscribe(val => {
-      this.loadSong(val.playlist, val.song, true);
+      // this.loadSong(val.playlist, val.song, true);
     })
 
+    // TODO: Remove this an integrate into the player actions
     this.navController.clickedSong.subscribe(val => {
-      const song: Song = val;
       this.loadSongViaId(val.playlistId, val.id, true);
     });
+
+    this.loadPlaylists();
   }
 
   ngOnInit() {
-    this.loadPlaylists(true);
-
+    // Setup layout settings
     this.activeWindowTitle = PLAYLISTS_DEFAULT_TITLE;
     this.isMinimised = true;
     this.playerPlaylistsWindow = document.getElementById("player-playlists");
 
+    // Load the default song
     this.loadSongViaId(0, 0, false);
   }
 
-  loadPlaylists(justLoaded?: boolean) {
+  /**
+   * Loads both the default playlists and personal playlists, and combines them
+   * into a single array to ensure correct indexing.
+   */
+  loadPlaylists(): void {
     this.sovService.getSovInfo().subscribe((info) => {
       this.sovInfo = info
     });
@@ -75,14 +83,17 @@ export class PlayerComponent implements OnInit {
     });
 
     this.playlists = [];
-    for(const sov of this.sovInfo) {
+    for (const sov of this.sovInfo) {
       this.playlists.push(sov.repertoire);
     }    
-    for(const playlist of this.myPlaylists) {
+    for (const playlist of this.myPlaylists) {
       this.playlists.push(playlist);
     }
   }
 
+  /**
+   * Displays the provided playlist on the player.
+   */
   displayPlaylist(playlist: Playlist) {
     this.currDisplayedPlaylist = playlist;
     this.currDisplayedPlaylistId = this.playlists.indexOf(playlist);
@@ -90,37 +101,36 @@ export class PlayerComponent implements OnInit {
     this.playerPlaylistsWindow.scroll(0, 0);
   }
 
-  getDefaultPlaylists(): Playlist[] {
-    const defaultPlaylists = this.playlists.filter(x => x.isDefault);
-    return defaultPlaylists;
-  }
-
-  getMyPlaylists(): Playlist[] {
-    const myPlaylists = this.playlists.filter(x => !x.isDefault);
-    return this.playlists.filter(x => !x.isDefault);
-  }
-
+  /**
+   * Returns the user to the main menu of the player.
+   */
   onBackClick() {
     this.currDisplayedPlaylist = null;
     this.activeWindowTitle = PLAYLISTS_DEFAULT_TITLE;
     this.playerPlaylistsWindow.scroll(0, 0);
   }
 
-  loadSongViaId(playlistId: number, songId: number, isPlayOnLoad: boolean) {
-    console.log("Loading '" + this.playlists[playlistId].tracks[songId].title + "' of playlist '" + this.playlists[playlistId].name + "'");
-    const selected: Song = this.playlists[playlistId].tracks[songId];
-    this.audioSources = [
-      {
-        src: selected.src,
-        type: "audio/mp3"
-      }
-    ]
-    this.nowPlaying = selected;
-    this.currActivePlaylist = this.playlists[playlistId];
-    this.isCanPlay = isPlayOnLoad;
+  /**
+   * Retrieves the default playlists.
+   */
+  getDefaultPlaylists(): Playlist[] {
+    return this.sovInfo.map(info => info.repertoire);
   }
 
-  loadSong(playlist: Playlist, song: Song, isPlayOnLoad = true) {
+  /**
+   * Retrieves the personal playlists.
+   */
+  getMyPlaylists(): Playlist[] {
+    return this.myPlaylists;
+  }
+
+  /**
+   * Loads via the playlist id (index in the playlists array), song id (index in the song array).
+   */
+   loadSongViaId(playlistId: number, songId: number, isPlayOnLoad = true): void {
+    const playlist = this.playlists[playlistId];
+    const song = playlist.tracks[songId];
+
     console.log("Loading '" + song.title + "' of playlist '" + playlist.name + "'");
     this.audioSources = [
       {
@@ -128,16 +138,26 @@ export class PlayerComponent implements OnInit {
         type: "audio/mp3",
       },
     ];
+    
     this.nowPlaying = song;
     this.currActivePlaylist = playlist;
     this.isCanPlay = isPlayOnLoad;
+
+    const songIndex = playlist.tracks.indexOf(song);
+    this.nowPlayingHasNext = songIndex + 1 < playlist.tracks.length;
+    this.nowPlayingHasPrev = songIndex - 1 >= 0;
   }
 
-  loadNextSong() {
+  /**
+   * Loads the next song in the current playlist.
+   */
+  loadNextSong(): void {
     const currPlaylistIndex = this.playlists.indexOf(this.currActivePlaylist);
     const currSongIndex = this.currActivePlaylist.tracks.indexOf(this.nowPlaying);
+
     let nextSongIndex = currSongIndex + 1;
 
+    // Loop back to the start if this is the last song
     if(nextSongIndex >= this.currActivePlaylist.tracks.length) {
       nextSongIndex = 0;
     }
@@ -145,19 +165,22 @@ export class PlayerComponent implements OnInit {
     this.loadSongViaId(currPlaylistIndex, nextSongIndex, true);
   }
 
-  loadPrevSong() {
+  /**
+   * Loads the previous song in the current playlist.
+   */
+  loadPrevSong(): void {
     const currPlaylistIndex = this.playlists.indexOf(this.currActivePlaylist);
     const currSongIndex = this.currActivePlaylist.tracks.indexOf(this.nowPlaying);
-    let prevSongIndex = currSongIndex + 1;
+    let prevSongIndex = currSongIndex - 1;
 
-    if(prevSongIndex < this.currActivePlaylist.tracks.length) {
+    if(prevSongIndex < 0) {
       prevSongIndex = 0;
     }
 
     this.loadSongViaId(currPlaylistIndex, prevSongIndex, true);
   }
 
-  onBigPlayClick(event) {
+  onPlayClick(event) {
     event.stopPropagation();
     if(this.isPlaying) {
       this.plyr.player.pause();
@@ -166,12 +189,12 @@ export class PlayerComponent implements OnInit {
     }
   }
 
-  onBigNextClick(event) {
+  onNextClick(event) {
     event.stopPropagation();
     this.loadNextSong();
   }
 
-  onBigPrevClick(event) {
+  onPrevClick(event) {
     event.stopPropagation();
     this.loadPrevSong();
   }

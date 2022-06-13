@@ -11,12 +11,11 @@
   overflow: hidden;
   .player-content {
     max-height: 700px;
-    transition: max-height 0.2s;
+    transition: max-height 0.1s;
     &.inactive {
       max-height: 0;
     
       .player-plyr {
-        transition: ease 0.2s;
         display: none;
       }
     }
