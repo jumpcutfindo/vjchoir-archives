@@ -21,12 +21,14 @@
 
     <hr/>
 
-    <div class="container-fluid d-flex align-content-start flex-wrap">
-      <div *ngFor="let batch of batches" class="link col-12 col-xl-6 my-auto" (click)="currActive = batch" [routerLink]="" fragment="{{batch.id}}" onclick="window.scroll(0,0);">
-        <img src="{{batch.image}}" class="img-fluid rounded" />
-        <h4 class="my-3 text-center">Batch of {{batch.name}}</h4>
+    <h3>Concerts</h3> 
+      <div class="cards d-flex flex-row pb-2">
+        <div *ngFor="let batch of batches" class="card d-flex p-3 me-2 _mat-animation-noopable text-center" [routerLink]="['/batches', batch.id]">
+          <img *ngIf="!batch.image" src="../../../assets/images/batch.png" class="img-fluid rounded mx-auto" />
+          <img *ngIf="batch.image" src="{{batch.image}}" class="img-fluid rounded mx-auto" />
+          <h4 class="my-3 text-center">Batch of {{batch.name}}</h4>
+        </div>
       </div>
-    </div>
   </div>
 
   <div class="section" *ngIf="currActive" [ngClass]="currActive ? '' : 'd-none'">
