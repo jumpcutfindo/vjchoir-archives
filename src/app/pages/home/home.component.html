@@ -41,7 +41,7 @@
   <div class="section">
     <h3>Website Updates</h3> 
     <div class="cards d-flex flex-row pb-2">
-      <div *ngFor="let update of updateLogs; last as isLast; first as isFirst" class="card d-block p-3 me-2">
+      <div *ngFor="let update of updateLogs; last as isLast; first as isFirst" class="card d-block p-3 me-2" [routerLink]="['/misc/updates']">
         <div class="d-flex">
           <h4 class="my-0">{{update.title}}</h4>
           <span *ngIf="isFirst" class="badge bg-danger my-auto ms-2">CURRENT VERSION</span>

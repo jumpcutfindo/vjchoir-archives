@@ -63,7 +63,9 @@ export class NavControllerComponent implements OnInit {
     this.currActive = this.menu.find(item => item.id === id) ?? this.menu[0];
 
     this.shouldLoad = oldActiveId !== this.currActive.id;
+  }
 
-    window.scroll(0, 0);
+  onActivate(event): void {
+    window.scrollTo(0, 0);
   }
 }

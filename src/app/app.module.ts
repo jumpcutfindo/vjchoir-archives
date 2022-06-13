@@ -10,7 +10,6 @@ import { SovComponent } from './pages/sov/sov.component';
 import { ListenComponent } from './pages/listen/listen.component';
 import { MiscComponent } from './pages/misc/misc.component';
 import { NavControllerComponent } from './navigation/nav-controller/nav-controller.component';
-import { SiderComponent } from './navigation/sider/sider.component';
 import { AppendNamesPipe } from './pipes/append-names.pipe';
 import { SafePipe } from './pipes/safe-link-pipe';
 import { PlayerComponent } from './music/player/player.component';
@@ -44,7 +43,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ListenComponent,
     MiscComponent,
     NavControllerComponent,
-    SiderComponent,
     PlayerComponent,
     AppendNamesPipe,
     SafePipe,
