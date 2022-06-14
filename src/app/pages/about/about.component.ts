@@ -4,6 +4,7 @@ import { AboutService } from "./about.service";
 import { ActivatedRoute } from "@angular/router";
 import { LoadingService } from "src/app/loading/loading.service";
 import { combineLatest } from "rxjs";
+import { NavControllerService } from "src/app/navigation/nav-controller/nav-controller.service";
 
 @Component({
   selector: "app-about",
@@ -17,7 +18,8 @@ export class AboutComponent implements OnInit {
   constructor(
     private activatedRoute: ActivatedRoute,
     private aboutService: AboutService,
-    private loadingService: LoadingService
+    private loadingService: LoadingService,
+    private navControllerService: NavControllerService
   ) {}
 
   ngOnInit() {
@@ -39,5 +41,8 @@ export class AboutComponent implements OnInit {
    */
   setSection(sectionId: string): void {
     this.currActive = this.aboutJSON.sections.find(section => section.id === sectionId);
+
+    this.navControllerService.setNavTitle("About");
+    this.navControllerService.setWindowTitle(this.currActive.title);
   }
 }

@@ -8,6 +8,7 @@ import { PlayerService } from "src/app/music/player/player.service";
 import { LoadingService } from 'src/app/loading/loading.service';
 import { combineLatest } from "rxjs";
 import { SymphVoices, Playlist, Song } from "../listen/listen.service";
+import { NavControllerService } from "src/app/navigation/nav-controller/nav-controller.service";
 
 @Component({
   selector: "app-sov",
@@ -25,7 +26,8 @@ export class SovComponent implements OnInit {
     private activatedRoute: ActivatedRoute,
     private sovService: SovService,
     private playerService: PlayerService,
-    private loadingService: LoadingService
+    private loadingService: LoadingService,
+    private navControllerService: NavControllerService
   ) {
   }
 
@@ -47,6 +49,10 @@ export class SovComponent implements OnInit {
 
   setSection(id: string): void {
     this.currActive = this.sovInfo.find(sov => sov.id.toString() === id);
+
+    const title = !this.currActive ? "Symphony of Voices" : this.currActive.title;
+    this.navControllerService.setNavTitle("Symphony of Voices");
+    this.navControllerService.setWindowTitle(title);
   }
 
   playSong(playlist: Playlist, song: Song) {

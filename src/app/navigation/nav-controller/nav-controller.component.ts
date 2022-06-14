@@ -34,6 +34,10 @@ export class NavControllerComponent implements OnInit {
   ngOnInit() {
     this.router.events.subscribe((val) => {
       if (val instanceof NavigationEnd) {
+        // Handle sidebar switching to proper page
+        const pageId = val.url.split('/')[1];
+        this.currActive = this.menu.filter(item => item.id === pageId)[0];
+
         if (this.shouldLoad) this.loadingService.setLoading(true);
       }
     });

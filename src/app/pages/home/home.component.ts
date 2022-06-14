@@ -5,6 +5,7 @@ import { Title } from '@angular/platform-browser';
 import { LoadingService } from 'src/app/loading/loading.service';
 import { DarkModeService } from 'src/app/services/darkmode.service';
 import { MiscService } from '../misc/misc.service';
+import { NavControllerService } from 'src/app/navigation/nav-controller/nav-controller.service';
 
 @Component({
   selector: 'app-home',
@@ -26,13 +27,14 @@ export class HomeComponent implements OnInit {
 
   constructor(private homeService: HomeService, 
     private miscService: MiscService,
-    private titleService: Title,
     private loadingService: LoadingService,
-    private darkModeService: DarkModeService) { }
+    private darkModeService: DarkModeService,
+    private navControllerService: NavControllerService) { }
 
   ngOnInit() {
-    // Update title
-    this.titleService.setTitle("The VJChoir Archives");
+    // Update titles
+    this.navControllerService.setWindowTitle("The VJChoir Archives");
+    this.navControllerService.setNavTitle("Home");
 
     // Retrieve header content
     this.homeService.getHeader()

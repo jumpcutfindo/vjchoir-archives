@@ -2,6 +2,7 @@ import { Injectable, RendererFactory2 } from '@angular/core';
 
 import menuJSON from '../../../assets/data/menu.json';
 import { Observable, of, Subject } from 'rxjs';
+import { Title } from '@angular/platform-browser';
 
 export interface MenuItem {
   id: string;
@@ -19,19 +20,34 @@ export class NavControllerService {
   
   private menuItems: MenuItem[];
 
-  private clickedLinkSource = new Subject<any>();
-  clickedLink = this.clickedLinkSource.asObservable();
-
   private routeUpdatesSource = new Subject<any>();
   routerUpdates = this.routeUpdatesSource.asObservable();
 
   private sidebarToggleSource = new Subject<any>();
   sidebarToggle = this.sidebarToggleSource.asObservable();
 
+  private navBarTitleSource = new Subject<string>();
+  navBarTitleUpdates = this.navBarTitleSource.asObservable();
+
   private isSidebarActive = false;
 
-  constructor(private rendererFactory: RendererFactory2) {
+  constructor(private rendererFactory: RendererFactory2,
+    private titleService: Title) {
     this.renderer = rendererFactory.createRenderer(null, null);
+  }
+  
+  /**
+   * Sets the navbar title.
+   */
+  setNavTitle(title: string): void {
+    this.navBarTitleSource.next(title);
+  }
+
+  /**
+   * Sets the window title.
+   */
+  setWindowTitle(title: string): void {
+    this.titleService.setTitle(title);
   }
 
   /**
@@ -62,13 +78,6 @@ export class NavControllerService {
       icon: x.icon,
       isVisible: x.isVisible === undefined ? true : x.isVisible,
     };
-  }
-
-  /**
-   * Handles the event when a link is clicked
-   */
-  onLinkClick(event: any) {
-    this.clickedLinkSource.next(event);
   }
   
   /**

@@ -4,6 +4,7 @@ import { BatchItem } from './model/BatchItem';
 import { ActivatedRoute } from '@angular/router';
 import { LoadingService } from 'src/app/loading/loading.service';
 import { combineLatest } from 'rxjs';
+import { NavControllerService } from 'src/app/navigation/nav-controller/nav-controller.service';
 
 @Component({
   selector: 'app-batches',
@@ -21,7 +22,8 @@ export class BatchesComponent implements OnInit {
   constructor(
     private activatedRoute: ActivatedRoute,
     private batchesService: BatchesService,
-    private loadingService: LoadingService
+    private loadingService: LoadingService,
+    private navControllerService: NavControllerService
   ) { 
     
   }
@@ -39,12 +41,14 @@ export class BatchesComponent implements OnInit {
     });
     
     this.loadingService.setLoading(false);
-
-    console.log(this.batches)
   }
 
   setBatch(batchId: string): void {
     this.currActive = this.batches.find(batch => batch.id === batchId);
     if (this.currActive) this.currTitle = this.currActive.name;
+
+    const title = !this.currActive ? "Batches" : `Batch of ${this.currActive.name}`;
+    this.navControllerService.setNavTitle("Batches");
+    this.navControllerService.setWindowTitle(title);
   }
 }

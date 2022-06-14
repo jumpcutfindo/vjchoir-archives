@@ -9,11 +9,11 @@ import { ToastrService } from 'ngx-toastr';
 import { Clipboard } from '@angular/cdk/clipboard';
 import { Title } from '@angular/platform-browser';
 import { LoadingService } from 'src/app/loading/loading.service';
+import { NavControllerService } from 'src/app/navigation/nav-controller/nav-controller.service';
 
 const PLAYLIST_QUERY_PARAM = 'pl';
 
 const LISTEN_PAGE_SETTINGS_ID = 'listenSettings';
-const LISTEN_TITLE = "Listen";
 
 @Component({
   selector: 'app-listen',
@@ -50,12 +50,16 @@ export class ListenComponent implements OnInit {
     private route: ActivatedRoute,
     private toaster: ToastrService,
     private clipboard: Clipboard,
-    private titleService: Title,
-    private loadingService: LoadingService) { 
+    private loadingService: LoadingService,
+    private navControllerService: NavControllerService) { 
     
   }
 
   ngOnInit() {
+    // Set titles
+    this.navControllerService.setNavTitle("Listen");
+    this.navControllerService.setWindowTitle("Listen");
+
     // Retrieve local settings
     const settings = localStorage.getItem(LISTEN_PAGE_SETTINGS_ID);
     if(settings == null || settings == undefined || settings == '') {
@@ -95,7 +99,6 @@ export class ListenComponent implements OnInit {
       this.router.navigate(['listen'], { replaceUrl: true });
     });
 
-    this.titleService.setTitle(LISTEN_TITLE);
     this.loadingService.setLoading(false);
   }
 

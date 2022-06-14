@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { combineLatest } from 'rxjs';
 import { LoadingService } from 'src/app/loading/loading.service';
+import { NavControllerService } from 'src/app/navigation/nav-controller/nav-controller.service';
 import { SovService } from '../sov/sov.service';
 import { Performance, PerformanceService } from './performance.service';
 
@@ -19,9 +20,14 @@ export class PerformanceComponent implements OnInit {
   constructor(private loadingSerivce: LoadingService,
     private performanceService: PerformanceService,
     private sovService: SovService,
-    private modalService: NgbModal) { }
+    private modalService: NgbModal,
+    private navControllerService: NavControllerService) { }
 
   ngOnInit(): void {
+    // Set titles
+    this.navControllerService.setNavTitle("Performances");
+    this.navControllerService.setWindowTitle("Performances");
+
     // Retrieve component information
     this.performanceService.getPerformanceIntro().subscribe(intro => this.intro = intro);
 
