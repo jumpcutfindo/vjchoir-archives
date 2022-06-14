@@ -220,7 +220,6 @@ export class PlayerComponent implements OnInit {
    * Handles the event when play button is clicked
    */
   onPlayClick(event?) {
-    console.log("play clikced")
     if (event) event.stopPropagation();
     if (this.isPlaying) {
       this.playerService.onPlayerAction({

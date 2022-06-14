@@ -24,11 +24,14 @@
           <h4 class="my-0">{{update.title}}</h4>
           <span *ngIf="isFirst" class="badge bg-danger my-auto ms-2">CURRENT VERSION</span>
         </div>
+        <p class="mb-2">{{update.date | formatDate }}</p>
         <p>{{update.summary}}</p>
         <ul>
           <li *ngFor="let change of update.changes">
             <p>{{change.title}}</p>
-            <div [innerHTML]="change.explanation"></div>
+            <ul>
+              <li *ngFor="let subpoint of change.subpoints"><p>{{subpoint}}</p></li>
+            </ul>
           </li>
         </ul>
 

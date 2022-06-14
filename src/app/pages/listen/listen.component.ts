@@ -203,7 +203,7 @@ export class ListenComponent implements OnInit {
   }
 
   getPlaylistLink(playlist: Playlist) {
-    this.createToast("success", "Playlist link has been copied to your clipboard!");
+    this.createToast("success", "The playlist code has been copied to your clipboard!");
     this.clipboard.copy(this.listenService.playlistToParameters(playlist));
   }
 

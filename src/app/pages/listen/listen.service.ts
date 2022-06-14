@@ -4,6 +4,8 @@ import listenJSON from "../../../assets/data/listen.json";
 
 import { Observable, of, Subject } from "rxjs";
 import { SovService } from '../sov/sov.service';
+import { isNumber } from "@ng-bootstrap/ng-bootstrap/util/util";
+import { _isNumberValue } from "@angular/cdk/coercion";
 
 const MY_PLAYLISTS_STRING = "myPlaylists";
 
@@ -82,8 +84,10 @@ export class ListenService {
   sovInfo: any;
 
   constructor(private sovService: SovService) {
-    this.getLocalPlaylists();
-    this.sovService.getSovInfo().subscribe(info => this.sovInfo = info);
+    this.sovService.getSovInfo().subscribe(info => {
+      this.sovInfo = info
+      this.getLocalPlaylists();
+    });
   }
 
   /**
@@ -97,9 +101,11 @@ export class ListenService {
       this.myPlaylists = [];
     } else {
       this.myPlaylists = JSON.parse(json);
-      this.myPlaylists.map(playlistJSON => {
+      this.myPlaylists = this.myPlaylists.map(playlistJSON => {
         return this.jsonToPlaylist(playlistJSON);
       });
+
+      this.savePlaylists(this.myPlaylists);
     }
     console.log("Loaded " + this.myPlaylists.length + " saved playlists!");
   }
@@ -154,10 +160,23 @@ export class ListenService {
   }
 
   /**
-   * Converts a JSON stored playlist to one usable by the system
+   * Converts a stored JSON playlist to one usable by the system
    */
   jsonToPlaylist(playlist: any): Playlist {
     playlist.isOpen = false;
+
+    // This method handles the situation where an old version of the website with
+    // older playlists is accessing the new website (due to the time change from a
+    // number to a string)
+    if (!_isNumberValue(playlist.duration)) {
+      console.log("Uh-oh! Looks like your saved playlist is using an old format, please hold while we update...");
+      const code: string = this.playlistToParameters(playlist);
+      const fixedPlaylist: Playlist = this.parametersToPlaylist(code);
+
+      fixedPlaylist.name = playlist.name;
+      fixedPlaylist.desc = playlist.desc;
+      return fixedPlaylist;
+    }
 
     return playlist;
   }
@@ -165,7 +184,7 @@ export class ListenService {
   /**
    * Converts some generated code parameters into a playlist
    */
-  parametersToPlaylist(code: string): any {
+  parametersToPlaylist(code: string): Playlist {
     try {
       const params = [];
       const playlistParams = code.split(PLAYLIST_SEPARATOR);
@@ -211,8 +230,6 @@ export class ListenService {
       }
 
       playlist.duration = repertoireDuration;
-
-      console.log(playlist);
       
       return playlist;
     } catch(e) {
@@ -224,7 +241,7 @@ export class ListenService {
   /**
    * Converts a playlist into generated code parameters
    */
-  playlistToParameters(playlist: Playlist): any {
+  playlistToParameters(playlist: Playlist): string {
     const tracks = playlist.tracks;
     const plIds = [];
     const params = [];

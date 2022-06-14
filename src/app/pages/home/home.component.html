@@ -46,7 +46,7 @@
           <h4 class="my-0">{{update.title}}</h4>
           <span *ngIf="isFirst" class="badge bg-danger my-auto ms-2">CURRENT VERSION</span>
         </div>
-        <p class="date m-0">{{update.date}}</p>
+        <p class="date m-0">{{update.date | formatDate }}</p>
         <p [innerHTML]="update.summary"></p>
       </div>
     </div>

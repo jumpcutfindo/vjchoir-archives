@@ -112,7 +112,7 @@
               </h4>
               <div class="d-flex justify-content-end mx-3">
                 <!-- <i class="fa fa-file-export icon-primary me-3 my-auto" placement="top" ngbTooltip="Get playlist code" [cdkCopyToClipboard]="exportPlaylist(playlist)" onclick="event.stopPropagation();"></i> -->
-                <i class="fa fa-link icon-primary me-3 my-auto" placement="top" ngbTooltip="Copy playlist link" (click)="getPlaylistLink(playlist)" onclick="event.stopPropagation();"></i>
+                <i class="fa fa-code icon-primary me-3 my-auto" placement="top" ngbTooltip="Copy playlist code" (click)="getPlaylistLink(playlist)" onclick="event.stopPropagation();"></i>
                 <i class="fa fa-times icon-danger me-4 my-auto" placement="top" ngbTooltip="Delete playlist" (click)="openModal(deleteModal);" onclick="event.stopPropagation();"></i>
                 <i class="fa fa-caret-up my-auto" (click)="playlist.isOpen = !playlist.isOpen; event.stopPropagation();"></i>
               </div>
