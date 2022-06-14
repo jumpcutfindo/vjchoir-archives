@@ -17,9 +17,9 @@
 @media only screen and (max-width: 768px) {
   .main-content {
     overflow-x: hidden;
-    display: flex;
     flex-wrap: nowrap;
     align-items: stretch;
+    padding-bottom: 48px;
   }
 
   .content-left, .content-right {

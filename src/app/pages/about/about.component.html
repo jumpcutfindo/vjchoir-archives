@@ -9,7 +9,7 @@
   </div>
 </div>
 
-<div class="content" class="my-3">
+<div class="content" class="mt-3">
   <div class="section" *ngFor="let section of aboutJSON.sections" [ngClass]="section == currActive ? '' : 'd-none'" id="{{section.id}}">
     <h3>{{section.title}}</h3>
     <img src="{{section.image.link}}" class="img-fluid px-0 mx-0 mb-2 {{section.image.styles}}">
@@ -18,5 +18,3 @@
   </div>
 
 </div>
-
-<div class="m-5"></div>

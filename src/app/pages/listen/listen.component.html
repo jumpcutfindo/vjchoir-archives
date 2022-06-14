@@ -197,8 +197,8 @@
 
     <div class="playlist-content" *ngIf="sov.isOpen">
       <div class="playlist-header playlist-content-header py-3" (click)="sov.isOpen = !sov.isOpen">
-        <div class="row mx-2">
-          <img src="{{sov.artwork}}" class="playlist-artwork w-25 col m-0 pl-0 pr-3">
+        <div class="d-flex flex-wrap mx-2">
+          <img src="{{sov.artwork}}" class="playlist-artwork me-3 mb-sm-3">
           <div class="m-0 p-0 text-left col">
             <div class="d-flex">
               <h4 class="flex-grow-1 m-0">{{sov.title}}</h4>
@@ -216,7 +216,7 @@
           <div class="d-inline-flex col-12 m-0 p-0">
             <p class="m-0 p-0 col-1"></p>
             <p class="song-number text-center col-1 m-0 p-0"><small>NO.</small></p>
-            <p class="song-title text-left text-truncate col-9 m-0 p-0"><small>TITLE</small></p>
+            <p class="song-title text-left text-truncate col-8 col-md-9 m-0 p-0"><small>TITLE</small></p>
             <p class="song-duration text-center col-1 m-0 p-0"><small>DUR.</small></p>
           </div>
         </div>
@@ -233,7 +233,7 @@
               </div>
             </div>
             <p class="song-number text-center col-1 m-0 p-0"><small>{{i+1}}</small></p>
-            <p class="song-title text-left text-truncate col-9 m-0 p-0">{{song.title}} <small class="song-composer">{{song.composer}}</small></p>
+            <p class="song-title text-left text-truncate col-8 col-md-9 m-0 p-0">{{song.title}} <small class="song-composer">{{song.composer}}</small></p>
             <p class="song-duration text-center col-1 m-0 p-0"><small>{{song.duration | formatDuration}}</small></p>
           </div>
         </div>

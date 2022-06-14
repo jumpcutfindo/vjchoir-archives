@@ -650,10 +650,10 @@ app-player, app-sidebar {
         font-family: $primary-text-font;
         max-width: 300px;
         color: $dark-primary-text-color;
-        &:hover {
-          outline: none;
-          background: $dark-primary-text-color;
-          color: $dark-background-color;
+        &:hover, &:active {
+          outline: none !important;
+          background: $dark-primary-text-color !important;
+          color: $dark-background-color !important;
         }
       }
       .fa-bars {

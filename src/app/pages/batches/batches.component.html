@@ -12,7 +12,7 @@
   </div>
 </div>
 
-<div class="content" class="my-3">
+<div class="content" class="mt-3">
   <div class="section" [ngClass]="currActive ? 'd-none' : ''" id="home">
 
     <h3>{{batchesIntro.title}}</h3>
@@ -23,10 +23,10 @@
 
     <h3>Concerts</h3> 
       <div class="cards d-flex flex-row pb-2">
-        <div *ngFor="let batch of batches" class="card d-flex p-3 me-2 _mat-animation-noopable text-center" [routerLink]="['/batches', batch.id]">
+        <div *ngFor="let batch of batches" class="card d-flex p-3 mx-1 _mat-animation-noopable text-center" [routerLink]="['/batches', batch.id]">
           <img *ngIf="!batch.image" src="../../../assets/images/batch.png" class="img-fluid rounded mx-auto" />
           <img *ngIf="batch.image" src="{{batch.image}}" class="img-fluid rounded mx-auto" />
-          <h4 class="my-3 text-center">Batch of {{batch.name}}</h4>
+          <h4 class="mt-3 text-center">Batch of {{batch.name}}</h4>
         </div>
       </div>
   </div>
@@ -84,5 +84,3 @@
     </div>
   </div>
 </div>
-
-<div class="m-5"></div>

@@ -1,4 +1,4 @@
-<div class="d-flex row ms-0 mb-3">
+<div class="d-flex ms-0 mb-3">
   <div ngbDropdown class="d-inline-block me-2 p-0">
     <button type="button" class="btn btn-outline-primary" ngbDropdownToggle>{{currActive == null ? 'Home' : currActive.abbr}}</button>
     <div ngbDropdownMenu>
@@ -22,12 +22,14 @@
     <hr/>
 
     <div class="section">
-      <h3>Concerts</h3> 
-      <div class="cards d-flex flex-row pb-2">
-        <div *ngFor="let sov of sovInfo" class="card d-flex p-3 me-2 _mat-animation-noopable text-center" [routerLink]="['/sov', sov.id]" onclick="window.scroll(0,0);">
-          <img src="{{sov.artwork}}" class="card-artwork rounded mx-auto" />
-          <h4 class="mt-3 text-center">{{sov.abbr}}</h4>
-          <p class="my-0">{{sov.info.date | formatDate}}</p>
+      <h3>Concerts</h3>
+      <div class="col-sm-12">
+        <div class="cards d-flex flex-row pb-2">
+          <div *ngFor="let sov of sovInfo" class="card d-flex p-3 mx-1 _mat-animation-noopable text-center" [routerLink]="['/sov', sov.id]" onclick="window.scroll(0,0);">
+            <img src="{{sov.artwork}}" class="card-artwork rounded mx-auto" />
+            <h4 class="mt-3 text-center">{{sov.abbr}}</h4>
+            <p class="my-0">{{sov.info.date | formatDate}}</p>
+          </div>
         </div>
       </div>
     </div>
@@ -48,8 +50,8 @@
 
     <div>
       <h3>Repertoire</h3>
-      <div class="container-fluid row repertoire px-0 mx-0">
-        <div class="col-md-6 px-3">
+      <div class="d-flex flex-wrap repertoire px-0 mx-0">
+        <div class="col-md-6 pe-lg-2">
           <ol class="px-0 start">
             <li *ngFor="let song of currActive.repertoire.tracks | slice:0:currActive.info.noFirstHalf" class="p-2" (click)="playSong(currActive.repertoire, song)">
               <span class="id">{{song.id + 1}}</span>
@@ -58,7 +60,7 @@
             </li>
           </ol>
         </div>
-        <div class="col-md-6 px-3">
+        <div class="col-md-6">
           <ol class="px-0 end">
             <li *ngFor="let song of currActive.repertoire.tracks | slice:currActive.info.noFirstHalf:(currActive.info.noFirstHalf + currActive.info.noSecondHalf)" class="p-2" (click)="playSong(currActive.repertoire, song)">
               <span class="id">{{song.id + 1}}</span>

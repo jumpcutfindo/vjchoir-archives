@@ -12,7 +12,7 @@
   <div class="section">
     <h3>Upcoming Events</h3>
     <div *ngIf="upcomingEvents.length > 0" class="cards upcoming-events d-flex flex-row pb-2">
-      <div *ngFor="let event of upcomingEvents" class="card d-block p-3 me-2 text-center" (click)="openLink(event.link)">
+      <div *ngFor="let event of upcomingEvents" class="card d-block p-3 mx-1 text-center" (click)="openLink(event.link)">
         <div class="d-flex flex-column">
           <h1 class="m-0 days-remaining">{{event.daysRemaining}}</h1>
           <p class="m-0">DAYS TO</p>
@@ -41,7 +41,7 @@
   <div class="section">
     <h3>Website Updates</h3> 
     <div class="cards d-flex flex-row pb-2">
-      <div *ngFor="let update of updateLogs; last as isLast; first as isFirst" class="card d-block p-3 me-2" [routerLink]="['/misc/updates']">
+      <div *ngFor="let update of updateLogs; last as isLast; first as isFirst" class="card d-block p-3 mx-1" [routerLink]="['/misc/updates']">
         <div class="d-flex">
           <h4 class="my-0">{{update.title}}</h4>
           <span *ngIf="isFirst" class="badge bg-danger my-auto ms-2">CURRENT VERSION</span>
@@ -52,5 +52,3 @@
     </div>
   </div>
 </div>
-
-<div class="m-5"></div>
