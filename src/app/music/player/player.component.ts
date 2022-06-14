@@ -265,4 +265,11 @@ export class PlayerComponent implements OnInit {
       this.play();
     }
   }
+
+  /**
+   * Handles the closing of the player when a link is clicked
+   */
+  onLinkClick(event?) {
+    this.isMinimised = true;
+  }
 }
