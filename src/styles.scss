@@ -4,6 +4,7 @@ $base-color: rgb(128, 27, 66);
 $base-color-faded: rgb(128, 27, 66, 0.5);
 $accent-color: rgb(175, 36, 90);
 $background-color: rgb(250, 250, 250);
+$background-color-darker: rgb(240, 240, 240);
 $primary-text-color: rgb(0, 0, 0);
 $primary-text-color-faded: rgb(0, 0, 0, 0.5);
 $primary-text-inv-color: rgb(255, 255, 255);
@@ -349,6 +350,16 @@ app-player, app-sidebar {
 
 .dark-mode {
   background: $dark-background-color;
+  nav-controller {
+    .content-holder {
+      background: $dark-base-color;
+    }
+
+    .main-content {
+      background: $dark-background-color;
+    }
+  }
+
   h1,
   h2,
   h3,

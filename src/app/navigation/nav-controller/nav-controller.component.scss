@@ -1,5 +1,11 @@
-.content-right {
-  flex-grow: 1 !important;
+@import "../../../styles.scss";
+
+.content-holder {
+  background-color: $background-color-darker;
+}
+
+.main-content {
+  background-color: $background-color;
 }
 
 @media only screen and (max-width: 1024px) {

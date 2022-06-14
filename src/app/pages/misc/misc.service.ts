@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core'
 import { Observable, of } from 'rxjs'
 
-import updateJSON from '../../../assets/data/updatelog.json'
+import updateJSON from '../../../assets/data/update_log.json'
 import miscJSON from '../../../assets/data/misc.json'
 
 export interface UpdateLog {

@@ -11,16 +11,20 @@
 
 <div class="content" class="my-3">
   <div class="section" *ngFor="let section of miscJSON.sections" [ngClass]="section == currActive ? '' : 'd-none'" id="{{section.id}}">
-    <div *ngIf="section.title == 'Updates'">
+    <div *ngIf="section.title === 'Main'" class="misc-section">
       <h3>{{section.title}}</h3>
-      <div [innerHTML]="section.content"></div>
+      <p>{{section.content}}</p>
+    </div>
+    <div *ngIf="section.title === 'Updates'">
+      <h3>{{section.title}}</h3>
+      <div><p>{{section.content}}</p></div>
       <hr/>
       <div *ngFor="let update of updateLog; last as isLast; first as isFirst">
         <div class="d-flex">
           <h4 class="my-0">{{update.title}}</h4>
           <span *ngIf="isFirst" class="badge bg-danger my-auto ms-2">CURRENT VERSION</span>
         </div>
-        <p [innerHTML]="update.summary"></p>
+        <p>{{update.summary}}</p>
         <ul>
           <li *ngFor="let change of update.changes">
             <p>{{change.title}}</p>
@@ -31,11 +35,15 @@
         <hr *ngIf="!isLast" />
       </div>
     </div>
-    <div *ngIf="section.title != 'Updates'">
+    <div *ngIf="section.title === 'FAQ'">
       <h3>{{section.title}}</h3>
-      <div [innerHTML]="section.content">
+      <div><p>{{section.content}}</p></div>
+      <div *ngFor="let qna of section.qna" class="d-flex flex-column my-4">
+        <p class="m-0"><b>Q: {{qna.question}}</b></p>
+        <p class="m-0">A: {{qna.answer}}</p>
       </div>
     </div>
+    
 
     <div class="d-flex justify-content-center mt-5" *ngIf="section.title =='Main'">
       <img src="../../../assets/images/logo/mainfooter.png" class="w-50 col-12 col-md-6">
