@@ -42,7 +42,11 @@
                 <h4 *ngIf="media.title" class="m-0">{{media.title}}</h4>
                 <a *ngIf="media.link" href="{{media.link.url}}" target="_blank" class="m-0">{{media.link.name}}</a>
                 <p *ngIf="media.description" class="m-0">{{media.description}}</p>
-                <img *ngIf="media.image" src="{{media.image}}" class="col-lg-10 my-2">
+                <splide *ngIf="media.images" [options]="{ type: 'loop', perPage: 1, keyboard: false, width: '100vw', autoplay: 'true', interval: '5000'}" class="col-lg-10 my-2">
+                  <splide-slide *ngFor="let photo of media.images">
+                    <img [src]="photo" alt="" />
+                  </splide-slide>
+                </splide>
                 <hr *ngIf="media.divider" />
               </div>
             </div>

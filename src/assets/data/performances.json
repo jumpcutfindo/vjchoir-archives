@@ -122,6 +122,49 @@
                     }
                 }
             ]
+        },
+        {
+            "title": "Coalescence",
+            "description": "The choir performed as part of VJC's 2022 concert series in tandem with the school's Chinese Orchestra.",
+            "image": "../../../assets/images/performances/2022/coalescence_cover.jpg",
+            "time": {
+                "start": 1653494400000
+            },
+            "media": [
+                {
+                    "title": "Recordings",
+                    "description": "Recordings of the event can be found in the following link"
+                },
+                {
+                    "link": {
+                        "name": "Link to recordings",
+                        "url": "https://drive.google.com/drive/folders/1NmuJcb4aDZp7c87XICqZklTRSbADSKMW?usp=sharing"
+                    },
+                    "divider": true
+                },
+                {
+                    "title": "Booklet",
+                    "description": "The e-booklet for the event can also be found in the following link:"
+                },
+                {
+                    "link": {
+                        "name": "Link to e-booklet",
+                        "url": "https://www.flipsnack.com/98EE9A99E8C/concert-series-co-and-choir-if-possible.html"
+                    },
+                    "divider": true
+                },
+                {
+                    "title": "Photos"
+                },
+                {
+                    "images": [
+                        "../../../assets/images/performances/2022/coalescence_0.jpg",
+                        "../../../assets/images/performances/2022/coalescence_1.jpg",
+                        "../../../assets/images/performances/2022/coalescence_2.jpg",
+                        "../../../assets/images/performances/2022/coalescence_3.jpg"
+                    ]
+                }
+            ]
         }
     ]
 }
