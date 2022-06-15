@@ -21,7 +21,7 @@
 
     <hr/>
 
-    <h3>Concerts</h3> 
+    <h3>Batches</h3> 
       <div class="cards d-flex flex-row pb-2">
         <div *ngFor="let batch of batches" class="card d-flex p-3 mx-1 _mat-animation-noopable text-center" [routerLink]="['/batches', batch.id]">
           <img *ngIf="!batch.image" src="../../../assets/images/batch.png" class="img-fluid rounded mx-auto" />
