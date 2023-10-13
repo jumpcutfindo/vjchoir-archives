@@ -4,6 +4,7 @@ $base-color: rgb(128, 27, 66);
 $base-color-faded: rgb(128, 27, 66, 0.5);
 $accent-color: rgb(175, 36, 90);
 $background-color: rgb(250, 250, 250);
+$background-color-darker: rgb(240, 240, 240);
 $primary-text-color: rgb(0, 0, 0);
 $primary-text-color-faded: rgb(0, 0, 0, 0.5);
 $primary-text-inv-color: rgb(255, 255, 255);
@@ -12,16 +13,14 @@ $sidebar-text-color: rgb(255, 255, 255);
 $navbar-background-color: rgb(255, 255, 255);
 $sider-background-color: rgb(0, 0, 0, 0.05);
 $sider-background-color-inv: rgb(255, 255, 255, 0.5);
-$sider-primary-color: rgb(0, 0, 0, 0.40);
+$sider-primary-color: rgb(0, 0, 0, 0.4);
 $dark-base-color: rgb(35, 7, 18);
 $dark-accent-color: rgb(255, 255, 255);
 $dark-background-color: rgb(48, 9, 24);
 $dark-primary-text-color: rgb(250, 250, 250);
-$dark-border-color: rgba(255, 255, 255, .2);
-$title-text-font: 'Poppins',
-sans-serif;
-$primary-text-font: 'Karla',
-sans-serif;
+$dark-border-color: rgba(255, 255, 255, 0.2);
+$title-text-font: "Poppins", sans-serif;
+$primary-text-font: "Karla", sans-serif;
 
 /* Application-wide Styles */
 
@@ -34,21 +33,15 @@ h6 {
   font-family: $title-text-font;
 }
 
-p {
+a, p {
   font-family: $primary-text-font;
   font-size: large;
-}
-
-.sider {
-  display: block;
-  background: $sider-background-color;
-  min-height: 95vh;
 }
 
 .invalid {
   font-family: $primary-text-font;
   width: 100%;
-  margin-top: .25rem;
+  margin-top: 0.25rem;
   font-size: 80%;
   color: #dc3545;
 }
@@ -57,7 +50,7 @@ p {
   color: #dc3545;
 }
 
-img {
+.section {
   animation: fadeIn ease 1s;
   -webkit-animation: fadeIn ease 1s;
   -moz-animation: fadeIn ease 1s;
@@ -77,6 +70,40 @@ img {
   font-family: $primary-text-font !important;
 }
 
+.cards {
+  max-width: 75vw;
+  height: auto;
+  overflow-x: scroll;
+  white-space: nowrap;
+
+  .card {
+    min-width: 250px;
+    min-height: 250px;
+    max-width: 250px;
+    max-height: 250px;
+    border: 1px rgba(0, 0, 0, 0.1) solid;
+    border-radius: 5px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    
+    &:hover {
+      cursor: pointer;
+      background: $accent-color;
+      border: 1px $background-color solid;
+      i, h3, h4, p {
+          color: $primary-text-inv-color;
+      }
+    }
+  }
+}
+
+.splide__slide {
+  img {
+    width: 100% !important;
+    height: auto;
+  }
+}
+
 ngb-carousel {
   &:focus {
     outline: none;
@@ -92,6 +119,62 @@ ngb-carousel {
   height: 1px;
   display: flex;
   padding: 3rem 0rem 3rem 0rem;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: rgb(255, 255, 255, 0.0);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(175, 175, 175, 1);
+  border-radius: 20px;
+
+  :hover {
+    background: rgb(125, 125, 125, 1);
+  }
+}
+
+app-player, app-sidebar {
+  z-index: 1;
+}
+
+.performance-modal {
+  max-width: 1000px !important;
+
+  a {
+    color: $primary-text-inv-color;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.modal-backdrop {
+  z-index: 2 !important;
+}
+
+.dropdown-menu {
+  padding: 0 !important;
+}
+
+.dropdown-item {
+  padding: 12px !important;
+}
+
+.plyr__controls__item[data-plyr="play"], .plyr__control[data-plyr="settings"] {
+  display: none !important;
+}
+
+.plyr__volume {
+  width: 30% !important;
 }
 
 @keyframes fadeIn {
@@ -138,7 +221,6 @@ ngb-carousel {
     opacity: 1;
   }
 }
-
 
 /* themes */
 
@@ -211,7 +293,7 @@ ngb-carousel {
   .badge {
     font-family: $primary-text-font;
   }
-  .badge-primary {
+  .bg-primary {
     background-color: $accent-color !important;
   }
   .link {
@@ -268,6 +350,16 @@ ngb-carousel {
 
 .dark-mode {
   background: $dark-background-color;
+  nav-controller {
+    .content-holder {
+      background: $dark-base-color;
+    }
+
+    .main-content {
+      background: $dark-background-color;
+    }
+  }
+
   h1,
   h2,
   h3,
@@ -276,11 +368,12 @@ ngb-carousel {
   h6,
   p,
   i,
-  label {
+  label,
+  a {
     color: $dark-primary-text-color;
   }
   hr {
-    border-top: 1px solid rgba(255, 255, 255, .2);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
   }
   nav {
     background: $dark-base-color !important;
@@ -391,7 +484,7 @@ ngb-carousel {
   .badge {
     font-family: $primary-text-font;
   }
-  .badge-primary {
+  .bg-primary {
     background-color: $dark-primary-text-color !important;
     color: $dark-base-color !important;
   }
@@ -429,6 +522,41 @@ ngb-carousel {
         border-bottom: 1px $dark-border-color solid !important;
         &:hover {
           border: 1px $dark-border-color solid !important;
+        }
+      }
+    }
+  }
+  .dropdown-menu {
+    border: 1px $dark-border-color solid;
+    background: $dark-background-color;
+  }
+  .cards {
+    .card {
+      border-color: $dark-border-color !important;
+      background: $dark-background-color;
+      &:hover {
+        background: white !important;
+        h3,
+        h4,
+        p,
+        i {
+          color: $primary-text-color !important;
+        }
+      }
+      .date {
+        color: $dark-primary-text-color !important;
+      }
+    }
+  }
+  app-home {
+    .upcoming-events {
+      .card {
+        &:hover {
+          .days-remaining,
+          .link,
+          i {
+            color: $primary-text-color !important;
+          }
         }
       }
     }
@@ -522,10 +650,10 @@ ngb-carousel {
         font-family: $primary-text-font;
         max-width: 300px;
         color: $dark-primary-text-color;
-        &:hover {
-          outline: none;
-          background: $dark-primary-text-color;
-          color: $dark-background-color;
+        &:hover, &:active {
+          outline: none !important;
+          background: $dark-primary-text-color !important;
+          color: $dark-background-color !important;
         }
       }
       .fa-bars {
@@ -535,7 +663,8 @@ ngb-carousel {
   }
 
   .cdk-drag-preview {
-    box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
+    box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2),
+      0 6px 20px 0 rgba(255, 255, 255, 0.19);
     background: $dark-background-color !important;
     border-bottom: none !important;
   }
@@ -580,7 +709,8 @@ ngb-carousel {
     .player-layout {
       background: $dark-background-color;
       color: $dark-primary-text-color;
-      box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
+      box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2),
+        0 6px 20px 0 rgba(255, 255, 255, 0.19);
       h1,
       h2,
       h3,
@@ -664,12 +794,21 @@ ngb-carousel {
   }
 }
 
-
 /* Responsive handling */
 
+@media only screen and (max-width: 1200px) {
+  .cards {
+      max-width: 70vw;
+  }
+}
+
 @media only screen and (max-width: 1024px) {
+  .cards {
+      max-width: 65vw;
+  }
+  
   h1 {
-    font-size: 2.0rem !important;
+    font-size: 2rem !important;
   }
   h2 {
     font-size: 1.75rem !important;
@@ -685,7 +824,16 @@ ngb-carousel {
   }
 }
 
+@media only screen and (max-width: 850px) {
+  .cards {
+      max-width: 60vw;
+  }
+}
+
 @media only screen and (max-width: 768px) {
+  .cards {
+      max-width: 100vw;
+  }
   .no-scroll {
     overflow: hidden;
   }

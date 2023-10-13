@@ -1,0 +1,15 @@
+.cards {
+    .card {
+        min-width: 325px !important;
+        max-width: 325px !important;
+        max-height: 400px !important;
+        img {
+            min-width: 275px;
+            min-height: 275px;
+            max-width: 275px;
+            max-height: 275px;
+            object-fit: contain;
+        }
+        max-height: 300px;
+    }
+}

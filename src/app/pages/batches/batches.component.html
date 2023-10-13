@@ -1,13 +1,18 @@
-<div class="d-flex row ml-0">
-  <button class="btn btn-outline-primary mx-1 mb-2" [ngClass]="currActive ? '' : 'active'" (click)="currActive = null" onclick="this.blur(); window.scroll(0,0);" [routerLink]="" fragment="home">
-      Home
-    </button>
-  <button *ngFor="let batch of batches" class="btn btn-outline-primary mx-1 mb-2" [ngClass]="batch == currActive ? 'active' : ''" (click)="currActive = batch" [routerLink]="" fragment="{{batch.id}}" onclick="this.blur(); window.scroll(0,0);">
-          {{batch.name}}
+<div class="d-flex row ms-0">
+  <div ngbDropdown class="d-inline-block me-2 p-0">
+    <button type="button" class="btn btn-outline-primary" ngbDropdownToggle>{{currActive == null ? 'Home' : currActive.name}}</button>
+    <div ngbDropdownMenu>
+      <button ngbDropdownItem class="btn btn-outline-primary mb-2" [ngClass]="currActive ? '' : 'active'" (click)="currActive = null" onclick="this.blur(); window.scroll(0,0);" [routerLink]="['/batches', 'home']">
+        Home
       </button>
+      <button ngbDropdownItem *ngFor="let batch of batches" class="btn btn-outline-primary mb-2" [ngClass]="batch == currActive ? 'active' : ''" (click)="currActive = batch" [routerLink]="['/batches', batch.id]" onclick="this.blur(); window.scroll(0,0);">
+        {{batch.name}}
+      </button>
+    </div>
+  </div>
 </div>
 
-<div class="content" class="my-3">
+<div class="content" class="mt-3">
   <div class="section" [ngClass]="currActive ? 'd-none' : ''" id="home">
 
     <h3>{{batchesIntro.title}}</h3>
@@ -16,12 +21,14 @@
 
     <hr/>
 
-    <div class="container-fluid d-flex align-content-start flex-wrap">
-      <div *ngFor="let batch of batches" class="link col-12 col-xl-6 my-auto" (click)="currActive = batch" [routerLink]="" fragment="{{batch.id}}" onclick="window.scroll(0,0);">
-        <img src="{{batch.image}}" class="img-fluid rounded" />
-        <h4 class="my-3 text-center">Batch of {{batch.name}}</h4>
+    <h3>Batches</h3> 
+      <div class="cards d-flex flex-row pb-2">
+        <div *ngFor="let batch of batches" class="card d-flex p-3 mx-1 _mat-animation-noopable text-center" [routerLink]="['/batches', batch.id]">
+          <img *ngIf="!batch.image" src="../../../assets/images/batch.png" class="img-fluid rounded mx-auto" />
+          <img *ngIf="batch.image" src="{{batch.image}}" class="img-fluid rounded mx-auto" />
+          <h4 class="mt-3 text-center">Batch of {{batch.name}}</h4>
+        </div>
       </div>
-    </div>
   </div>
 
   <div class="section" *ngIf="currActive" [ngClass]="currActive ? '' : 'd-none'">
@@ -54,8 +61,9 @@
             <h5>{{section.name}}</h5>
             <ul class="list-group">
               <li class="list-group-item" *ngFor="let name of section.members; first as isFirst">
-                <p class="m-0 p-0">{{name}}</p>
-                <span *ngIf="isFirst" class="badge badge-primary badge-pill">SL</span>
+                <a *ngIf="name === 'Daniel Hoe'" href="https://www.youtube.com/watch?v=IWpPVodf7N8" target="_blank"><p class="m-0">{{name}}</p></a>
+                <p *ngIf="name !== 'Daniel Hoe'"class="m-0 p-0">{{name}}</p>
+                <span *ngIf="isFirst" class="badge bg-primary rounded-pill">SL</span>
               </li>
             </ul>
           </div>
@@ -67,14 +75,12 @@
     <div *ngIf="currActive.photos">
       <hr/>
       <h4>Featured Photos</h4>
-
-      <ngb-carousel class="mx-auto my-3 col-sm-12 col-md-8">
-        <ng-template ngbSlide *ngFor="let image of currActive.photos">
-          <div class="text-center">
-            <img src="{{image}}" class="img-fluid">
-          </div>
-        </ng-template>
-      </ngb-carousel>
+      <splide *ngIf="currActive.photos"
+        [options]="{ type: 'loop', perPage: 1, keyboard: false, width: '100vw', autoplay: 'true', interval: '5000'}">
+        <splide-slide *ngFor="let photo of currActive.photos">
+          <img [src]="photo" alt="" />
+        </splide-slide>
+      </splide>
     </div>
   </div>
 </div>

@@ -1,21 +1,14 @@
 import {
   Component,
   OnInit,
-  HostListener,
-  Output,
-  EventEmitter,
 } from "@angular/core";
 import { SovService } from "./sov.service";
-import { SymphVoices } from "src/app/music/model/SymphVoices";
-import { Router, NavigationStart, NavigationEnd } from "@angular/router";
-import { NavControllerService } from "src/app/navigation/nav-controller/nav-controller.service";
+import { ActivatedRoute } from "@angular/router";
 import { PlayerService } from "src/app/music/player/player.service";
-import { Playlist } from "src/app/music/model/Playlist";
-import { Song } from "src/app/music/model/Song";
-import { Title } from '@angular/platform-browser';
 import { LoadingService } from 'src/app/loading/loading.service';
-
-const SOV_TITLE = "Symphony of Voices";
+import { combineLatest } from "rxjs";
+import { SymphVoices, Playlist, Song } from "../listen/listen.service";
+import { NavControllerService } from "src/app/navigation/nav-controller/nav-controller.service";
 
 @Component({
   selector: "app-sov",
@@ -30,59 +23,39 @@ export class SovComponent implements OnInit {
   currActive: SymphVoices;
 
   constructor(
-    private navControllerService: NavControllerService,
+    private activatedRoute: ActivatedRoute,
     private sovService: SovService,
     private playerService: PlayerService,
-    private router: Router,
-    private titleService: Title,
-    private loadingService: LoadingService
+    private loadingService: LoadingService,
+    private navControllerService: NavControllerService
   ) {
   }
 
   ngOnInit() {
     this.sovService.getSovIntro().subscribe(intro => this.sovIntro = intro);
+
+    combineLatest([this.sovService.getSovInfo(), this.activatedRoute.url]).subscribe(([sovData, urlData]) => {
+      this.sovInfo = sovData;
+      
+      this.setSection(urlData[1].path);
+    });
+
     this.sovService.getSovInfo().subscribe(info => {
       this.sovInfo = info;
-      this.handleFragment();
-    });
-    
-    this.navControllerService.routerUpdates.subscribe(val => {
-      this.handleFragment();
     });
     
     this.loadingService.setLoading(false);
   }
 
-  navigateToFragment(fragmentCode) {
-    let temp = this.sovInfo.filter((x) => {
-      return x.abbr.includes(fragmentCode);
-    });
+  setSection(id: string): void {
+    this.currActive = this.sovInfo.find(sov => sov.id.toString() === id);
 
-    this.currActive = temp[0];
-    window.scroll(0, 0);
+    const title = !this.currActive ? "Symphony of Voices" : this.currActive.title;
+    this.navControllerService.setNavTitle("Symphony of Voices");
+    this.navControllerService.setWindowTitle(title);
   }
 
   playSong(playlist: Playlist, song: Song) {
-    this.playerService.onSongRequest(playlist, song);
-  }
-
-  private handleFragment() {
-    if (!this.router.url.includes("#")) {
-      this.currActive = null;
-    } else {
-      let fragment = this.router.url.split("#")[1];
-      for (let item of this.sovInfo) {
-        if (fragment.includes(item.abbr)) {
-          this.currActive = item;
-          this.titleService.setTitle(this.currActive.title);
-          this.loadingService.setLoading(false);
-          return;
-        }
-      }
-
-      this.currActive = null;
-    }
-    this.titleService.setTitle(SOV_TITLE);
-    this.loadingService.setLoading(false);
+    this.playerService.requestSong(playlist, song);
   }
 }

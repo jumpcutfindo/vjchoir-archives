@@ -1,60 +1,39 @@
 {
   "defaultActiveId": 0,
   "items": [{
-      "id": 0,
+      "id": "home",
       "name": "HOME",
-      "linkName": "/home",
-      "icon": "fas fa-home",
-      "active": false,
-      "isVisible": true
+      "icon": "fas fa-home"
     },
     {
-      "id": 1,
+      "id": "about",
       "name": "ABOUT",
-      "linkName": "/about",
-      "icon": "fas fa-info-circle",
-      "active": false,
-      "isVisible": true
+      "icon": "fas fa-info-circle"
     },
     {
-      "id": 2,
+      "id": "batches",
       "name": "BATCHES",
-      "linkName": "/batches",
-      "icon": "fas fa-user-friends",
-      "active": false,
-      "isVisible": true
+      "icon": "fas fa-user-friends"
     },
     {
-      "id": 3,
+      "id": "sov",
       "name": "SYMPHONY OF VOICES",
-      "linkName": "/sov",
-      "icon": "fas fa-compact-disc",
-      "active": false,
-      "isVisible": true
+      "icon": "fas fa-compact-disc"
     },
     {
-      "id": 4,
+      "id": "performances",
+      "name": "PERFORMANCES",
+      "icon": "fas fa-theater-masks"
+    },
+    {
+      "id": "listen",
       "name": "LISTEN",
-      "linkName": "/listen",
-      "icon": "fas fa-headphones",
-      "active": false,
-      "isVisible": true
+      "icon": "fas fa-headphones"
     },
     {
-      "id": 5,
-      "name": "CONTRIBUTE",
-      "linkName": "/contribute",
-      "icon": "fas fa-people-carry",
-      "active": false,
-      "isVisible": true
-    },
-    {
-      "id": 6,
+      "id": "misc",
       "name": "MISC",
-      "linkName": "/misc",
-      "icon": "fas fa-ellipsis-h",
-      "active": false,
-      "isVisible": true
+      "icon": "fas fa-ellipsis-h"
     }
   ]
 }

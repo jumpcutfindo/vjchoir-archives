@@ -12,7 +12,7 @@ export class NavbarComponent implements OnInit {
   @Input() controller;
   @Input() currActive;
   
-  private navTitle: string;
+  navTitle: string;
   isSidebarActive = false;
   
   constructor(private navControllerService: NavControllerService) { }
@@ -22,6 +22,10 @@ export class NavbarComponent implements OnInit {
 
     this.navControllerService.sidebarToggle.subscribe(val => {
       this.isSidebarActive = !this.isSidebarActive;
+    })
+
+    this.navControllerService.navBarTitleUpdates.subscribe(title => {
+      this.navTitle = title;
     })
   }
 

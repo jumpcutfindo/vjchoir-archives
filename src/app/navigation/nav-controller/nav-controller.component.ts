@@ -1,23 +1,13 @@
 import {
   Component,
   OnInit,
-  HostListener,
   ViewChild,
-  ViewChildren,
-  QueryList,
-  ElementRef,
 } from "@angular/core";
-import { MenuItem } from "../model/MenuItem";
 
-import { NavControllerService } from "./nav-controller.service";
-import { Router, NavigationStart, NavigationEnd } from "@angular/router";
-import { HomeComponent } from "src/app/pages/home/home.component";
-import { AboutComponent } from "src/app/pages/about/about.component";
-import { BatchesComponent } from "src/app/pages/batches/batches.component";
-import { SovComponent } from "src/app/pages/sov/sov.component";
-import { PlayerComponent } from "src/app/music/player/player.component";
-import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
+import { MenuItem, NavControllerService } from "./nav-controller.service";
+import { Router, NavigationEnd, ActivatedRoute } from "@angular/router";
 import { LoadingService } from 'src/app/loading/loading.service';
+import { combineLatest } from "rxjs";
 
 @Component({
   selector: "nav-controller",
@@ -31,75 +21,55 @@ export class NavControllerComponent implements OnInit {
   controller: NavControllerComponent;
   currActive: MenuItem;
 
-  isSidebarActive: boolean = false;
+  isSidebarActive = false;
+  shouldLoad: boolean;
 
   constructor(
+    private activatedRoute: ActivatedRoute,
     private navControllerService: NavControllerService,
     private router: Router,
     private loadingService: LoadingService
-  ) {
+  ) {}
+
+  ngOnInit() {
     this.router.events.subscribe((val) => {
       if (val instanceof NavigationEnd) {
-        this.loadingService.setLoading(true);
-        this.navControllerService.onRouteUpdate(val);
-        this.navigateToLink(val.url);
+        // Handle sidebar switching to proper page
+        const pageId = val.url.split('/')[1];
+        this.currActive = this.menu.filter(item => item.id === pageId)[0];
+
+        if (this.shouldLoad) this.loadingService.setLoading(true);
       }
-    });
-    this.navControllerService.clickedLink.subscribe((val) => {
-      this.navigateToLink(val);
     });
 
     this.navControllerService.sidebarToggle.subscribe(val => {
       this.isSidebarActive = !this.isSidebarActive;
     })
-  }
 
-  ngOnInit() {
-    this.getMenu();
-    this.setCurrActive();
+    combineLatest([this.navControllerService.getMenuItems(), this.activatedRoute.url]).subscribe(([menuData, urlData]) => {
+      this.menu = menuData;
+
+      // Determine which sidebar item should be active
+      let page = urlData[0].path;
+      if (!page) page = window.location.pathname.split("/")[1];
+      this.setActiveItem(page);
+    });
+
     this.controller = this;
   }
 
-  private getMenu() {
-    this.navControllerService
-      .getMenuItems()
-      .subscribe((menu) => (this.menu = menu));
+  /**
+   * Sets the active menu item based on the id provided.
+   */
+  private setActiveItem(id: string) {
+    const oldActiveId = this.currActive ? this.currActive.id : undefined;
+
+    this.currActive = this.menu.find(item => item.id === id) ?? this.menu[0];
+
+    this.shouldLoad = oldActiveId !== this.currActive.id;
   }
 
-  private setCurrActive() {
-    const windowName = window.location.href;
-
-    for (let i = 0; i < this.menu.length; i++) {
-      let item = this.menu[i];
-
-      if (windowName.includes(item.linkName)) {
-        this.currActive = item;
-        break;
-      }
-    }
-
-    if (!this.currActive) {
-      this.currActive = this.navControllerService.getDefaultActiveItem();
-    }
-  }
-
-  navigateTo(item) {
-    this.currActive = item;
-
-    window.scroll(0, 0);
-  }
-
-
-  pages = ['home', 'about', 'batches', 'sov', 'listen', 'contribute', 'misc']
-  navigateToLink(url: string) {
-    for(let i = 0; i < this.pages.length; i ++) {
-      let sourceUrl = url.split("#")[0];
-
-      if(sourceUrl.toLowerCase().includes(this.pages[i])) {
-        let temp = this.menu.filter(x => x.linkName.includes(this.pages[i]));
-        this.navigateTo(temp[0]);
-        return;
-      }
-    }
+  onActivate(event): void {
+    window.scrollTo(0, 0);
   }
 }

@@ -1,0 +1,340 @@
+[
+  {
+    "title": "v5.0",
+    "date": 1655164800000,
+    "summary": "This update adds a new 'Performances' page to the website, adds new information and also has some major technical changes.",
+    "items": [
+      {
+        "title": "Added 'Performances' page",
+        "subpoints": [
+          "Implemented systems to enter the performance related data, and for it to be displayed prettily on the website",
+          "Implemented opening of performances to view more information - you can click on the individually performances and you will be directed to the relevant page, or a window opens up showing information related to that performance"
+        ]
+      },
+      {
+        "title": "Removed 'Contribution' page",
+        "subpoints": [
+          "A smaller page for contributing has been added under the 'About' page",
+          "Developer Note: This was removed due to the under-utilisation of the page, and it also cluttered up the sidebar - I received a grand total of 1 email over the 2 years the page was set up lol"
+        ]
+      },
+      {
+        "title": "Revamped 'Home' page",
+        "subpoints": [
+          "Added 'Upcoming Events' - a section which can hold countdowns to big events",
+          "Added 'Website Updates' - a section which simply displays the recent updates to the website",
+          "Removed 'Creator's Message' - less annoying and preachy content on the website is always a plus"
+        ]
+      },
+      {
+        "title": "Changed navigation buttons on pages to a dropdown menu",
+        "subpoints": [
+          "Access to different subpages is now done via this dropdown menu"
+        ]
+      },
+      {
+        "title": "Changed website to use proper links to link to different pages",
+        "subpoints": [
+          "Access to webpages can now be done directly, e.g. vjchoir.github.io/sov/2015",
+          "Developer Note: Previously, the links were kinda janky and could only be accessed via something like 'vjchoir.github.io/sov#SOV2015' which was really ugly; this new system allows you to directly link different pages to people!"
+        ]
+      },
+      {
+        "title": "Implemented card based display for various parts of the site",
+        "subpoints": [
+          "Previously it was some badly formatted and underwhelming jumble of items in a page that didn't layout properly - this card system should make it look and feel more modern"
+        ]
+      },
+      {
+        "title": "Added a bunch of content to the website",
+        "subpoints": [
+          "Added information pertinent to the Batch of 2022 / 2023 (thanks Asher!)",
+          "Added photos for the Batch of 2021 / 2022 (thanks Claire!)",
+          "Added performances for 2014 to 2015",
+          "Added old photos for the Batch of 2017 / 2018 (can be found on the batch's 'Featured Photos' carousel at the bottom of the page)"
+        ]
+      },
+      {
+        "title": "Added music controls within the expanded Player"
+      },
+      {
+        "title": "Updated 'About' descriptions for the choir"
+      },
+      {
+        "title": "Added placeholders for personal playlists, missing batch photos"
+      },
+      {
+        "title": "Improved 'Listen' page tutorial for link sharing"
+      },
+      {
+        "title": "Implemented a conversion system for old playlist formats",
+        "subpoints": [
+          "Developer Note: This is kind of an iffy fix to an issue caused by the updating of the song information - previously, the timing was a hardcoded mm:ss kind of thing (which was totally not great, that's why we changed it) and now it uses numbers so we can do calculations and funky math better. However, due to the way the playlists were saved in the past, previously saved playlists were incompatible with this new change, causing the 'Listen' page to pretty much break and old playlists would be unusuable. However, this new system gives the old playlist to the system that generates the sharing code, then converts it back into the new format that the website uses! It works, and your playlists are retained from previous versions! If you didn't understand this, it's ok! You're probably unaffected!"
+        ]
+      },
+      {
+        "title": "Updated the underlying technology and codebase",
+        "subpoints": [
+          "Update Angular to version 14, along with other reliant components",
+          "Removed a bunch of unused libraries that were causing clutter or deprecated",
+          "Refactored a bunch of components so that they're cleaner and give me less of a headache when I update the site every year",
+          "Standardised timings to use UTC time (in milliseconds) and durations (in seconds)"
+        ]
+      },
+      {
+        "title": "(Hopefully) Fixed most issues regarding the player and playlist system"
+      },
+      {
+        "title": "Fixed the audio of SOV2007's 'Counting Frogs' - a portion of the audio was cut off"
+      }
+    ]
+  },
+  {
+    "title": "v4.1",
+    "date": 1628467200000,
+    "summary": "This update mainly updates information regarding the various batches and adds a few SOVs. It also fixes some bugs inherent in the website.",
+    "items": [
+      {
+        "title": "Added batch information for batches of 2020/2021 and 2021/2022 (thanks Claire!)"
+      },
+      {
+        "title": "Added songs and playlist information for SOV2007 and SOV2008 (thanks Ling Kang!)",
+        "subpoints": [
+          "Users are able to navigate through SOVs of 2007 and 2008, adding them to their respective playlists if they desire"
+        ]
+      },
+      {
+        "title": "Fixed bugs in the website"
+      }
+    ]
+  },
+  {
+    "title": "v4",
+    "date": 1591920000000,
+    "summary": "Updated the site into an Angular-based web application, with more functionalities.",
+    "items": [
+      {
+        "title": "Converted most / all of the code into Angular"
+      },
+      {
+        "title": "Added the website's player",
+        "subpoints": [
+          "Player allows you to play songs from SOVs throughout the website",
+          "Player can be minimised and expanded from bottom of website",
+          "Player reads custom created playlists"
+        ]
+      },
+      {
+        "title": "Revamped 'Listen' page",
+        "subpoints": [
+          "Page is no longer for playing music, instead is for managing playlists",
+          "Added custom playlists and customisation features",
+          "Added sharing of playlists via links",
+          "Added tutorials to guide user through playlist creation",
+          "Added small toast notifcations to inform user of any actions",
+          "Added settings page for Listen"
+        ]
+      },
+      {
+        "title": "Revamped 'Symphony of Voices' pages",
+        "subpoints": [
+          "Freshened up the page so that it's cleaner and looks better organised",
+          "Changed the styling of the repertoire",
+          "Added 'click to play' functionality for the songs: clicking on the songs now plays the song in the Player",
+          "Removed the YouTube embedded video: this was causing some page load errors which was irritating so I removed it"
+        ]
+      },
+      {
+        "title": "Revamped 'Contribution' page",
+        "subpoints": [
+          "Added new descriptions and specific roles I'm looking for",
+          "Added a form for users to fill up for feedback / ideas"
+        ]
+      },
+      {
+        "title": "Changed navigation stuff",
+        "subpoints": [
+          "Users should not have any issues linking directly to individual pages now. Pressing the back button should also lead you to the correct pages"
+        ]
+      },
+      {
+        "title": "Cleaned up data storage",
+        "subpoints": [
+          "The storing of the website's data (in JSON format) was pretty messy and has been cleaned up now. Added a form for users to fill up for feedback / ideas"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "v3.6",
+    "date": 1578268800000,
+    "summary": "New Year Cleaning update - updated some information and added some small features.",
+    "items": [
+      {
+        "title": "Updated the dates to 2020"
+        
+      },
+      {
+        "title": "Added a \"Featured Photos\" segment to the batch pages"
+        
+      },
+      {
+        "title": "Added photos for the 2014/2015 batch and the 2019/2020 batch"
+        
+      },
+      {
+        "title": "Changed the intro on the main page"
+        
+      }
+    ]
+  },
+  {
+    "title": "v3.5",
+    "date": 1567036800000,
+    "summary": "Added batch information and some minor bugfixes.",
+    "items": [
+      {
+        "title": "Added the Batch of 2019 - 2020's information"
+        
+      },
+      {
+        "title": "(Hopefully) Fixed a bug with the image in the footer of the website"
+        
+      }
+    ]
+  },
+  {
+    "title": "v3.4",
+    "date": 1559347200000,
+    "summary": "Added dark mode and updated some SOV data.",
+    "items": [
+      {
+        "title": "Added SOV2010's information (available on both the SOV page and listen page)"
+        
+      },
+      {
+        "title": "Added \"dark mode\" to the website - you can toggle this on and off on the sidebar)"
+        
+      },
+      {
+        "title": "Reuploaded SOV2014's data - previously the quality was quite crappy but I've re-cut and reuploaded it so that it's more pleasant to listen to"
+        
+      },
+      {
+        "title": "Listen loading animation (not sure if this 100% works, but what it's supposed to do is show a loading animation when the track hasn't loaded, and it'll disappear when it has)"
+        
+      },
+      {
+        "title": "Some text fixes (song names, song composers etc.)"
+        
+      }
+    ]
+  },
+  {
+    "title": "v3.3",
+    "date": 1559001600000,
+    "summary": "Added SOV2019, as well as refactored some code to make the site run better.",
+    "items": [
+      {
+        "title": "Added SOV2019's information (which includes download links, updates to the listen page)"
+        
+      },
+      {
+        "title": "Re-coded the website to make it more developer friendly (this is stuff you don't need to care about)"
+        
+      },
+      {
+        "title": "Reorganised information on the website (it was getting a bit too cluttered with different batches and SOVs, so I've put them on one landing page and you can access the rest from there)"
+        
+      },
+      {
+        "title": "Added a Contribution page, which includes detailed information on how to contribute without actually doing any of the coding stuff (leave that to us!)"
+        
+      },
+      {
+        "title": "Removed the Stories page - I have an idea of how to improve it but I don't have the time to code it out right now, and it kind of broke when I was updating the site so it'll be gone for a bit."
+        
+      },
+      {
+        "title": "Redid the Listen page - now acts like a budget Spotify player with shuffle features and a Favourites playlist."
+        
+      },
+      {
+        "title": "Remastered audio for SOV2012 and SOV2014 - previously these pieces of audio were quite trashy in quality but thanks to Mr Samuel Wong I have proper recordings of these SOVs now. The audio is much cleaner and nicer to listen to."
+        
+      },
+      {
+        "title": "Redid the album art for SOV2012 and SOV2014"
+        
+      }
+    ]
+  },
+
+  {
+    "title": "v3.2",
+    "date": 1551571200000,
+    "summary": "We're still alive! Added a bunch of stories previously submitted and other small tweaks.",
+    "items": [
+      {
+        "title": "Added a bunch of stories that were submitted last year apparently but I never realised (sorry Dayne)"
+        
+      },
+      {
+        "title": "Added a small countdown to SOV2019 at the bottom of this page"
+        
+      },
+      {
+        "title": "Changed the website font and standardised it (I hated the previous one)"
+        
+      },
+      {
+        "title": "Removed our Christmas logo (bet you didn't even realise we had one)"
+        
+      },
+      {
+        "title": "Updated SOV (there was one song that couldn't play, Die mit, which should be fixed now)"
+        
+      },
+      {
+        "title": "Various other minimal aesthetic changes that should make the website more enjoyable"
+        
+      }
+    ]
+  },
+
+  {
+    "title": "v3.1",
+    "date": 1544486400000,
+    "summary": "Adds SOV2012 and some batch information.",
+    "items": [
+      {
+        "title": "Added SOV2012 (information and Listen data)"
+        
+      },
+      {
+        "title": "Added 2018/2019 batch information (thanks Sih-Zau!)"
+        
+      },
+      {
+        "title": "You can now listen to SOV2012 under the 'Listen' section! (thanks to Trixie for sending in the recordings)"
+        
+      }
+    ]
+  },
+
+  {
+    "title": "v3",
+    "date": 1543795200000,
+    "summary": "Migrated from Google Sites to a simple HTML-CSS-JavaScript website.",
+    "items": [
+      {
+        "title": "The website has been updated to give it a fresher, modern look!"
+        
+      },
+      {
+        "title": "Added proper sections for each item, with relevant information under each item."
+        
+      }
+    ]
+  }
+]

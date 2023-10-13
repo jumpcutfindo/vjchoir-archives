@@ -1,18 +1,88 @@
 {
   "intro": {
     "title": "Welcome to the Batches page!",
-    "msg": "<p>Hello! Welcome to the landing page for Batches! In this part of the website, the details of the previous batches of VJChoir are kept so that you can see how the past batches looked like.</br></br>Use the navigation buttons above to browse through the different batches. In each page, the general information of the choir's committees and members are included. Photos from the various batches are also there so that you can kinda get a look of how lupsup or noob everyone looked back in their hey-day.</br></br><b>Contributing / fixing:</b></br>Seeing as I'm not from any batches after my own, the information provided above has been sent to me over the years by the various members of the various batches. If you want to contribute, or you've spotted an error, head over to the \"Contribute\" part of the archives to send in the relevant information. Thanks very much! :)</p>"
+    "msg": "<p>Hello! Welcome to the landing page for Batches! In this part of the website, the details of the previous batches of VJChoir are kept so that you can see how the past batches looked like.</br></br>In each page, the general information of the choir's committees and members are included. Photos from the various batches are also there so that you can kinda get a look of how lupsup or noob everyone looked back in their hey-day.</br></br>If you're from a previous batch and have photos you'd like to share on the website, you can always drop me a message and I'll update the page for you! There's a neat little carousel at the bottom of each batch's page that shows up if they've submitted any photos to the site :)</p>"
   },
   "batches": [
     {
-      "id": "2122",
+      "id": "2023",
+      "name": "2022 / 2023",
+      "image": "../../../assets/images/batch.png",
+      "desc": "Hi there! This page contains information pertaining to the batch of 2022 - 2023.",
+      "comms": [
+        {
+          "name": "Exco",
+          "img": "../../../assets/images/batch.png",
+          "members": [
+            "Lin Muxi (P)",
+            "Mrudani Subramanian (VP)",
+            "Aaron Koay (S)",
+            "Jenna Lim (Welfare Head)",
+            "Shatiesh Rajha (QM)",
+            "Asher Ooi (T)"
+          ]
+        },
+        {
+          "name": "Musico",
+          "img": "../../../assets/images/batch.png",
+          "members": [
+            "Brandon Goh (SC)",
+            "Ho Rui Yi (ASC)",
+            "Elizabeth Chan (S)",
+            "Lim Shuen Ying (A)",
+            "Isaac Kuah (T)",
+            "Nathan Evan Seah Shen (B)"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "name": "Sopranos",
+          "members": [
+            "Elizabeth Chan",
+            "Du Ruiyang",
+            "Seow Xin Yu",
+            "Charis Tey"
+          ]
+        },
+        {
+          "name": "Altos",
+          "members": [
+            "Lim Shuen Ying",
+            "Jenna Lim",
+            "Lin Muxi",
+            "Mrudani Subramanian",
+            "Ng Zhiqi"
+          ]
+        },
+        {
+          "name": "Tenors",
+          "members": [
+            "Isaac Kuah",
+            "Aaron Koay",
+            "Ho Rui Yi"
+          ]
+        },
+        {
+          "name": "Basses",
+          "members": [
+            "Nathan Evan Seah Shen",
+            "Asher Ooi",
+            "Brandon Goh",
+            "Shatiesh Rajha"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2022",
       "name": "2021 / 2022",
-      "image": "",
+      "image": "../../../assets/images/batches/2022/batch.jpg",
       "desc": "Hi there! This page contains information pertaining to the batch of 2021 - 2022.",
       "comms": [
         {
           "name": "Exco",
-          "img": "",
+          "img": "../../../assets/images/batches/2022/exco.jpg",
           "members": [
             "Tan Xuan Lin, Claire (P)",
             "Lyu Mingze (VP)",
@@ -25,7 +95,7 @@
         },
         {
           "name": "Musico",
-          "img": "",
+          "img": "../../../assets/images/batches/2022/musico.jpg",
           "members": [
             "Jin Yucheng (SC)",
             "Matt Tan Yong (SC & B)",
@@ -169,14 +239,14 @@
       ]
     },
     {
-      "id": "1920",
+      "id": "2020",
       "name": "2019 / 2020",
-      "image": "../../../assets/images/batches/1920/batch.jpeg",
+      "image": "../../../assets/images/batches/2020/batch.jpeg",
       "desc": "Hi there! This page contains information pertaining to the batch of 2019 - 2020.",
       "comms": [
         {
           "name": "Exco",
-          "img": "../../../assets/images/batches/1920/exco.jpg",
+          "img": "../../../assets/images/batches/2020/exco.jpg",
           "members": [
             "Low Jia Xin (P)",
             "Miri Aung (VP)",
@@ -188,7 +258,7 @@
         },
         {
           "name": "Musico",
-          "img": "../../../assets/images/batches/1920/musico.jpeg",
+          "img": "../../../assets/images/batches/2020/musico.jpeg",
           "members": [
             "Athuf Hashiholan (T)",
             "Wong Zheng Jie (B)",
@@ -258,20 +328,20 @@
         }
       ],
       "photos": [
-        "../../../assets/images/batches/1920/featured (1).jpeg",
-        "../../../assets/images/batches/1920/featured (2).jpg",
-        "../../../assets/images/batches/1920/featured (3).jpeg"
+        "../../../assets/images/batches/2020/featured (1).jpeg",
+        "../../../assets/images/batches/2020/featured (2).jpg",
+        "../../../assets/images/batches/2020/featured (3).jpeg"
       ]
     },
     {
-      "id": "1819",
+      "id": "2019",
       "name": "2018 / 2019",
-      "image": "../../../assets/images/batches/1819/batch.jpg",
+      "image": "../../../assets/images/batches/2019/batch.jpg",
       "desc": "Hi there! This page contains information pertaining to the batch of 2018 - 2019.",
       "comms": [
         {
           "name": "Exco",
-          "img": "../../../assets/images/batches/1819/exco.jpg",
+          "img": "../../../assets/images/batches/2019/exco.jpg",
           "members": [
             "Joel Ler (Welfare Head)",
             "Darius Ong (QM)",
@@ -283,7 +353,7 @@
         },
         {
           "name": "Musico",
-          "img": "../../../assets/images/batches/1819/musico.jpg",
+          "img": "../../../assets/images/batches/2019/musico.jpg",
           "members": [
             "Magdeleine (S)",
             "Devy Anggreni (A)",
@@ -343,14 +413,14 @@
       ]
     },
     {
-      "id": "1718",
+      "id": "2018",
       "name": "2017 / 2018",
-      "image": "../../../assets/images/batches/1718/batch.jpg",
+      "image": "../../../assets/images/batches/2018/batch.jpg",
       "desc": "Hi there! This page contains information pertaining to the batch of 2017 - 2018.",
       "comms": [
         {
           "name": "Exco",
-          "img": "../../../assets/images/batches/1718/exco.jpg",
+          "img": "../../../assets/images/batches/2018/exco.jpg",
           "members": [
             "Dayne Taniajura (VP)",
             "Sherlyn Priscilla (T)",
@@ -362,7 +432,7 @@
         },
         {
           "name": "Musico",
-          "img": "../../../assets/images/batches/1718/musico.jpg",
+          "img": "../../../assets/images/batches/2018/musico.jpg",
           "members": [
             "Toh Xin Long (SC)",
             "Japheth Leong (T)",
@@ -438,17 +508,27 @@
             "Mohd Al-Ahda"
           ]
         }
+      ],
+      "photos": [
+        "../../../assets/images/batches/2018/featured (1).jpg",
+        "../../../assets/images/batches/2018/featured (2).jpg",
+        "../../../assets/images/batches/2018/featured (3).jpg",
+        "../../../assets/images/batches/2018/featured (4).jpg",
+        "../../../assets/images/batches/2018/featured (5).jpg",
+        "../../../assets/images/batches/2018/featured (6).jpg",
+        "../../../assets/images/batches/2018/featured (7).jpg",
+        "../../../assets/images/batches/2018/featured (8).jpg"
       ]
     },
     {
-      "id": "1617",
+      "id": "2017",
       "name": "2016 / 2017",
-      "image": "../../../assets/images/batches/1617/batch.jpg",
+      "image": "../../../assets/images/batches/2017/batch.jpg",
       "desc": "Hi there! This page contains information pertaining to the batch of 2016 - 2017.",
       "comms": [
         {
           "name": "Exco",
-          "img": "../../../assets/images/batches/1617/exco.jpg",
+          "img": "../../../assets/images/batches/2017/exco.jpg",
           "members": [
             "Lee Peijing (GAM)",
             "Christian Teo (S)",
@@ -459,7 +539,7 @@
         },
         {
           "name": "Musico",
-          "img": "../../../assets/images/batches/1617/musico.jpg",
+          "img": "../../../assets/images/batches/2017/musico.jpg",
           "members": [
             "Lloyd Ng (T)",
             "Cherylene Tan (S)",
@@ -471,7 +551,7 @@
         },
         {
           "name": "Welco",
-          "img": "../../../assets/images/batches/1617/welco.jpg",
+          "img": "../../../assets/images/batches/2017/welco.jpg",
           "members": [
             "Neo Ming Feng",
             "Own Min Yi",
@@ -486,70 +566,70 @@
         {
           "name": "Sopranos",
           "members": [
-            "Cherylene",
-            "Shivaane",
-            "Dora",
-            "Michelle",
-            "Ye Won",
-            "Lynnette",
+            "Cherylene Tan",
+            "S Shivaane",
+            "Dora Oh",
+            "Michelle Ong",
+            "Park Ye Won",
+            "Lynnette Quek",
             "Bao Rong",
-            "Pei Jing",
-            "Qiu Ru",
-            "Payaal",
-            "Shi Chao"
+            "Lee Pei Jing",
+            "Yu Qiu Ru",
+            "Payaal D/O Dewakar Upadhya",
+            "Qiu Shi Chao"
           ]
         },
         {
           "name": "Altos",
           "members": [
-            "Rianne",
-            "Grace",
-            "Marissa",
-            "Celeste",
-            "Nai Rong",
-            "Dionetta",
-            "Angela",
-            "Yi Wei",
-            "Min Yi"
+            "Rianne Chew",
+            "Grace Goh",
+            "Marissa Poh",
+            "Celeste Lee",
+            "Du Nai Rong",
+            "Dionetta Young",
+            "Angela Tan",
+            "Chen Yi Wei",
+            "Own Min Yi"
           ]
         },
         {
           "name": "Tenors",
           "members": [
-            "Lloyd",
-            "Ming Feng",
-            "Jonathan",
-            "Nicholas",
-            "Zu En",
-            "Wen Yu"
+            "Lloyd Jacob Ng",
+            "Neo Ming Feng",
+            "Jonathan Chen",
+            "Nicholas Tay",
+            "Lai Zu En",
+            "Du Wen Yu"
           ]
         },
         {
           "name": "Basses",
           "members": [
-            "Martin",
+            "Martin Yong",
             "Li Yu Xuan",
-            "Brendan",
-            "Christian",
+            "Brendan Lim",
+            "Christian Teo",
             "Yeo Yu Xuan",
-            "Rui Cong",
+            "Zhu Rui Cong",
             "Tay Xiong",
-            "Ernest",
-            "Cleon",
-            "Jasper"
+            "Ernest Cho",
+            "Cleon Tan",
+            "Jasper Ong"
           ]
         }
       ]
     },
     {
-      "id": "1516",
+      "id": "2016",
       "name": "2015 / 2016",
-      "image": "../../../assets/images/batches/1516/batch.jpg",
+      "image": "../../../assets/images/batches/2016/batch.jpg",
       "desc": "Hi there! This page contains information pertaining to the batch of 2015 - 2016.",
       "comms": [
         {
           "name": "Exco",
-          "img": "../../../assets/images/batches/1516/exco.jpg",
+          "img": "../../../assets/images/batches/2016/exco.jpg",
           "members": [
             "Yeo Hui Kun (VP)",
             "Rebecca Goh (S)",
@@ -560,7 +640,7 @@
         },
         {
           "name": "Musico",
-          "img": "../../../assets/images/batches/1516/musico.jpg",
+          "img": "../../../assets/images/batches/2016/musico.jpg",
           "members": [
             "Ng Jun-Ren (B)",
             "Toh Hong Jin (T)",
@@ -572,7 +652,7 @@
         },
         {
           "name": "Welco",
-          "img": "../../../assets/images/batches/1516/welco.jpg",
+          "img": "../../../assets/images/batches/2016/welco.jpg",
           "members": [
             "Daryl Yeo",
             "Lim Qin Da",
@@ -641,14 +721,14 @@
       ]
     },
     {
-      "id": "1415",
+      "id": "2015",
       "name": "2014 / 2015",
-      "image": "../../../assets/images/batches/1415/batch.jpg",
+      "image": "../../../assets/images/batches/2015/batch.jpg",
       "desc": "Hi there! This page contains information pertaining to the batch of 2014 - 2015.",
       "comms": [
         {
           "name": "Exco",
-          "img": "../../../assets/images/batches/1415/exco.jpg",
+          "img": "../../../assets/images/batches/2015/exco.jpg",
           "members": [
             "Rebecca Seah (GAM)",
             "Wyn Lim (T)",
@@ -659,7 +739,7 @@
         },
         {
           "name": "Musico",
-          "img": "../../../assets/images/batches/1415/musico.jpg",
+          "img": "../../../assets/images/batches/2015/musico.jpg",
           "members": [
             "Joel Casey Tay (SC)",
             "Gloria Ho (ASC)",
@@ -671,7 +751,7 @@
         },
         {
           "name": "Welco",
-          "img": "../../../assets/images/batches/1415/welco.jpg",
+          "img": "../../../assets/images/batches/2015/welco.jpg",
           "members": [
             "Joshua Ariel",
             "Wen Xin",
@@ -749,21 +829,21 @@
         }
       ],
       "photos": [
-        "../../../assets/images/batches/1415/featured (1).jpg",
-        "../../../assets/images/batches/1415/featured (2).jpg",
-        "../../../assets/images/batches/1415/featured (3).jpg",
-        "../../../assets/images/batches/1415/featured (4).jpg"
+        "../../../assets/images/batches/2015/featured (1).jpg",
+        "../../../assets/images/batches/2015/featured (2).jpg",
+        "../../../assets/images/batches/2015/featured (3).jpg",
+        "../../../assets/images/batches/2015/featured (4).jpg"
       ]
     },
     {
-      "id": "1314",
+      "id": "2014",
       "name": "2013 / 2014",
-      "image": "../../../assets/images/batches/1314/batch.jpg",
+      "image": "../../../assets/images/batches/2014/batch.jpg",
       "desc": "Hi there! This page contains information pertaining to the batch of 2013 - 2014.",
       "comms": [
         {
           "name": "Exco",
-          "img": "../../../assets/images/batches/1314/exco.jpg",
+          "img": "../../../assets/images/batches/2014/exco.jpg",
           "members": [
             "Ethan Loh (P)",
             "Lidiya Hidhir (T)",
@@ -774,7 +854,7 @@
         },
         {
           "name": "Musico",
-          "img": "../../../assets/images/batches/1314/musico.jpg",
+          "img": "../../../assets/images/batches/2014/musico.jpg",
           "members": [
             "Tseng Wen Yu (SC)",
             "Andre Tng (SC)",
@@ -786,7 +866,7 @@
         },
         {
           "name": "Welco",
-          "img": "../../../assets/images/batches/1314/welco.jpg",
+          "img": "../../../assets/images/batches/2014/welco.jpg",
           "members": [
             "Luo Yigong",
             "Celine Chang",

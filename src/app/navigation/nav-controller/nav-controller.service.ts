@@ -1,10 +1,15 @@
-import { Injectable, ViewChild, Renderer2, RendererFactory2 } from '@angular/core';
+import { Injectable, RendererFactory2 } from '@angular/core';
 
 import menuJSON from '../../../assets/data/menu.json';
-import { MenuItem } from '../model/MenuItem';
 import { Observable, of, Subject } from 'rxjs';
+import { Title } from '@angular/platform-browser';
 
-const MENU_ARRAY = ['about', 'batches', 'sov', 'misc'];
+export interface MenuItem {
+  id: string;
+  name: string;
+  icon: string;
+  isVisible?: boolean;
+}
 
 @Injectable({
   providedIn: 'root',
@@ -15,24 +20,39 @@ export class NavControllerService {
   
   private menuItems: MenuItem[];
 
-  private clickedSongSource = new Subject<any>();
-  clickedSong = this.clickedSongSource.asObservable();
-
-  private clickedLinkSource = new Subject<any>();
-  clickedLink = this.clickedLinkSource.asObservable();
-
   private routeUpdatesSource = new Subject<any>();
   routerUpdates = this.routeUpdatesSource.asObservable();
 
   private sidebarToggleSource = new Subject<any>();
   sidebarToggle = this.sidebarToggleSource.asObservable();
 
+  private navBarTitleSource = new Subject<string>();
+  navBarTitleUpdates = this.navBarTitleSource.asObservable();
+
   private isSidebarActive = false;
 
-  constructor(private rendererFactory: RendererFactory2) {
+  constructor(private rendererFactory: RendererFactory2,
+    private titleService: Title) {
     this.renderer = rendererFactory.createRenderer(null, null);
   }
+  
+  /**
+   * Sets the navbar title.
+   */
+  setNavTitle(title: string): void {
+    this.navBarTitleSource.next(title);
+  }
 
+  /**
+   * Sets the window title.
+   */
+  setWindowTitle(title: string): void {
+    this.titleService.setTitle(title);
+  }
+
+  /**
+   * Retrieves the menu (sidebar) items
+   */
   getMenuItems(): Observable<MenuItem[]> {
     if(!this.menuItems) {
         this.menuItems = menuJSON.items.map((x) => this.toMenuItem(x));
@@ -41,47 +61,28 @@ export class NavControllerService {
     return of(this.menuItems);
   }
 
+  /**
+   * Retrieves the default menu item (i.e. home page)
+   */
   getDefaultActiveItem() {
     return this.menuItems[menuJSON.defaultActiveId];
   }
 
+  /**
+   * Convert a set of properties into a menu item
+   */
   private toMenuItem(x) {
     return {
       id: x.id,
       name: x.name,
-      linkName: x.linkName,
       icon: x.icon,
-      active: x.active,
-      isVisible: x.isVisible,
+      isVisible: x.isVisible === undefined ? true : x.isVisible,
     };
   }
-
-  onSongClick(event: any) {
-    this.clickedSongSource.next(event);
-  }
-
-  onLinkClick(event: any) {
-    this.clickedLinkSource.next(event);
-  }
-
-  onRouteUpdate(value: any) {
-    const url = value.url;
-    
-    let route = url.split('#')[0];
-    let fragment = url.split('#')[1];
-    
-    for(let item of MENU_ARRAY) {
-      if(route.includes(item)) {
-        this.routeUpdatesSource.next({
-          route: item,
-          fragment: fragment,
-          url: url
-        });
-        break;
-      }
-    }
-  }
   
+  /**
+   * Toggles the sidebar.
+   */
   toggleSidebar() {
     this.sidebarToggleSource.next();
     this.isSidebarActive = !this.isSidebarActive;

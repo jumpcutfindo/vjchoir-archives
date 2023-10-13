@@ -1,28 +1,17 @@
 {
   "header": {
     "title": "Welcome to the...",
-    "image_light": "../assets/images/logo/VJChoir-dark.svg",
-    "image_dark": "../assets/images/logo/VJChoir.svg",
-    "intro_msg": "Welcome to the unofficial official webpage for the Victoria Junior College Choir. In this website, there is a repository of batch information, songs and other cool stuff that you can peruse. Enjoy!"
+    "logo": {
+      "light": "../assets/images/logo/VJChoir-dark.svg",
+      "dark": "../assets/images/logo/VJChoir.svg"
+    },
+    "message": "Welcome to the unofficial official webpage for the Victoria Junior College Choir. This website is a repository of batch information, songs, concerts and other cool stuff for you to peruse. Enjoy!"
   },
-  "sections": [{
-    "title": "Creator's Message",
-    "content": "<p>Hang in there, life threw a curveball but you'll get back on track soon! Hoping for good things to come in 2021!</p>"
-  }],
+  "upcoming_events": [],
   "featured_photos": {
-    "title": "Featured Photos",
-    "images": [{
-        "link": "../../../assets/images/featured/header1.jpg"
-      },
-      {
-        "link": "../../../assets/images/featured/header2.jpg"
-      },
-      {
-        "link": "../../../assets/images/featured/header3.jpg"
-      },
-      {
-        "link": "../../../assets/images/featured/header4.jpg"
-      }
-    ]
+    "location": "../../../assets/images/featured",
+    "base_name": "featured_",
+    "filetype": "jpg",
+    "count": 5
   }
 }

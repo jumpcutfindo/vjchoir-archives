@@ -1,13 +1,10 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { BatchesService } from './batches.service';
 import { BatchItem } from './model/BatchItem';
-import { NavControllerService } from 'src/app/navigation/nav-controller/nav-controller.service';
-import { Router } from '@angular/router';
-import { Title } from '@angular/platform-browser';
+import { ActivatedRoute } from '@angular/router';
 import { LoadingService } from 'src/app/loading/loading.service';
-
-const BATCHES_NAME = "Batches";
-const BATCH_OF = "Batch of ";
+import { combineLatest } from 'rxjs';
+import { NavControllerService } from 'src/app/navigation/nav-controller/nav-controller.service';
 
 @Component({
   selector: 'app-batches',
@@ -18,45 +15,40 @@ export class BatchesComponent implements OnInit {
 
   batches: BatchItem[];
   batchesIntro: any;
+
+  currTitle: string;
   currActive: BatchItem;
 
-  constructor(private navControllerService: NavControllerService, 
-    private batchesService: BatchesService, 
-    private router: Router,
-    private titleService: Title,
-    private loadingService: LoadingService) { 
-  
+  constructor(
+    private activatedRoute: ActivatedRoute,
+    private batchesService: BatchesService,
+    private loadingService: LoadingService,
+    private navControllerService: NavControllerService
+  ) { 
+    
   }
 
   ngOnInit() {
+    this.currTitle = "Home";
+
     this.batchesService.getIntro().subscribe(intro => this.batchesIntro = intro);
-    this.batchesService.getBatches().subscribe(batches => {
-      this.batches = batches
-      this.handleFragment();
+
+    combineLatest([this.batchesService.getBatches(), this.activatedRoute.url]).subscribe(([batches, urlData]) => {
+      this.batches = batches;
+      
+      // Load batch based on the URL
+      this.setBatch(urlData[1].path);
     });
     
-    this.navControllerService.routerUpdates.subscribe(val => {
-      this.handleFragment();
-    });
+    this.loadingService.setLoading(false);
   }
 
-  private handleFragment() {
-    if (!this.router.url.includes("#")) {
-      this.currActive = null;
-    } else {
-      let fragment = this.router.url.split("#")[1];
-      for (let item of this.batches) {
-        if (fragment.includes(item.id)) {
-          this.currActive = item;
-          this.titleService.setTitle(BATCH_OF + this.currActive.name);
-          this.loadingService.setLoading(false);
-          return;
-        }
-      }
-      this.currActive = null;
-    }
-    
-    this.titleService.setTitle(BATCHES_NAME);
-    this.loadingService.setLoading(false);
+  setBatch(batchId: string): void {
+    this.currActive = this.batches.find(batch => batch.id === batchId);
+    if (this.currActive) this.currTitle = this.currActive.name;
+
+    const title = !this.currActive ? "Batches" : `Batch of ${this.currActive.name}`;
+    this.navControllerService.setNavTitle("Batches");
+    this.navControllerService.setWindowTitle(title);
   }
 }

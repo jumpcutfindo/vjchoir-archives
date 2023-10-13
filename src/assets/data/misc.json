@@ -2,17 +2,39 @@
   "sections": [{
       "title": "Main",
       "id": "main",
-      "content": "<p>Welcome to the Miscellaneous page of the website! This is the part of the site that will contain all the information that doesn't really relate to anything under the stuff on the sidebar and doesn't deserve its own spot there too. Enjoy!</p>"
+      "content": "Welcome to the Miscellaneous page of the website! This is the part of the site that will contain all the information that doesn't really relate to anything under the stuff on the sidebar and doesn't deserve its own spot there too. Enjoy!"
     },
     {
       "title": "Updates",
       "id": "updates",
-      "content": "<p>This is the update page, where I catalogue the changes the website has gone through over the past few years. It may get a bit technical!</p>"
+      "content": "This is the update page, where I catalogue the changes the website has gone through over the past few years. It may get a bit technical!"
     },
     {
       "title": "FAQ",
       "id": "faq",
-      "content": "<p>Hello! This is where I'll be including some questions and answers that I get from time to time! :)</br></br><b>Q: How did you make this website?</b></br>A: I've talked about it here in <a href='../about#archival'>the about part of the website</a>.</br></br><b>Q: What is the website coded in?</b></br>A: AngularJS, HTML and CSS.</br></br><b>Q: Why not get the music up on Spotify / Apple Music?</b></br>I've actually tried! The problem with that is that we need to get licensing rights for some songs, and also there is a lot of cost involved that I'm trying to avoid to get the music on there. I'd like a playlist of VJChoir music on these platforms too but there's no easy way to get stuff on there :(</br></br><b>Q: How long will you maintain this website for?</b></br>I mean right now I have no plans to stop, but maintaining it does take up a lot of time and effort (but mainly around SOV season for updating information).</p>"
+      "content": "Here's some questions and their answers I believe people who are browsing might have about the website! If you want to find out anything regarding this, feel free to drop me a message!",
+      "qna": [
+        {
+          "question": "How was the website made?",
+          "answer": "The website started off as a simple Google Sites kinda thing where you could drag and drop content boxes and stuff to indicate where things were. After I picked up programming I started improving on the site, and after a lot of work here we are! :)"
+        },
+        {
+          "question": "What is the website coded in?",
+          "answer": "The current website is coded in HTML / CSS / TypeScript, using the Angular framework."
+        },
+        {
+          "question": "Where do you host all the data and stuff for the website?",
+          "answer": "Well, since this site just needs to serve up the information and there aren't many things we need to keep private or authenticate, the data is stored in the GitHub repository itself (since it's free and I'm cheap)! It works fine so far, and there aren't any plans to shift the current system :)"
+        },
+        {
+          "question": "Why not upload all the recordings onto Spotify / some other music sharing platform?",
+          "answer": "I've actually tried! The problem with that is that we need to get licensing rights for some songs, and also there is a lot of cost involved that I'm trying to avoid to get the music on there. I'd like a playlist of VJChoir music on these platforms too but there's no easy way to get stuff on there :("
+        },
+        {
+          "question": "How long will this website be maintained for?",
+          "answer": "Well I honestly don't know, it really depends on my interest or the interest of any other individuals from the choir! If you want to pick up some of the work around here, do drop me a message :)"
+        }
+      ]
     }
   ]
 }

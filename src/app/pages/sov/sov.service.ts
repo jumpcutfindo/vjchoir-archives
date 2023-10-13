@@ -2,11 +2,7 @@ import { Injectable } from "@angular/core";
 
 import sovJSON from "../../../assets/data/sov.json";
 import { Observable, of } from "rxjs";
-import { SymphVoices } from "src/app/music/model/SymphVoices";
-import { Playlist } from "src/app/music/model/Playlist";
-import { Song } from "src/app/music/model/Song";
-
-import moment from "moment";
+import { Song, Playlist, SymphVoices } from "../listen/listen.service";
 
 @Injectable({
   providedIn: "root",
@@ -35,7 +31,7 @@ export class SovService {
           id: j,
           title: tempJSON.name,
           composer: tempJSON.composer,
-          duration: moment.duration("0:" + tempJSON.duration),
+          duration: tempJSON.duration,
           src: "../assets/audio/" + jsonItem.abbr + "/" + tempJSON.mp3 + ".mp3",
           artwork: jsonItem.artwork,
           album_info: {
@@ -48,9 +44,9 @@ export class SovService {
         tempTracks.push(tempSong);
       }
 
-      let repertoireDuration = moment.duration();
+      let repertoireDuration = 0;
       for(let j = 0; j < tempTracks.length; j ++) {
-        repertoireDuration.add(tempTracks[j].duration);
+        repertoireDuration += tempTracks[j].duration;
       }
 
       let tempRepertoire: Playlist = <Playlist>{

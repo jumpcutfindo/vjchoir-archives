@@ -1,10 +1,7 @@
-import { Component, OnInit, ChangeDetectorRef, Output, EventEmitter, HostListener } from '@angular/core';
-import { ListenService } from './listen.service';
+import { Component, OnInit, HostListener } from '@angular/core';
+import { ListenService, Playlist, PlaylistActionType, Song } from './listen.service';
 import { SovService } from '../sov/sov.service';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { Playlist } from 'src/app/music/model/Playlist';
-import moment from 'moment';
-import { Song } from 'src/app/music/model/Song';
 import { PlayerService } from 'src/app/music/player/player.service';
 import {CdkDragDrop, moveItemInArray} from '@angular/cdk/drag-drop';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -12,11 +9,11 @@ import { ToastrService } from 'ngx-toastr';
 import { Clipboard } from '@angular/cdk/clipboard';
 import { Title } from '@angular/platform-browser';
 import { LoadingService } from 'src/app/loading/loading.service';
+import { NavControllerService } from 'src/app/navigation/nav-controller/nav-controller.service';
 
 const PLAYLIST_QUERY_PARAM = 'pl';
 
 const LISTEN_PAGE_SETTINGS_ID = 'listenSettings';
-const LISTEN_TITLE = "Listen";
 
 @Component({
   selector: 'app-listen',
@@ -24,7 +21,8 @@ const LISTEN_TITLE = "Listen";
   styleUrls: ['./listen.component.scss']
 })
 export class ListenComponent implements OnInit {
-
+  // Handling width of window
+  innerWidth = window.innerWidth;
   @HostListener('window:resize', ['$event'])
   onResize(event) {
     this.innerWidth = window.innerWidth;
@@ -34,15 +32,15 @@ export class ListenComponent implements OnInit {
   areToastsEnabled: boolean;
   isHeaderClosedOnStart: boolean;
 
-  innerWidth = window.innerWidth;
-
+  // Header content related
   headerContent;
+  currActiveHeader;
+  isHeaderVisible = true;
+
+  // Playlist related
   sovInfo;
   myPlaylistsInfo: Playlist[];
-  currActiveHeader;
-  isHeaderVisible: boolean = true;
-
-  importPlaylistCode: string = '';
+  importPlaylistCode = '';
 
   constructor(private listenService: ListenService, 
     private sovService: SovService, 
@@ -52,45 +50,47 @@ export class ListenComponent implements OnInit {
     private route: ActivatedRoute,
     private toaster: ToastrService,
     private clipboard: Clipboard,
-    private titleService: Title,
-    private loadingService: LoadingService) { 
+    private loadingService: LoadingService,
+    private navControllerService: NavControllerService) { 
     
   }
 
   ngOnInit() {
-    let settings = localStorage.getItem(LISTEN_PAGE_SETTINGS_ID);
+    // Set titles
+    this.navControllerService.setNavTitle("Listen");
+    this.navControllerService.setWindowTitle("Listen");
+
+    // Retrieve local settings
+    const settings = localStorage.getItem(LISTEN_PAGE_SETTINGS_ID);
     if(settings == null || settings == undefined || settings == '') {
       console.log("No settings! Loading default..")
       this.areToastsEnabled = true;
       this.isHeaderClosedOnStart = false;
     } else {
-      let settingsJSON = JSON.parse(settings);
-      console.log(settingsJSON);
+      const settingsJSON = JSON.parse(settings);
       this.areToastsEnabled = settingsJSON.areToastsEnabled;
       this.isHeaderClosedOnStart = settingsJSON.isHeaderClosedOnStart;
     }
 
     this.isHeaderVisible = !this.isHeaderClosedOnStart;
 
-
+    // Retrieve header content
     this.listenService.getHeader().subscribe(content => {
       this.headerContent = content
       this.currActiveHeader = this.headerContent.sections[0];
     });
 
+    // Retrieve SOV info
     this.sovService.getSovInfo().subscribe(content => {
       this.sovInfo = content;
     })
-
-    this.sovInfo.map(item => {
-      item.isOpen = false;
-      return item;
-    });
-
+    
+    // Retrieve personal playlists
     this.listenService.getPlaylists().subscribe(myPlaylists => {
-      this.myPlaylistsInfo = this.listenService.myPlaylists;
+      this.myPlaylistsInfo = myPlaylists;
     });
 
+    // Handles links with importing of playlist included
     this.route.queryParams.subscribe(params => {
       if(params[PLAYLIST_QUERY_PARAM]) {
         this.importPlaylist(params[PLAYLIST_QUERY_PARAM]);
@@ -99,166 +99,146 @@ export class ListenComponent implements OnInit {
       this.router.navigate(['listen'], { replaceUrl: true });
     });
 
-    this.titleService.setTitle(LISTEN_TITLE);
     this.loadingService.setLoading(false);
   }
 
-  onKeyEnter(playlist: Playlist, element: any) {
-    let property = element.getAttribute("id");
+  /**
+   * Handles the updating of the playlist name / description.
+   */
+  onUpdatePlaylistHeaders(playlist: Playlist, element: any) {
+    const property = element.getAttribute("id");
 
     playlist[property] = element.value;
-    this.listenService.savePlaylists(this.myPlaylistsInfo);
 
-    console.log("Updated '" + property + "' to '" + element.value + "'!");
+    this.listenService.onPlaylistUpdate({
+      type: PlaylistActionType.UPDATE_PLAYLIST_HEADERS,
+      playlists: this.myPlaylistsInfo
+    });
+
+    this.createToast("success", "Updated '" + property + "' to '" + element.value + "'!");
   }
 
-  createNewPlaylist() {
-    let tempPlaylist = this.listenService.createNewPlaylist();
+  /**
+   * Handles creation of a new, empty playlist
+   */
+  createNewPlaylist(): void {
+    const tempPlaylist = this.listenService.createNewPlaylist();
 
     this.myPlaylistsInfo.push(tempPlaylist);
-    this.listenService.savePlaylists(this.myPlaylistsInfo);
 
     console.log("Created new playlist!");
 
-    this.playerService.onPlaylistUpdate({
-      type: "Create playlist",
-      playlist: tempPlaylist
+    this.listenService.onPlaylistUpdate({
+      type: PlaylistActionType.CREATE_PLAYLIST,
+      playlists: this.myPlaylistsInfo
     });
-    this.createToast({
-      type: "success",
-      msg: "Created a new playlist!"
-    });
+
+    this.createToast("success", "Created a new playlist!");
   }
 
+  /**
+   * Handles deletion of a selected playlist
+   */
   deletePlaylist(playlist: Playlist) {
     const playlistIndex = this.myPlaylistsInfo.indexOf(playlist);
     this.myPlaylistsInfo.splice(playlistIndex, 1);
-    this.listenService.savePlaylists(this.myPlaylistsInfo);
 
     console.log("Deleted playlist: " + playlist.name);
 
-    this.playerService.onPlaylistUpdate({
-      type: "Delete playlist",
-      playlist: playlist
+    this.listenService.onPlaylistUpdate({
+      type: PlaylistActionType.DELETE_PLAYLIST,
+      playlists: this.myPlaylistsInfo
     });
-    this.createToast({
-      type: "error",
-      msg: "Deleted playlist '" + playlist.name + "'!"
-    });
+
+    this.createToast("error", "Deleted playlist '" + playlist.name + "'!");
   }
 
+  /**
+   * Handles the adding of a song to a playlist 
+   */
   addSongToPlaylist(song: Song, playlist: Playlist) {
     playlist.tracks.push(song);
-    playlist.duration.add(song.duration);
+    playlist.duration += song.duration;
 
-    this.listenService.savePlaylists(this.myPlaylistsInfo);
-
-    this.playerService.onPlaylistUpdate({
-      type: "Add song",
-      playlist: playlist
+    this.listenService.onPlaylistUpdate({
+      type: PlaylistActionType.ADD_SONG,
+      playlists: this.myPlaylistsInfo
     });
 
-    this.createToast({
-      type: "success",
-      msg: "Added '" + song.title + "' to '" + playlist.name + "'!"
-    });
+    this.createToast("success", "Added '" + song.title + "' to '" + playlist.name + "'!");
   }
 
+  /**
+   * Handles the removal of a song from a playlist
+   */
   removeSongFromPlaylist(song: Song, playlist: Playlist) {
     playlist.tracks = playlist.tracks.filter(x => x != song);
-    playlist.duration.subtract(song.duration);
+    playlist.duration -= song.duration;
 
-    this.listenService.savePlaylists(this.myPlaylistsInfo);
-
-    this.playerService.onPlaylistUpdate({
-      type: "Remove song",
-      playlist: playlist
+    this.listenService.onPlaylistUpdate({
+      type: PlaylistActionType.DELETE_SONG,
+      playlists: this.myPlaylistsInfo
     });
     
-    this.createToast({
-      type: "error",
-      msg: "Removed '" + song.title + "' from '" + playlist.name + "'!"
-    });
+    this.createToast("error", "Removed '" + song.title + "' from '" + playlist.name + "'!");
   }
 
   playSong(playlist: Playlist, song: Song) {
-    this.playerService.onSongRequest(playlist, song);
+    this.playerService.requestSong(playlist, song);
   }
 
   resetStorage() {
     this.myPlaylistsInfo = [];
     this.listenService.resetStorage();
 
-    this.createToast({
-      type: "error",
-      msg: "Storage has been reset!"
-    });
+    this.createToast("success", "Storage has been reset successfully!");
   }
 
   importPlaylist(code: string) {
-    console.log(code);
-
-    let playlist = this.listenService.parametersToPlaylist(code);
+    const playlist = this.listenService.parametersToPlaylist(code);
     this.myPlaylistsInfo.push(playlist);
-    this.listenService.savePlaylists(this.myPlaylistsInfo);
 
     if(playlist.name == "Default playlist name") {
-      this.createToast({
-        type: "error",
-        msg: "Unable to import the playlist using the link given! Created a default one instead."
-      });
+      this.createToast("error", "Unable to import the playlist using the link given! Created a default one instead.");
     } else {
-      this.createToast({
-        type: "success",
-        msg: "Imported a new playlist from the link provided!"
-      });
+      this.createToast("success", "Imported a new playlist from the link provided!");
     }
-
-    
-  }
-
-  exportPlaylist(playlist: Playlist): string {
-    let string = this.listenService.playlistToParameters(playlist);
-    
-    return string;
   }
 
   getPlaylistLink(playlist: Playlist) {
-    this.createToast({
-      type: "success",
-      msg: "Playlist link has been copied to your clipboard!"
-    });
-    this.clipboard.copy(this.exportPlaylist(playlist));
+    this.createToast("success", "The playlist code has been copied to your clipboard!");
+    this.clipboard.copy(this.listenService.playlistToParameters(playlist));
   }
 
   drop(playlist: Playlist, event: CdkDragDrop<string[]>) {
     moveItemInArray(playlist.tracks, event.previousIndex, event.currentIndex);
-    this.listenService.savePlaylists(this.myPlaylistsInfo);
   }
 
   openModal(modal) {
     this.modalService.open(modal);
   }
   
-  createToast(params) {
+  createToast(type: string, message: string)  {
     if(!this.areToastsEnabled) {
       return;
     }
 
-    if(params.type == "success") {
-      this.toaster.success(params.msg);
-    } else if(params.type == "error") {
-      this.toaster.error(params.msg);
+    switch (type) {
+    case "success":
+      this.toaster.success(message);
+      break;
+    case "error":
+      this.toaster.error(message);
+      break;
     }
   }
 
   saveSettings() {
-    let settingsJSON = {
+    const settingsJSON = {
       areToastsEnabled: this.areToastsEnabled,
       isHeaderClosedOnStart: this.isHeaderClosedOnStart
-    }
+    };
 
-    console.log(settingsJSON);
     localStorage.setItem(LISTEN_PAGE_SETTINGS_ID, JSON.stringify(settingsJSON));
     console.log("Settings have been saved.");
   }

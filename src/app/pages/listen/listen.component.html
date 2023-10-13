@@ -1,16 +1,19 @@
 <div class="listen-header d-block">
   <div class="listen-header-buttons d-flex mb-4">
-    <div class="d-flex row mx-0">
-      <button *ngFor="let item of headerContent.sections" class="btn btn-outline-primary mx-1 mb-2 mb-md-0" [ngClass]="item == currActiveHeader ? 'active' : ''" (click)="currActiveHeader = item; isHeaderVisible = true;" onclick="this.blur(); event.stopPropagation()">
+    <div ngbDropdown class="d-inline-block me-2 p-0">
+      <button type="button" class="btn btn-outline-primary" ngbDropdownToggle>{{currActiveHeader.title}}</button>
+      <div ngbDropdownMenu>
+        <button ngbDropdownItem *ngFor="let item of headerContent.sections" class="btn btn-outline-primary my-1" [ngClass]="item == currActiveHeader ? 'active' : ''" (click)="currActiveHeader = item; isHeaderVisible = true;" onclick="this.blur(); event.stopPropagation()">
           {{item.title}}
-      </button>
+        </button>
+      </div>
     </div>
     <div class="d-flex flex-grow-1 justify-content-end rounded listen-header-close" (click)="isHeaderVisible = !isHeaderVisible">
-      <i class="fa fa-caret-up m-0 my-auto mr-md-3 mx-2" *ngIf="isHeaderVisible"></i>
-      <i class="fa fa-caret-down m-0 my-auto mr-md-3 mx-2" *ngIf="!isHeaderVisible"></i>
+      <i class="fa fa-caret-up m-0 my-auto me-md-3 mx-2" *ngIf="isHeaderVisible"></i>
+      <i class="fa fa-caret-down m-0 my-auto me-md-3 mx-2" *ngIf="!isHeaderVisible"></i>
     </div>
   </div>
-  <div *ngIf="isHeaderVisible">
+  <div *ngIf="isHeaderVisible" class="section">
     <h3>{{currActiveHeader.header}}</h3>
     <div [innerHTML]="currActiveHeader.content"></div>
     <div *ngIf="currActiveHeader.title == 'Settings'">
@@ -27,8 +30,8 @@
             <hr/>
             <p>This action is irreversible. Once you clear your storage, all your playlists will be removed from your local storage!</p>
 
-            <div class="row justify-content-end d-flex mx-0">
-              <button class="btn btn-outline-secondary mr-2" (click)="modal.dismiss()">Cancel</button>
+            <div class="justify-content-end d-flex mx-0">
+              <button class="btn btn-outline-secondary me-2" (click)="modal.dismiss()">Cancel</button>
               <button class="btn btn-danger" (click)="resetStorage(); modal.dismiss();">Clear Storage</button>
             </div>
           </div>
@@ -56,15 +59,15 @@
   <hr/>
 </div>
 
-<div class="listen-your-playlists">
+<div class="listen-your-playlists section">
   <div class="d-flex mb-2">
     <h5 class="flex-grow-1 my-auto">Your Playlists</h5>
-    <button class="btn btn-outline-primary mr-2" (click)="openModal(importPlaylistModal)" onclick="this.blur();">
-        <i class="fa fa-file-import small my-auto mx-0 mr-2"></i>
+    <button class="btn btn-outline-primary me-2" (click)="openModal(importPlaylistModal)" onclick="this.blur();">
+        <i class="fa fa-file-import small my-auto mx-0 me-2"></i>
         Import
     </button>
     <button class="btn btn-outline-primary" (click)="createNewPlaylist();" onclick="this.blur();">
-        <i class="fa fa-plus small my-auto mx-0 mr-2"></i>
+        <i class="fa fa-plus small my-auto mx-0 me-2"></i>
         Create New
     </button>
 
@@ -76,22 +79,23 @@
 
         <textarea class="col-12 p-0 m-0 mb-2" [(ngModel)]="importPlaylistCode"></textarea>
 
-        <div class="row justify-content-end d-flex mx-0">
-          <button class="btn btn-outline-secondary mr-2" (click)="modal.dismiss()">Cancel</button>
+        <div class="justify-content-end d-flex mx-0">
+          <button class="btn btn-outline-secondary me-2" (click)="modal.dismiss()">Cancel</button>
           <button class="btn btn-danger" (click)="importPlaylist(importPlaylistCode); modal.dismiss();">Import</button>
         </div>
       </div>
     </ng-template>
   </div>
   <div *ngFor="let playlist of myPlaylistsInfo; last as isLast" class="container-fluid p-0">
-    <div class="playlist-header container-fluid row my-auto m-0 px-0 py-2" (click)="playlist.isOpen = !playlist.isOpen" *ngIf="!playlist.isOpen">
-      <p class="col-6 m-0 pl-2 text-truncate"><b>{{playlist.name}}</b></p>
-      <div class="col-6 text-right d-inline-block row p-0">
-        <div class="d-inline">
-          <span class="badge badge-pill badge-secondary mr-2">{{playlist.duration.hours() + "H " + playlist.duration.minutes() + "M"}}</span>
-          <span class="badge badge-pill badge-primary">{{playlist.tracks.length}} SONGS</span>
+    <div class="playlist-header d-flex my-auto m-0 px-2 py-2" (click)="playlist.isOpen = !playlist.isOpen" *ngIf="!playlist.isOpen">
+      <p class="d-flex m-0 pl-2 text-truncate"><b>{{playlist.name}}</b></p>
+      <div class="flex-grow-1"></div>
+      <div class="d-flex">
+        <div>
+          <span class="badge rounded-pill bg-secondary me-2">{{ playlist.duration | formatDuration: "h:m"}}</span>
+          <span class="badge rounded-pill bg-primary">{{playlist.tracks.length}} SONGS</span>
         </div>
-        <div class="d-inline ml-2">
+        <div class="ms-2">
           <i class="fas fa-caret-down"></i>
         </div>
       </div>
@@ -104,19 +108,19 @@
           <div class="m-0 p-0 text-left col">
             <div class="d-flex">
               <h4 class="flex-grow-1 m-0 col-8 p-0">
-                <input #name id="name" class="p-1 col-12" value="{{playlist.name}}" onclick="event.stopPropagation();" (keyup.enter)="name.blur()" (blur)="onKeyEnter(playlist, name)" autocomplete="off">
+                <input #name id="name" class="p-1 col-12" value="{{playlist.name}}" onclick="event.stopPropagation();" (keyup.enter)="name.blur()" (blur)="onUpdatePlaylistHeaders(playlist, name)" autocomplete="off">
               </h4>
-              <div class="col-4 d-flex justify-content-end">
-                <!-- <i class="fa fa-file-export icon-primary mr-3 my-auto" placement="top" ngbTooltip="Get playlist code" [cdkCopyToClipboard]="exportPlaylist(playlist)" onclick="event.stopPropagation();"></i> -->
-                <i class="fa fa-link icon-primary mr-3 my-auto" placement="top" ngbTooltip="Copy playlist link" (click)="getPlaylistLink(playlist)" onclick="event.stopPropagation();"></i>
-                <i class="fa fa-times icon-danger mr-4 my-auto" placement="top" ngbTooltip="Delete playlist" (click)="openModal(deleteModal);" onclick="event.stopPropagation();"></i>
-                <i class="fa fa-caret-up my-auto"></i>
+              <div class="d-flex justify-content-end mx-3">
+                <!-- <i class="fa fa-file-export icon-primary me-3 my-auto" placement="top" ngbTooltip="Get playlist code" [cdkCopyToClipboard]="exportPlaylist(playlist)" onclick="event.stopPropagation();"></i> -->
+                <i class="fa fa-code icon-primary me-3 my-auto" placement="top" ngbTooltip="Copy playlist code" (click)="getPlaylistLink(playlist)" onclick="event.stopPropagation();"></i>
+                <i class="fa fa-times icon-danger me-4 my-auto" placement="top" ngbTooltip="Delete playlist" (click)="openModal(deleteModal);" onclick="event.stopPropagation();"></i>
+                <i class="fa fa-caret-up my-auto" (click)="playlist.isOpen = !playlist.isOpen; event.stopPropagation();"></i>
               </div>
             </div>
             <p class="d-block m-0">
-              <input #desc id="desc" class="col-12 p-1 my-1" value="{{playlist.desc}}" onclick="event.stopPropagation();" (keyup.enter)="desc.blur()" (blur)="onKeyEnter(playlist, desc)" autocomplete="off">
+              <input #desc id="desc" class="col-12 p-1 my-1" value="{{playlist.desc}}" onclick="event.stopPropagation();" (keyup.enter)="desc.blur()" (blur)="onUpdatePlaylistHeaders(playlist, desc)" autocomplete="off">
             </p>
-            <button class="btn btn-outline-primary my-2" (click)="playSong(playlist, playlist.tracks[0])" onclick="event.stopPropagation();"><i class="fa fa-play mr-2"></i>Play</button>
+            <button class="btn btn-outline-primary my-2" (click)="playSong(playlist, playlist.tracks[0])" onclick="event.stopPropagation();"><i class="fa fa-play me-2"></i>Play</button>
           </div>
         </div>
 
@@ -133,13 +137,12 @@
         </div>
         <div cdkDropList (cdkDropListDropped)="drop(playlist, $event)">
           <div class="song row m-0 py-2" *ngFor="let song of playlist.tracks; let i = index; last as isLast" [ngClass]="!isLast ? 'border-bottom' : ''" cdkDrag>
-
             <div class="d-inline-flex col-12 m-0 p-0">
-              <div class="add-button text-center p-0 m-0 col-2 col-md-1 d-flex justify-content-around" (click)="removeSongFromPlaylist(song, playlist)">
+              <div class="add-button text-center p-0 m-0 col-2 col-md-1 d-flex justify-content-around">
                 <div cdkDragHandle>
                   <i class="fa fa-bars small"></i>
                 </div>
-                <div>
+                <div (click)="removeSongFromPlaylist(song, playlist)">
                   <i class="fa fa-times text-danger small"></i>
                 </div>
               </div>
@@ -161,8 +164,8 @@
         <hr/>
         <p>This action is irreversible. Once you delete this playlist, the existing data will be wiped from your local storage!</p>
 
-        <div class="row justify-content-end d-flex mx-0">
-          <button class="btn btn-outline-secondary mr-2" (click)="modal.dismiss()">Cancel</button>
+        <div class="justify-content-end d-flex mx-0">
+          <button class="btn btn-outline-secondary me-2" (click)="modal.dismiss()">Cancel</button>
           <button class="btn btn-danger" (click)=" deletePlaylist(playlist); modal.dismiss();">Delete Playlist</button>
         </div>
       </div>
@@ -174,18 +177,19 @@
 </div>
 <hr/>
 
-<div class="listen-default-playlists mb-5 mb-xl-0">
+<div class="listen-default-playlists mb-5 mb-xl-0 section">
   <h5 class="mt-4">Default Playlists</h5>
   <div *ngFor="let sov of sovInfo; last as isLast" class="container-fluid p-0">
-    <div class="playlist-header container-fluid row my-auto m-0 px-0 py-2" (click)="sov.isOpen = !sov.isOpen" *ngIf="!sov.isOpen">
+    <div class="playlist-header d-flex my-auto m-0 px-2 py-2" (click)="sov.isOpen = !sov.isOpen" *ngIf="!sov.isOpen">
       <p *ngIf="innerWidth > 600" class="col-6 m-0 pl-2 text-truncate"><b>{{sov.title}}</b></p>
       <p *ngIf="innerWidth <= 600" class="col-4 m-0 pl-2 text-truncate"><b>{{sov.abbr}}</b></p>
-      <div class="col-8 col-md-6 text-right d-inline-block row p-0">
-        <div class="d-inline">
-          <span class="badge badge-pill badge-secondary mr-2">{{sov.repertoire.duration.hours() + "H " + sov.repertoire.duration.minutes() + "M"}}</span>
-          <span class="badge badge-pill badge-primary">{{sov.repertoire.tracks.length}} SONGS</span>
+      <div class="flex-grow-1"></div>
+      <div class="d-flex">
+        <div>
+          <span class="badge rounded-pill bg-secondary me-2">{{sov.repertoire.duration | formatDuration: "h:m"}}</span>
+          <span class="badge rounded-pill bg-primary">{{sov.repertoire.tracks.length}} SONGS</span>
         </div>
-        <div class="d-inline ml-2">
+        <div class="ms-2">
           <i class="fas fa-caret-down"></i>
         </div>
       </div>
@@ -193,15 +197,15 @@
 
     <div class="playlist-content" *ngIf="sov.isOpen">
       <div class="playlist-header playlist-content-header py-3" (click)="sov.isOpen = !sov.isOpen">
-        <div class="row mx-2">
-          <img src="{{sov.artwork}}" class="playlist-artwork w-25 col m-0 pl-0 pr-3">
+        <div class="d-flex flex-wrap mx-2">
+          <img src="{{sov.artwork}}" class="playlist-artwork me-3 mb-sm-3">
           <div class="m-0 p-0 text-left col">
             <div class="d-flex">
               <h4 class="flex-grow-1 m-0">{{sov.title}}</h4>
               <i class="fas fa-caret-up m-0 my-auto mx-3"></i>
             </div>
             <p class="d-block m-0" [innerHTML]="sov.intro"></p>
-            <button class="btn btn-outline-primary my-2" (click)="playSong(sov.repertoire, sov.repertoire.tracks[0])" onclick="event.stopPropagation();"><i class="fa fa-play mr-2"></i>Play</button>
+            <button class="btn btn-outline-primary my-2" (click)="playSong(sov.repertoire, sov.repertoire.tracks[0])" onclick="event.stopPropagation();"><i class="fa fa-play me-2"></i>Play</button>
           </div>
         </div>
 
@@ -212,7 +216,7 @@
           <div class="d-inline-flex col-12 m-0 p-0">
             <p class="m-0 p-0 col-1"></p>
             <p class="song-number text-center col-1 m-0 p-0"><small>NO.</small></p>
-            <p class="song-title text-left text-truncate col-9 m-0 p-0"><small>TITLE</small></p>
+            <p class="song-title text-left text-truncate col-8 col-md-9 m-0 p-0"><small>TITLE</small></p>
             <p class="song-duration text-center col-1 m-0 p-0"><small>DUR.</small></p>
           </div>
         </div>
@@ -223,13 +227,13 @@
             <div placement="bottom-left" class=" my-auto p-0 m-0 col-1 text-center add-button" display="static" ngbDropdown>
               <i class="fa fa-plus small d-block p-1 mx-auto" ngbDropdownToggle></i>
               <div ngbDropdownMenu>
-                <p class="mx-3 my-0"><small><b>Add song to...</b></small></p>
-                <div class="dropdown-divider"></div>
+                <p class="mx-3 my-2 p-0"><small><b>Add song to...</b></small></p>
+                <hr class="text-white m-0">
                 <button ngbDropdownItem *ngFor="let playlist of myPlaylistsInfo" class="py-2 px-3 text-truncate" (click)="addSongToPlaylist(song, playlist)">{{playlist.name}}</button>
               </div>
             </div>
             <p class="song-number text-center col-1 m-0 p-0"><small>{{i+1}}</small></p>
-            <p class="song-title text-left text-truncate col-9 m-0 p-0">{{song.title}} <small class="song-composer">{{song.composer}}</small></p>
+            <p class="song-title text-left text-truncate col-8 col-md-9 m-0 p-0">{{song.title}} <small class="song-composer">{{song.composer}}</small></p>
             <p class="song-duration text-center col-1 m-0 p-0"><small>{{song.duration | formatDuration}}</small></p>
           </div>
         </div>

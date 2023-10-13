@@ -1,0 +1,170 @@
+{
+    "intro": {
+        "title": "Welcome to the Performances page!",
+        "msg": "<p>Hello! The choir has a long history of performing in settings outside of its annual concert, such as local / overseas competitions, or even smaller performances like carolling! This page attempts to archive information relating to those performances by keeping any recordings, video links, photos etc.</br></br>This page is pretty new, and being not-in-choir right now has kind of put a wrench in the plan to gather all the possible media relating to both newer and older performances. Hopefully, in time, this page will become more populated with that kind of stuff, but in the meantime I would be very grateful to anyone who has information related to any past performances and can help to contribute it! Please send over whatever content you may have (e.g. recordings, videos, images, repertoires, booklets, pamphlets) and I can help to populate this part of the website accordingly! Thank you!</p>"
+    },
+    "performances": [
+        {
+            "title": "4th Vietnam International Choir Competition",
+            "description": "The choir participated in the 4th Vietnam International Choir Competition organised by INTERKULTUR, in Hoi An, Vietnam. The choir achieved great results, winning 4 out of the 4 categories (Male Chorus, Female Chorus, Mixed Youth, Sacred) they participated in for the competition.",
+            "image": "../../../assets/images/performances/2015/hoi_an.jpg",
+            "location": "Hội An, Vietnam",
+            "time": {
+                "start": 1430334000000,
+                "end": 1430679600000
+            },
+            "media": [
+                {
+                    "title": "Results",
+                    "description": "Results for the competition can be found at the following website, which lists the choir's fellow competitors and their relevant results as well."
+                },
+                {
+                    "link": {
+                        "name": "Link to the results",
+                        "url": "http://www.hoianworldheritage.org.vn/en/news/New-notice/result-364.hwh"
+                    },
+                    "divider": true
+                },
+                {
+                    "title": "Recordings",
+                    "description": "Recordings of the various performances by the choir in Hoi An can be found in the following link:"
+                },
+                {
+                    "link": {
+                        "name": "VJChoir in Hoi An",
+                        "url": "https://www.youtube.com/playlist?list=PLhz3lrGQP-Aje_Dhl5spMD4v4rLpDqCQL"
+                    }
+                }
+            ]
+        },
+        {
+            "title": "Singapore Youth Festival 2015",
+            "description": "The choir performed as part of SYF 2015, presenting three songs: 'Pseudo Yoik' by Jaakko Mäntyjärvi, '刺 (Ci)' by Zechariah Goh Toh Chai and 'Entreat Me Not To Leave You' by Dan Forrest. The choir obtained Distinction.",
+            "image": "../../../assets/images/performances/2015/syf.jpg",
+            "time": {
+                "start": 1429747200000
+            },
+            "media": [
+                {
+                    "title": "Recordings",
+                    "description": "Recordings for the performance can be found in the following link, as provided by the SYF Committee:"
+                },
+                {
+                    "link": {
+                        "name": "SYF 2015 Recordings",
+                        "url": "https://drive.google.com/drive/folders/0B24yMaqyw1RwfmlTOWhGLWFEUjdTQVdFTWRrdVJLSGlYZWFQYURZNlhqb0NzeWtaNlRRbzQ?resourcekey=0-cmaaHl2Lvk3ogbKaPI6WfQ"
+                    }
+                }
+            ]
+        },
+        {
+            "title": "Jubilate VII",
+            "description": "The choir participated in Jubilate VII - Festival of Choirs, held in Malacca, Malaysia.",
+            "image": "../../../assets/images/performances/2014/malacca.jpg",
+            "location": "Malacca, Malaysia",
+            "time": {
+                "start": 1416787200000,
+                "end": 1417219200000
+            },
+            "media": [
+                {
+                    "description": "There aren't any proper recordings of the performances available! If you do happen to hold a copy, I would appreciate it if you could send it over! :)"
+                }
+            ]
+        },
+        {
+            "title": "Asia Cantate 2014",
+            "description": "The choir participated in Asia Cantate 2014, competing and winning 3 categories (Senior Youth, Open Mixed and Folklore). The choir also achieved Overall Champions.",
+            "image": "../../../assets/images/performances/2014/asia_cantate.jpg",
+            "location": "Hong Kong",
+            "time": {
+                "start": 1402588800000,
+                "end": 1402848000000
+            },
+            "media": [
+                {
+                    "title": "Photos",
+                    "description": "Courtesy of Joel Casey Tay, we have some photos of the trip that were taken in the following links:"
+                },
+                {
+                    "link": {
+                        "name": "Asia Cantate 2014 - Part 1",
+                        "url": "https://www.flickr.com/photos/131263502@N03/sets/72157651688123415/"
+                    }
+                },
+                {
+                    "link": {
+                        "name": "Asia Cantate 2014 - Part 2",
+                        "url": "https://www.flickr.com/photos/131263502@N03/sets/72157649358285833/"
+                    },
+                    "divider": true
+                },
+                {
+                    "title": "Videos",
+                    "description": "Courtesy of Konzert, we have some recordings of our performances during the event:"
+                },
+                {
+                    "link": {
+                        "name": "Open Mixed Category",
+                        "url": "https://www.youtube.com/watch?v=4-2_HKvF9oI"
+                    }
+                },
+                {
+                    "link": {
+                        "name": "Senior Youth Category",
+                        "url": "https://www.youtube.com/watch?v=pDBaQqzIkiE"
+                    }
+                },
+                {
+                    "link": {
+                        "name": "Folklore Category",
+                        "url": "https://www.youtube.com/watch?v=j7jtQg8xZYE"
+                    }
+                }
+            ]
+        },
+        {
+            "title": "Coalescence",
+            "description": "The choir performed as part of VJC's 2022 concert series in tandem with the school's Chinese Orchestra.",
+            "image": "../../../assets/images/performances/2022/coalescence_cover.jpg",
+            "time": {
+                "start": 1653494400000
+            },
+            "media": [
+                {
+                    "title": "Recordings",
+                    "description": "Recordings of the event can be found in the following link"
+                },
+                {
+                    "link": {
+                        "name": "Link to recordings",
+                        "url": "https://drive.google.com/drive/folders/1NmuJcb4aDZp7c87XICqZklTRSbADSKMW?usp=sharing"
+                    },
+                    "divider": true
+                },
+                {
+                    "title": "Booklet",
+                    "description": "The e-booklet for the event can also be found in the following link:"
+                },
+                {
+                    "link": {
+                        "name": "Link to e-booklet",
+                        "url": "https://www.flipsnack.com/98EE9A99E8C/concert-series-co-and-choir-if-possible.html"
+                    },
+                    "divider": true
+                },
+                {
+                    "title": "Photos"
+                },
+                {
+                    "images": [
+                        "../../../assets/images/performances/2022/coalescence_0.jpg",
+                        "../../../assets/images/performances/2022/coalescence_1.jpg",
+                        "../../../assets/images/performances/2022/coalescence_2.jpg",
+                        "../../../assets/images/performances/2022/coalescence_3.jpg"
+                    ]
+                }
+            ]
+        }
+    ]
+}

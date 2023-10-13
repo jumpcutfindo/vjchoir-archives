@@ -1,11 +1,9 @@
-import { Component, OnInit, ViewChild, HostListener, Output, EventEmitter } from "@angular/core";
+import { Component, OnInit, ViewChild, Output, EventEmitter } from "@angular/core";
 import { PlyrComponent } from "ngx-plyr";
 import { SovService } from "src/app/pages/sov/sov.service";
-import { Song } from "../model/Song";
 import { NavControllerService } from 'src/app/navigation/nav-controller/nav-controller.service';
-import { ListenService } from 'src/app/pages/listen/listen.service';
-import { Playlist } from '../model/Playlist';
-import { PlayerService } from './player.service';
+import { ListenService, Playlist, PlaylistActionType, Song, SymphVoices } from 'src/app/pages/listen/listen.service';
+import { PlayerActionTypes, PlayerService } from './player.service';
 
 const PLAYLISTS_DEFAULT_TITLE = "Playlists";
 
@@ -22,58 +20,80 @@ export class PlayerComponent implements OnInit {
 
   sovInfo: any;
   myPlaylists: Playlist[];
-
   playlists: Playlist[] = [];
 
   isMinimised: boolean;
-  isPlaying: boolean = false;
-
-  isCanPlay: boolean = false;
-  isBuffering: boolean = true;
+  isPlaying = false;
+  isCanPlay = false;
+  isBuffering = true;
 
   activeWindowTitle: string;
   currDisplayedPlaylist: Playlist;
   currDisplayedPlaylistId: number;
+
   currActivePlaylist: Playlist;
-  
   nowPlaying: Song;
+  nowPlayingHasNext: boolean;
+  nowPlayingHasPrev: boolean;
 
   playerPlaylistsWindow: HTMLElement;
 
   audioSources: Plyr.Source[] = [];
 
   constructor(private navController: NavControllerService, private sovService: SovService, private listenService: ListenService, private playerService: PlayerService) {
-    this.playerService.playlistUpdates.subscribe(val => {
-      if(val.type == "Delete playlist") {
-        let tempIndex = this.playlists.indexOf(val.playlist);
-        this.playlists.splice(tempIndex, 1);
-        console.log("Completed");
-        console.log(this.playlists);
-      }
+    // Update personal playlists whenever there is an edit made to personal playlists
+    this.listenService.playlistUpdates.subscribe(val => {
       this.loadPlaylists();
     });
 
-    this.playerService.songRequestUpdates.subscribe(val => {
-      this.loadSong(val.playlist, val.song, true);
-    })
-
-    this.navController.clickedSong.subscribe(val => {
-      const song: Song = val;
-      this.loadSongViaId(val.playlistId, val.id, true);
-    });
+    this.initPlayerUpdateListener();
+    this.loadPlaylists();
   }
 
   ngOnInit() {
-    this.loadPlaylists(true);
-
+    // Setup layout settings
     this.activeWindowTitle = PLAYLISTS_DEFAULT_TITLE;
     this.isMinimised = true;
     this.playerPlaylistsWindow = document.getElementById("player-playlists");
 
+    // Load the default song
     this.loadSongViaId(0, 0, false);
   }
 
-  loadPlaylists(justLoaded?: boolean) {
+  /**
+   * Instantiates the listener for any relevant player updates. Actions will
+   * go through the serivce and dispatched to the component for relevant
+   * updates.
+   */
+  initPlayerUpdateListener(): void {
+    this.playerService.playerUpdates.subscribe(action => {
+      let playlistId;
+      switch (action.type) {
+      case PlayerActionTypes.PLAY:
+        this.play();
+        break;
+      case PlayerActionTypes.PAUSE:
+        this.pause();
+        break;
+      case PlayerActionTypes.NEXT:
+        this.loadNextSong();
+        break;
+      case PlayerActionTypes.PREVIOUS:
+        this.loadPrevSong();
+        break;
+      case PlayerActionTypes.SELECT_SONG:
+        playlistId = this.playlists.indexOf(action.playlist);
+        this.loadSongViaId(playlistId, this.playlists[playlistId].tracks.indexOf(action.song));
+        break;
+      }
+    });
+  }
+
+  /**
+   * Loads both the default playlists and personal playlists, and combines them
+   * into a single array to ensure correct indexing.
+   */
+  loadPlaylists(): void {
     this.sovService.getSovInfo().subscribe((info) => {
       this.sovInfo = info
     });
@@ -83,14 +103,17 @@ export class PlayerComponent implements OnInit {
     });
 
     this.playlists = [];
-    for(let sov of this.sovInfo) {
+    for (const sov of this.sovInfo) {
       this.playlists.push(sov.repertoire);
     }    
-    for(let playlist of this.myPlaylists) {
+    for (const playlist of this.myPlaylists) {
       this.playlists.push(playlist);
     }
   }
 
+  /**
+   * Displays the provided playlist on the player.
+   */
   displayPlaylist(playlist: Playlist) {
     this.currDisplayedPlaylist = playlist;
     this.currDisplayedPlaylistId = this.playlists.indexOf(playlist);
@@ -98,37 +121,46 @@ export class PlayerComponent implements OnInit {
     this.playerPlaylistsWindow.scroll(0, 0);
   }
 
-  getDefaultPlaylists(): Playlist[] {
-    let defaultPlaylists = this.playlists.filter(x => x.isDefault);
-    return defaultPlaylists;
-  }
-
-  getMyPlaylists(): Playlist[] {
-    let myPlaylists = this.playlists.filter(x => !x.isDefault);
-    return this.playlists.filter(x => !x.isDefault);
-  }
-
+  /**
+   * Returns the user to the main menu of the player.
+   */
   onBackClick() {
     this.currDisplayedPlaylist = null;
     this.activeWindowTitle = PLAYLISTS_DEFAULT_TITLE;
     this.playerPlaylistsWindow.scroll(0, 0);
   }
 
-  loadSongViaId(playlistId: number, songId: number, isPlayOnLoad: boolean) {
-    console.log("Loading '" + this.playlists[playlistId].tracks[songId].title + "' of playlist '" + this.playlists[playlistId].name + "'");
-    const selected: Song = this.playlists[playlistId].tracks[songId];
-    this.audioSources = [
-      {
-        src: selected.src,
-        type: "audio/mp3"
-      }
-    ]
-    this.nowPlaying = selected;
-    this.currActivePlaylist = this.playlists[playlistId];
-    this.isCanPlay = isPlayOnLoad;
+  /**
+   * Retrieves the default playlists.
+   */
+  getDefaultPlaylists(): Playlist[] {
+    return this.sovInfo.map(info => info.repertoire);
   }
 
-  loadSong(playlist: Playlist, song: Song, isPlayOnLoad: boolean = true) {
+  /**
+   * Retrieves the personal playlists.
+   */
+  getMyPlaylists(): Playlist[] {
+    return this.myPlaylists;
+  }
+
+  play(): void {
+    this.plyr.player.play();
+    this.isPlaying = true;
+  }
+
+  pause(): void {
+    this.plyr.player.pause();
+    this.isPlaying = false;
+  }
+
+  /**
+   * Loads via the playlist id (index in the playlists array), song id (index in the song array).
+   */
+   loadSongViaId(playlistId: number, songId: number, isPlayOnLoad = true): void {
+    const playlist = this.playlists[playlistId];
+    const song = playlist.tracks[songId];
+
     console.log("Loading '" + song.title + "' of playlist '" + playlist.name + "'");
     this.audioSources = [
       {
@@ -136,68 +168,108 @@ export class PlayerComponent implements OnInit {
         type: "audio/mp3",
       },
     ];
+    
     this.nowPlaying = song;
     this.currActivePlaylist = playlist;
     this.isCanPlay = isPlayOnLoad;
+
+    const songIndex = playlist.tracks.indexOf(song);
+    this.nowPlayingHasNext = songIndex + 1 < playlist.tracks.length;
+    this.nowPlayingHasPrev = songIndex - 1 >= 0;
   }
 
-  loadNextSong() {
-    let currPlaylistIndex = this.playlists.indexOf(this.currActivePlaylist);
-    let currSongIndex = this.currActivePlaylist.tracks.indexOf(this.nowPlaying);
+  /**
+   * Loads the next song in the current playlist.
+   */
+  loadNextSong(): void {
+    this.pause();
+
+    const currPlaylistIndex = this.playlists.indexOf(this.currActivePlaylist);
+    const currSongIndex = this.currActivePlaylist.tracks.indexOf(this.nowPlaying);
+
     let nextSongIndex = currSongIndex + 1;
 
+    // Loop back to the start if this is the last song
     if(nextSongIndex >= this.currActivePlaylist.tracks.length) {
       nextSongIndex = 0;
+      this.loadSongViaId(currPlaylistIndex, nextSongIndex, false);
+      return;
     }
 
     this.loadSongViaId(currPlaylistIndex, nextSongIndex, true);
   }
 
-  loadPrevSong() {
-    let currPlaylistIndex = this.playlists.indexOf(this.currActivePlaylist);
-    let currSongIndex = this.currActivePlaylist.tracks.indexOf(this.nowPlaying);
-    let prevSongIndex = currSongIndex + 1;
+  /**
+   * Loads the previous song in the current playlist.
+   */
+  loadPrevSong(): void {
+    this.pause();
+    
+    const currPlaylistIndex = this.playlists.indexOf(this.currActivePlaylist);
+    const currSongIndex = this.currActivePlaylist.tracks.indexOf(this.nowPlaying);
+    let prevSongIndex = currSongIndex - 1;
 
-    if(prevSongIndex < this.currActivePlaylist.tracks.length) {
+    if(prevSongIndex < 0) {
       prevSongIndex = 0;
     }
 
     this.loadSongViaId(currPlaylistIndex, prevSongIndex, true);
   }
 
-  onBigPlayClick(event) {
-    event.stopPropagation();
-    if(this.isPlaying) {
-      this.plyr.player.pause();
+  /**
+   * Handles the event when play button is clicked
+   */
+  onPlayClick(event?) {
+    if (event) event.stopPropagation();
+    if (this.isPlaying) {
+      this.playerService.onPlayerAction({
+        type: PlayerActionTypes.PAUSE,
+        playlist: this.currActivePlaylist,
+        song: this.nowPlaying,
+      });
     } else {
-      this.plyr.player.play();
+      this.playerService.onPlayerAction({
+        type: PlayerActionTypes.PLAY,
+        playlist: this.currActivePlaylist,
+        song: this.nowPlaying,
+      });
     }
   }
 
-  onBigNextClick(event) {
-    event.stopPropagation();
-    this.loadNextSong();
+  /**
+   * Handles the event when next button is clicked
+   */
+  onNextClick(event?) {
+    if (event) event.stopPropagation();
+    this.playerService.onPlayerAction({
+      type: PlayerActionTypes.NEXT,
+      playlist: this.currActivePlaylist,
+      song: this.nowPlaying
+    });
   }
 
-  onBigPrevClick(event) {
-    event.stopPropagation();
-    this.loadPrevSong();
+  /**
+   * Handles the event when prev button is clicked
+   */
+  onPrevClick(event?) {
+    if (event) event.stopPropagation();
+    this.playerService.onPlayerAction({
+      type: PlayerActionTypes.PREVIOUS,
+      playlist: this.currActivePlaylist,
+      song: this.nowPlaying
+    });
   }
 
   onCanPlay() {
     if(this.isCanPlay) {
-      this.plyr.player.play();
+      this.play();
     }
   }
 
-  onLinkClick(link: string) {
-    this.navController.onLinkClick(link);
-
-    if(window.innerWidth < 1024) {
-      if(this.navController.getIsSidebarActive()) {
-        this.navController.toggleSidebar();
-      }
-      this.isMinimised = !this.isMinimised;
-    }
+  /**
+   * Handles the closing of the player when a link is clicked
+   */
+  onLinkClick(event?) {
+    this.isMinimised = true;
   }
 }
