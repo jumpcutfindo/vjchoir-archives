@@ -5,31 +5,105 @@
   },
   "batches": [
     {
-      "id": "2023",
-      "name": "2022 / 2023",
-      "image": "../../../assets/images/batch.png",
-      "desc": "Hi there! This page contains information pertaining to the batch of 2022 - 2023.",
+      "id": "2024",
+      "name": "2023 / 2024",
+      "image": "../../../assets/images/batches/2024/batch.jpg",
+      "desc": "Hi there! This page contains information pertaining to the batch of 2023 - 2024.",
       "comms": [
         {
           "name": "Exco",
           "img": "../../../assets/images/batch.png",
           "members": [
-            "Lin Muxi (P)",
-            "Mrudani Subramanian (VP)",
-            "Aaron Koay (S)",
-            "Jenna Lim (Welfare Head)",
-            "Shatiesh Rajha (QM)",
-            "Asher Ooi (T)"
+            "Chew Qiao Enn (P)",
+            "Kaizer Koh (VP)",
+            "Chyenne Chiu Yun Xi (QM)",
+            "Wang Ray Kit (T)",
+            "Venugopal Roshini (Welfare Head)"
           ]
         },
         {
           "name": "Musico",
           "img": "../../../assets/images/batch.png",
           "members": [
-            "Brandon Goh (SC)",
+            "Dylan Chu Jet Ren (SC, B)",
+            "Seet Ju Jing Sebastian (ASC)",
+            "Chan Charlene Julia (S)",
+            "Yeow Xuen Lynn (A)",
+            "Kaydren Tang Kai Wen (T)"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "name": "Sopranos",
+          "members": [
+            "Chan Charlene Julia",
+            "Mahendrakar Anushka",
+            "Asha Prasad",
+            "Venugopal Roshini",
+            "Kannamball Natarajan",
+            "Kek Si Qi, Zarah",
+            "Sam Yong Zhe"
+          ]
+        },
+        {
+          "name": "Altos",
+          "members": [
+            "Yeow Xuen Lynn",
+            "Chew Qiao Enn",
+            "Portia Tan Hui Man",
+            "Chyenne Chiu Yun Xi"
+          ]
+        },
+        {
+          "name": "Tenors",
+          "members": [
+            "Kaydren Tang Kai Wen",
+            "Wang Ray Kit",
+            "Zhou Kaiwei Kelvin",
+            "Chang Linao"
+          ]
+        },
+        {
+          "name": "Basses",
+          "members": [
+            "Dylan Chu Jet Ren",
+            "Fang Zhiyi",
+            "Kaizer Koh",
+            "Lester Lim Weng Kwang",
+            "Lee Zhi Ren",
+            "Seet Ju Jing Sebastian"
+          ]
+        }
+      ],
+      "photos": []
+    },
+    {
+      "id": "2023",
+      "name": "2022 / 2023",
+      "image": "../../../assets/images/batches/2023/batch.jpg",
+      "desc": "Hi there! This page contains information pertaining to the batch of 2022 - 2023.",
+      "comms": [
+        {
+          "name": "Exco",
+          "img": "../../../assets/images/batches/2023/exco.jpg",
+          "members": [
+            "Jenna Lim (Welfare Head)",
+            "Asher Ooi (T)",
+            "Lin Muxi (P)",
+            "Aaron Koay (S)",
+            "Mrudani Subramanian (VP)",
+            "Shatiesh Rajha (QM)"
+          ]
+        },
+        {
+          "name": "Musico",
+          "img": "../../../assets/images/batches/2023/musico.jpg",
+          "members": [
             "Ho Rui Yi (ASC)",
-            "Elizabeth Chan (S)",
+            "Brandon Goh (SC)",
             "Lim Shuen Ying (A)",
+            "Elizabeth Chan (S)",
             "Isaac Kuah (T)",
             "Nathan Evan Seah Shen (B)"
           ]
@@ -57,11 +131,7 @@
         },
         {
           "name": "Tenors",
-          "members": [
-            "Isaac Kuah",
-            "Aaron Koay",
-            "Ho Rui Yi"
-          ]
+          "members": ["Isaac Kuah", "Aaron Koay", "Ho Rui Yi"]
         },
         {
           "name": "Basses",
@@ -72,6 +142,22 @@
             "Shatiesh Rajha"
           ]
         }
+      ],
+      "photos": [
+        "../../../assets/images/batches/2023/featured (1).jpg",
+        "../../../assets/images/batches/2023/featured (2).jpg",
+        "../../../assets/images/batches/2023/featured (3).jpg",
+        "../../../assets/images/batches/2023/featured (4).jpg",
+        "../../../assets/images/batches/2023/featured (5).jpg",
+        "../../../assets/images/batches/2023/featured (6).jpg",
+        "../../../assets/images/batches/2023/featured (7).jpg",
+        "../../../assets/images/batches/2023/featured (8).jpg",
+        "../../../assets/images/batches/2023/featured (9).jpg",
+        "../../../assets/images/batches/2023/featured (10).jpg",
+        "../../../assets/images/batches/2023/featured (11).jpg",
+        "../../../assets/images/batches/2023/featured (12).jpg",
+        "../../../assets/images/batches/2023/featured (13).jpg",
+        "../../../assets/images/batches/2023/featured (14).jpg"
       ]
     },
     {
@@ -90,7 +176,6 @@
             "Mohamed Samir (Welfare Head)",
             "Bolliger Andrea Shijia (QM)",
             "Phua Sin Yi Venice (T)"
-
           ]
         },
         {
