@@ -146,17 +146,16 @@
               "desc": "Audio and videos to all SOVs can be found in the link above.",
               "links": [
                 {
-                  "title": "Google Drive",
-                  "link": "https://drive.google.com/drive/folders/1J0J87sIO77Obo9i3XkpCaGbbNRDhdLLa?usp=sharing",
-                  "icon": "fab fa-google-drive",
+                  "title": "OneDrive",
+                  "link": "https://1drv.ms/f/s!Aq-Z-Rt0pYOKsipBlnAw2_O7MO3p",
+                  "icon": "fab fa-microsoft",
                   "size": ""
                 }
               ]
             },
             {
               "title": "Video",
-              "desc": "Videos for this SOV are currently unavailable.",
-              "links": []
+              "desc": "Videos for this year's SOV are unavailable for download."
             },
             {
               "title": "Audio",
@@ -169,10 +168,10 @@
                   "size": "192 MB"
                 },
                 {
-                  "title": "Google Drive",
-                  "link": "https://drive.google.com/open?id=1d12p-8S4V0VajmoV6LY9hK9YitRL88Z3",
-                  "icon": "fab fa-google-drive",
-                  "size": "192 MB"
+                  "title": "OneDrive",
+                  "link": "https://1drv.ms/f/s!Aq-Z-Rt0pYOKsjFBlnAw2_O7MO3p",
+                  "icon": "fab fa-microsoft",
+                  "size": ""
                 }
               ]
             }
@@ -310,9 +309,9 @@
               "desc": "Audio and videos to all SOVs can be found in the link above.",
               "links": [
                 {
-                  "title": "Google Drive",
-                  "link": "https://drive.google.com/drive/folders/1J0J87sIO77Obo9i3XkpCaGbbNRDhdLLa?usp=sharing",
-                  "icon": "fab fa-google-drive",
+                  "title": "OneDrive",
+                  "link": "https://1drv.ms/f/s!Aq-Z-Rt0pYOKsipBlnAw2_O7MO3p",
+                  "icon": "fab fa-microsoft",
                   "size": ""
                 }
               ]
@@ -346,10 +345,10 @@
                   "size": "150 MB"
                 },
                 {
-                  "title": "Google Drive",
-                  "link": "https://drive.google.com/open?id=1v59qpiYSrSBgPZX9AZWWw9cImb4ovBEJ",
-                  "icon": "fab fa-google-drive",
-                  "size": "150 MB"
+                  "title": "OneDrive",
+                  "link": "https://1drv.ms/f/s!Aq-Z-Rt0pYOKsjFBlnAw2_O7MO3p",
+                  "icon": "fab fa-microsoft",
+                  "size": ""
                 }
               ]
             }
@@ -499,9 +498,9 @@
               "desc": "Audio and videos to all SOVs can be found in the link above.",
               "links": [
                 {
-                  "title": "Google Drive",
-                  "link": "https://drive.google.com/drive/folders/1J0J87sIO77Obo9i3XkpCaGbbNRDhdLLa?usp=sharing",
-                  "icon": "fab fa-google-drive",
+                  "title": "OneDrive",
+                  "link": "https://1drv.ms/f/s!Aq-Z-Rt0pYOKsipBlnAw2_O7MO3p",
+                  "icon": "fab fa-microsoft",
                   "size": ""
                 }
               ]
@@ -535,10 +534,10 @@
                   "size": "160 MB"
                 },
                 {
-                  "title": "Google Drive",
-                  "link": "https://drive.google.com/open?id=0B24yMaqyw1RwWEZqbmVFeHNHeDg",
-                  "icon": "fab fa-google-drive",
-                  "size": "160 MB"
+                  "title": "OneDrive",
+                  "link": "https://1drv.ms/f/s!Aq-Z-Rt0pYOKsjFBlnAw2_O7MO3p",
+                  "icon": "fab fa-microsoft",
+                  "size": ""
                 }
               ]
             }
@@ -676,24 +675,16 @@
               "desc": "Audio and videos to all SOVs can be found in the link above.",
               "links": [
                 {
-                  "title": "Google Drive",
-                  "link": "https://drive.google.com/drive/folders/1J0J87sIO77Obo9i3XkpCaGbbNRDhdLLa?usp=sharing",
-                  "icon": "fab fa-google-drive",
+                  "title": "OneDrive",
+                  "link": "https://1drv.ms/f/s!Aq-Z-Rt0pYOKsipBlnAw2_O7MO3p",
+                  "icon": "fab fa-microsoft",
                   "size": ""
                 }
               ]
             },
             {
               "title": "Video",
-              "desc": "Individual video files can be found in the above link.",
-              "links": [
-                {
-                  "title": "Google Drive",
-                  "link": "https://drive.google.com/open?id=0B24yMaqyw1Rwa2gteGJGNFpmXzQ",
-                  "icon": "fab fa-google-drive",
-                  "size": "3.0 GB"
-                }
-              ]
+              "desc": "Videos for this year's SOV are unavailable for download."
             },
             {
               "title": "Audio",
@@ -712,10 +703,10 @@
                   "size": "170 MB"
                 },
                 {
-                  "title": "Google Drive",
-                  "link": "https://drive.google.com/open?id=0B24yMaqyw1Rwa2gteGJGNFpmXzQ",
-                  "icon": "fab fa-google-drive",
-                  "size": "170 MB"
+                  "title": "OneDrive",
+                  "link": "https://1drv.ms/f/s!Aq-Z-Rt0pYOKsjFBlnAw2_O7MO3p",
+                  "icon": "fab fa-microsoft",
+                  "size": ""
                 }
               ]
             }
@@ -877,24 +868,16 @@
               "desc": "Audio and videos to all SOVs can be found in the link above.",
               "links": [
                 {
-                  "title": "Google Drive",
-                  "link": "https://drive.google.com/drive/folders/1J0J87sIO77Obo9i3XkpCaGbbNRDhdLLa?usp=sharing",
-                  "icon": "fab fa-google-drive",
+                  "title": "OneDrive",
+                  "link": "https://1drv.ms/f/s!Aq-Z-Rt0pYOKsipBlnAw2_O7MO3p",
+                  "icon": "fab fa-microsoft",
                   "size": ""
                 }
               ]
             },
             {
               "title": "Video",
-              "desc": "Individual video files can be found in the above link.",
-              "links": [
-                {
-                  "title": "Google Drive",
-                  "link": "https://drive.google.com/drive/folders/0B24yMaqyw1RwfkkycW9oY3VJUXF5S0ltdHJidGFFTlhWTlhuT1d6SnVWemJwZHgwdzY5clU?usp=sharing",
-                  "icon": "fab fa-google-drive",
-                  "size": "3.0 GB"
-                }
-              ]
+              "desc": "Videos for this year's SOV are unavailable for download."
             },
             {
               "title": "Audio",
@@ -913,10 +896,10 @@
                   "size": "120 MB"
                 },
                 {
-                  "title": "Google Drive",
-                  "link": "https://drive.google.com/drive/folders/0B24yMaqyw1RwfkkycW9oY3VJUXF5S0ltdHJidGFFTlhWTlhuT1d6SnVWemJwZHgwdzY5clU?usp=sharing",
-                  "icon": "fab fa-google-drive",
-                  "size": "120 MB"
+                  "title": "OneDrive",
+                  "link": "https://1drv.ms/f/s!Aq-Z-Rt0pYOKsjFBlnAw2_O7MO3p",
+                  "icon": "fab fa-microsoft",
+                  "size": ""
                 },
                 {
                   "title": "Mega",
@@ -1078,9 +1061,9 @@
               "desc": "Audio and videos to all SOVs can be found in the link above.",
               "links": [
                 {
-                  "title": "Google Drive",
-                  "link": "hhttps://drive.google.com/drive/folders/1J0J87sIO77Obo9i3XkpCaGbbNRDhdLLa?usp=sharing",
-                  "icon": "fab fa-google-drive",
+                  "title": "OneDrive",
+                  "link": "https://1drv.ms/f/s!Aq-Z-Rt0pYOKsipBlnAw2_O7MO3p",
+                  "icon": "fab fa-microsoft",
                   "size": ""
                 }
               ]
@@ -1114,10 +1097,10 @@
                   "size": "169 MB"
                 },
                 {
-                  "title": "Google Drive",
-                  "link": "https://drive.google.com/drive/folders/1GJNYVfv2AyQ7dyPLOedNjALGwwKiQlyn?usp=sharing",
-                  "icon": "fab fa-google-drive",
-                  "size": "169 MB"
+                  "title": "OneDrive",
+                  "link": "https://1drv.ms/f/s!Aq-Z-Rt0pYOKsjFBlnAw2_O7MO3p",
+                  "icon": "fab fa-microsoft",
+                  "size": ""
                 }
               ]
             }
@@ -1267,24 +1250,16 @@
               "desc": "Audio and videos to all SOVs can be found in the link above.",
               "links": [
                 {
-                  "title": "Google Drive",
-                  "link": "https://drive.google.com/drive/folders/1J0J87sIO77Obo9i3XkpCaGbbNRDhdLLa?usp=sharing",
-                  "icon": "fab fa-google-drive",
-                  "size": "1.0 GB"
+                  "title": "OneDrive",
+                  "link": "https://1drv.ms/f/s!Aq-Z-Rt0pYOKsipBlnAw2_O7MO3p",
+                  "icon": "fab fa-microsoft",
+                  "size": ""
                 }
               ]
             },
             {
               "title": "Video",
-              "desc": "The video files for this particular SOV can be found in the above link.",
-              "links": [
-                {
-                  "title": "Google Drive",
-                  "link": "https://drive.google.com/drive/folders/0B24yMaqyw1Rwfkk1MEo1Wk43YkNiUGx6TVNBTVNmaG80ZVZRRE81TTUySjZnSEZuX1JNbjg",
-                  "icon": "fab fa-google-drive",
-                  "size": "1.0 GB"
-                }
-              ]
+              "desc": "Videos for this year's SOV are unavailable for download."
             },
             {
               "title": "Audio",
@@ -1303,10 +1278,10 @@
                   "size": "140 MB"
                 },
                 {
-                  "title": "Google Drive",
-                  "link": "https://drive.google.com/folderview?id=0B24yMaqyw1Rwfkk1MEo1Wk43YkNiUGx6TVNBTVNmaG80ZVZRRE81TTUySjZnSEZuX1JNbjg&usp=sharing",
-                  "icon": "fab fa-google-drive",
-                  "size": "140 MB"
+                  "title": "OneDrive",
+                  "link": "https://1drv.ms/f/s!Aq-Z-Rt0pYOKsjFBlnAw2_O7MO3p",
+                  "icon": "fab fa-microsoft",
+                  "size": ""
                 }
               ]
             }
@@ -1437,34 +1412,26 @@
               "desc": "Audio and videos to all SOVs can be found in the link above.",
               "links": [
                 {
-                  "title": "Google Drive",
-                  "link": "https://drive.google.com/drive/folders/1J0J87sIO77Obo9i3XkpCaGbbNRDhdLLa?usp=sharing",
-                  "icon": "fab fa-google-drive",
-                  "size": "1.0 GB"
+                  "title": "OneDrive",
+                  "link": "https://1drv.ms/f/s!Aq-Z-Rt0pYOKsipBlnAw2_O7MO3p",
+                  "icon": "fab fa-microsoft",
+                  "size": ""
                 }
               ]
             },
             {
               "title": "Video",
-              "desc": "Videos for this year's SOV as recorded by the Esplanade can be found in the link above.",
-              "links": [
-                {
-                  "title": "Google Drive",
-                  "link": "https://drive.google.com/open?id=1e0CH_KSxBV056t2OccWtLDcv7gM_5b81",
-                  "icon": "fab fa-google-drive",
-                  "size": "345 MB"
-                }
-              ]
+              "desc": "Videos for this year's SOV are unavailable for download."
             },
             {
               "title": "Audio",
               "desc": "Links to the audio can be found in the links above.",
               "links": [
                 {
-                  "title": "Google Drive",
-                  "link": "https://drive.google.com/open?id=1e0CH_KSxBV056t2OccWtLDcv7gM_5b81",
-                  "icon": "fab fa-google-drive",
-                  "size": "142 MB"
+                  "title": "OneDrive",
+                  "link": "https://1drv.ms/f/s!Aq-Z-Rt0pYOKsjFBlnAw2_O7MO3p",
+                  "icon": "fab fa-microsoft",
+                  "size": ""
                 }
               ]
             }
@@ -1483,7 +1450,7 @@
         "noFirstHalf": 9,
         "noSecondHalf": 11
       },
-      "intro": "Symphony of Voices 2010 was held on the 11th of May, 2010 at the Esplanade Concert Hall.</br> The theme for this year was <b>Masquerade</b>.</br>Note: for this year there wasn't really a specific theme, but instead the concert was divided into a few different sections. You can take a look at the booklet for more information in the Google Drive.",
+      "intro": "Symphony of Voices 2010 was held on the 11th of May, 2010 at the Esplanade Concert Hall.</br> The theme for this year was <b>Masquerade</b>.</br>Note: for this year there wasn't really a specific theme, but instead the concert was divided into a few different sections. You can take a look at the booklet for more information in the Drive.",
       "artwork": "../../../assets/images/sov/SOV2010.jpg",
       "repertoire": [
         {
@@ -1620,34 +1587,26 @@
               "desc": "Audio and videos to all SOVs can be found in the link above.",
               "links": [
                 {
-                  "title": "Google Drive",
-                  "link": "https://drive.google.com/drive/folders/1J0J87sIO77Obo9i3XkpCaGbbNRDhdLLa?usp=sharing",
-                  "icon": "fab fa-google-drive",
-                  "size": "1.0 GB"
+                  "title": "OneDrive",
+                  "link": "https://1drv.ms/f/s!Aq-Z-Rt0pYOKsipBlnAw2_O7MO3p",
+                  "icon": "fab fa-microsoft",
+                  "size": ""
                 }
               ]
             },
             {
               "title": "Video",
-              "desc": "Videos for this year's SOV can be found in the link above.",
-              "links": [
-                {
-                  "title": "Google Drive",
-                  "link": "https://drive.google.com/open?id=1ua7hew63pWFDmuKXSUpQ3WZoaC1YFUNt",
-                  "icon": "fab fa-google-drive",
-                  "size": "1.97 GB"
-                }
-              ]
+              "desc": "Videos for this year's SOV are unavailable for download."
             },
             {
               "title": "Audio",
               "desc": "Links to the audio can be found in the links above.",
               "links": [
                 {
-                  "title": "Google Drive",
-                  "link": "https://drive.google.com/open?id=1ua7hew63pWFDmuKXSUpQ3WZoaC1YFUNt",
-                  "icon": "fab fa-google-drive",
-                  "size": "158 MB"
+                  "title": "OneDrive",
+                  "link": "https://1drv.ms/f/s!Aq-Z-Rt0pYOKsjFBlnAw2_O7MO3p",
+                  "icon": "fab fa-microsoft",
+                  "size": ""
                 },
                 {
                   "title": "Dropbox",
@@ -1808,9 +1767,10 @@
               "desc": "Audio and videos to all SOVs can be found in the link above.",
               "links": [
                 {
-                  "title": "Google Drive",
-                  "link": "https://drive.google.com/drive/folders/1J0J87sIO77Obo9i3XkpCaGbbNRDhdLLa?usp=sharing",
-                  "icon": "fab fa-google-drive"
+                  "title": "OneDrive",
+                  "link": "https://1drv.ms/f/s!Aq-Z-Rt0pYOKsipBlnAw2_O7MO3p",
+                  "icon": "fab fa-microsoft",
+                  "size": ""
                 }
               ]
             },
@@ -1823,9 +1783,10 @@
               "desc": "Links to the audio can be found in the links above.",
               "links": [
                 {
-                  "title": "Google Drive",
-                  "link": "https://drive.google.com/drive/folders/1J5yK8yAu5Q7H-F6H8v-YDf2_WX8_KxBf?usp=sharing",
-                  "icon": "fab fa-google-drive"
+                  "title": "OneDrive",
+                  "link": "https://1drv.ms/f/s!Aq-Z-Rt0pYOKsjFBlnAw2_O7MO3p",
+                  "icon": "fab fa-microsoft",
+                  "size": ""
                 }
               ]
             }
@@ -2010,24 +1971,26 @@
               "desc": "Audio and videos to all SOVs can be found in the link above.",
               "links": [
                 {
-                  "title": "Google Drive",
-                  "link": "https://drive.google.com/drive/folders/1J0J87sIO77Obo9i3XkpCaGbbNRDhdLLa?usp=sharing",
-                  "icon": "fab fa-google-drive"
+                  "title": "OneDrive",
+                  "link": "https://1drv.ms/f/s!Aq-Z-Rt0pYOKsipBlnAw2_O7MO3p",
+                  "icon": "fab fa-microsoft",
+                  "size": ""
                 }
               ]
             },
             {
               "title": "Video",
-              "desc": "Videos for this year's SOV are unavailable for download (no source)."
+              "desc": "Videos for this year's SOV are unavailable for download."
             },
             {
               "title": "Audio",
               "desc": "Links to the audio can be found in the links above.",
               "links": [
                 {
-                  "title": "Google Drive",
-                  "link": "https://drive.google.com/drive/folders/1uMsn2rPTeuL5nWDvR1gEs6AN0Q7HZmQs?usp=sharing",
-                  "icon": "fab fa-google-drive"
+                  "title": "OneDrive",
+                  "link": "https://1drv.ms/f/s!Aq-Z-Rt0pYOKsjFBlnAw2_O7MO3p",
+                  "icon": "fab fa-microsoft",
+                  "size": ""
                 }
               ]
             }
