@@ -5,6 +5,80 @@
   },
   "batches": [
     {
+      "id": "2024",
+      "name": "2023 / 2024",
+      "image": "../../../assets/images/batches/2024/batch.jpg",
+      "desc": "Hi there! This page contains information pertaining to the batch of 2023 - 2024.",
+      "comms": [
+        {
+          "name": "Exco",
+          "img": "../../../assets/images/batch.png",
+          "members": [
+            "Chew Qiao Enn (P)",
+            "Kaizer Koh (VP)",
+            "Chyenne Chiu Yun Xi (QM)",
+            "Wang Ray Kit (T)",
+            "Venugopal Roshini (Welfare Head)"
+          ]
+        },
+        {
+          "name": "Musico",
+          "img": "../../../assets/images/batch.png",
+          "members": [
+            "Dylan Chu Jet Ren (SC, B)",
+            "Seet Ju Jing Sebastian (ASC)",
+            "Chan Charlene Julia (S)",
+            "Yeow Xuen Lynn (A)",
+            "Kaydren Tang Kai Wen (T)"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "name": "Sopranos",
+          "members": [
+            "Chan Charlene Julia",
+            "Mahendrakar Anushka",
+            "Asha Prasad",
+            "Venugopal Roshini",
+            "Kannamball Natarajan",
+            "Kek Si Qi, Zarah",
+            "Sam Yong Zhe"
+          ]
+        },
+        {
+          "name": "Altos",
+          "members": [
+            "Yeow Xuen Lynn",
+            "Chew Qiao Enn",
+            "Portia Tan Hui Man",
+            "Chyenne Chiu Yun Xi"
+          ]
+        },
+        {
+          "name": "Tenors",
+          "members": [
+            "Kaydren Tang Kai Wen",
+            "Wang Ray Kit",
+            "Zhou Kaiwei Kelvin",
+            "Chang Linao"
+          ]
+        },
+        {
+          "name": "Basses",
+          "members": [
+            "Dylan Chu Jet Ren",
+            "Fang Zhiyi",
+            "Kaizer Koh",
+            "Lester Lim Weng Kwang",
+            "Lee Zhi Ren",
+            "Seet Ju Jing Sebastian"
+          ]
+        }
+      ],
+      "photos": []
+    },
+    {
       "id": "2023",
       "name": "2022 / 2023",
       "image": "../../../assets/images/batches/2023/batch.jpg",
