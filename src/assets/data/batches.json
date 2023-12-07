@@ -7,29 +7,29 @@
     {
       "id": "2023",
       "name": "2022 / 2023",
-      "image": "../../../assets/images/batch.png",
+      "image": "../../../assets/images/batches/2023/batch.jpg",
       "desc": "Hi there! This page contains information pertaining to the batch of 2022 - 2023.",
       "comms": [
         {
           "name": "Exco",
-          "img": "../../../assets/images/batch.png",
+          "img": "../../../assets/images/batches/2023/exco.jpg",
           "members": [
-            "Lin Muxi (P)",
-            "Mrudani Subramanian (VP)",
-            "Aaron Koay (S)",
             "Jenna Lim (Welfare Head)",
-            "Shatiesh Rajha (QM)",
-            "Asher Ooi (T)"
+            "Asher Ooi (T)",
+            "Lin Muxi (P)",
+            "Aaron Koay (S)",
+            "Mrudani Subramanian (VP)",
+            "Shatiesh Rajha (QM)"
           ]
         },
         {
           "name": "Musico",
-          "img": "../../../assets/images/batch.png",
+          "img": "../../../assets/images/batches/2023/musico.jpg",
           "members": [
-            "Brandon Goh (SC)",
             "Ho Rui Yi (ASC)",
-            "Elizabeth Chan (S)",
+            "Brandon Goh (SC)",
             "Lim Shuen Ying (A)",
+            "Elizabeth Chan (S)",
             "Isaac Kuah (T)",
             "Nathan Evan Seah Shen (B)"
           ]
@@ -57,11 +57,7 @@
         },
         {
           "name": "Tenors",
-          "members": [
-            "Isaac Kuah",
-            "Aaron Koay",
-            "Ho Rui Yi"
-          ]
+          "members": ["Isaac Kuah", "Aaron Koay", "Ho Rui Yi"]
         },
         {
           "name": "Basses",
@@ -90,7 +86,6 @@
             "Mohamed Samir (Welfare Head)",
             "Bolliger Andrea Shijia (QM)",
             "Phua Sin Yi Venice (T)"
-
           ]
         },
         {
