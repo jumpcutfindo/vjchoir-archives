@@ -106,6 +106,8 @@
 }
 
 .big-play-button {
+  border: none;
+
   &:hover {
     color: $accent-color !important;
   }
