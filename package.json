@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve -c dev",
-    "build": "ng build --prod --base-href=\"https://vjchoir.github.io/\"",
+    "build": "npx ng build --configuration production --base-href=\"https://vjchoir.github.io/\" && sh -c 'sed -i \"/<head>/a `cat 404-redirect-script.txt`\" ./dist/vjchoir-archives/index.html' && cp 404.html ./dist/vjchoir-archives/404.html",
     "test": "ng test",
     "lint": "eslint \"src/**/*.ts\"",
     "e2e": "ng e2e"
